@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
+    <org.eventb.theory.core.typeParameter name="'" org.eventb.core.identifier="EL"/>
+    <org.eventb.theory.core.datatypeDefinition name="(" org.eventb.core.identifier="STACK">
+        <org.eventb.theory.core.typeArgument name="'" org.eventb.theory.core.givenType="EL"/>
+        <org.eventb.theory.core.datatypeConstructor name="(" org.eventb.core.identifier="Empty"/>
+        <org.eventb.theory.core.datatypeConstructor name=")" org.eventb.core.identifier="push">
+            <org.eventb.theory.core.constructorArgument name="'" org.eventb.core.identifier="pop" org.eventb.theory.core.type="EL"/>
+            <org.eventb.theory.core.constructorArgument name="(" org.eventb.core.identifier="next_stack" org.eventb.theory.core.type="STACK(EL)"/>
+        </org.eventb.theory.core.datatypeConstructor>
+    </org.eventb.theory.core.datatypeDefinition>
+    <org.eventb.theory.core.newOperatorDefinition name=")" org.eventb.core.label="@" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="INFIX">
+        <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="STACK(EL)" org.eventb.core.identifier="stack1"/>
+        <org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="STACK(EL)" org.eventb.core.identifier="stack2"/>
+        <org.eventb.theory.core.recursiveOperatorDefinition name=")" org.eventb.theory.core.inductiveArgument="stack1">
+            <org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="Empty" org.eventb.theory.core.formula="stack2"/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="push(e,s)" org.eventb.theory.core.formula="push(e,s@stack2)"/>
+        </org.eventb.theory.core.recursiveOperatorDefinition>
+    </org.eventb.theory.core.newOperatorDefinition>
+    <org.eventb.theory.core.newOperatorDefinition name="*" org.eventb.core.label="notEmpty" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.notationType="PREFIX">
+        <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="STACK(EL)" org.eventb.core.identifier="stack"/>
+        <org.eventb.theory.core.recursiveOperatorDefinition name="(" org.eventb.theory.core.inductiveArgument="stack">
+            <org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="Empty" org.eventb.theory.core.formula="⊥"/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="push(e,s)" org.eventb.theory.core.formula="⊤"/>
+        </org.eventb.theory.core.recursiveOperatorDefinition>
+    </org.eventb.theory.core.newOperatorDefinition>
+</org.eventb.theory.core.theoryRoot>

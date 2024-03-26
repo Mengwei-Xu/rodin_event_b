@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
+    <org.eventb.theory.core.typeParameter name="'" org.eventb.core.identifier="event_predicate"/>
+    <org.eventb.theory.core.typeParameter name="(" org.eventb.core.identifier="action_predicate"/>
+    <org.eventb.theory.core.datatypeDefinition name=")" org.eventb.core.identifier="predicate">
+        <org.eventb.theory.core.typeArgument name="'" org.eventb.theory.core.givenType="event_predicate"/>
+        <org.eventb.theory.core.typeArgument name="(" org.eventb.theory.core.givenType="action_predicate"/>
+        <org.eventb.theory.core.datatypeConstructor name=")" org.eventb.core.identifier="event">
+            <org.eventb.theory.core.constructorArgument name="'" org.eventb.core.identifier="eventp" org.eventb.theory.core.type="event_predicate"/>
+        </org.eventb.theory.core.datatypeConstructor>
+        <org.eventb.theory.core.datatypeConstructor name="*" org.eventb.core.identifier="action">
+            <org.eventb.theory.core.constructorArgument name="'" org.eventb.core.identifier="actionp" org.eventb.theory.core.type="action_predicate"/>
+        </org.eventb.theory.core.datatypeConstructor>
+    </org.eventb.theory.core.datatypeDefinition>
+</org.eventb.theory.core.theoryRoot>
