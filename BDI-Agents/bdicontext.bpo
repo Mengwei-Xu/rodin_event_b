@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="8">
-    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="7">
+<org.eventb.core.poFile org.eventb.core.poStamp="13">
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="10">
         <org.eventb.core.poIdentifier name="Events" org.eventb.core.type="ℙ(Events)"/>
         <org.eventb.core.poIdentifier name="Plan_library" org.eventb.core.type="ℙ(Plan_library)"/>
         <org.eventb.core.poIdentifier name="Actions" org.eventb.core.type="ℙ(Actions)"/>
@@ -18,7 +18,7 @@
         <org.eventb.core.poIdentifier name="cry_at" org.eventb.core.type="Actions"/>
         <org.eventb.core.poIdentifier name="triggering_event" org.eventb.core.type="ℙ(Plan_library×(Events×Terms))"/>
         <org.eventb.core.poIdentifier name="smiled_at" org.eventb.core.type="Belief_predicates"/>
-        <org.eventb.core.poIdentifier name="delete_set" org.eventb.core.type="ℙ(Actions×Terms×(Belief_predicates×Terms))"/>
+        <org.eventb.core.poIdentifier name="delete_set" org.eventb.core.type="ℙ(Actions×Terms×ℙ(Belief_predicates×Terms))"/>
         <org.eventb.core.poIdentifier name="laughed_at" org.eventb.core.type="Belief_predicates"/>
         <org.eventb.core.poIdentifier name="travel" org.eventb.core.type="Actions"/>
         <org.eventb.core.poIdentifier name="play_at" org.eventb.core.type="Events"/>
@@ -36,243 +36,287 @@
         <org.eventb.core.poIdentifier name="null" org.eventb.core.type="Terms"/>
         <org.eventb.core.poIdentifier name="arrive_at" org.eventb.core.type="Events"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="axm13/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="7">
+    <org.eventb.core.poSequent name="axm13/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="13">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP1"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="travel ↦ ab∈dom(precondition)∧precondition∈Actions × Terms ⇸ ℙ(Belief_predicates × Terms)" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#a"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#a"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP1"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="axm15/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="7">
+    <org.eventb.core.poSequent name="axm14/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="13">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP2"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="travel ↦ ab∈dom(delete_set)∧delete_set∈Actions × Terms ⇸ ℙ(Belief_predicates × Terms)" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#b"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#b"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP2"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="axm15/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="13">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP3"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="travel ↦ ab∈dom(add_set)∧add_set∈Actions × Terms ⇸ ℙ(Belief_predicates × Terms)" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#c"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#c"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP3"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="axm16/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="7">
+    <org.eventb.core.poSequent name="axm16/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="13">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP4"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="travel ↦ bc∈dom(precondition)∧precondition∈Actions × Terms ⇸ ℙ(Belief_predicates × Terms)" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#d"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#d"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP4"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="axm18/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="7">
+    <org.eventb.core.poSequent name="axm17/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="13">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP5"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="travel ↦ bc∈dom(delete_set)∧delete_set∈Actions × Terms ⇸ ℙ(Belief_predicates × Terms)" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#e"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#e"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP5"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="axm18/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="13">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP6"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="travel ↦ bc∈dom(add_set)∧add_set∈Actions × Terms ⇸ ℙ(Belief_predicates × Terms)" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#f"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#f"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP6"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="axm19/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="7">
+    <org.eventb.core.poSequent name="axm19/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="13">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP7"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="travel ↦ ac∈dom(precondition)∧precondition∈Actions × Terms ⇸ ℙ(Belief_predicates × Terms)" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#g"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#g"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP7"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="axm21/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="7">
+    <org.eventb.core.poSequent name="axm20/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="13">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP8"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="travel ↦ ac∈dom(delete_set)∧delete_set∈Actions × Terms ⇸ ℙ(Belief_predicates × Terms)" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#h"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#h"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP8"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="axm21/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="13">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP9"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="travel ↦ ac∈dom(add_set)∧add_set∈Actions × Terms ⇸ ℙ(Belief_predicates × Terms)" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#i"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#i"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP9"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="axm22/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="7">
+    <org.eventb.core.poSequent name="axm22/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="13">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP:"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="laugh_at ↦ b∈dom(precondition)∧precondition∈Actions × Terms ⇸ ℙ(Belief_predicates × Terms)" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#')"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#')"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP:"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="axm24/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Theorem" org.eventb.core.poStamp="7">
+    <org.eventb.core.poSequent name="axm23/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="13">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP;"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="laugh_at ↦ b∈dom(delete_set)∧delete_set∈Actions × Terms ⇸ ℙ(Belief_predicates × Terms)" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#'*"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#'*"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP;"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="axm24/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="13">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP="/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="laugh_at ↦ b∈dom(add_set)∧add_set∈Actions × Terms ⇸ ℙ(Belief_predicates × Terms)" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#'+"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#'+"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP="/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="axm24/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="7">
-        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP="/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="add_set(laugh_at ↦ b)={laughed_at ↦ b}" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#'+"/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#'+"/>
-        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP="/>
-    </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="axm25/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="7">
+    <org.eventb.core.poSequent name="axm25/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="13">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP&gt;"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="smile_at ↦ b∈dom(precondition)∧precondition∈Actions × Terms ⇸ ℙ(Belief_predicates × Terms)" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#',"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#',"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP&gt;"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="axm27/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Theorem" org.eventb.core.poStamp="8">
+    <org.eventb.core.poSequent name="axm26/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="13">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP?"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="smile_at ↦ b∈dom(delete_set)∧delete_set∈Actions × Terms ⇸ ℙ(Belief_predicates × Terms)" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#'-"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#'-"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP?"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="axm27/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="13">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP@"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="smile_at ↦ b∈dom(add_set)∧add_set∈Actions × Terms ⇸ ℙ(Belief_predicates × Terms)" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#'."/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#'."/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP@"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="axm27/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="8">
-        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP@"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="add_set(smile_at ↦ b)={smiled_at ↦ b}" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#'."/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#'."/>
-        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP@"/>
-    </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="axm28/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="7">
+    <org.eventb.core.poSequent name="axm28/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="13">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPA"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="joke_at ↦ b∈dom(precondition)∧precondition∈Actions × Terms ⇸ ℙ(Belief_predicates × Terms)" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#'\/"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#'\/"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPA"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="axm30/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="7">
+    <org.eventb.core.poSequent name="axm29/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="13">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPB"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="joke_at ↦ b∈dom(delete_set)∧delete_set∈Actions × Terms ⇸ ℙ(Belief_predicates × Terms)" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#'0"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#'0"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPB"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="axm30/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="13">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPC"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="joke_at ↦ b∈dom(add_set)∧add_set∈Actions × Terms ⇸ ℙ(Belief_predicates × Terms)" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#'1"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#'1"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPC"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="axm31/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="7">
+    <org.eventb.core.poSequent name="axm31/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="13">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPD"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="cry_at ↦ b∈dom(precondition)∧precondition∈Actions × Terms ⇸ ℙ(Belief_predicates × Terms)" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#'2"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#'2"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPD"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="axm33/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="7">
+    <org.eventb.core.poSequent name="axm32/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="13">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPE"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="cry_at ↦ b∈dom(delete_set)∧delete_set∈Actions × Terms ⇸ ℙ(Belief_predicates × Terms)" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#'3"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#'3"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPE"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="axm33/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="13">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPF"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="cry_at ↦ b∈dom(add_set)∧add_set∈Actions × Terms ⇸ ℙ(Belief_predicates × Terms)" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#'4"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#'4"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPF"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="axm34/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="7">
+    <org.eventb.core.poSequent name="axm34/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="13">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPG"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="plan1∈dom(triggering_event)∧triggering_event∈Plan_library ⇸ Events × Terms" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#j"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#j"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPG"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="axm35/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="7">
+    <org.eventb.core.poSequent name="axm35/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="13">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPH"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="plan1∈dom(context)∧context∈Plan_library ⇸ ℙ(Belief_predicates × Terms)" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#k"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#k"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPH"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="axm36/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="7">
+    <org.eventb.core.poSequent name="axm36/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="13">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPI"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="plan1∈dom(plan_body)∧plan_body∈Plan_library ⇸ STACK(ℙ(predicate(Events,Actions,Plan_library) × Terms))" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#l"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#l"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPI"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="axm37/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="7">
+    <org.eventb.core.poSequent name="axm37/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="13">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPJ"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="plan2∈dom(triggering_event)∧triggering_event∈Plan_library ⇸ Events × Terms" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#s"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#s"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPJ"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="axm38/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="7">
+    <org.eventb.core.poSequent name="axm38/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="13">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPK"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="plan2∈dom(context)∧context∈Plan_library ⇸ ℙ(Belief_predicates × Terms)" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#t"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#t"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPK"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="axm39/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="7">
+    <org.eventb.core.poSequent name="axm39/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="13">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPL"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="plan2∈dom(plan_body)∧plan_body∈Plan_library ⇸ STACK(ℙ(predicate(Events,Actions,Plan_library) × Terms))" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#u"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#u"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPL"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="axm40/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="7">
+    <org.eventb.core.poSequent name="axm40/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="13">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPM"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="plan3∈dom(triggering_event)∧triggering_event∈Plan_library ⇸ Events × Terms" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#'5"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#'5"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPM"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="axm41/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="7">
+    <org.eventb.core.poSequent name="axm41/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="13">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPN"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="plan3∈dom(context)∧context∈Plan_library ⇸ ℙ(Belief_predicates × Terms)" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#'6"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#'6"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPN"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="axm42/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="7">
+    <org.eventb.core.poSequent name="axm42/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="13">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPO"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="plan3∈dom(plan_body)∧plan_body∈Plan_library ⇸ STACK(ℙ(predicate(Events,Actions,Plan_library) × Terms))" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#'7"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#'7"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPO"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="HYP1" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="7">
+    <org.eventb.core.poPredicateSet name="HYP1" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="13">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="partition(Terms,{a},{b},{c},{ab},{bc},{ac},{null})" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#\/"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="partition(Belief_predicates,{at},{laughed_at},{smiled_at},{joked_at},{cried_at})" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#E"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="partition(Events,{arrive_at},{play_at})" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#F"/>
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="partition(Actions,{travel},{laugh_at},{smile_at},{joke_at},{cry_at})" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#x"/>
         <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="partition(Plan_library,{plan1},{plan2},{plan3})" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#_"/>
-        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="precondition∈Actions × Terms → ℙ(Belief_predicates × Terms)" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#N"/>
-        <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="delete_set∈Actions × Terms ↔ Belief_predicates × Terms" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#R"/>
-        <org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="add_set∈Actions × Terms → ℙ(Belief_predicates × Terms)" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#S"/>
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="precondition∈Actions × Terms ⇸ ℙ(Belief_predicates × Terms)" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#N"/>
+        <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="delete_set∈Actions × Terms ⇸ ℙ(Belief_predicates × Terms)" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#R"/>
+        <org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="add_set∈Actions × Terms ⇸ ℙ(Belief_predicates × Terms)" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#S"/>
         <org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="triggering_event∈Plan_library → Events × Terms" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#W"/>
         <org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="context∈Plan_library → ℙ(Belief_predicates × Terms)" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#["/>
         <org.eventb.core.poPredicate name="PRD10" org.eventb.core.predicate="plan_body∈Plan_library → STACK(ℙ(predicate(Events,Actions,Plan_library) × Terms))" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#\\"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="HYP3" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP1" org.eventb.core.poStamp="7">
+    <org.eventb.core.poPredicateSet name="HYP2" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP1" org.eventb.core.poStamp="13">
         <org.eventb.core.poPredicate name="PRD11" org.eventb.core.predicate="precondition(travel ↦ ab)={at ↦ a}" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#a"/>
-        <org.eventb.core.poPredicate name="PRD12" org.eventb.core.predicate="delete_set[{travel ↦ ab}]={at ↦ a}" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#b"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="HYP4" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP3" org.eventb.core.poStamp="7">
+    <org.eventb.core.poPredicateSet name="HYP3" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP2" org.eventb.core.poStamp="13">
+        <org.eventb.core.poPredicate name="PRD12" org.eventb.core.predicate="delete_set(travel ↦ ab)={at ↦ a}" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#b"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="HYP4" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP3" org.eventb.core.poStamp="13">
         <org.eventb.core.poPredicate name="PRD13" org.eventb.core.predicate="add_set(travel ↦ ab)={at ↦ b}" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#c"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="HYP6" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP4" org.eventb.core.poStamp="7">
+    <org.eventb.core.poPredicateSet name="HYP5" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP4" org.eventb.core.poStamp="13">
         <org.eventb.core.poPredicate name="PRD14" org.eventb.core.predicate="precondition(travel ↦ bc)={at ↦ b}" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#d"/>
-        <org.eventb.core.poPredicate name="PRD15" org.eventb.core.predicate="delete_set[{travel ↦ bc}]={at ↦ b}" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#e"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="HYP7" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP6" org.eventb.core.poStamp="7">
+    <org.eventb.core.poPredicateSet name="HYP6" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP5" org.eventb.core.poStamp="13">
+        <org.eventb.core.poPredicate name="PRD15" org.eventb.core.predicate="delete_set(travel ↦ bc)={at ↦ b}" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#e"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="HYP7" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP6" org.eventb.core.poStamp="13">
         <org.eventb.core.poPredicate name="PRD16" org.eventb.core.predicate="add_set(travel ↦ bc)={at ↦ c}" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#f"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="HYP9" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP7" org.eventb.core.poStamp="7">
+    <org.eventb.core.poPredicateSet name="HYP8" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP7" org.eventb.core.poStamp="13">
         <org.eventb.core.poPredicate name="PRD17" org.eventb.core.predicate="precondition(travel ↦ ac)={at ↦ a}" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#g"/>
-        <org.eventb.core.poPredicate name="PRD18" org.eventb.core.predicate="delete_set[{travel ↦ ac}]={at ↦ a}" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#h"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="HYP:" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP9" org.eventb.core.poStamp="7">
+    <org.eventb.core.poPredicateSet name="HYP9" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP8" org.eventb.core.poStamp="13">
+        <org.eventb.core.poPredicate name="PRD18" org.eventb.core.predicate="delete_set(travel ↦ ac)={at ↦ a}" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#h"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="HYP:" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP9" org.eventb.core.poStamp="13">
         <org.eventb.core.poPredicate name="PRD19" org.eventb.core.predicate="add_set(travel ↦ ac)={at ↦ c}" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#i"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="HYP=" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP:" org.eventb.core.poStamp="7">
+    <org.eventb.core.poPredicateSet name="HYP;" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP:" org.eventb.core.poStamp="13">
         <org.eventb.core.poPredicate name="PRD20" org.eventb.core.predicate="precondition(laugh_at ↦ b)={at ↦ b}" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#')"/>
-        <org.eventb.core.poPredicate name="PRD21" org.eventb.core.predicate="delete_set[{laugh_at ↦ b}]=(∅ ⦂ ℙ(Belief_predicates×Terms))" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#'*"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="HYP&gt;" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP=" org.eventb.core.poStamp="7">
+    <org.eventb.core.poPredicateSet name="HYP=" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP;" org.eventb.core.poStamp="13">
+        <org.eventb.core.poPredicate name="PRD21" org.eventb.core.predicate="delete_set(laugh_at ↦ b)=(∅ ⦂ ℙ(Belief_predicates×Terms))" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#'*"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="HYP&gt;" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP=" org.eventb.core.poStamp="13">
         <org.eventb.core.poPredicate name="PRD22" org.eventb.core.predicate="add_set(laugh_at ↦ b)={laughed_at ↦ b}" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#'+"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="HYP@" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP&gt;" org.eventb.core.poStamp="7">
+    <org.eventb.core.poPredicateSet name="HYP?" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP&gt;" org.eventb.core.poStamp="13">
         <org.eventb.core.poPredicate name="PRD23" org.eventb.core.predicate="precondition(smile_at ↦ b)={at ↦ b}" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#',"/>
-        <org.eventb.core.poPredicate name="PRD24" org.eventb.core.predicate="delete_set[{smile_at ↦ b}]=(∅ ⦂ ℙ(Belief_predicates×Terms))" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#'-"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="HYPA" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP@" org.eventb.core.poStamp="7">
+    <org.eventb.core.poPredicateSet name="HYP@" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP?" org.eventb.core.poStamp="13">
+        <org.eventb.core.poPredicate name="PRD24" org.eventb.core.predicate="delete_set(smile_at ↦ b)=(∅ ⦂ ℙ(Belief_predicates×Terms))" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#'-"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="HYPA" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYP@" org.eventb.core.poStamp="13">
         <org.eventb.core.poPredicate name="PRD25" org.eventb.core.predicate="add_set(smile_at ↦ b)={smiled_at ↦ b}" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#'."/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="HYPC" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPA" org.eventb.core.poStamp="7">
+    <org.eventb.core.poPredicateSet name="HYPB" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPA" org.eventb.core.poStamp="13">
         <org.eventb.core.poPredicate name="PRD26" org.eventb.core.predicate="precondition(joke_at ↦ b)={at ↦ b}" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#'\/"/>
-        <org.eventb.core.poPredicate name="PRD27" org.eventb.core.predicate="delete_set[{joke_at ↦ b}]=(∅ ⦂ ℙ(Belief_predicates×Terms))" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#'0"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="HYPD" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPC" org.eventb.core.poStamp="7">
+    <org.eventb.core.poPredicateSet name="HYPC" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPB" org.eventb.core.poStamp="13">
+        <org.eventb.core.poPredicate name="PRD27" org.eventb.core.predicate="delete_set(joke_at ↦ b)=(∅ ⦂ ℙ(Belief_predicates×Terms))" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#'0"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="HYPD" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPC" org.eventb.core.poStamp="13">
         <org.eventb.core.poPredicate name="PRD28" org.eventb.core.predicate="add_set(joke_at ↦ b)={joked_at ↦ b}" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#'1"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="HYPF" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPD" org.eventb.core.poStamp="7">
+    <org.eventb.core.poPredicateSet name="HYPE" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPD" org.eventb.core.poStamp="13">
         <org.eventb.core.poPredicate name="PRD29" org.eventb.core.predicate="precondition(cry_at ↦ b)={at ↦ b}" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#'2"/>
-        <org.eventb.core.poPredicate name="PRD30" org.eventb.core.predicate="delete_set[{cry_at ↦ b}]=(∅ ⦂ ℙ(Belief_predicates×Terms))" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#'3"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="HYPG" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPF" org.eventb.core.poStamp="7">
+    <org.eventb.core.poPredicateSet name="HYPF" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPE" org.eventb.core.poStamp="13">
+        <org.eventb.core.poPredicate name="PRD30" org.eventb.core.predicate="delete_set(cry_at ↦ b)=(∅ ⦂ ℙ(Belief_predicates×Terms))" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#'3"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="HYPG" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPF" org.eventb.core.poStamp="13">
         <org.eventb.core.poPredicate name="PRD31" org.eventb.core.predicate="add_set(cry_at ↦ b)={cried_at ↦ b}" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#'4"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="HYPH" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPG" org.eventb.core.poStamp="7">
+    <org.eventb.core.poPredicateSet name="HYPH" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPG" org.eventb.core.poStamp="13">
         <org.eventb.core.poPredicate name="PRD32" org.eventb.core.predicate="triggering_event(plan1)=arrive_at ↦ c" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#j"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="HYPI" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPH" org.eventb.core.poStamp="7">
+    <org.eventb.core.poPredicateSet name="HYPI" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPH" org.eventb.core.poStamp="13">
         <org.eventb.core.poPredicate name="PRD33" org.eventb.core.predicate="context(plan1)={at ↦ a}" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#k"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="HYPJ" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPI" org.eventb.core.poStamp="7">
+    <org.eventb.core.poPredicateSet name="HYPJ" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPI" org.eventb.core.poStamp="13">
         <org.eventb.core.poPredicate name="PRD34" org.eventb.core.predicate="plan_body(plan1)=push({action(travel) ↦ ab},push({event(play_at) ↦ b},push({action(travel) ↦ bc},Empty ⦂ STACK(ℙ(predicate(Events,Actions,Plan_library)×Terms)))))" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#l"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="HYPK" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPJ" org.eventb.core.poStamp="7">
+    <org.eventb.core.poPredicateSet name="HYPK" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPJ" org.eventb.core.poStamp="13">
         <org.eventb.core.poPredicate name="PRD35" org.eventb.core.predicate="triggering_event(plan2)=arrive_at ↦ c" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#s"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="HYPL" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPK" org.eventb.core.poStamp="7">
+    <org.eventb.core.poPredicateSet name="HYPL" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPK" org.eventb.core.poStamp="13">
         <org.eventb.core.poPredicate name="PRD36" org.eventb.core.predicate="context(plan2)={at ↦ a}" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#t"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="HYPM" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPL" org.eventb.core.poStamp="0">
+    <org.eventb.core.poPredicateSet name="HYPM" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPL" org.eventb.core.poStamp="13">
         <org.eventb.core.poPredicate name="PRD37" org.eventb.core.predicate="plan_body(plan2)=push({action(travel) ↦ ac},Empty ⦂ STACK(ℙ(predicate(Events,Actions,Plan_library)×Terms)))" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#u"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="HYPN" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPM" org.eventb.core.poStamp="0">
+    <org.eventb.core.poPredicateSet name="HYPN" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPM" org.eventb.core.poStamp="13">
         <org.eventb.core.poPredicate name="PRD38" org.eventb.core.predicate="triggering_event(plan3)=play_at ↦ b" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#'5"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="HYPO" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPN" org.eventb.core.poStamp="0">
+    <org.eventb.core.poPredicateSet name="HYPO" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPN" org.eventb.core.poStamp="13">
         <org.eventb.core.poPredicate name="PRD39" org.eventb.core.predicate="context(plan3)={at ↦ b}" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#'6"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPO" org.eventb.core.poStamp="7">
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/BDI-Agents/bdicontext.bpo|org.eventb.core.poFile#bdicontext|org.eventb.core.poPredicateSet#HYPO" org.eventb.core.poStamp="13">
         <org.eventb.core.poPredicate name="PRD40" org.eventb.core.predicate="plan_body(plan3)=push({action(laugh_at) ↦ b},push({action(smile_at) ↦ b},push({action(joke_at) ↦ b},push({action(cry_at) ↦ b},Empty ⦂ STACK(ℙ(predicate(Events,Actions,Plan_library)×Terms))))))" org.eventb.core.source="/BDI-Agents/bdicontext.buc|org.eventb.core.contextFile#bdicontext|org.eventb.core.axiom#'7"/>
     </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>

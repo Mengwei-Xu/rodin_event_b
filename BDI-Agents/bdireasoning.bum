@@ -56,7 +56,7 @@
         <org.eventb.core.parameter name=")" org.eventb.core.identifier="terms1"/>
         <org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="intention_stack ∈ ran(intentions)"/>
         <org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="pop(intention_stack) = {(action(action_real) ↦ terms1)}"/>
-        <org.eventb.core.action name="-" org.eventb.core.assignment="belief_base ≔ (belief_base ∖ delete_set[{action_real ↦ terms1}]) ∪ add_set(action_real ↦ terms1)" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="-" org.eventb.core.assignment="belief_base ≔ (belief_base ∖ delete_set(action_real ↦ terms1)) ∪ add_set(action_real ↦ terms1)" org.eventb.core.label="act1"/>
         <org.eventb.core.guard name="1" org.eventb.core.label="grd3" org.eventb.core.predicate="precondition(action_real ↦ terms1) ⊆ belief_base"/>
         <org.eventb.core.action name="2" org.eventb.core.assignment="intentions ≔ (intentions ∖ {({(event_real ↦ terms2)} ↦ intention_stack)}) ∪  {({(event_real ↦ terms2)} ↦ next_stack(intention_stack))}   " org.eventb.core.label="act2"/>
         <org.eventb.core.parameter name="4" org.eventb.core.identifier="event_real"/>
