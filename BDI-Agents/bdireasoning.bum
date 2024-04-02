@@ -4,14 +4,13 @@
         <org.eventb.core.action name="'" org.eventb.core.assignment="belief_base ≔ {(at ↦ a)}" org.eventb.core.label="act1"/>
         <org.eventb.core.action name="(" org.eventb.core.assignment="external_events ≔ {(arrive_at ↦ c)}" org.eventb.core.label="act2"/>
         <org.eventb.core.action name=")" org.eventb.core.assignment="intentions ≔ ∅" org.eventb.core.label="act3"/>
-        <org.eventb.core.action name="*" org.eventb.core.assignment="intention_for_event ≔ ∅" org.eventb.core.label="act4"/>
         <org.eventb.core.action name="+" org.eventb.core.assignment="backups ≔ ∅" org.eventb.core.label="act5"/>
     </org.eventb.core.event>
     <org.eventb.core.seesContext name="(" org.eventb.core.target="bdicontext"/>
     <org.eventb.core.event name=")" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AddressExternalEvent">
         <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="event_real ↦ terms ∈ external_events"/>
         <org.eventb.core.parameter name="(" org.eventb.core.identifier="event_real"/>
-        <org.eventb.core.action name="*" org.eventb.core.assignment="intentions ≔ intentions ∪ {push({(event(event_real) ↦ terms)},Empty)}" org.eventb.core.label="act3"/>
+        <org.eventb.core.action name="*" org.eventb.core.assignment="intentions ≔ intentions ∪ {∅ ↦ push({(event(event_real) ↦ terms)},Empty)}" org.eventb.core.label="act3"/>
         <org.eventb.core.parameter name="+" org.eventb.core.identifier="terms"/>
         <org.eventb.core.action name="," org.eventb.core.assignment="external_events ≔ external_events ∖ {(event_real ↦ terms)} " org.eventb.core.label="act4"/>
     </org.eventb.core.event>
@@ -20,25 +19,25 @@
     <org.eventb.core.variable name="," org.eventb.core.identifier="external_events"/>
     <org.eventb.core.invariant name="-" org.eventb.core.label="inv2" org.eventb.core.predicate="external_events ∈ ℙ(Events × Terms)"/>
     <org.eventb.core.variable name="." org.eventb.core.identifier="intentions"/>
-    <org.eventb.core.invariant name="/" org.eventb.core.label="inv3" org.eventb.core.predicate="intentions ∈ ℙ (STACK(ℙ(predicate(Events,Actions,Plan_library) × Terms))) "/>
+    <org.eventb.core.invariant name="/" org.eventb.core.label="inv3" org.eventb.core.predicate="intentions ∈ ℙ (ℙ(Events × Terms) × STACK(ℙ(predicate(Events,Actions,Plan_library) × Terms))) "/>
     <org.eventb.core.event name="6" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="SelectRelevantPlans">
         <org.eventb.core.parameter name="'" org.eventb.core.identifier="event_real"/>
-        <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="intention ∈ intentions"/>
-        <org.eventb.core.action name=")" org.eventb.core.assignment="intention_for_event(event_real ↦ terms) ≔ push(relevant_plans,Empty)" org.eventb.core.label="act1"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="intention_stack ∈ ran(intentions)"/>
         <org.eventb.core.parameter name="*" org.eventb.core.identifier="terms"/>
         <org.eventb.core.parameter name="+" org.eventb.core.identifier="relevant_plans"/>
-        <org.eventb.core.parameter name="," org.eventb.core.identifier="intention"/>
-        <org.eventb.core.guard name="-" org.eventb.core.label="grd2" org.eventb.core.predicate="pop(intention) = {(event(event_real) ↦ terms)}"/>
-        <org.eventb.core.guard name="/" org.eventb.core.label="grd5" org.eventb.core.predicate="relevant_plans ∈ ℙ(predicate(Events,Actions,Plan_library) × Terms)"/>
-        <org.eventb.core.guard name="." org.eventb.core.label="grd4" org.eventb.core.predicate="relevant_plans = {plan(plan_real) ↦ n ∣ triggering_event(plan_real) = (event_real ↦ terms)}"/>
-        <org.eventb.core.action name="0" org.eventb.core.assignment="intentions ≔ intentions ∪ {push(relevant_plans,Empty)}" org.eventb.core.label="act2"/>
+        <org.eventb.core.parameter name="," org.eventb.core.identifier="intention_stack"/>
+        <org.eventb.core.guard name="-" org.eventb.core.label="grd2" org.eventb.core.predicate="pop(intention_stack) = {(event(event_real) ↦ terms)}"/>
+        <org.eventb.core.guard name="2" org.eventb.core.label="grd3" org.eventb.core.predicate="{(event_real ↦ terms)} ∉ dom(intentions) "/>
+        <org.eventb.core.guard name="/" org.eventb.core.label="grd4" org.eventb.core.predicate="relevant_plans ∈ ℙ(predicate(Events,Actions,Plan_library) × Terms)"/>
+        <org.eventb.core.guard name="." org.eventb.core.label="grd5" org.eventb.core.predicate="relevant_plans = {plan(plan_real) ↦ n ∣ n = terms ∧ triggering_event(plan_real) = (event_real ↦ terms)}"/>
+        <org.eventb.core.action name="0" org.eventb.core.assignment="intentions ≔ intentions ∪ {{(event_real ↦ terms)} ↦ push(relevant_plans,Empty)}" org.eventb.core.label="act1"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="0" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="SelectApplicablePlan">
-        <org.eventb.core.guard name="0" org.eventb.core.label="grd5" org.eventb.core.predicate="intention ∈ intentions"/>
+        <org.eventb.core.guard name="0" org.eventb.core.label="grd5" org.eventb.core.predicate="intention_stack ∈ ran(intentions)"/>
         <org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="plan_real ∈ Plan_library"/>
-        <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="plan(plan_real) ↦ terms1 ∈ pop(intention)"/>
-        <org.eventb.core.action name="6" org.eventb.core.assignment="backups(event_real ↦ terms2) ≔ {plan_real_other ∣ (plan(plan_real_other) ↦ terms3) ∈ (pop(intention) ∖ {plan(plan_real) ↦ terms1})}" org.eventb.core.label="act3"/>
-        <org.eventb.core.action name=")" org.eventb.core.assignment="intentions ≔ (intentions ∖ {intention}) ∪ {plan_body_stack @ (next_stack(intention))}" org.eventb.core.label="act1"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="plan(plan_real) ↦ terms1 ∈ pop(intention_stack)"/>
+        <org.eventb.core.action name="6" org.eventb.core.assignment="backups(event_real ↦ terms2) ≔ {plan_real_other ∣ (plan(plan_real_other) ↦ terms3) ∈ (pop(intention_stack) ∖ {plan(plan_real) ↦ terms1})}" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="intentions ≔ (intentions ∖ {{(event_real ↦ terms2)} ↦ intention_stack}) ∪ {{(event_real ↦ terms2)} ↦ plan_body_stack @ (next_stack(intention_stack))}" org.eventb.core.label="act2"/>
         <org.eventb.core.guard name="2" org.eventb.core.label="grd6" org.eventb.core.predicate="plan_body_stack = plan_body(plan_real)"/>
         <org.eventb.core.parameter name="," org.eventb.core.identifier="plan_real"/>
         <org.eventb.core.parameter name="4" org.eventb.core.identifier="event_real"/>
@@ -46,24 +45,25 @@
         <org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="context(plan_real) ⊆ belief_base"/>
         <org.eventb.core.parameter name="7" org.eventb.core.identifier="terms2"/>
         <org.eventb.core.parameter name="8" org.eventb.core.identifier="terms3"/>
-        <org.eventb.core.parameter name="/" org.eventb.core.identifier="intention"/>
+        <org.eventb.core.parameter name="/" org.eventb.core.identifier="intention_stack"/>
         <org.eventb.core.parameter name="1" org.eventb.core.identifier="plan_body_stack"/>
-        <org.eventb.core.action name="3" org.eventb.core.assignment="intention_for_event(event_real ↦ terms2) ≔ plan_body_stack" org.eventb.core.label="act2"/>
         <org.eventb.core.guard name="5" org.eventb.core.label="grd7" org.eventb.core.predicate="triggering_event(plan_real) = (event_real ↦ terms2) "/>
         <org.eventb.core.guard name="9" org.eventb.core.label="grd8" org.eventb.core.predicate="terms3 ∈ Terms"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ExecuteAction">
-        <org.eventb.core.parameter name="'" org.eventb.core.identifier="intention"/>
+        <org.eventb.core.parameter name="'" org.eventb.core.identifier="intention_stack"/>
         <org.eventb.core.parameter name="(" org.eventb.core.identifier="action_real"/>
-        <org.eventb.core.parameter name=")" org.eventb.core.identifier="terms"/>
-        <org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="intention ∈ intentions"/>
-        <org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="pop(intention) = {(action(action_real) ↦ terms)}"/>
-        <org.eventb.core.action name="-" org.eventb.core.assignment="belief_base ≔ (belief_base ∖ delete_set[{action_real ↦ terms}]) ∪ add_set(action_real ↦ terms)" org.eventb.core.label="act1"/>
-        <org.eventb.core.guard name="1" org.eventb.core.label="grd4" org.eventb.core.predicate="precondition(action_real ↦ terms) ⊆ belief_base"/>
-        <org.eventb.core.action name="2" org.eventb.core.assignment="intentions ≔ (intentions ∖ {intention}) ∪  { next_stack(intention)}   " org.eventb.core.label="act2"/>
+        <org.eventb.core.parameter name=")" org.eventb.core.identifier="terms1"/>
+        <org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="intention_stack ∈ ran(intentions)"/>
+        <org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="pop(intention_stack) = {(action(action_real) ↦ terms1)}"/>
+        <org.eventb.core.action name="-" org.eventb.core.assignment="belief_base ≔ (belief_base ∖ delete_set[{action_real ↦ terms1}]) ∪ add_set(action_real ↦ terms1)" org.eventb.core.label="act1"/>
+        <org.eventb.core.guard name="1" org.eventb.core.label="grd3" org.eventb.core.predicate="precondition(action_real ↦ terms1) ⊆ belief_base"/>
+        <org.eventb.core.action name="2" org.eventb.core.assignment="intentions ≔ (intentions ∖ {({(event_real ↦ terms2)} ↦ intention_stack)}) ∪  {({(event_real ↦ terms2)} ↦ next_stack(intention_stack))}   " org.eventb.core.label="act2"/>
+        <org.eventb.core.parameter name="4" org.eventb.core.identifier="event_real"/>
+        <org.eventb.core.parameter name="5" org.eventb.core.identifier="terms2"/>
+        <org.eventb.core.guard name="7" org.eventb.core.label="grd5" org.eventb.core.predicate="(event_real ↦ terms2) ∈ Events × Terms "/>
+        <org.eventb.core.guard name="6" org.eventb.core.label="grd4" org.eventb.core.predicate="({(event_real ↦ terms2)} ↦ intention_stack) ∈ intentions"/>
     </org.eventb.core.event>
-    <org.eventb.core.variable name="2" org.eventb.core.identifier="intention_for_event"/>
     <org.eventb.core.variable name="3" org.eventb.core.identifier="backups"/>
-    <org.eventb.core.invariant name="4" org.eventb.core.label="inv4" org.eventb.core.predicate="intention_for_event ∈ (Events × Terms) → STACK(ℙ(predicate(Events,Actions,Plan_library) × Terms))"/>
-    <org.eventb.core.invariant name="5" org.eventb.core.label="inv5" org.eventb.core.predicate="backups ∈ (Events × Terms) → ℙ(Plan_library) "/>
+    <org.eventb.core.invariant name="5" org.eventb.core.label="inv5" org.eventb.core.predicate="backups ∈ (Events × Terms) ⇸ ℙ(Plan_library) "/>
 </org.eventb.core.machineFile>

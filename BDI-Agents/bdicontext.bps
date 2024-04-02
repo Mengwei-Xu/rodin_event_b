@@ -10,7 +10,8 @@
     <org.eventb.core.psStatus name="axm24/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="7" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="axm24/THM" org.eventb.core.confidence="0" org.eventb.core.poStamp="7" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="axm25/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="7" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="axm27/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="7" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="axm27/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="8" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="axm27/THM" org.eventb.core.confidence="0" org.eventb.core.poStamp="8" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="axm28/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="7" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="axm30/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="7" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="axm31/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="7" org.eventb.core.psManual="false"/>
