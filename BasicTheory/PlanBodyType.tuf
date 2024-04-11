@@ -11,5 +11,10 @@
         <org.eventb.theory.core.datatypeConstructor name="*" org.eventb.core.identifier="action">
             <org.eventb.theory.core.constructorArgument name="'" org.eventb.core.identifier="actionp" org.eventb.theory.core.type="action_predicate"/>
         </org.eventb.theory.core.datatypeConstructor>
+        <org.eventb.theory.core.datatypeConstructor name="+" org.eventb.core.identifier="plan">
+            <org.eventb.theory.core.constructorArgument name="'" org.eventb.core.identifier="planp" org.eventb.theory.core.type="plan_identifier"/>
+        </org.eventb.theory.core.datatypeConstructor>
+        <org.eventb.theory.core.typeArgument name="," org.eventb.theory.core.givenType="plan_identifier"/>
     </org.eventb.theory.core.datatypeDefinition>
+    <org.eventb.theory.core.typeParameter name="*" org.eventb.core.identifier="plan_identifier"/>
 </org.eventb.theory.core.theoryRoot>
