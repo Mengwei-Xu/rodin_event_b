@@ -37,7 +37,7 @@
     <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="Y" org.eventb.core.identifier="context"/>
     <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="Z" org.eventb.core.identifier="plan_body"/>
     <org.eventb.core.axiom name="[" org.eventb.core.label="axm11" org.eventb.core.predicate="context ∈ Plan_library → ℙ(Belief_predicates × Terms) "/>
-    <org.eventb.core.axiom name="\" org.eventb.core.label="axm12" org.eventb.core.predicate="plan_body ∈ Plan_library → STACK(ℙ(predicate(Events,Actions,Plan_library) × Terms))"/>
+    <org.eventb.core.axiom name="\" org.eventb.core.label="axm12" org.eventb.core.predicate="plan_body ∈ Plan_library → STACK(ℙ(predicate(Events, Actions, Plan_library) × Terms))"/>
     <org.eventb.core.axiom name="a" org.eventb.core.label="axm13" org.eventb.core.predicate="precondition(travel ↦ ab) = {(at ↦ a)}"/>
     <org.eventb.core.axiom name="b" org.eventb.core.label="axm14" org.eventb.core.predicate="delete_set(travel ↦ ab) = {(at ↦ a)}"/>
     <org.eventb.core.axiom name="c" org.eventb.core.label="axm15" org.eventb.core.predicate="add_set(travel ↦ ab) = {(at ↦ b)}"/>
