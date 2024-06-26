@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase" version="3">
+    <org.eventb.core.carrierSet name="5" org.eventb.core.comment="a set of variables for predicates e.g. X, Y, Z, capital" org.eventb.core.identifier="Variables"/>
+    <org.eventb.core.carrierSet name="(" org.eventb.core.comment="a set of belief predicate symbols" org.eventb.core.identifier="Belief_predicates"/>
+    <org.eventb.core.axiom name="'R" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(Predicate, Events, Actions, Plan_library)"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="=" org.eventb.core.identifier="at"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="';" org.eventb.core.identifier="smiled_at"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="'=" org.eventb.core.identifier="cried_at"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="&gt;" org.eventb.core.identifier="arrive_at"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="'9" org.eventb.core.identifier="play_at"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="?" org.eventb.core.identifier="travel"/>
+    <org.eventb.core.axiom name="E" org.eventb.core.label="axm2" org.eventb.core.predicate="partition(Belief_predicates, {at}, {smiled_at}, {cried_at},{next})"/>
+    <org.eventb.core.axiom name="F" org.eventb.core.label="axm3" org.eventb.core.predicate="partition(Events, {arrive_at}, {play_at})"/>
+    <org.eventb.core.axiom name="x" org.eventb.core.label="axm4" org.eventb.core.predicate="partition(Actions, {travel}, {smile_at}, {cry_at})"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="'@" org.eventb.core.identifier="smile_at"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="'A" org.eventb.core.identifier="cry_at"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="'T" org.eventb.core.identifier="next"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="]" org.eventb.core.identifier="plan1"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="^" org.eventb.core.identifier="plan2"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="'8" org.eventb.core.identifier="plan3"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="'D" org.eventb.core.identifier="plan4"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="true" name="O" org.eventb.core.identifier="precondition"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="true" name="P" org.eventb.core.identifier="delete_set"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="true" name="Q" org.eventb.core.identifier="add_set"/>
+    <org.eventb.core.axiom name="_" org.eventb.core.label="axm5" org.eventb.core.predicate="partition(Plan_library, {plan1}, {plan2}, {plan3}, {plan4})"/>
+    <org.eventb.core.axiom name="N" org.eventb.core.label="axm6" org.eventb.core.predicate="precondition ∈ (Actions × Terms) ↔ (Belief_predicates × Terms) "/>
+    <org.eventb.core.axiom name="R" org.eventb.core.label="axm7" org.eventb.core.predicate="delete_set ∈ (Actions × Terms) ↔ (Belief_predicates × Terms) "/>
+    <org.eventb.core.axiom name="S" org.eventb.core.label="axm8" org.eventb.core.predicate="add_set ∈ (Actions × Terms) ↔ (Belief_predicates × Terms) "/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="true" name="Z" org.eventb.core.identifier="plan_body"/>
+    <org.eventb.core.axiom name="\" org.eventb.core.label="axm9" org.eventb.core.predicate="plan_body ∈ Plan_library×Events⇸ℙ(ℙ(Belief_predicates×Terms)×Terms×STACK(ℙ(Predicate × Terms)))"/>
+    <org.eventb.core.axiom name="'H" org.eventb.core.label="axm10" org.eventb.core.predicate="precondition={terms1,terms2·&#10;&#9;terms1∈Point∧terms2∈Point&#10;∣ travel↦Vector(terms1↦terms2)↦(at↦terms1)}∪{terms·terms∈Point&#10;∣ smile_at↦terms↦(at↦terms)}∪{terms· terms∈Point&#10;∣ cry_at↦terms↦(at↦terms)}"/>
+    <org.eventb.core.axiom name="'I" org.eventb.core.label="axm11" org.eventb.core.predicate="add_set={terms,terms1,terms2·terms1∈Point∧terms2∈Point∧terms=Vector(terms1↦terms2)∣&#10;&#9;travel↦terms↦(at↦terms2)}&#10;&#9;∪{terms·terms∈Point∣cry_at↦terms↦(cried_at↦terms)}&#10;&#9;∪{terms·terms∈Point∣smile_at↦terms↦(smiled_at↦terms)}"/>
+    <org.eventb.core.axiom name="'X" org.eventb.core.label="axm12" org.eventb.core.predicate="delete_set={terms1,terms2·terms1∈Point∧terms2∈Point∣&#10;&#9;travel↦Vector(terms1↦terms2)↦(at↦terms1)}"/>
+    <org.eventb.core.axiom name="'Z" org.eventb.core.label="axm14" org.eventb.core.predicate="plan_body(plan3↦play_at)=&#10;&#9;&#9;&#9;{terms1,belief· &#10;&#9;&#9;&#9;&#9;terms1∈Point&#10;&#9;&#9;&#9;&#9;∧ at↦terms1∈belief &#10;&#9;&#9;&#9;&#9;&#9;∣belief↦terms1↦push({(smile_at ↦ terms1)}, Empty)}"/>
+    <org.eventb.core.axiom name="'M" org.eventb.core.label="axm15" org.eventb.core.predicate="plan_body(plan1↦arrive_at)={terms1,terms2,terms3,belief· &#10;&#9;&#9;&#9;&#9;terms3∈Point&#10;&#9;&#9;&#9;&#9;∧ terms2∈Point&#10;&#9;&#9;&#9;&#9;∧ terms1∈Point&#10;&#9;&#9;&#9;&#9;∧ next↦Vector(terms1↦terms2)∈belief&#10;&#9;&#9;&#9;&#9;∧ next↦Vector(terms2↦terms3)∈belief&#10;&#9;&#9;&#9;&#9;∧ at↦terms1∈ belief &#10;&#9;&#9;&#9;&#9;&#9;∣belief↦terms3↦push({(travel ↦ Vector(terms1↦terms2))}, push({(play_at ↦ terms2)}, push({(travel ↦ Vector(terms2↦terms3))}, Empty)))}&#10;"/>
+    <org.eventb.core.carrierSet name="'N" org.eventb.core.identifier="Predicate"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="'O" org.eventb.core.identifier="Events"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="'P" org.eventb.core.identifier="Actions"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="'Q" org.eventb.core.identifier="Plan_library"/>
+    <org.eventb.core.extendsContext name="'S" org.eventb.core.target="TermsContext"/>
+    <org.eventb.core.axiom name="'U" org.eventb.core.label="axm16" org.eventb.core.predicate="plan_body(plan2↦arrive_at)={terms1,terms2,belief· &#10;&#9;&#9;&#9;&#9;terms2∈Point&#10;&#9;&#9;&#9;&#9;∧ terms1∈Point&#10;&#9;&#9;&#9;&#9;∧ next↦Vector(terms1↦terms2)∈belief&#10;&#9;&#9;&#9;&#9;∧ at↦terms1∈belief &#10;&#9;&#9;&#9;&#9;&#9;∣belief↦terms2↦ push({(travel ↦ Vector(terms1↦terms2))}, Empty)}"/>
+    <org.eventb.core.axiom name="'V" org.eventb.core.label="axm17" org.eventb.core.predicate="plan_body(plan4↦play_at)={terms1,belief· &#10;&#9;&#9;&#9;&#9;terms1∈Point&#10;&#9;&#9;&#9;&#9;∧ at↦terms1∈belief &#10;&#9;&#9;&#9;&#9;&#9;∣belief↦terms1↦push({(cry_at ↦ terms1)}, Empty)}"/>
+</org.eventb.core.contextFile>
