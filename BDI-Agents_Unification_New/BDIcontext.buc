@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase" version="3">
+    <org.eventb.core.extendsContext name="'" org.eventb.core.target="TermsContext"/>
+    <org.eventb.core.axiom name="axm1" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(None_belief_predicates, Events, Actions, Plan_library)"/>
+    <org.eventb.core.axiom name="axm2" org.eventb.core.label="axm2" org.eventb.core.predicate="Preconditions ∈ (Actions × Terms) ↔ (Belief_predicates × Terms) "/>
+    <org.eventb.core.axiom name="axm3" org.eventb.core.label="axm3" org.eventb.core.predicate="Deletion_sets ∈ (Actions × Terms) ↔ (Belief_predicates × Terms) "/>
+    <org.eventb.core.axiom name="axm4" org.eventb.core.label="axm4" org.eventb.core.predicate="Addition_sets ∈ (Actions × Terms) ↔ (Belief_predicates × Terms)"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="true" name="set8" org.eventb.core.identifier="Preconditions"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="true" name="cst3" org.eventb.core.identifier="Addition_sets"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="true" name="cst2" org.eventb.core.identifier="Deletion_sets"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="true" name="cst4" org.eventb.core.identifier="Plan_body"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="cst5" org.eventb.core.identifier="Events"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="cst6" org.eventb.core.identifier="Actions"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="cst7" org.eventb.core.identifier="Plan_library"/>
+    <org.eventb.core.carrierSet name="set1" org.eventb.core.comment="a set of belief predicates symbols" org.eventb.core.identifier="Belief_predicates"/>
+    <org.eventb.core.carrierSet name="set2" org.eventb.core.comment="a set of none-belief predicates mainly to construct the plan-body such as actions and events" org.eventb.core.identifier="None_belief_predicates"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="set3" org.eventb.core.identifier="Initial_belief_base"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="true" name="set4" org.eventb.core.identifier="Initial_external_event_set"/>
+    <org.eventb.core.axiom name="axm5" org.eventb.core.label="axm5" org.eventb.core.predicate="Plan_body ∈ Events ⇸ (Plan_library⇸(ℙ(Belief_predicates×Terms)×Terms⇸ℙ(STACK(ℙ(AgentPrograms(Belief_predicates,None_belief_predicates,Terms))))))"/>
+    <org.eventb.core.axiom name="set5" org.eventb.core.label="axm6" org.eventb.core.predicate="Initial_belief_base ∈ ℙ(Belief_predicates × Terms)"/>
+    <org.eventb.core.axiom name="set6" org.eventb.core.label="axm7" org.eventb.core.predicate="Initial_external_event_set ∈  ℙ(Events × Terms)"/>
+</org.eventb.core.contextFile>

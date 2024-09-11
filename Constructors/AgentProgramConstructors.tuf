@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
+    <org.eventb.theory.core.datatypeDefinition name="'" org.eventb.core.identifier="AgentPrograms">
+        <org.eventb.theory.core.typeArgument name="'" org.eventb.theory.core.givenType="belief_predicates"/>
+        <org.eventb.theory.core.datatypeConstructor name="(" org.eventb.core.identifier="Constructor4DG">
+            <org.eventb.theory.core.constructorArgument name="'" org.eventb.core.identifier="SuccessConditions" org.eventb.theory.core.type="ℙ (belief_predicates × terms)"/>
+            <org.eventb.theory.core.constructorArgument name="(" org.eventb.core.comment="the reason why we need ℙ(None_belief_predicate) is for when we store a set of relevant plans" org.eventb.core.identifier="DGGoalPlanBodies" org.eventb.theory.core.type="ℙ (non_belief_predicates) ×terms"/>
+            <org.eventb.theory.core.constructorArgument name=")" org.eventb.core.identifier="FailureConditions" org.eventb.theory.core.type="ℙ (belief_predicates × terms)"/>
+        </org.eventb.theory.core.datatypeConstructor>
+        <org.eventb.theory.core.typeArgument name=")" org.eventb.theory.core.givenType="non_belief_predicates"/>
+        <org.eventb.theory.core.typeArgument name="*" org.eventb.theory.core.givenType="terms"/>
+        <org.eventb.theory.core.datatypeConstructor name="+" org.eventb.core.identifier="Constructor4NDG">
+            <org.eventb.theory.core.constructorArgument name="'" org.eventb.core.comment="the reason why we need ℙ(None_belief_predicate) is for when we store a set of relevant plans" org.eventb.core.identifier="NDGGoalPlanBodies" org.eventb.theory.core.type="ℙ (non_belief_predicates) ×terms"/>
+        </org.eventb.theory.core.datatypeConstructor>
+    </org.eventb.theory.core.datatypeDefinition>
+    <org.eventb.theory.core.typeParameter name="(" org.eventb.core.identifier="belief_predicates"/>
+    <org.eventb.theory.core.typeParameter name=")" org.eventb.core.identifier="non_belief_predicates"/>
+    <org.eventb.theory.core.typeParameter name="*" org.eventb.core.identifier="terms"/>
+</org.eventb.theory.core.theoryRoot>

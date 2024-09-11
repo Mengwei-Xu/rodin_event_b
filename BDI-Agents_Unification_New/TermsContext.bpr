@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.prFile version="1">
+    <org.eventb.core.prProof name="axm2/THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="Terms">
+        <org.eventb.core.lang name="L">
+            <org.eventb.theory.core.scDatatypeDefinition name="STACK">
+                <org.eventb.theory.core.scTypeArgument name="EL" org.eventb.theory.core.givenType="EL"/>
+                <org.eventb.theory.core.scDatatypeConstructor name="Empty"/>
+                <org.eventb.theory.core.scDatatypeConstructor name="push">
+                    <org.eventb.theory.core.scConstructorArgument name="pop" org.eventb.core.type="EL"/>
+                    <org.eventb.theory.core.scConstructorArgument name="next_stack" org.eventb.core.type="STACK"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+            </org.eventb.theory.core.scDatatypeDefinition>
+            <org.eventb.theory.core.scNewOperatorDefinition name="@" org.eventb.core.label="@" org.eventb.core.predicate="⊤" org.eventb.core.source="/StackTheory/StackTheo.tuf|org.eventb.theory.core.theoryRoot#StackTheo|org.eventb.theory.core.newOperatorDefinition#)" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="infix extended expression group" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="INFIX" org.eventb.theory.core.type="STACK(EL)" org.eventb.theory.core.wd="⊤">
+                <org.eventb.theory.core.scOperatorArgument name="stack1" org.eventb.core.source="/StackTheory/StackTheo.tuf|org.eventb.theory.core.theoryRoot#StackTheo|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="STACK(EL)"/>
+                <org.eventb.theory.core.scOperatorArgument name="stack2" org.eventb.core.source="/StackTheory/StackTheo.tuf|org.eventb.theory.core.theoryRoot#StackTheo|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.operatorArgument#(" org.eventb.core.type="STACK(EL)"/>
+                <org.eventb.theory.core.scRecursiveOperatorDefinition name=")" org.eventb.core.source="/StackTheory/StackTheo.tuf|org.eventb.theory.core.theoryRoot#StackTheo|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.recursiveOperatorDefinition#)" org.eventb.theory.core.inductiveArgument="stack1">
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="Empty ⦂ STACK(EL)" org.eventb.core.source="/StackTheory/StackTheo.tuf|org.eventb.theory.core.theoryRoot#StackTheo|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.recursiveOperatorDefinition#)|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="stack2"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="push(e,s)" org.eventb.core.source="/StackTheory/StackTheo.tuf|org.eventb.theory.core.theoryRoot#StackTheo|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.recursiveOperatorDefinition#)|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="push(e,s @ stack2)"/>
+                </org.eventb.theory.core.scRecursiveOperatorDefinition>
+            </org.eventb.theory.core.scNewOperatorDefinition>
+            <org.eventb.theory.core.scNewOperatorDefinition name="notEmpty" org.eventb.core.label="notEmpty" org.eventb.core.predicate="⊤" org.eventb.core.source="/StackTheory/StackTheo.tuf|org.eventb.theory.core.theoryRoot#StackTheo|org.eventb.theory.core.newOperatorDefinition#*" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.wd="⊤">
+                <org.eventb.theory.core.scOperatorArgument name="stack" org.eventb.core.source="/StackTheory/StackTheo.tuf|org.eventb.theory.core.theoryRoot#StackTheo|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="STACK(EL)"/>
+                <org.eventb.theory.core.scRecursiveOperatorDefinition name="(" org.eventb.core.source="/StackTheory/StackTheo.tuf|org.eventb.theory.core.theoryRoot#StackTheo|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(" org.eventb.theory.core.inductiveArgument="stack">
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="Empty ⦂ STACK(EL)" org.eventb.core.source="/StackTheory/StackTheo.tuf|org.eventb.theory.core.theoryRoot#StackTheo|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="push(e,s)" org.eventb.core.source="/StackTheory/StackTheo.tuf|org.eventb.theory.core.theoryRoot#StackTheo|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="⊤"/>
+                </org.eventb.theory.core.scRecursiveOperatorDefinition>
+            </org.eventb.theory.core.scNewOperatorDefinition>
+        </org.eventb.core.lang>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in goal" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p2"/>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+            <org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p3">
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p2"/>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+            <org.eventb.core.prAnte name=")" org.eventb.core.prGoal="p4">
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p2"/>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+            <org.eventb.core.prAnte name="*" org.eventb.core.prGoal="p5">
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p2"/>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+            <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="Point" org.eventb.core.type="ℙ(Terms)"/>
+        <org.eventb.core.prIdent name="a" org.eventb.core.type="Terms"/>
+        <org.eventb.core.prIdent name="b" org.eventb.core.type="Terms"/>
+        <org.eventb.core.prIdent name="c" org.eventb.core.type="Terms"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="Point⊆Terms"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="Point={a,b,c}"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬a=b"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="partition(Point,{a},{b},{c})"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="¬a=c"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬b=c"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="axm5/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3" org.eventb.core.prSets="Terms">
+        <org.eventb.core.lang name="L">
+            <org.eventb.theory.core.scDatatypeDefinition name="STACK">
+                <org.eventb.theory.core.scTypeArgument name="EL" org.eventb.theory.core.givenType="EL"/>
+                <org.eventb.theory.core.scDatatypeConstructor name="Empty"/>
+                <org.eventb.theory.core.scDatatypeConstructor name="push">
+                    <org.eventb.theory.core.scConstructorArgument name="pop" org.eventb.core.type="EL"/>
+                    <org.eventb.theory.core.scConstructorArgument name="next_stack" org.eventb.core.type="STACK"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+            </org.eventb.theory.core.scDatatypeDefinition>
+            <org.eventb.theory.core.scNewOperatorDefinition name="@" org.eventb.core.label="@" org.eventb.core.predicate="⊤" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="infix extended expression group" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="INFIX" org.eventb.theory.core.type="STACK(EL)" org.eventb.theory.core.wd="⊤">
+                <org.eventb.theory.core.scOperatorArgument name="stack1" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="STACK(EL)"/>
+                <org.eventb.theory.core.scOperatorArgument name="stack2" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.operatorArgument#(" org.eventb.core.type="STACK(EL)"/>
+                <org.eventb.theory.core.scRecursiveOperatorDefinition name=")" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.recursiveOperatorDefinition#)" org.eventb.theory.core.inductiveArgument="stack1">
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="Empty ⦂ STACK(EL)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.recursiveOperatorDefinition#)|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="stack2"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="push(e,s)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.recursiveOperatorDefinition#)|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="push(e,s @ stack2)"/>
+                </org.eventb.theory.core.scRecursiveOperatorDefinition>
+            </org.eventb.theory.core.scNewOperatorDefinition>
+            <org.eventb.theory.core.scNewOperatorDefinition name="notEmpty" org.eventb.core.label="notEmpty" org.eventb.core.predicate="⊤" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.wd="⊤">
+                <org.eventb.theory.core.scOperatorArgument name="stack" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="STACK(EL)"/>
+                <org.eventb.theory.core.scRecursiveOperatorDefinition name="(" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(" org.eventb.theory.core.inductiveArgument="stack">
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="Empty ⦂ STACK(EL)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="push(e,s)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="⊤"/>
+                </org.eventb.theory.core.scRecursiveOperatorDefinition>
+            </org.eventb.theory.core.scNewOperatorDefinition>
+        </org.eventb.core.lang>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Terms,Point,VectorTerms))" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p4,p5"/>
+                <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p4,p5"/>
+                <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Point,{a},{b},{c}))" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p6,p7,p8,p9"/>
+                        <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p6,p7,p8,p9"/>
+                        <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                            <org.eventb.core.prAnte name="'">
+                                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p10"/>
+                                <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p11"/>
+                                <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ goal" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+                                    <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p12">
+                                        <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with Point={a,b,c}" org.eventb.core.prHyps="p6">
+                                            <org.eventb.core.prAnte name="'">
+                                                <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p3" org.eventb.core.prInfHyps="p13"/>
+                                                <org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p4" org.eventb.core.prInfHyps="p14"/>
+                                                <org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p5" org.eventb.core.prInfHyps="p15"/>
+                                                <org.eventb.core.prHypAction name="DESELECT3" org.eventb.core.prHyps="p3,p4,p5"/>
+                                                <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p6"/>
+                                                <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p12" org.eventb.core.prHyps="p3,p4,p5,p7,p8,p9,p13,p14,p15">
+                                                    <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+                                                </org.eventb.core.prRule>
+                                            </org.eventb.core.prAnte>
+                                        </org.eventb.core.prRule>
+                                    </org.eventb.core.prAnte>
+                                    <org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p16">
+                                        <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional goal" org.eventb.core.prGoal="p16" org.eventb.core.prHyps="p3"/>
+                                    </org.eventb.core.prAnte>
+                                </org.eventb.core.prRule>
+                            </org.eventb.core.prAnte>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                    <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+            <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="Point" org.eventb.core.type="ℙ(Terms)"/>
+        <org.eventb.core.prIdent name="Vector" org.eventb.core.type="ℙ(Terms×Terms×Terms)"/>
+        <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        <org.eventb.core.prIdent name="a" org.eventb.core.type="Terms"/>
+        <org.eventb.core.prIdent name="b" org.eventb.core.type="Terms"/>
+        <org.eventb.core.prIdent name="c" org.eventb.core.type="Terms"/>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="Point⊆Terms"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="a ↦ c∈dom(Vector)∧Vector∈Terms × Terms ⇸ Terms"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="Point={a,b,c}"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬a=b"/>
+        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="Terms={a,b,c}∪VectorTerms"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(Point,{a},{b},{c})"/>
+        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="{a,b,c}∩VectorTerms=(∅ ⦂ ℙ(Terms))"/>
+        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="Vector∈Terms × Terms ⇸ Terms"/>
+        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="Vector∈{a,b,c} × {a,b,c} ↣ VectorTerms"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="Terms=Point∪VectorTerms"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="Point∩VectorTerms=(∅ ⦂ ℙ(Terms))"/>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="VectorTerms⊆Terms"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬a=c"/>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="a ↦ c∈dom(Vector)"/>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬b=c"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="partition(Terms,Point,VectorTerms)"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="Vector∈Point × Point ↣ VectorTerms"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
+        <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
+        <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.eqL1:1"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="axm5/THM"/>
+    <org.eventb.core.prProof name="axm8/WD"/>
+    <org.eventb.core.prProof name="axm8/THM"/>
+    <org.eventb.core.prProof name="axm6/WD" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="p0" org.eventb.core.prSets="Terms">
+        <org.eventb.core.lang name="L">
+            <org.eventb.theory.core.scDatatypeDefinition name="STACK">
+                <org.eventb.theory.core.scTypeArgument name="EL" org.eventb.theory.core.givenType="EL"/>
+                <org.eventb.theory.core.scDatatypeConstructor name="Empty"/>
+                <org.eventb.theory.core.scDatatypeConstructor name="push">
+                    <org.eventb.theory.core.scConstructorArgument name="pop" org.eventb.core.type="EL"/>
+                    <org.eventb.theory.core.scConstructorArgument name="next_stack" org.eventb.core.type="STACK"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+            </org.eventb.theory.core.scDatatypeDefinition>
+            <org.eventb.theory.core.scNewOperatorDefinition name="@" org.eventb.core.label="@" org.eventb.core.predicate="⊤" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="infix extended expression group" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="INFIX" org.eventb.theory.core.type="STACK(EL)" org.eventb.theory.core.wd="⊤">
+                <org.eventb.theory.core.scOperatorArgument name="stack1" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="STACK(EL)"/>
+                <org.eventb.theory.core.scOperatorArgument name="stack2" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.operatorArgument#(" org.eventb.core.type="STACK(EL)"/>
+                <org.eventb.theory.core.scRecursiveOperatorDefinition name=")" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.recursiveOperatorDefinition#)" org.eventb.theory.core.inductiveArgument="stack1">
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="Empty ⦂ STACK(EL)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.recursiveOperatorDefinition#)|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="stack2"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="push(e,s)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.recursiveOperatorDefinition#)|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="push(e,s @ stack2)"/>
+                </org.eventb.theory.core.scRecursiveOperatorDefinition>
+            </org.eventb.theory.core.scNewOperatorDefinition>
+            <org.eventb.theory.core.scNewOperatorDefinition name="notEmpty" org.eventb.core.label="notEmpty" org.eventb.core.predicate="⊤" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.wd="⊤">
+                <org.eventb.theory.core.scOperatorArgument name="stack" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="STACK(EL)"/>
+                <org.eventb.theory.core.scRecursiveOperatorDefinition name="(" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(" org.eventb.theory.core.inductiveArgument="stack">
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="Empty ⦂ STACK(EL)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="push(e,s)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="⊤"/>
+                </org.eventb.theory.core.scRecursiveOperatorDefinition>
+            </org.eventb.theory.core.scNewOperatorDefinition>
+        </org.eventb.core.lang>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Terms,Point,VectorTerms))" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2,p3"/>
+                <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p2,p3"/>
+                <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Point,{a},{b},{c}))" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p4,p5,p6,p7"/>
+                        <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p4,p5,p6,p7"/>
+                        <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                            <org.eventb.core.prAnte name="'">
+                                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p8"/>
+                                <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p9"/>
+                                <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with Point={a,b,c}" org.eventb.core.prHyps="p4">
+                                    <org.eventb.core.prAnte name="'">
+                                        <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p10" org.eventb.core.prInfHyps="p11"/>
+                                        <org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p2" org.eventb.core.prInfHyps="p12"/>
+                                        <org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p3" org.eventb.core.prInfHyps="p13"/>
+                                        <org.eventb.core.prHypAction name="DESELECT3" org.eventb.core.prHyps="p10,p2,p3"/>
+                                        <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p4"/>
+                                    </org.eventb.core.prAnte>
+                                </org.eventb.core.prRule>
+                            </org.eventb.core.prAnte>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                    <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+            <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="Point" org.eventb.core.type="ℙ(Terms)"/>
+        <org.eventb.core.prIdent name="a" org.eventb.core.type="Terms"/>
+        <org.eventb.core.prIdent name="b" org.eventb.core.type="Terms"/>
+        <org.eventb.core.prIdent name="c" org.eventb.core.type="Terms"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="Point⊆Terms"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="Point={a,b,c}"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬a=b"/>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="Terms={a,b,c}∪VectorTerms">
+            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="partition(Point,{a},{b},{c})"/>
+        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="{a,b,c}∩VectorTerms=(∅ ⦂ ℙ(Terms))">
+            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="Vector∈{a,b,c} × {a,b,c} ↣ VectorTerms">
+            <org.eventb.core.prIdent name="Vector" org.eventb.core.type="ℙ(Terms×Terms×Terms)"/>
+            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="Terms=Point∪VectorTerms">
+            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="Point∩VectorTerms=(∅ ⦂ ℙ(Terms))">
+            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="VectorTerms⊆Terms">
+            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬a=c"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬b=c"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(Terms,Point,VectorTerms)">
+            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="Vector∈Point × Point ↣ VectorTerms">
+            <org.eventb.core.prIdent name="Vector" org.eventb.core.type="ℙ(Terms×Terms×Terms)"/>
+            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.eqL2:1"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="axm7/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.prSets="Terms">
+        <org.eventb.core.lang name="L">
+            <org.eventb.theory.core.scDatatypeDefinition name="STACK">
+                <org.eventb.theory.core.scTypeArgument name="EL" org.eventb.theory.core.givenType="EL"/>
+                <org.eventb.theory.core.scDatatypeConstructor name="Empty"/>
+                <org.eventb.theory.core.scDatatypeConstructor name="push">
+                    <org.eventb.theory.core.scConstructorArgument name="pop" org.eventb.core.type="EL"/>
+                    <org.eventb.theory.core.scConstructorArgument name="next_stack" org.eventb.core.type="STACK"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+            </org.eventb.theory.core.scDatatypeDefinition>
+            <org.eventb.theory.core.scNewOperatorDefinition name="@" org.eventb.core.label="@" org.eventb.core.predicate="⊤" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="infix extended expression group" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="INFIX" org.eventb.theory.core.type="STACK(EL)" org.eventb.theory.core.wd="⊤">
+                <org.eventb.theory.core.scOperatorArgument name="stack1" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="STACK(EL)"/>
+                <org.eventb.theory.core.scOperatorArgument name="stack2" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.operatorArgument#(" org.eventb.core.type="STACK(EL)"/>
+                <org.eventb.theory.core.scRecursiveOperatorDefinition name=")" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.recursiveOperatorDefinition#)" org.eventb.theory.core.inductiveArgument="stack1">
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="Empty ⦂ STACK(EL)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.recursiveOperatorDefinition#)|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="stack2"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="push(e,s)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.recursiveOperatorDefinition#)|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="push(e,s @ stack2)"/>
+                </org.eventb.theory.core.scRecursiveOperatorDefinition>
+            </org.eventb.theory.core.scNewOperatorDefinition>
+            <org.eventb.theory.core.scNewOperatorDefinition name="notEmpty" org.eventb.core.label="notEmpty" org.eventb.core.predicate="⊤" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.wd="⊤">
+                <org.eventb.theory.core.scOperatorArgument name="stack" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="STACK(EL)"/>
+                <org.eventb.theory.core.scRecursiveOperatorDefinition name="(" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(" org.eventb.theory.core.inductiveArgument="stack">
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="Empty ⦂ STACK(EL)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="push(e,s)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="⊤"/>
+                </org.eventb.theory.core.scRecursiveOperatorDefinition>
+            </org.eventb.theory.core.scNewOperatorDefinition>
+        </org.eventb.core.lang>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Terms,Point,VectorTerms))" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p4,p5"/>
+                <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p4,p5"/>
+                <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Point,{a},{b},{c}))" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p6,p7,p8,p9"/>
+                        <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p6,p7,p8,p9"/>
+                        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Vector,{a ↦ b ↦ vectterm1}))" org.eventb.core.prHyps="">
+                            <org.eventb.core.prAnte name="'">
+                                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p10"/>
+                                <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p10"/>
+                                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                                    <org.eventb.core.prAnte name="'">
+                                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p11"/>
+                                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p12"/>
+                                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with Point={a,b,c}" org.eventb.core.prHyps="p6">
+                                            <org.eventb.core.prAnte name="'">
+                                                <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p13" org.eventb.core.prInfHyps="p14"/>
+                                                <org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p4" org.eventb.core.prInfHyps="p15"/>
+                                                <org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p5" org.eventb.core.prInfHyps="p16"/>
+                                                <org.eventb.core.prHypAction name="DESELECT3" org.eventb.core.prHyps="p13,p4,p5"/>
+                                                <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p6"/>
+                                                <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with Vector={a ↦ b ↦ vectterm1}" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p10">
+                                                    <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p18">
+                                                        <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p14" org.eventb.core.prInfHyps="p17"/>
+                                                        <org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p14"/>
+                                                        <org.eventb.core.prHypAction name="DESELECT2" org.eventb.core.prHyps="p10"/>
+                                                        <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p18" org.eventb.core.prHyps="">
+                                                            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p19">
+                                                                <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p19" org.eventb.core.prHyps=""/>
+                                                            </org.eventb.core.prAnte>
+                                                        </org.eventb.core.prRule>
+                                                    </org.eventb.core.prAnte>
+                                                </org.eventb.core.prRule>
+                                            </org.eventb.core.prAnte>
+                                        </org.eventb.core.prRule>
+                                    </org.eventb.core.prAnte>
+                                </org.eventb.core.prRule>
+                            </org.eventb.core.prAnte>
+                            <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                    <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+            <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="Point" org.eventb.core.type="ℙ(Terms)"/>
+        <org.eventb.core.prIdent name="Vector" org.eventb.core.type="ℙ(Terms×Terms×Terms)"/>
+        <org.eventb.core.prIdent name="a" org.eventb.core.type="Terms"/>
+        <org.eventb.core.prIdent name="b" org.eventb.core.type="Terms"/>
+        <org.eventb.core.prIdent name="c" org.eventb.core.type="Terms"/>
+        <org.eventb.core.prIdent name="vectterm1" org.eventb.core.type="Terms"/>
+        <org.eventb.core.prPred name="p17" org.eventb.core.predicate="{a ↦ b ↦ vectterm1}∈{a,b,c} × {a,b,c} ↣ VectorTerms">
+            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="Point⊆Terms"/>
+        <org.eventb.core.prPred name="p18" org.eventb.core.predicate="finite({a ↦ b ↦ vectterm1})"/>
+        <org.eventb.core.prPred name="p19" org.eventb.core.predicate="⊤"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="Point={a,b,c}"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬a=b"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="finite(Vector)"/>
+        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="Terms={a,b,c}∪VectorTerms">
+            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="partition(Point,{a},{b},{c})"/>
+        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="{a,b,c}∩VectorTerms=(∅ ⦂ ℙ(Terms))">
+            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="Vector∈{a,b,c} × {a,b,c} ↣ VectorTerms">
+            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(Vector,{a ↦ b ↦ vectterm1})"/>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="Vector={a ↦ b ↦ vectterm1}"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="Terms=Point∪VectorTerms">
+            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="Point∩VectorTerms=(∅ ⦂ ℙ(Terms))">
+            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="VectorTerms⊆Terms">
+            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬a=c"/>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬b=c"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="partition(Terms,Point,VectorTerms)">
+            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="Vector∈Point × Point ↣ VectorTerms">
+            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.eqL2:1"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+        <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="axm7/THM" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6" org.eventb.core.prSets="Terms">
+        <org.eventb.core.lang name="L">
+            <org.eventb.theory.core.scDatatypeDefinition name="STACK">
+                <org.eventb.theory.core.scTypeArgument name="EL" org.eventb.theory.core.givenType="EL"/>
+                <org.eventb.theory.core.scDatatypeConstructor name="Empty"/>
+                <org.eventb.theory.core.scDatatypeConstructor name="push">
+                    <org.eventb.theory.core.scConstructorArgument name="pop" org.eventb.core.type="EL"/>
+                    <org.eventb.theory.core.scConstructorArgument name="next_stack" org.eventb.core.type="STACK"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+            </org.eventb.theory.core.scDatatypeDefinition>
+            <org.eventb.theory.core.scNewOperatorDefinition name="@" org.eventb.core.label="@" org.eventb.core.predicate="⊤" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="infix extended expression group" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="INFIX" org.eventb.theory.core.type="STACK(EL)" org.eventb.theory.core.wd="⊤">
+                <org.eventb.theory.core.scOperatorArgument name="stack1" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="STACK(EL)"/>
+                <org.eventb.theory.core.scOperatorArgument name="stack2" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.operatorArgument#(" org.eventb.core.type="STACK(EL)"/>
+                <org.eventb.theory.core.scRecursiveOperatorDefinition name=")" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.recursiveOperatorDefinition#)" org.eventb.theory.core.inductiveArgument="stack1">
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="Empty ⦂ STACK(EL)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.recursiveOperatorDefinition#)|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="stack2"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="push(e,s)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.recursiveOperatorDefinition#)|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="push(e,s @ stack2)"/>
+                </org.eventb.theory.core.scRecursiveOperatorDefinition>
+            </org.eventb.theory.core.scNewOperatorDefinition>
+            <org.eventb.theory.core.scNewOperatorDefinition name="notEmpty" org.eventb.core.label="notEmpty" org.eventb.core.predicate="⊤" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.wd="⊤">
+                <org.eventb.theory.core.scOperatorArgument name="stack" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="STACK(EL)"/>
+                <org.eventb.theory.core.scRecursiveOperatorDefinition name="(" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(" org.eventb.theory.core.inductiveArgument="stack">
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="Empty ⦂ STACK(EL)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="push(e,s)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="⊤"/>
+                </org.eventb.theory.core.scRecursiveOperatorDefinition>
+            </org.eventb.theory.core.scNewOperatorDefinition>
+        </org.eventb.core.lang>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Terms,Point,VectorTerms))" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p7,p8"/>
+                <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p7,p8"/>
+                <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Point,{a},{b},{c}))" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p9,p10,p11,p12"/>
+                        <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p9,p10,p11,p12"/>
+                        <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                            <org.eventb.core.prAnte name="'">
+                                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p13"/>
+                                <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p14"/>
+                                <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with Point={a,b,c}" org.eventb.core.prHyps="p9">
+                                    <org.eventb.core.prAnte name="'">
+                                        <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p6" org.eventb.core.prInfHyps="p15"/>
+                                        <org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p7" org.eventb.core.prInfHyps="p16"/>
+                                        <org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p8" org.eventb.core.prInfHyps="p17"/>
+                                        <org.eventb.core.prHypAction name="DESELECT3" org.eventb.core.prHyps="p6,p7,p8"/>
+                                        <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p9"/>
+                                        <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p6,p1,p3,p2,p7,p8,p10,p11,p12,p15,p16,p17">
+                                            <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+                                        </org.eventb.core.prRule>
+                                    </org.eventb.core.prAnte>
+                                </org.eventb.core.prRule>
+                            </org.eventb.core.prAnte>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                    <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+            <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="Point" org.eventb.core.type="ℙ(Terms)"/>
+        <org.eventb.core.prIdent name="Vector" org.eventb.core.type="ℙ(Terms×Terms×Terms)"/>
+        <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        <org.eventb.core.prIdent name="a" org.eventb.core.type="Terms"/>
+        <org.eventb.core.prIdent name="b" org.eventb.core.type="Terms"/>
+        <org.eventb.core.prIdent name="c" org.eventb.core.type="Terms"/>
+        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="Point⊆Terms"/>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="Point={a,b,c}"/>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬a=b"/>
+        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="Terms={a,b,c}∪VectorTerms"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="partition(Point,{a},{b},{c})"/>
+        <org.eventb.core.prPred name="p17" org.eventb.core.predicate="{a,b,c}∩VectorTerms=(∅ ⦂ ℙ(Terms))"/>
+        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="Vector∈{a,b,c} × {a,b,c} ↣ VectorTerms"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="card(VectorTerms)=9"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="Terms=Point∪VectorTerms"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="finite(Terms)"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="Point∩VectorTerms=(∅ ⦂ ℙ(Terms))"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="finite(VectorTerms)"/>
+        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="VectorTerms⊆Terms"/>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬a=c"/>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬b=c"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="card(Terms)=12"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="partition(Terms,Point,VectorTerms)"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="Vector∈Point × Point ↣ VectorTerms"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.eqL2:1"/>
+        <org.eventb.core.prReas name="r3" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+    </org.eventb.core.prProof>
+</org.eventb.core.prFile>

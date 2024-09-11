@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+    <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+        <org.eventb.core.action name="'" org.eventb.core.assignment="belief_base ≔ Initial_belief_base" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="external_events ≔ Initial_external_event_set" org.eventb.core.label="act2"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="intentions ≔ ∅" org.eventb.core.label="act3"/>
+        <org.eventb.core.action name="+" org.eventb.core.assignment="alreadytry ≔ ∅" org.eventb.core.label="act4"/>
+        <org.eventb.core.action name="," org.eventb.core.assignment="stack_intention ≔ ∅ " org.eventb.core.label="act5"/>
+        <org.eventb.core.action name="-" org.eventb.core.assignment="plan_intention ≔∅" org.eventb.core.label="act6"/>
+    </org.eventb.core.event>
+    <org.eventb.core.seesContext name="(" org.eventb.core.target="BDIcontext"/>
+    <org.eventb.core.event name=")" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AddressExternalEvent">
+        <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="event_real ↦ terms ∈ external_events"/>
+        <org.eventb.core.parameter name="(" org.eventb.core.identifier="event_real"/>
+        <org.eventb.core.action name="*" org.eventb.core.assignment="intentions ≔ intentions ∪ {∅ ↦ push({Constructor4NDG({event_real} ↦ terms)},Empty)}" org.eventb.core.label="act1"/>
+        <org.eventb.core.parameter name="+" org.eventb.core.identifier="terms"/>
+        <org.eventb.core.action name="," org.eventb.core.assignment="external_events ≔ external_events ∖ {(event_real ↦ terms)} " org.eventb.core.label="act2"/>
+    </org.eventb.core.event>
+    <org.eventb.core.variable name="*" org.eventb.core.identifier="belief_base"/>
+    <org.eventb.core.invariant name="+" org.eventb.core.label="inv1" org.eventb.core.predicate="belief_base ∈ ℙ(Belief_predicates × Terms)"/>
+    <org.eventb.core.variable name="," org.eventb.core.identifier="external_events"/>
+    <org.eventb.core.invariant name="8" org.eventb.core.label="inv2" org.eventb.core.predicate="belief_base≠∅ "/>
+    <org.eventb.core.invariant name="-" org.eventb.core.label="inv3" org.eventb.core.predicate="external_events ∈ ℙ(Events × Terms)"/>
+    <org.eventb.core.variable name="." org.eventb.core.identifier="intentions"/>
+    <org.eventb.core.invariant name="/" org.eventb.core.label="inv4" org.eventb.core.predicate="intentions ∈ ℙ (ℙ(Events × Terms) × STACK(ℙ(Agent_programs))) "/>
+    <org.eventb.core.event name="6" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="SelectRelevantPlans">
+        <org.eventb.core.parameter name="'" org.eventb.core.identifier="event_real"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="intention_stack ∈ ran(intentions)"/>
+        <org.eventb.core.parameter name="*" org.eventb.core.identifier="terms"/>
+        <org.eventb.core.parameter name="+" org.eventb.core.identifier="relevant_plans"/>
+        <org.eventb.core.parameter name="," org.eventb.core.identifier="intention_stack"/>
+        <org.eventb.core.guard name="4" org.eventb.core.label="grd2" org.eventb.core.predicate="notEmpty(intention_stack)"/>
+        <org.eventb.core.guard name="-" org.eventb.core.label="grd3" org.eventb.core.predicate="pop(intention_stack) = {Constructor4NDG({event_real} ↦ terms)}"/>
+        <org.eventb.core.guard name="3" org.eventb.core.label="grd4" org.eventb.core.predicate="event_real∈Events"/>
+        <org.eventb.core.guard name="2" org.eventb.core.label="grd5" org.eventb.core.predicate="{(event_real ↦ terms)} ∉ dom(intentions) "/>
+        <org.eventb.core.guard name="/" org.eventb.core.label="grd6" org.eventb.core.predicate="relevant_plans ∈ ℙ(None_belief_predicates)"/>
+        <org.eventb.core.guard name="." org.eventb.core.label="grd7" org.eventb.core.predicate="relevant_plans =dom(Plan_body(event_real))" org.eventb.core.theorem="true"/>
+        <org.eventb.core.action name="0" org.eventb.core.assignment="intentions ≔ intentions ∪ {{(event_real ↦ terms)} ↦ push({Constructor4NDG(relevant_plans ↦terms)},Empty)}" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="5" org.eventb.core.assignment="plan_intention(event_real↦terms)≔one_plan" org.eventb.core.label="act2"/>
+        <org.eventb.core.guard name="6" org.eventb.core.label="grd8" org.eventb.core.predicate="one_plan∈relevant_plans"/>
+        <org.eventb.core.parameter name="7" org.eventb.core.identifier="one_plan"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="evt6" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="compute_plan">
+        <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="event_real↦terms∈dom(plan_intention)"/>
+        <org.eventb.core.parameter name="(" org.eventb.core.identifier="event_real"/>
+        <org.eventb.core.parameter name=")" org.eventb.core.identifier="terms"/>
+        <org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="event_real↦terms∉dom(stack_intention)"/>
+        <org.eventb.core.action name="+" org.eventb.core.assignment="stack_intention(event_real↦terms)≔one_stack" org.eventb.core.label="act1"/>
+        <org.eventb.core.parameter name="," org.eventb.core.identifier="one_stack"/>
+        <org.eventb.core.guard name="-" org.eventb.core.label="grd3" org.eventb.core.predicate="one_stack∈Plan_body(event_real)(plan_intention(event_real↦terms))(belief_base↦terms)"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="evt1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="SelectApplicablePlan">
+        <org.eventb.core.guard name="0" org.eventb.core.label="grd1" org.eventb.core.predicate="{event_real ↦ terms2}↦intention_stack ∈ intentions"/>
+        <org.eventb.core.guard name="8" org.eventb.core.label="grd2" org.eventb.core.predicate="notEmpty(intention_stack)"/>
+        <org.eventb.core.guard name="*" org.eventb.core.label="grd3" org.eventb.core.predicate="plan_real ∈ Plan_library"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd4" org.eventb.core.predicate="Constructor4NDG({plan_real} ↦ terms2) ∈ pop(intention_stack)"/>
+        <org.eventb.core.action name="6" org.eventb.core.assignment="alreadytry ≔alreadytry ∪{ event_real ↦terms2↦plan_body_stack}" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="intentions ≔ (intentions ∖ {{(event_real ↦ terms2)} ↦ intention_stack}) ∪ {{(event_real ↦ terms2)} ↦ plan_body_stack @ (next_stack(intention_stack))}" org.eventb.core.label="act2"/>
+        <org.eventb.core.guard name=";" org.eventb.core.label="grd5" org.eventb.core.predicate="plan_real=plan_intention(event_real↦terms2)"/>
+        <org.eventb.core.guard name="9" org.eventb.core.label="grd6" org.eventb.core.predicate="event_real↦terms2↦plan_body_stack∉alreadytry "/>
+        <org.eventb.core.guard name="2" org.eventb.core.comment="plan_body(event_real)(plan_real)(belief_base↦terms2)" org.eventb.core.label="grd7" org.eventb.core.predicate="plan_body_stack=stack_intention(event_real↦terms2)"/>
+        <org.eventb.core.parameter name="," org.eventb.core.identifier="plan_real"/>
+        <org.eventb.core.parameter name="4" org.eventb.core.identifier="event_real"/>
+        <org.eventb.core.parameter name="7" org.eventb.core.identifier="terms2"/>
+        <org.eventb.core.parameter name="/" org.eventb.core.identifier="intention_stack"/>
+        <org.eventb.core.parameter name="1" org.eventb.core.identifier="plan_body_stack"/>
+        <org.eventb.core.action name=":" org.eventb.core.assignment="plan_intention ≔ {event_real↦terms2}⩤plan_intention" org.eventb.core.label="act3"/>
+        <org.eventb.core.action name="=" org.eventb.core.assignment="stack_intention≔ {event_real↦terms2}⩤stack_intention" org.eventb.core.label="act4"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ExecuteAction">
+        <org.eventb.core.parameter name="'" org.eventb.core.identifier="intention_stack"/>
+        <org.eventb.core.parameter name="(" org.eventb.core.identifier="action_real"/>
+        <org.eventb.core.guard name="6" org.eventb.core.label="grd1" org.eventb.core.predicate="({(event_real ↦ terms2)} ↦ intention_stack) ∈ intentions"/>
+        <org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="notEmpty(intention_stack)"/>
+        <org.eventb.core.action name="-" org.eventb.core.assignment="belief_base ≔ next_belief_base" org.eventb.core.label="act1"/>
+        <org.eventb.core.guard name="8" org.eventb.core.label="grd3" org.eventb.core.predicate="action_real∈Actions "/>
+        <org.eventb.core.guard name="&gt;" org.eventb.core.label="grd4" org.eventb.core.predicate="pop(intention_stack) = {Constructor4NDG({action_real} ↦ terms1)}"/>
+        <org.eventb.core.guard name="?" org.eventb.core.label="grd5" org.eventb.core.predicate="action_real↦terms1∈dom(Preconditions)"/>
+        <org.eventb.core.guard name="1" org.eventb.core.label="grd6" org.eventb.core.predicate="Preconditions[{action_real ↦ terms1}] ⊆ belief_base"/>
+        <org.eventb.core.action name="2" org.eventb.core.assignment="intentions ≔ next_intentions  " org.eventb.core.label="act2"/>
+        <org.eventb.core.parameter name="4" org.eventb.core.identifier="event_real"/>
+        <org.eventb.core.parameter name=")" org.eventb.core.identifier="terms1"/>
+        <org.eventb.core.parameter name="5" org.eventb.core.identifier="terms2"/>
+        <org.eventb.core.parameter name="9" org.eventb.core.identifier="next_intentions"/>
+        <org.eventb.core.guard name=":" org.eventb.core.label="grd7" org.eventb.core.predicate="next_intentions=(intentions ∖ {({(event_real ↦ terms2)} ↦ intention_stack)}) ∪  {({(event_real ↦ terms2)} ↦ next_stack(intention_stack))} "/>
+        <org.eventb.core.parameter name=";" org.eventb.core.identifier="next_belief_base"/>
+        <org.eventb.core.guard name="=" org.eventb.core.label="grd8" org.eventb.core.predicate="next_belief_base=(belief_base ∖ Deletion_sets[{action_real ↦ terms1}]) ∪ Addition_sets[{action_real ↦ terms1}]"/>
+    </org.eventb.core.event>
+    <org.eventb.core.variable name="3" org.eventb.core.identifier="alreadytry"/>
+    <org.eventb.core.invariant name="5" org.eventb.core.label="inv5" org.eventb.core.predicate="alreadytry ∈ (Events × Terms) ↔ STACK(ℙ(Agent_programs))"/>
+    <org.eventb.core.event name="7" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="FailureRecoveryBlockedAction">
+        <org.eventb.core.parameter name="'" org.eventb.core.identifier="intention_stack"/>
+        <org.eventb.core.guard name="4" org.eventb.core.label="grd1" org.eventb.core.predicate="({(event_real ↦ terms2)} ↦ intention_stack) ∈ intentions"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="action_real∈Actions"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="intentions ≔ (intentions ∖ {({(event_real ↦ terms2)} ↦ intention_stack)}) ∪  {({(event_real ↦ terms2)} ↦ push({Constructor4NDG(dom(Plan_body(event_real)) ↦ terms2)},Empty))}   " org.eventb.core.label="act1"/>
+        <org.eventb.core.parameter name="*" org.eventb.core.identifier="action_real"/>
+        <org.eventb.core.parameter name="+" org.eventb.core.identifier="event_real"/>
+        <org.eventb.core.parameter name="-" org.eventb.core.identifier="terms1"/>
+        <org.eventb.core.parameter name="." org.eventb.core.identifier="terms2"/>
+        <org.eventb.core.guard name="5" org.eventb.core.label="grd3" org.eventb.core.predicate="notEmpty(intention_stack)"/>
+        <org.eventb.core.guard name="1" org.eventb.core.label="grd4" org.eventb.core.predicate="pop(intention_stack) = {Constructor4NDG({action_real} ↦ terms1)}"/>
+        <org.eventb.core.guard name="2" org.eventb.core.label="grd5" org.eventb.core.predicate="Preconditions[{action_real ↦ terms1}] ⊈ belief_base"/>
+        <org.eventb.core.guard name="3" org.eventb.core.label="grd6" org.eventb.core.predicate="(event_real ↦ terms2) ∈ Events × Terms "/>
+    </org.eventb.core.event>
+    <org.eventb.core.variable name="evt2" org.eventb.core.identifier="plan_intention"/>
+    <org.eventb.core.variable name="evt3" org.eventb.core.identifier="stack_intention"/>
+    <org.eventb.core.invariant name="evt4" org.eventb.core.label="inv6" org.eventb.core.predicate="plan_intention ∈ Events×Terms ⇸ Plan_library"/>
+    <org.eventb.core.invariant name="evt5" org.eventb.core.label="inv7" org.eventb.core.predicate="stack_intention ∈ Events×Terms ⇸ STACK(ℙ(Agent_programs))"/>
+    <org.eventb.core.event name="evt7" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="evt1">
+        <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="dgp ∈ Declarative_goal_programs"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="SuccessConditions(DGPtoDG(dgp)) ⊈ belief_base"/>
+        <org.eventb.core.parameter name=")" org.eventb.core.identifier="dgp"/>
+    </org.eventb.core.event>
+</org.eventb.core.machineFile>
