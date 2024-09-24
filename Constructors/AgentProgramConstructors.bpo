@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="1">
-    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="1">
-        <org.eventb.core.poIdentifier name="non_belief_predicates" org.eventb.core.type="ℙ(non_belief_predicates)"/>
-        <org.eventb.core.poIdentifier name="belief_predicates" org.eventb.core.type="ℙ(belief_predicates)"/>
-        <org.eventb.core.poIdentifier name="terms" org.eventb.core.type="ℙ(terms)"/>
-    </org.eventb.core.poPredicateSet>
-</org.eventb.core.poFile>
