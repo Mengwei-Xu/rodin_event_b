@@ -9886,20 +9886,6 @@
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="axm35/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="Belief_predicates,Plan_library,Terms">
         <org.eventb.core.lang name="L">
-            <org.eventb.theory.core.scDatatypeDefinition name="predicate">
-                <org.eventb.theory.core.scTypeArgument name="event_predicate" org.eventb.theory.core.givenType="event_predicate"/>
-                <org.eventb.theory.core.scTypeArgument name="action_predicate" org.eventb.theory.core.givenType="action_predicate"/>
-                <org.eventb.theory.core.scTypeArgument name="plan_predicate" org.eventb.theory.core.givenType="plan_predicate"/>
-                <org.eventb.theory.core.scDatatypeConstructor name="event">
-                    <org.eventb.theory.core.scConstructorArgument name="eventp" org.eventb.core.type="event_predicate"/>
-                </org.eventb.theory.core.scDatatypeConstructor>
-                <org.eventb.theory.core.scDatatypeConstructor name="action">
-                    <org.eventb.theory.core.scConstructorArgument name="actionp" org.eventb.core.type="action_predicate"/>
-                </org.eventb.theory.core.scDatatypeConstructor>
-                <org.eventb.theory.core.scDatatypeConstructor name="plan">
-                    <org.eventb.theory.core.scConstructorArgument name="planp" org.eventb.core.type="plan_predicate"/>
-                </org.eventb.theory.core.scDatatypeConstructor>
-            </org.eventb.theory.core.scDatatypeDefinition>
             <org.eventb.theory.core.scDatatypeDefinition name="STACK">
                 <org.eventb.theory.core.scTypeArgument name="EL" org.eventb.theory.core.givenType="EL"/>
                 <org.eventb.theory.core.scDatatypeConstructor name="Empty"/>
@@ -9923,6 +9909,20 @@
                     <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="push(e,s)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="⊤"/>
                 </org.eventb.theory.core.scRecursiveOperatorDefinition>
             </org.eventb.theory.core.scNewOperatorDefinition>
+            <org.eventb.theory.core.scDatatypeDefinition name="predicate">
+                <org.eventb.theory.core.scTypeArgument name="event_predicate" org.eventb.theory.core.givenType="event_predicate"/>
+                <org.eventb.theory.core.scTypeArgument name="action_predicate" org.eventb.theory.core.givenType="action_predicate"/>
+                <org.eventb.theory.core.scTypeArgument name="plan_identifier" org.eventb.theory.core.givenType="plan_identifier"/>
+                <org.eventb.theory.core.scDatatypeConstructor name="event">
+                    <org.eventb.theory.core.scConstructorArgument name="eventp" org.eventb.core.type="event_predicate"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+                <org.eventb.theory.core.scDatatypeConstructor name="action">
+                    <org.eventb.theory.core.scConstructorArgument name="actionp" org.eventb.core.type="action_predicate"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+                <org.eventb.theory.core.scDatatypeConstructor name="plan">
+                    <org.eventb.theory.core.scConstructorArgument name="planp" org.eventb.core.type="plan_identifier"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+            </org.eventb.theory.core.scDatatypeDefinition>
         </org.eventb.core.lang>
         <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Terms,{a},{b},{c},{ab},{bc},{ac}))" org.eventb.core.prHyps="">
             <org.eventb.core.prAnte name="'">
@@ -10157,29 +10157,15 @@
             <org.eventb.core.prIdent name="bc" org.eventb.core.type="Terms"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prExpr name="e0" org.eventb.core.expression="Plan_library"/>
-        <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
-        <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
+        <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
+        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+        <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="axm36/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="Actions,Events,Plan_library,Terms">
         <org.eventb.core.lang name="L">
-            <org.eventb.theory.core.scDatatypeDefinition name="predicate">
-                <org.eventb.theory.core.scTypeArgument name="event_predicate" org.eventb.theory.core.givenType="event_predicate"/>
-                <org.eventb.theory.core.scTypeArgument name="action_predicate" org.eventb.theory.core.givenType="action_predicate"/>
-                <org.eventb.theory.core.scTypeArgument name="plan_predicate" org.eventb.theory.core.givenType="plan_predicate"/>
-                <org.eventb.theory.core.scDatatypeConstructor name="event">
-                    <org.eventb.theory.core.scConstructorArgument name="eventp" org.eventb.core.type="event_predicate"/>
-                </org.eventb.theory.core.scDatatypeConstructor>
-                <org.eventb.theory.core.scDatatypeConstructor name="action">
-                    <org.eventb.theory.core.scConstructorArgument name="actionp" org.eventb.core.type="action_predicate"/>
-                </org.eventb.theory.core.scDatatypeConstructor>
-                <org.eventb.theory.core.scDatatypeConstructor name="plan">
-                    <org.eventb.theory.core.scConstructorArgument name="planp" org.eventb.core.type="plan_predicate"/>
-                </org.eventb.theory.core.scDatatypeConstructor>
-            </org.eventb.theory.core.scDatatypeDefinition>
             <org.eventb.theory.core.scDatatypeDefinition name="STACK">
                 <org.eventb.theory.core.scTypeArgument name="EL" org.eventb.theory.core.givenType="EL"/>
                 <org.eventb.theory.core.scDatatypeConstructor name="Empty"/>
@@ -10203,6 +10189,20 @@
                     <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="push(e,s)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="⊤"/>
                 </org.eventb.theory.core.scRecursiveOperatorDefinition>
             </org.eventb.theory.core.scNewOperatorDefinition>
+            <org.eventb.theory.core.scDatatypeDefinition name="predicate">
+                <org.eventb.theory.core.scTypeArgument name="event_predicate" org.eventb.theory.core.givenType="event_predicate"/>
+                <org.eventb.theory.core.scTypeArgument name="action_predicate" org.eventb.theory.core.givenType="action_predicate"/>
+                <org.eventb.theory.core.scTypeArgument name="plan_identifier" org.eventb.theory.core.givenType="plan_identifier"/>
+                <org.eventb.theory.core.scDatatypeConstructor name="event">
+                    <org.eventb.theory.core.scConstructorArgument name="eventp" org.eventb.core.type="event_predicate"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+                <org.eventb.theory.core.scDatatypeConstructor name="action">
+                    <org.eventb.theory.core.scConstructorArgument name="actionp" org.eventb.core.type="action_predicate"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+                <org.eventb.theory.core.scDatatypeConstructor name="plan">
+                    <org.eventb.theory.core.scConstructorArgument name="planp" org.eventb.core.type="plan_identifier"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+            </org.eventb.theory.core.scDatatypeDefinition>
         </org.eventb.core.lang>
         <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Terms,{a},{b},{c},{ab},{bc},{ac}))" org.eventb.core.prHyps="">
             <org.eventb.core.prAnte name="'">
@@ -10273,6 +10273,7 @@
             <org.eventb.core.prIdent name="at" org.eventb.core.type="Belief_predicates"/>
             <org.eventb.core.prIdent name="smiled_at" org.eventb.core.type="Belief_predicates"/>
         </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="plan_body∈Plan_library → STACK(ℙ(predicate(Events,Actions,Plan_library) × Terms))"/>
         <org.eventb.core.prPred name="p28" org.eventb.core.predicate="Actions={travel,smile_at,joke_at}">
             <org.eventb.core.prIdent name="joke_at" org.eventb.core.type="Actions"/>
             <org.eventb.core.prIdent name="smile_at" org.eventb.core.type="Actions"/>
@@ -10284,7 +10285,6 @@
             <org.eventb.core.prIdent name="joked_at" org.eventb.core.type="Belief_predicates"/>
             <org.eventb.core.prIdent name="smiled_at" org.eventb.core.type="Belief_predicates"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p43" org.eventb.core.predicate="plan_body∈Plan_library ⇸ STACK(ℙ(predicate(Events,Actions,Plan_library) × Terms))"/>
         <org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬b=ac">
             <org.eventb.core.prIdent name="ac" org.eventb.core.type="Terms"/>
             <org.eventb.core.prIdent name="b" org.eventb.core.type="Terms"/>
@@ -10293,7 +10293,6 @@
             <org.eventb.core.prIdent name="smile_at" org.eventb.core.type="Actions"/>
             <org.eventb.core.prIdent name="travel" org.eventb.core.type="Actions"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="plan1∈dom(plan_body)∧plan_body∈Plan_library ⇸ STACK(ℙ(predicate(Events,Actions,Plan_library) × Terms))"/>
         <org.eventb.core.prPred name="p15" org.eventb.core.predicate="¬c=ac">
             <org.eventb.core.prIdent name="ac" org.eventb.core.type="Terms"/>
             <org.eventb.core.prIdent name="c" org.eventb.core.type="Terms"/>
@@ -10316,7 +10315,6 @@
             <org.eventb.core.prIdent name="ab" org.eventb.core.type="Terms"/>
             <org.eventb.core.prIdent name="b" org.eventb.core.type="Terms"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="plan_body∈Plan_library → STACK(ℙ(predicate(Events,Actions,Plan_library) × Terms))"/>
         <org.eventb.core.prPred name="p40" org.eventb.core.predicate="plan1∈dom(plan_body)"/>
         <org.eventb.core.prPred name="p27" org.eventb.core.predicate="partition(Actions,{travel},{smile_at},{joke_at})">
             <org.eventb.core.prIdent name="joke_at" org.eventb.core.type="Actions"/>
@@ -10364,6 +10362,7 @@
             <org.eventb.core.prIdent name="at" org.eventb.core.type="Belief_predicates"/>
             <org.eventb.core.prIdent name="joked_at" org.eventb.core.type="Belief_predicates"/>
         </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="plan1∈dom(plan_body)∧plan_body∈Plan_library ⇸ STACK(ℙ(predicate(Events,Actions,Plan_library) × Terms))"/>
         <org.eventb.core.prPred name="p31" org.eventb.core.predicate="¬smile_at=joke_at">
             <org.eventb.core.prIdent name="joke_at" org.eventb.core.type="Actions"/>
             <org.eventb.core.prIdent name="smile_at" org.eventb.core.type="Actions"/>
@@ -10405,6 +10404,7 @@
             <org.eventb.core.prIdent name="joked_at" org.eventb.core.type="Belief_predicates"/>
             <org.eventb.core.prIdent name="smiled_at" org.eventb.core.type="Belief_predicates"/>
         </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p43" org.eventb.core.predicate="plan_body∈Plan_library ⇸ STACK(ℙ(predicate(Events,Actions,Plan_library) × Terms))"/>
         <org.eventb.core.prPred name="p3" org.eventb.core.predicate="Terms={a,b,c,ab,bc,ac}">
             <org.eventb.core.prIdent name="a" org.eventb.core.type="Terms"/>
             <org.eventb.core.prIdent name="ab" org.eventb.core.type="Terms"/>
@@ -10434,29 +10434,15 @@
             <org.eventb.core.prIdent name="bc" org.eventb.core.type="Terms"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prExpr name="e0" org.eventb.core.expression="Plan_library"/>
-        <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
-        <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
+        <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
+        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+        <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="axm38/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.prSets="Belief_predicates,Plan_library,Terms">
         <org.eventb.core.lang name="L">
-            <org.eventb.theory.core.scDatatypeDefinition name="predicate">
-                <org.eventb.theory.core.scTypeArgument name="event_predicate" org.eventb.theory.core.givenType="event_predicate"/>
-                <org.eventb.theory.core.scTypeArgument name="action_predicate" org.eventb.theory.core.givenType="action_predicate"/>
-                <org.eventb.theory.core.scTypeArgument name="plan_predicate" org.eventb.theory.core.givenType="plan_predicate"/>
-                <org.eventb.theory.core.scDatatypeConstructor name="event">
-                    <org.eventb.theory.core.scConstructorArgument name="eventp" org.eventb.core.type="event_predicate"/>
-                </org.eventb.theory.core.scDatatypeConstructor>
-                <org.eventb.theory.core.scDatatypeConstructor name="action">
-                    <org.eventb.theory.core.scConstructorArgument name="actionp" org.eventb.core.type="action_predicate"/>
-                </org.eventb.theory.core.scDatatypeConstructor>
-                <org.eventb.theory.core.scDatatypeConstructor name="plan">
-                    <org.eventb.theory.core.scConstructorArgument name="planp" org.eventb.core.type="plan_predicate"/>
-                </org.eventb.theory.core.scDatatypeConstructor>
-            </org.eventb.theory.core.scDatatypeDefinition>
             <org.eventb.theory.core.scDatatypeDefinition name="STACK">
                 <org.eventb.theory.core.scTypeArgument name="EL" org.eventb.theory.core.givenType="EL"/>
                 <org.eventb.theory.core.scDatatypeConstructor name="Empty"/>
@@ -10480,6 +10466,20 @@
                     <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="push(e,s)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="⊤"/>
                 </org.eventb.theory.core.scRecursiveOperatorDefinition>
             </org.eventb.theory.core.scNewOperatorDefinition>
+            <org.eventb.theory.core.scDatatypeDefinition name="predicate">
+                <org.eventb.theory.core.scTypeArgument name="event_predicate" org.eventb.theory.core.givenType="event_predicate"/>
+                <org.eventb.theory.core.scTypeArgument name="action_predicate" org.eventb.theory.core.givenType="action_predicate"/>
+                <org.eventb.theory.core.scTypeArgument name="plan_identifier" org.eventb.theory.core.givenType="plan_identifier"/>
+                <org.eventb.theory.core.scDatatypeConstructor name="event">
+                    <org.eventb.theory.core.scConstructorArgument name="eventp" org.eventb.core.type="event_predicate"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+                <org.eventb.theory.core.scDatatypeConstructor name="action">
+                    <org.eventb.theory.core.scConstructorArgument name="actionp" org.eventb.core.type="action_predicate"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+                <org.eventb.theory.core.scDatatypeConstructor name="plan">
+                    <org.eventb.theory.core.scConstructorArgument name="planp" org.eventb.core.type="plan_identifier"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+            </org.eventb.theory.core.scDatatypeDefinition>
         </org.eventb.core.lang>
         <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Terms,{a},{b},{c},{ab},{bc},{ac}))" org.eventb.core.prHyps="">
             <org.eventb.core.prAnte name="'">
@@ -10716,29 +10716,15 @@
             <org.eventb.core.prIdent name="bc" org.eventb.core.type="Terms"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prExpr name="e0" org.eventb.core.expression="Plan_library"/>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL4"/>
-        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-        <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
         <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
+        <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL4"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="axm39/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.prSets="Actions,Events,Plan_library,Terms">
         <org.eventb.core.lang name="L">
-            <org.eventb.theory.core.scDatatypeDefinition name="predicate">
-                <org.eventb.theory.core.scTypeArgument name="event_predicate" org.eventb.theory.core.givenType="event_predicate"/>
-                <org.eventb.theory.core.scTypeArgument name="action_predicate" org.eventb.theory.core.givenType="action_predicate"/>
-                <org.eventb.theory.core.scTypeArgument name="plan_predicate" org.eventb.theory.core.givenType="plan_predicate"/>
-                <org.eventb.theory.core.scDatatypeConstructor name="event">
-                    <org.eventb.theory.core.scConstructorArgument name="eventp" org.eventb.core.type="event_predicate"/>
-                </org.eventb.theory.core.scDatatypeConstructor>
-                <org.eventb.theory.core.scDatatypeConstructor name="action">
-                    <org.eventb.theory.core.scConstructorArgument name="actionp" org.eventb.core.type="action_predicate"/>
-                </org.eventb.theory.core.scDatatypeConstructor>
-                <org.eventb.theory.core.scDatatypeConstructor name="plan">
-                    <org.eventb.theory.core.scConstructorArgument name="planp" org.eventb.core.type="plan_predicate"/>
-                </org.eventb.theory.core.scDatatypeConstructor>
-            </org.eventb.theory.core.scDatatypeDefinition>
             <org.eventb.theory.core.scDatatypeDefinition name="STACK">
                 <org.eventb.theory.core.scTypeArgument name="EL" org.eventb.theory.core.givenType="EL"/>
                 <org.eventb.theory.core.scDatatypeConstructor name="Empty"/>
@@ -10762,6 +10748,20 @@
                     <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="push(e,s)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="⊤"/>
                 </org.eventb.theory.core.scRecursiveOperatorDefinition>
             </org.eventb.theory.core.scNewOperatorDefinition>
+            <org.eventb.theory.core.scDatatypeDefinition name="predicate">
+                <org.eventb.theory.core.scTypeArgument name="event_predicate" org.eventb.theory.core.givenType="event_predicate"/>
+                <org.eventb.theory.core.scTypeArgument name="action_predicate" org.eventb.theory.core.givenType="action_predicate"/>
+                <org.eventb.theory.core.scTypeArgument name="plan_identifier" org.eventb.theory.core.givenType="plan_identifier"/>
+                <org.eventb.theory.core.scDatatypeConstructor name="event">
+                    <org.eventb.theory.core.scConstructorArgument name="eventp" org.eventb.core.type="event_predicate"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+                <org.eventb.theory.core.scDatatypeConstructor name="action">
+                    <org.eventb.theory.core.scConstructorArgument name="actionp" org.eventb.core.type="action_predicate"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+                <org.eventb.theory.core.scDatatypeConstructor name="plan">
+                    <org.eventb.theory.core.scConstructorArgument name="planp" org.eventb.core.type="plan_identifier"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+            </org.eventb.theory.core.scDatatypeDefinition>
         </org.eventb.core.lang>
         <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Terms,{a},{b},{c},{ab},{bc},{ac}))" org.eventb.core.prHyps="">
             <org.eventb.core.prAnte name="'">
@@ -10783,11 +10783,11 @@
                                             <org.eventb.core.prAnte name="'">
                                                 <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p33" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p34,p35,p36,p37,p38,p39,p40"/>
                                                 <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p34,p35,p36,p37,p38,p39,p40"/>
-                                                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p2">
+                                                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1">
                                                     <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p41">
                                                         <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p41" org.eventb.core.prHyps="">
                                                             <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p42">
-                                                                <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p42" org.eventb.core.prHyps="p1">
+                                                                <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p42" org.eventb.core.prHyps="p2">
                                                                     <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p43">
                                                                         <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p43" org.eventb.core.prHyps="">
                                                                             <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p44">
@@ -10832,19 +10832,18 @@
             <org.eventb.core.prIdent name="at" org.eventb.core.type="Belief_predicates"/>
             <org.eventb.core.prIdent name="smiled_at" org.eventb.core.type="Belief_predicates"/>
         </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="plan_body∈Plan_library → STACK(ℙ(predicate(Events,Actions,Plan_library) × Terms))"/>
         <org.eventb.core.prPred name="p29" org.eventb.core.predicate="Actions={travel,smile_at,joke_at}">
             <org.eventb.core.prIdent name="joke_at" org.eventb.core.type="Actions"/>
             <org.eventb.core.prIdent name="smile_at" org.eventb.core.type="Actions"/>
             <org.eventb.core.prIdent name="travel" org.eventb.core.type="Actions"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="plan2∈dom(plan_body)∧plan_body∈Plan_library ⇸ STACK(ℙ(predicate(Events,Actions,Plan_library) × Terms))"/>
         <org.eventb.core.prPred name="p20" org.eventb.core.predicate="partition(Belief_predicates,{at},{smiled_at},{joked_at})">
             <org.eventb.core.prIdent name="Belief_predicates" org.eventb.core.type="ℙ(Belief_predicates)"/>
             <org.eventb.core.prIdent name="at" org.eventb.core.type="Belief_predicates"/>
             <org.eventb.core.prIdent name="joked_at" org.eventb.core.type="Belief_predicates"/>
             <org.eventb.core.prIdent name="smiled_at" org.eventb.core.type="Belief_predicates"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="plan_body∈Plan_library ⇸ STACK(ℙ(predicate(Events,Actions,Plan_library) × Terms))"/>
         <org.eventb.core.prPred name="p13" org.eventb.core.predicate="¬b=ac">
             <org.eventb.core.prIdent name="ac" org.eventb.core.type="Terms"/>
             <org.eventb.core.prIdent name="b" org.eventb.core.type="Terms"/>
@@ -10875,7 +10874,6 @@
             <org.eventb.core.prIdent name="ab" org.eventb.core.type="Terms"/>
             <org.eventb.core.prIdent name="b" org.eventb.core.type="Terms"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="plan_body∈Plan_library → STACK(ℙ(predicate(Events,Actions,Plan_library) × Terms))"/>
         <org.eventb.core.prPred name="p28" org.eventb.core.predicate="partition(Actions,{travel},{smile_at},{joke_at})">
             <org.eventb.core.prIdent name="joke_at" org.eventb.core.type="Actions"/>
             <org.eventb.core.prIdent name="smile_at" org.eventb.core.type="Actions"/>
@@ -10896,6 +10894,7 @@
             <org.eventb.core.prIdent name="joke_at" org.eventb.core.type="Actions"/>
             <org.eventb.core.prIdent name="travel" org.eventb.core.type="Actions"/>
         </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="plan2∈dom(plan_body)∧plan_body∈Plan_library ⇸ STACK(ℙ(predicate(Events,Actions,Plan_library) × Terms))"/>
         <org.eventb.core.prPred name="p14" org.eventb.core.predicate="¬c=ab">
             <org.eventb.core.prIdent name="ab" org.eventb.core.type="Terms"/>
             <org.eventb.core.prIdent name="c" org.eventb.core.type="Terms"/>
@@ -10964,6 +10963,7 @@
             <org.eventb.core.prIdent name="joked_at" org.eventb.core.type="Belief_predicates"/>
             <org.eventb.core.prIdent name="smiled_at" org.eventb.core.type="Belief_predicates"/>
         </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="plan_body∈Plan_library ⇸ STACK(ℙ(predicate(Events,Actions,Plan_library) × Terms))"/>
         <org.eventb.core.prPred name="p4" org.eventb.core.predicate="Terms={a,b,c,ab,bc,ac}">
             <org.eventb.core.prIdent name="a" org.eventb.core.type="Terms"/>
             <org.eventb.core.prIdent name="ab" org.eventb.core.type="Terms"/>
@@ -10995,29 +10995,15 @@
             <org.eventb.core.prIdent name="bc" org.eventb.core.type="Terms"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prExpr name="e0" org.eventb.core.expression="Plan_library"/>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL4"/>
-        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-        <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
         <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
+        <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL4"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="axm34/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="Events,Plan_library,Terms">
         <org.eventb.core.lang name="L">
-            <org.eventb.theory.core.scDatatypeDefinition name="predicate">
-                <org.eventb.theory.core.scTypeArgument name="event_predicate" org.eventb.theory.core.givenType="event_predicate"/>
-                <org.eventb.theory.core.scTypeArgument name="action_predicate" org.eventb.theory.core.givenType="action_predicate"/>
-                <org.eventb.theory.core.scTypeArgument name="plan_predicate" org.eventb.theory.core.givenType="plan_predicate"/>
-                <org.eventb.theory.core.scDatatypeConstructor name="event">
-                    <org.eventb.theory.core.scConstructorArgument name="eventp" org.eventb.core.type="event_predicate"/>
-                </org.eventb.theory.core.scDatatypeConstructor>
-                <org.eventb.theory.core.scDatatypeConstructor name="action">
-                    <org.eventb.theory.core.scConstructorArgument name="actionp" org.eventb.core.type="action_predicate"/>
-                </org.eventb.theory.core.scDatatypeConstructor>
-                <org.eventb.theory.core.scDatatypeConstructor name="plan">
-                    <org.eventb.theory.core.scConstructorArgument name="planp" org.eventb.core.type="plan_predicate"/>
-                </org.eventb.theory.core.scDatatypeConstructor>
-            </org.eventb.theory.core.scDatatypeDefinition>
             <org.eventb.theory.core.scDatatypeDefinition name="STACK">
                 <org.eventb.theory.core.scTypeArgument name="EL" org.eventb.theory.core.givenType="EL"/>
                 <org.eventb.theory.core.scDatatypeConstructor name="Empty"/>
@@ -11041,6 +11027,20 @@
                     <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="push(e,s)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="⊤"/>
                 </org.eventb.theory.core.scRecursiveOperatorDefinition>
             </org.eventb.theory.core.scNewOperatorDefinition>
+            <org.eventb.theory.core.scDatatypeDefinition name="predicate">
+                <org.eventb.theory.core.scTypeArgument name="event_predicate" org.eventb.theory.core.givenType="event_predicate"/>
+                <org.eventb.theory.core.scTypeArgument name="action_predicate" org.eventb.theory.core.givenType="action_predicate"/>
+                <org.eventb.theory.core.scTypeArgument name="plan_identifier" org.eventb.theory.core.givenType="plan_identifier"/>
+                <org.eventb.theory.core.scDatatypeConstructor name="event">
+                    <org.eventb.theory.core.scConstructorArgument name="eventp" org.eventb.core.type="event_predicate"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+                <org.eventb.theory.core.scDatatypeConstructor name="action">
+                    <org.eventb.theory.core.scConstructorArgument name="actionp" org.eventb.core.type="action_predicate"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+                <org.eventb.theory.core.scDatatypeConstructor name="plan">
+                    <org.eventb.theory.core.scConstructorArgument name="planp" org.eventb.core.type="plan_identifier"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+            </org.eventb.theory.core.scDatatypeDefinition>
         </org.eventb.core.lang>
         <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Terms,{a},{b},{c},{ab},{bc},{ac}))" org.eventb.core.prHyps="">
             <org.eventb.core.prAnte name="'">
@@ -11277,29 +11277,15 @@
             <org.eventb.core.prIdent name="bc" org.eventb.core.type="Terms"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prExpr name="e0" org.eventb.core.expression="Plan_library"/>
-        <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
-        <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
+        <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
+        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+        <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="axm37/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.prSets="Events,Plan_library,Terms">
         <org.eventb.core.lang name="L">
-            <org.eventb.theory.core.scDatatypeDefinition name="predicate">
-                <org.eventb.theory.core.scTypeArgument name="event_predicate" org.eventb.theory.core.givenType="event_predicate"/>
-                <org.eventb.theory.core.scTypeArgument name="action_predicate" org.eventb.theory.core.givenType="action_predicate"/>
-                <org.eventb.theory.core.scTypeArgument name="plan_predicate" org.eventb.theory.core.givenType="plan_predicate"/>
-                <org.eventb.theory.core.scDatatypeConstructor name="event">
-                    <org.eventb.theory.core.scConstructorArgument name="eventp" org.eventb.core.type="event_predicate"/>
-                </org.eventb.theory.core.scDatatypeConstructor>
-                <org.eventb.theory.core.scDatatypeConstructor name="action">
-                    <org.eventb.theory.core.scConstructorArgument name="actionp" org.eventb.core.type="action_predicate"/>
-                </org.eventb.theory.core.scDatatypeConstructor>
-                <org.eventb.theory.core.scDatatypeConstructor name="plan">
-                    <org.eventb.theory.core.scConstructorArgument name="planp" org.eventb.core.type="plan_predicate"/>
-                </org.eventb.theory.core.scDatatypeConstructor>
-            </org.eventb.theory.core.scDatatypeDefinition>
             <org.eventb.theory.core.scDatatypeDefinition name="STACK">
                 <org.eventb.theory.core.scTypeArgument name="EL" org.eventb.theory.core.givenType="EL"/>
                 <org.eventb.theory.core.scDatatypeConstructor name="Empty"/>
@@ -11323,6 +11309,20 @@
                     <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="push(e,s)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="⊤"/>
                 </org.eventb.theory.core.scRecursiveOperatorDefinition>
             </org.eventb.theory.core.scNewOperatorDefinition>
+            <org.eventb.theory.core.scDatatypeDefinition name="predicate">
+                <org.eventb.theory.core.scTypeArgument name="event_predicate" org.eventb.theory.core.givenType="event_predicate"/>
+                <org.eventb.theory.core.scTypeArgument name="action_predicate" org.eventb.theory.core.givenType="action_predicate"/>
+                <org.eventb.theory.core.scTypeArgument name="plan_identifier" org.eventb.theory.core.givenType="plan_identifier"/>
+                <org.eventb.theory.core.scDatatypeConstructor name="event">
+                    <org.eventb.theory.core.scConstructorArgument name="eventp" org.eventb.core.type="event_predicate"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+                <org.eventb.theory.core.scDatatypeConstructor name="action">
+                    <org.eventb.theory.core.scConstructorArgument name="actionp" org.eventb.core.type="action_predicate"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+                <org.eventb.theory.core.scDatatypeConstructor name="plan">
+                    <org.eventb.theory.core.scConstructorArgument name="planp" org.eventb.core.type="plan_identifier"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+            </org.eventb.theory.core.scDatatypeDefinition>
         </org.eventb.core.lang>
         <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Terms,{a},{b},{c},{ab},{bc},{ac}))" org.eventb.core.prHyps="">
             <org.eventb.core.prAnte name="'">
@@ -11561,29 +11561,15 @@
             <org.eventb.core.prIdent name="bc" org.eventb.core.type="Terms"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prExpr name="e0" org.eventb.core.expression="Plan_library"/>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL4"/>
-        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-        <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
         <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
+        <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL4"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="axm40/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.prSets="Events,Plan_library,Terms">
         <org.eventb.core.lang name="L">
-            <org.eventb.theory.core.scDatatypeDefinition name="predicate">
-                <org.eventb.theory.core.scTypeArgument name="event_predicate" org.eventb.theory.core.givenType="event_predicate"/>
-                <org.eventb.theory.core.scTypeArgument name="action_predicate" org.eventb.theory.core.givenType="action_predicate"/>
-                <org.eventb.theory.core.scTypeArgument name="plan_predicate" org.eventb.theory.core.givenType="plan_predicate"/>
-                <org.eventb.theory.core.scDatatypeConstructor name="event">
-                    <org.eventb.theory.core.scConstructorArgument name="eventp" org.eventb.core.type="event_predicate"/>
-                </org.eventb.theory.core.scDatatypeConstructor>
-                <org.eventb.theory.core.scDatatypeConstructor name="action">
-                    <org.eventb.theory.core.scConstructorArgument name="actionp" org.eventb.core.type="action_predicate"/>
-                </org.eventb.theory.core.scDatatypeConstructor>
-                <org.eventb.theory.core.scDatatypeConstructor name="plan">
-                    <org.eventb.theory.core.scConstructorArgument name="planp" org.eventb.core.type="plan_predicate"/>
-                </org.eventb.theory.core.scDatatypeConstructor>
-            </org.eventb.theory.core.scDatatypeDefinition>
             <org.eventb.theory.core.scDatatypeDefinition name="STACK">
                 <org.eventb.theory.core.scTypeArgument name="EL" org.eventb.theory.core.givenType="EL"/>
                 <org.eventb.theory.core.scDatatypeConstructor name="Empty"/>
@@ -11607,6 +11593,20 @@
                     <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="push(e,s)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="⊤"/>
                 </org.eventb.theory.core.scRecursiveOperatorDefinition>
             </org.eventb.theory.core.scNewOperatorDefinition>
+            <org.eventb.theory.core.scDatatypeDefinition name="predicate">
+                <org.eventb.theory.core.scTypeArgument name="event_predicate" org.eventb.theory.core.givenType="event_predicate"/>
+                <org.eventb.theory.core.scTypeArgument name="action_predicate" org.eventb.theory.core.givenType="action_predicate"/>
+                <org.eventb.theory.core.scTypeArgument name="plan_identifier" org.eventb.theory.core.givenType="plan_identifier"/>
+                <org.eventb.theory.core.scDatatypeConstructor name="event">
+                    <org.eventb.theory.core.scConstructorArgument name="eventp" org.eventb.core.type="event_predicate"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+                <org.eventb.theory.core.scDatatypeConstructor name="action">
+                    <org.eventb.theory.core.scConstructorArgument name="actionp" org.eventb.core.type="action_predicate"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+                <org.eventb.theory.core.scDatatypeConstructor name="plan">
+                    <org.eventb.theory.core.scConstructorArgument name="planp" org.eventb.core.type="plan_identifier"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+            </org.eventb.theory.core.scDatatypeDefinition>
         </org.eventb.core.lang>
         <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Terms,{a},{b},{c},{ab},{bc},{ac}))" org.eventb.core.prHyps="">
             <org.eventb.core.prAnte name="'">
@@ -11845,29 +11845,15 @@
             <org.eventb.core.prIdent name="bc" org.eventb.core.type="Terms"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prExpr name="e0" org.eventb.core.expression="Plan_library"/>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL4"/>
-        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-        <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
         <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
+        <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL4"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="axm41/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.prSets="Belief_predicates,Plan_library,Terms">
         <org.eventb.core.lang name="L">
-            <org.eventb.theory.core.scDatatypeDefinition name="predicate">
-                <org.eventb.theory.core.scTypeArgument name="event_predicate" org.eventb.theory.core.givenType="event_predicate"/>
-                <org.eventb.theory.core.scTypeArgument name="action_predicate" org.eventb.theory.core.givenType="action_predicate"/>
-                <org.eventb.theory.core.scTypeArgument name="plan_predicate" org.eventb.theory.core.givenType="plan_predicate"/>
-                <org.eventb.theory.core.scDatatypeConstructor name="event">
-                    <org.eventb.theory.core.scConstructorArgument name="eventp" org.eventb.core.type="event_predicate"/>
-                </org.eventb.theory.core.scDatatypeConstructor>
-                <org.eventb.theory.core.scDatatypeConstructor name="action">
-                    <org.eventb.theory.core.scConstructorArgument name="actionp" org.eventb.core.type="action_predicate"/>
-                </org.eventb.theory.core.scDatatypeConstructor>
-                <org.eventb.theory.core.scDatatypeConstructor name="plan">
-                    <org.eventb.theory.core.scConstructorArgument name="planp" org.eventb.core.type="plan_predicate"/>
-                </org.eventb.theory.core.scDatatypeConstructor>
-            </org.eventb.theory.core.scDatatypeDefinition>
             <org.eventb.theory.core.scDatatypeDefinition name="STACK">
                 <org.eventb.theory.core.scTypeArgument name="EL" org.eventb.theory.core.givenType="EL"/>
                 <org.eventb.theory.core.scDatatypeConstructor name="Empty"/>
@@ -11891,6 +11877,20 @@
                     <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="push(e,s)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="⊤"/>
                 </org.eventb.theory.core.scRecursiveOperatorDefinition>
             </org.eventb.theory.core.scNewOperatorDefinition>
+            <org.eventb.theory.core.scDatatypeDefinition name="predicate">
+                <org.eventb.theory.core.scTypeArgument name="event_predicate" org.eventb.theory.core.givenType="event_predicate"/>
+                <org.eventb.theory.core.scTypeArgument name="action_predicate" org.eventb.theory.core.givenType="action_predicate"/>
+                <org.eventb.theory.core.scTypeArgument name="plan_identifier" org.eventb.theory.core.givenType="plan_identifier"/>
+                <org.eventb.theory.core.scDatatypeConstructor name="event">
+                    <org.eventb.theory.core.scConstructorArgument name="eventp" org.eventb.core.type="event_predicate"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+                <org.eventb.theory.core.scDatatypeConstructor name="action">
+                    <org.eventb.theory.core.scConstructorArgument name="actionp" org.eventb.core.type="action_predicate"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+                <org.eventb.theory.core.scDatatypeConstructor name="plan">
+                    <org.eventb.theory.core.scConstructorArgument name="planp" org.eventb.core.type="plan_identifier"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+            </org.eventb.theory.core.scDatatypeDefinition>
         </org.eventb.core.lang>
         <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Terms,{a},{b},{c},{ab},{bc},{ac}))" org.eventb.core.prHyps="">
             <org.eventb.core.prAnte name="'">
@@ -12127,29 +12127,15 @@
             <org.eventb.core.prIdent name="bc" org.eventb.core.type="Terms"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prExpr name="e0" org.eventb.core.expression="Plan_library"/>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL4"/>
-        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-        <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
         <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
+        <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL4"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="axm42/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.prSets="Actions,Events,Plan_library,Terms">
         <org.eventb.core.lang name="L">
-            <org.eventb.theory.core.scDatatypeDefinition name="predicate">
-                <org.eventb.theory.core.scTypeArgument name="event_predicate" org.eventb.theory.core.givenType="event_predicate"/>
-                <org.eventb.theory.core.scTypeArgument name="action_predicate" org.eventb.theory.core.givenType="action_predicate"/>
-                <org.eventb.theory.core.scTypeArgument name="plan_predicate" org.eventb.theory.core.givenType="plan_predicate"/>
-                <org.eventb.theory.core.scDatatypeConstructor name="event">
-                    <org.eventb.theory.core.scConstructorArgument name="eventp" org.eventb.core.type="event_predicate"/>
-                </org.eventb.theory.core.scDatatypeConstructor>
-                <org.eventb.theory.core.scDatatypeConstructor name="action">
-                    <org.eventb.theory.core.scConstructorArgument name="actionp" org.eventb.core.type="action_predicate"/>
-                </org.eventb.theory.core.scDatatypeConstructor>
-                <org.eventb.theory.core.scDatatypeConstructor name="plan">
-                    <org.eventb.theory.core.scConstructorArgument name="planp" org.eventb.core.type="plan_predicate"/>
-                </org.eventb.theory.core.scDatatypeConstructor>
-            </org.eventb.theory.core.scDatatypeDefinition>
             <org.eventb.theory.core.scDatatypeDefinition name="STACK">
                 <org.eventb.theory.core.scTypeArgument name="EL" org.eventb.theory.core.givenType="EL"/>
                 <org.eventb.theory.core.scDatatypeConstructor name="Empty"/>
@@ -12173,6 +12159,20 @@
                     <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="push(e,s)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="⊤"/>
                 </org.eventb.theory.core.scRecursiveOperatorDefinition>
             </org.eventb.theory.core.scNewOperatorDefinition>
+            <org.eventb.theory.core.scDatatypeDefinition name="predicate">
+                <org.eventb.theory.core.scTypeArgument name="event_predicate" org.eventb.theory.core.givenType="event_predicate"/>
+                <org.eventb.theory.core.scTypeArgument name="action_predicate" org.eventb.theory.core.givenType="action_predicate"/>
+                <org.eventb.theory.core.scTypeArgument name="plan_identifier" org.eventb.theory.core.givenType="plan_identifier"/>
+                <org.eventb.theory.core.scDatatypeConstructor name="event">
+                    <org.eventb.theory.core.scConstructorArgument name="eventp" org.eventb.core.type="event_predicate"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+                <org.eventb.theory.core.scDatatypeConstructor name="action">
+                    <org.eventb.theory.core.scConstructorArgument name="actionp" org.eventb.core.type="action_predicate"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+                <org.eventb.theory.core.scDatatypeConstructor name="plan">
+                    <org.eventb.theory.core.scConstructorArgument name="planp" org.eventb.core.type="plan_identifier"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+            </org.eventb.theory.core.scDatatypeDefinition>
         </org.eventb.core.lang>
         <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Terms,{a},{b},{c},{ab},{bc},{ac}))" org.eventb.core.prHyps="">
             <org.eventb.core.prAnte name="'">
@@ -12194,11 +12194,11 @@
                                             <org.eventb.core.prAnte name="'">
                                                 <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p33" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p34,p35,p36,p37,p38,p39,p40"/>
                                                 <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p34,p35,p36,p37,p38,p39,p40"/>
-                                                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p2">
+                                                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1">
                                                     <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p41">
                                                         <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p41" org.eventb.core.prHyps="">
                                                             <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p42">
-                                                                <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p42" org.eventb.core.prHyps="p1">
+                                                                <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p42" org.eventb.core.prHyps="p2">
                                                                     <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p43">
                                                                         <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p43" org.eventb.core.prHyps="">
                                                                             <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p44">
@@ -12243,6 +12243,7 @@
             <org.eventb.core.prIdent name="at" org.eventb.core.type="Belief_predicates"/>
             <org.eventb.core.prIdent name="smiled_at" org.eventb.core.type="Belief_predicates"/>
         </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="plan_body∈Plan_library → STACK(ℙ(predicate(Events,Actions,Plan_library) × Terms))"/>
         <org.eventb.core.prPred name="p29" org.eventb.core.predicate="Actions={travel,smile_at,joke_at}">
             <org.eventb.core.prIdent name="joke_at" org.eventb.core.type="Actions"/>
             <org.eventb.core.prIdent name="smile_at" org.eventb.core.type="Actions"/>
@@ -12254,7 +12255,6 @@
             <org.eventb.core.prIdent name="joked_at" org.eventb.core.type="Belief_predicates"/>
             <org.eventb.core.prIdent name="smiled_at" org.eventb.core.type="Belief_predicates"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="plan_body∈Plan_library ⇸ STACK(ℙ(predicate(Events,Actions,Plan_library) × Terms))"/>
         <org.eventb.core.prPred name="p13" org.eventb.core.predicate="¬b=ac">
             <org.eventb.core.prIdent name="ac" org.eventb.core.type="Terms"/>
             <org.eventb.core.prIdent name="b" org.eventb.core.type="Terms"/>
@@ -12285,7 +12285,6 @@
             <org.eventb.core.prIdent name="ab" org.eventb.core.type="Terms"/>
             <org.eventb.core.prIdent name="b" org.eventb.core.type="Terms"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="plan_body∈Plan_library → STACK(ℙ(predicate(Events,Actions,Plan_library) × Terms))"/>
         <org.eventb.core.prPred name="p28" org.eventb.core.predicate="partition(Actions,{travel},{smile_at},{joke_at})">
             <org.eventb.core.prIdent name="joke_at" org.eventb.core.type="Actions"/>
             <org.eventb.core.prIdent name="smile_at" org.eventb.core.type="Actions"/>
@@ -12353,6 +12352,7 @@
         <org.eventb.core.prPred name="p36" org.eventb.core.predicate="¬plan1=plan3">
             <org.eventb.core.prIdent name="plan1" org.eventb.core.type="Plan_library"/>
         </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="plan3∈dom(plan_body)∧plan_body∈Plan_library ⇸ STACK(ℙ(predicate(Events,Actions,Plan_library) × Terms))"/>
         <org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬a=bc">
             <org.eventb.core.prIdent name="a" org.eventb.core.type="Terms"/>
             <org.eventb.core.prIdent name="bc" org.eventb.core.type="Terms"/>
@@ -12374,6 +12374,7 @@
             <org.eventb.core.prIdent name="joked_at" org.eventb.core.type="Belief_predicates"/>
             <org.eventb.core.prIdent name="smiled_at" org.eventb.core.type="Belief_predicates"/>
         </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="plan_body∈Plan_library ⇸ STACK(ℙ(predicate(Events,Actions,Plan_library) × Terms))"/>
         <org.eventb.core.prPred name="p4" org.eventb.core.predicate="Terms={a,b,c,ab,bc,ac}">
             <org.eventb.core.prIdent name="a" org.eventb.core.type="Terms"/>
             <org.eventb.core.prIdent name="ab" org.eventb.core.type="Terms"/>
@@ -12396,7 +12397,6 @@
             <org.eventb.core.prIdent name="ac" org.eventb.core.type="Terms"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p42" org.eventb.core.predicate="plan3∈dom(plan_body)"/>
-        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="plan3∈dom(plan_body)∧plan_body∈Plan_library ⇸ STACK(ℙ(predicate(Events,Actions,Plan_library) × Terms))"/>
         <org.eventb.core.prPred name="p37" org.eventb.core.predicate="¬plan1=plan4">
             <org.eventb.core.prIdent name="plan1" org.eventb.core.type="Plan_library"/>
             <org.eventb.core.prIdent name="plan4" org.eventb.core.type="Plan_library"/>
@@ -12406,12 +12406,12 @@
             <org.eventb.core.prIdent name="bc" org.eventb.core.type="Terms"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prExpr name="e0" org.eventb.core.expression="Plan_library"/>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL4"/>
-        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-        <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
         <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
+        <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL4"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="axm1/THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="Terms">
         <org.eventb.core.lang name="L">
@@ -13220,20 +13220,6 @@
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="axm29/WD" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="Actions,Belief_predicates,Terms">
         <org.eventb.core.lang name="L">
-            <org.eventb.theory.core.scDatatypeDefinition name="predicate">
-                <org.eventb.theory.core.scTypeArgument name="event_predicate" org.eventb.theory.core.givenType="event_predicate"/>
-                <org.eventb.theory.core.scTypeArgument name="action_predicate" org.eventb.theory.core.givenType="action_predicate"/>
-                <org.eventb.theory.core.scTypeArgument name="plan_predicate" org.eventb.theory.core.givenType="plan_predicate"/>
-                <org.eventb.theory.core.scDatatypeConstructor name="event">
-                    <org.eventb.theory.core.scConstructorArgument name="eventp" org.eventb.core.type="event_predicate"/>
-                </org.eventb.theory.core.scDatatypeConstructor>
-                <org.eventb.theory.core.scDatatypeConstructor name="action">
-                    <org.eventb.theory.core.scConstructorArgument name="actionp" org.eventb.core.type="action_predicate"/>
-                </org.eventb.theory.core.scDatatypeConstructor>
-                <org.eventb.theory.core.scDatatypeConstructor name="plan">
-                    <org.eventb.theory.core.scConstructorArgument name="planp" org.eventb.core.type="plan_predicate"/>
-                </org.eventb.theory.core.scDatatypeConstructor>
-            </org.eventb.theory.core.scDatatypeDefinition>
             <org.eventb.theory.core.scDatatypeDefinition name="STACK">
                 <org.eventb.theory.core.scTypeArgument name="EL" org.eventb.theory.core.givenType="EL"/>
                 <org.eventb.theory.core.scDatatypeConstructor name="Empty"/>
@@ -13257,6 +13243,20 @@
                     <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="push(e,s)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="⊤"/>
                 </org.eventb.theory.core.scRecursiveOperatorDefinition>
             </org.eventb.theory.core.scNewOperatorDefinition>
+            <org.eventb.theory.core.scDatatypeDefinition name="predicate">
+                <org.eventb.theory.core.scTypeArgument name="event_predicate" org.eventb.theory.core.givenType="event_predicate"/>
+                <org.eventb.theory.core.scTypeArgument name="action_predicate" org.eventb.theory.core.givenType="action_predicate"/>
+                <org.eventb.theory.core.scTypeArgument name="plan_identifier" org.eventb.theory.core.givenType="plan_identifier"/>
+                <org.eventb.theory.core.scDatatypeConstructor name="event">
+                    <org.eventb.theory.core.scConstructorArgument name="eventp" org.eventb.core.type="event_predicate"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+                <org.eventb.theory.core.scDatatypeConstructor name="action">
+                    <org.eventb.theory.core.scConstructorArgument name="actionp" org.eventb.core.type="action_predicate"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+                <org.eventb.theory.core.scDatatypeConstructor name="plan">
+                    <org.eventb.theory.core.scConstructorArgument name="planp" org.eventb.core.type="plan_identifier"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+            </org.eventb.theory.core.scDatatypeDefinition>
         </org.eventb.core.lang>
         <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Terms,{a},{b},{c},{ab},{bc},{ac}))" org.eventb.core.prHyps="">
             <org.eventb.core.prAnte name="'">
@@ -13475,26 +13475,12 @@
         <org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬b=bc">
             <org.eventb.core.prIdent name="bc" org.eventb.core.type="Terms"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL4"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL4"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="axm43/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.prSets="Events,Plan_library,Terms">
         <org.eventb.core.lang name="L">
-            <org.eventb.theory.core.scDatatypeDefinition name="predicate">
-                <org.eventb.theory.core.scTypeArgument name="event_predicate" org.eventb.theory.core.givenType="event_predicate"/>
-                <org.eventb.theory.core.scTypeArgument name="action_predicate" org.eventb.theory.core.givenType="action_predicate"/>
-                <org.eventb.theory.core.scTypeArgument name="plan_predicate" org.eventb.theory.core.givenType="plan_predicate"/>
-                <org.eventb.theory.core.scDatatypeConstructor name="event">
-                    <org.eventb.theory.core.scConstructorArgument name="eventp" org.eventb.core.type="event_predicate"/>
-                </org.eventb.theory.core.scDatatypeConstructor>
-                <org.eventb.theory.core.scDatatypeConstructor name="action">
-                    <org.eventb.theory.core.scConstructorArgument name="actionp" org.eventb.core.type="action_predicate"/>
-                </org.eventb.theory.core.scDatatypeConstructor>
-                <org.eventb.theory.core.scDatatypeConstructor name="plan">
-                    <org.eventb.theory.core.scConstructorArgument name="planp" org.eventb.core.type="plan_predicate"/>
-                </org.eventb.theory.core.scDatatypeConstructor>
-            </org.eventb.theory.core.scDatatypeDefinition>
             <org.eventb.theory.core.scDatatypeDefinition name="STACK">
                 <org.eventb.theory.core.scTypeArgument name="EL" org.eventb.theory.core.givenType="EL"/>
                 <org.eventb.theory.core.scDatatypeConstructor name="Empty"/>
@@ -13518,6 +13504,20 @@
                     <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="push(e,s)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="⊤"/>
                 </org.eventb.theory.core.scRecursiveOperatorDefinition>
             </org.eventb.theory.core.scNewOperatorDefinition>
+            <org.eventb.theory.core.scDatatypeDefinition name="predicate">
+                <org.eventb.theory.core.scTypeArgument name="event_predicate" org.eventb.theory.core.givenType="event_predicate"/>
+                <org.eventb.theory.core.scTypeArgument name="action_predicate" org.eventb.theory.core.givenType="action_predicate"/>
+                <org.eventb.theory.core.scTypeArgument name="plan_identifier" org.eventb.theory.core.givenType="plan_identifier"/>
+                <org.eventb.theory.core.scDatatypeConstructor name="event">
+                    <org.eventb.theory.core.scConstructorArgument name="eventp" org.eventb.core.type="event_predicate"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+                <org.eventb.theory.core.scDatatypeConstructor name="action">
+                    <org.eventb.theory.core.scConstructorArgument name="actionp" org.eventb.core.type="action_predicate"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+                <org.eventb.theory.core.scDatatypeConstructor name="plan">
+                    <org.eventb.theory.core.scConstructorArgument name="planp" org.eventb.core.type="plan_identifier"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+            </org.eventb.theory.core.scDatatypeDefinition>
         </org.eventb.core.lang>
         <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Terms,{a},{b},{c},{ab},{bc},{ac}))" org.eventb.core.prHyps="">
             <org.eventb.core.prAnte name="'">
@@ -13756,29 +13756,15 @@
             <org.eventb.core.prIdent name="bc" org.eventb.core.type="Terms"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prExpr name="e0" org.eventb.core.expression="Plan_library"/>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL4"/>
-        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-        <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
         <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
+        <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL4"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="axm44/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.prSets="Belief_predicates,Plan_library,Terms">
         <org.eventb.core.lang name="L">
-            <org.eventb.theory.core.scDatatypeDefinition name="predicate">
-                <org.eventb.theory.core.scTypeArgument name="event_predicate" org.eventb.theory.core.givenType="event_predicate"/>
-                <org.eventb.theory.core.scTypeArgument name="action_predicate" org.eventb.theory.core.givenType="action_predicate"/>
-                <org.eventb.theory.core.scTypeArgument name="plan_predicate" org.eventb.theory.core.givenType="plan_predicate"/>
-                <org.eventb.theory.core.scDatatypeConstructor name="event">
-                    <org.eventb.theory.core.scConstructorArgument name="eventp" org.eventb.core.type="event_predicate"/>
-                </org.eventb.theory.core.scDatatypeConstructor>
-                <org.eventb.theory.core.scDatatypeConstructor name="action">
-                    <org.eventb.theory.core.scConstructorArgument name="actionp" org.eventb.core.type="action_predicate"/>
-                </org.eventb.theory.core.scDatatypeConstructor>
-                <org.eventb.theory.core.scDatatypeConstructor name="plan">
-                    <org.eventb.theory.core.scConstructorArgument name="planp" org.eventb.core.type="plan_predicate"/>
-                </org.eventb.theory.core.scDatatypeConstructor>
-            </org.eventb.theory.core.scDatatypeDefinition>
             <org.eventb.theory.core.scDatatypeDefinition name="STACK">
                 <org.eventb.theory.core.scTypeArgument name="EL" org.eventb.theory.core.givenType="EL"/>
                 <org.eventb.theory.core.scDatatypeConstructor name="Empty"/>
@@ -13802,6 +13788,20 @@
                     <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="push(e,s)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="⊤"/>
                 </org.eventb.theory.core.scRecursiveOperatorDefinition>
             </org.eventb.theory.core.scNewOperatorDefinition>
+            <org.eventb.theory.core.scDatatypeDefinition name="predicate">
+                <org.eventb.theory.core.scTypeArgument name="event_predicate" org.eventb.theory.core.givenType="event_predicate"/>
+                <org.eventb.theory.core.scTypeArgument name="action_predicate" org.eventb.theory.core.givenType="action_predicate"/>
+                <org.eventb.theory.core.scTypeArgument name="plan_identifier" org.eventb.theory.core.givenType="plan_identifier"/>
+                <org.eventb.theory.core.scDatatypeConstructor name="event">
+                    <org.eventb.theory.core.scConstructorArgument name="eventp" org.eventb.core.type="event_predicate"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+                <org.eventb.theory.core.scDatatypeConstructor name="action">
+                    <org.eventb.theory.core.scConstructorArgument name="actionp" org.eventb.core.type="action_predicate"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+                <org.eventb.theory.core.scDatatypeConstructor name="plan">
+                    <org.eventb.theory.core.scConstructorArgument name="planp" org.eventb.core.type="plan_identifier"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+            </org.eventb.theory.core.scDatatypeDefinition>
         </org.eventb.core.lang>
         <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Terms,{a},{b},{c},{ab},{bc},{ac}))" org.eventb.core.prHyps="">
             <org.eventb.core.prAnte name="'">
@@ -14038,29 +14038,15 @@
             <org.eventb.core.prIdent name="bc" org.eventb.core.type="Terms"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prExpr name="e0" org.eventb.core.expression="Plan_library"/>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL4"/>
-        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-        <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
         <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
+        <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL4"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="axm45/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.prSets="Actions,Events,Plan_library,Terms">
         <org.eventb.core.lang name="L">
-            <org.eventb.theory.core.scDatatypeDefinition name="predicate">
-                <org.eventb.theory.core.scTypeArgument name="event_predicate" org.eventb.theory.core.givenType="event_predicate"/>
-                <org.eventb.theory.core.scTypeArgument name="action_predicate" org.eventb.theory.core.givenType="action_predicate"/>
-                <org.eventb.theory.core.scTypeArgument name="plan_predicate" org.eventb.theory.core.givenType="plan_predicate"/>
-                <org.eventb.theory.core.scDatatypeConstructor name="event">
-                    <org.eventb.theory.core.scConstructorArgument name="eventp" org.eventb.core.type="event_predicate"/>
-                </org.eventb.theory.core.scDatatypeConstructor>
-                <org.eventb.theory.core.scDatatypeConstructor name="action">
-                    <org.eventb.theory.core.scConstructorArgument name="actionp" org.eventb.core.type="action_predicate"/>
-                </org.eventb.theory.core.scDatatypeConstructor>
-                <org.eventb.theory.core.scDatatypeConstructor name="plan">
-                    <org.eventb.theory.core.scConstructorArgument name="planp" org.eventb.core.type="plan_predicate"/>
-                </org.eventb.theory.core.scDatatypeConstructor>
-            </org.eventb.theory.core.scDatatypeDefinition>
             <org.eventb.theory.core.scDatatypeDefinition name="STACK">
                 <org.eventb.theory.core.scTypeArgument name="EL" org.eventb.theory.core.givenType="EL"/>
                 <org.eventb.theory.core.scDatatypeConstructor name="Empty"/>
@@ -14084,6 +14070,20 @@
                     <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="push(e,s)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="⊤"/>
                 </org.eventb.theory.core.scRecursiveOperatorDefinition>
             </org.eventb.theory.core.scNewOperatorDefinition>
+            <org.eventb.theory.core.scDatatypeDefinition name="predicate">
+                <org.eventb.theory.core.scTypeArgument name="event_predicate" org.eventb.theory.core.givenType="event_predicate"/>
+                <org.eventb.theory.core.scTypeArgument name="action_predicate" org.eventb.theory.core.givenType="action_predicate"/>
+                <org.eventb.theory.core.scTypeArgument name="plan_identifier" org.eventb.theory.core.givenType="plan_identifier"/>
+                <org.eventb.theory.core.scDatatypeConstructor name="event">
+                    <org.eventb.theory.core.scConstructorArgument name="eventp" org.eventb.core.type="event_predicate"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+                <org.eventb.theory.core.scDatatypeConstructor name="action">
+                    <org.eventb.theory.core.scConstructorArgument name="actionp" org.eventb.core.type="action_predicate"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+                <org.eventb.theory.core.scDatatypeConstructor name="plan">
+                    <org.eventb.theory.core.scConstructorArgument name="planp" org.eventb.core.type="plan_identifier"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+            </org.eventb.theory.core.scDatatypeDefinition>
         </org.eventb.core.lang>
         <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Terms,{a},{b},{c},{ab},{bc},{ac}))" org.eventb.core.prHyps="">
             <org.eventb.core.prAnte name="'">
@@ -14105,11 +14105,11 @@
                                             <org.eventb.core.prAnte name="'">
                                                 <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p33" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p34,p35,p36,p37,p38,p39,p40"/>
                                                 <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p34,p35,p36,p37,p38,p39,p40"/>
-                                                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p2">
+                                                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1">
                                                     <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p41">
                                                         <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p41" org.eventb.core.prHyps="">
                                                             <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p42">
-                                                                <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p42" org.eventb.core.prHyps="p1">
+                                                                <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p42" org.eventb.core.prHyps="p2">
                                                                     <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p43">
                                                                         <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p43" org.eventb.core.prHyps="">
                                                                             <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p44">
@@ -14154,6 +14154,7 @@
             <org.eventb.core.prIdent name="at" org.eventb.core.type="Belief_predicates"/>
             <org.eventb.core.prIdent name="smiled_at" org.eventb.core.type="Belief_predicates"/>
         </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="plan_body∈Plan_library → STACK(ℙ(predicate(Events,Actions,Plan_library) × Terms))"/>
         <org.eventb.core.prPred name="p29" org.eventb.core.predicate="Actions={travel,smile_at,joke_at}">
             <org.eventb.core.prIdent name="joke_at" org.eventb.core.type="Actions"/>
             <org.eventb.core.prIdent name="smile_at" org.eventb.core.type="Actions"/>
@@ -14165,7 +14166,7 @@
             <org.eventb.core.prIdent name="joked_at" org.eventb.core.type="Belief_predicates"/>
             <org.eventb.core.prIdent name="smiled_at" org.eventb.core.type="Belief_predicates"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="plan_body∈Plan_library ⇸ STACK(ℙ(predicate(Events,Actions,Plan_library) × Terms))"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="plan4∈dom(plan_body)∧plan_body∈Plan_library ⇸ STACK(ℙ(predicate(Events,Actions,Plan_library) × Terms))"/>
         <org.eventb.core.prPred name="p13" org.eventb.core.predicate="¬b=ac">
             <org.eventb.core.prIdent name="ac" org.eventb.core.type="Terms"/>
             <org.eventb.core.prIdent name="b" org.eventb.core.type="Terms"/>
@@ -14184,7 +14185,6 @@
             <org.eventb.core.prIdent name="plan2" org.eventb.core.type="Plan_library"/>
             <org.eventb.core.prIdent name="plan3" org.eventb.core.type="Plan_library"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="plan4∈dom(plan_body)∧plan_body∈Plan_library ⇸ STACK(ℙ(predicate(Events,Actions,Plan_library) × Terms))"/>
         <org.eventb.core.prPred name="p34" org.eventb.core.predicate="Plan_library={plan1,plan2,plan3,plan4}">
             <org.eventb.core.prIdent name="plan1" org.eventb.core.type="Plan_library"/>
             <org.eventb.core.prIdent name="plan2" org.eventb.core.type="Plan_library"/>
@@ -14199,7 +14199,6 @@
             <org.eventb.core.prIdent name="b" org.eventb.core.type="Terms"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p43" org.eventb.core.predicate="plan4∈Plan_library"/>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="plan_body∈Plan_library → STACK(ℙ(predicate(Events,Actions,Plan_library) × Terms))"/>
         <org.eventb.core.prPred name="p28" org.eventb.core.predicate="partition(Actions,{travel},{smile_at},{joke_at})">
             <org.eventb.core.prIdent name="joke_at" org.eventb.core.type="Actions"/>
             <org.eventb.core.prIdent name="smile_at" org.eventb.core.type="Actions"/>
@@ -14288,6 +14287,7 @@
             <org.eventb.core.prIdent name="joked_at" org.eventb.core.type="Belief_predicates"/>
             <org.eventb.core.prIdent name="smiled_at" org.eventb.core.type="Belief_predicates"/>
         </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="plan_body∈Plan_library ⇸ STACK(ℙ(predicate(Events,Actions,Plan_library) × Terms))"/>
         <org.eventb.core.prPred name="p4" org.eventb.core.predicate="Terms={a,b,c,ab,bc,ac}">
             <org.eventb.core.prIdent name="a" org.eventb.core.type="Terms"/>
             <org.eventb.core.prIdent name="ab" org.eventb.core.type="Terms"/>
@@ -14317,11 +14317,11 @@
             <org.eventb.core.prIdent name="bc" org.eventb.core.type="Terms"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prExpr name="e0" org.eventb.core.expression="Plan_library"/>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL4"/>
-        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-        <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
         <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
+        <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL4"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
     </org.eventb.core.prProof>
 </org.eventb.core.prFile>

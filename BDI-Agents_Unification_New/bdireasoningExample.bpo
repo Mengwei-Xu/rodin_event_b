@@ -183,7 +183,7 @@
     <org.eventb.core.poPredicateSet name="EVTHYPexternal_eventx(" org.eventb.core.parentSet="/BDI-Agents_Unification_New/bdireasoningExample.bpo|org.eventb.core.poFile#bdireasoningExample|org.eventb.core.poPredicateSet#EVTIDENTexternal_eventx" org.eventb.core.poStamp="1">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="event_real ↦ terms∈dom(plan_intention)" org.eventb.core.source="/BDI-Agents_Unification_New/bdireasoningExample.bum|org.eventb.core.machineFile#bdireasoningExample|org.eventb.core.event#evt7|org.eventb.core.guard#'"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTHYPexternal_eventx)" org.eventb.core.parentSet="/BDI-Agents_Unification_New/bdireasoningExample.bpo|org.eventb.core.poFile#bdireasoningExample|org.eventb.core.poPredicateSet#EVTHYPexternal_eventx(" org.eventb.core.poStamp="0">
+    <org.eventb.core.poPredicateSet name="EVTHYPexternal_eventx)" org.eventb.core.parentSet="/BDI-Agents_Unification_New/bdireasoningExample.bpo|org.eventb.core.poFile#bdireasoningExample|org.eventb.core.poPredicateSet#EVTHYPexternal_eventx(" org.eventb.core.poStamp="1">
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="plan_intention(event_real ↦ terms)=plan1" org.eventb.core.source="/BDI-Agents_Unification_New/bdireasoningExample.bum|org.eventb.core.machineFile#bdireasoningExample|org.eventb.core.event#evt7|org.eventb.core.guard#."/>
     </org.eventb.core.poPredicateSet>
     <org.eventb.core.poPredicateSet name="EVTALLHYPexternal_eventx" org.eventb.core.parentSet="/BDI-Agents_Unification_New/bdireasoningExample.bpo|org.eventb.core.poFile#bdireasoningExample|org.eventb.core.poPredicateSet#EVTHYPexternal_eventx)" org.eventb.core.poStamp="1">
@@ -217,7 +217,7 @@
     <org.eventb.core.poPredicateSet name="EVTHYPexternal_eventy(" org.eventb.core.parentSet="/BDI-Agents_Unification_New/bdireasoningExample.bpo|org.eventb.core.poFile#bdireasoningExample|org.eventb.core.poPredicateSet#EVTIDENTexternal_eventy" org.eventb.core.poStamp="1">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="event_real ↦ terms∈dom(plan_intention)" org.eventb.core.source="/BDI-Agents_Unification_New/bdireasoningExample.bum|org.eventb.core.machineFile#bdireasoningExample|org.eventb.core.event#evt13|org.eventb.core.guard#'"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTHYPexternal_eventy)" org.eventb.core.parentSet="/BDI-Agents_Unification_New/bdireasoningExample.bpo|org.eventb.core.poFile#bdireasoningExample|org.eventb.core.poPredicateSet#EVTHYPexternal_eventy(" org.eventb.core.poStamp="0">
+    <org.eventb.core.poPredicateSet name="EVTHYPexternal_eventy)" org.eventb.core.parentSet="/BDI-Agents_Unification_New/bdireasoningExample.bpo|org.eventb.core.poFile#bdireasoningExample|org.eventb.core.poPredicateSet#EVTHYPexternal_eventy(" org.eventb.core.poStamp="1">
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="plan_intention(event_real ↦ terms)=plan2" org.eventb.core.source="/BDI-Agents_Unification_New/bdireasoningExample.bum|org.eventb.core.machineFile#bdireasoningExample|org.eventb.core.event#evt13|org.eventb.core.guard#."/>
     </org.eventb.core.poPredicateSet>
     <org.eventb.core.poPredicateSet name="EVTALLHYPexternal_eventy" org.eventb.core.parentSet="/BDI-Agents_Unification_New/bdireasoningExample.bpo|org.eventb.core.poFile#bdireasoningExample|org.eventb.core.poPredicateSet#EVTHYPexternal_eventy)" org.eventb.core.poStamp="1">
@@ -251,7 +251,7 @@
     <org.eventb.core.poPredicateSet name="EVTHYPexternal_eventz(" org.eventb.core.parentSet="/BDI-Agents_Unification_New/bdireasoningExample.bpo|org.eventb.core.poFile#bdireasoningExample|org.eventb.core.poPredicateSet#EVTIDENTexternal_eventz" org.eventb.core.poStamp="1">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="event_real ↦ terms∈dom(plan_intention)" org.eventb.core.source="/BDI-Agents_Unification_New/bdireasoningExample.bum|org.eventb.core.machineFile#bdireasoningExample|org.eventb.core.event#evt12|org.eventb.core.guard#'"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTHYPexternal_eventz)" org.eventb.core.parentSet="/BDI-Agents_Unification_New/bdireasoningExample.bpo|org.eventb.core.poFile#bdireasoningExample|org.eventb.core.poPredicateSet#EVTHYPexternal_eventz(" org.eventb.core.poStamp="0">
+    <org.eventb.core.poPredicateSet name="EVTHYPexternal_eventz)" org.eventb.core.parentSet="/BDI-Agents_Unification_New/bdireasoningExample.bpo|org.eventb.core.poFile#bdireasoningExample|org.eventb.core.poPredicateSet#EVTHYPexternal_eventz(" org.eventb.core.poStamp="1">
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="plan_intention(event_real ↦ terms)=plan3" org.eventb.core.source="/BDI-Agents_Unification_New/bdireasoningExample.bum|org.eventb.core.machineFile#bdireasoningExample|org.eventb.core.event#evt12|org.eventb.core.guard#."/>
     </org.eventb.core.poPredicateSet>
     <org.eventb.core.poPredicateSet name="EVTALLHYPexternal_eventz" org.eventb.core.parentSet="/BDI-Agents_Unification_New/bdireasoningExample.bpo|org.eventb.core.poFile#bdireasoningExample|org.eventb.core.poPredicateSet#EVTHYPexternal_eventz)" org.eventb.core.poStamp="1">
@@ -285,7 +285,7 @@
     <org.eventb.core.poPredicateSet name="EVTHYPexternal_event{(" org.eventb.core.parentSet="/BDI-Agents_Unification_New/bdireasoningExample.bpo|org.eventb.core.poFile#bdireasoningExample|org.eventb.core.poPredicateSet#EVTIDENTexternal_event{" org.eventb.core.poStamp="1">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="event_real ↦ terms∈dom(plan_intention)" org.eventb.core.source="/BDI-Agents_Unification_New/bdireasoningExample.bum|org.eventb.core.machineFile#bdireasoningExample|org.eventb.core.event#evt11|org.eventb.core.guard#'"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTHYPexternal_event{)" org.eventb.core.parentSet="/BDI-Agents_Unification_New/bdireasoningExample.bpo|org.eventb.core.poFile#bdireasoningExample|org.eventb.core.poPredicateSet#EVTHYPexternal_event{(" org.eventb.core.poStamp="0">
+    <org.eventb.core.poPredicateSet name="EVTHYPexternal_event{)" org.eventb.core.parentSet="/BDI-Agents_Unification_New/bdireasoningExample.bpo|org.eventb.core.poFile#bdireasoningExample|org.eventb.core.poPredicateSet#EVTHYPexternal_event{(" org.eventb.core.poStamp="1">
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="plan_intention(event_real ↦ terms)=plan4" org.eventb.core.source="/BDI-Agents_Unification_New/bdireasoningExample.bum|org.eventb.core.machineFile#bdireasoningExample|org.eventb.core.event#evt11|org.eventb.core.guard#."/>
     </org.eventb.core.poPredicateSet>
     <org.eventb.core.poPredicateSet name="EVTALLHYPexternal_event{" org.eventb.core.parentSet="/BDI-Agents_Unification_New/bdireasoningExample.bpo|org.eventb.core.poFile#bdireasoningExample|org.eventb.core.poPredicateSet#EVTHYPexternal_event{)" org.eventb.core.poStamp="1">

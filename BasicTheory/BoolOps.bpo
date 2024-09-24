@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="1">
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
     <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0"/>
     <org.eventb.core.poSequent name="AND/Op-ASSOC" org.eventb.core.accurate="true" org.eventb.core.poDesc="Operator Associativity" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BasicTheory/BoolOps.bpo|org.eventb.core.poFile#BoolOps|org.eventb.core.poPredicateSet#ABSHYP"/>
@@ -8,7 +8,7 @@
         <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BasicTheory/BoolOps.tuf|org.eventb.theory.core.theoryRoot#BoolOps|org.eventb.theory.core.newOperatorDefinition#'"/>
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/BasicTheory/BoolOps.bpo|org.eventb.core.poFile#BoolOps|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/BasicTheory/BoolOps.bpo|org.eventb.core.poFile#BoolOps|org.eventb.core.poSequent#AND\/Op-ASSOC|org.eventb.core.poPredicateSet#SEQHYP"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="AND/Op-COMMUT" org.eventb.core.accurate="true" org.eventb.core.poDesc="Operator Commutativity" org.eventb.core.poStamp="1">
+    <org.eventb.core.poSequent name="AND/Op-COMMUT" org.eventb.core.accurate="true" org.eventb.core.poDesc="Operator Commutativity" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BasicTheory/BoolOps.bpo|org.eventb.core.poFile#BoolOps|org.eventb.core.poPredicateSet#ABSHYP"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀a⦂BOOL,b⦂BOOL·⊤⇒bool(a=TRUE∧b=TRUE)=bool(b=TRUE∧a=TRUE)" org.eventb.core.source="/BasicTheory/BoolOps.tuf|org.eventb.theory.core.theoryRoot#BoolOps|org.eventb.theory.core.newOperatorDefinition#'"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BasicTheory/BoolOps.tcf|org.eventb.theory.core.scTheoryRoot#BoolOps|org.eventb.theory.core.scNewOperatorDefinition#'"/>
@@ -22,7 +22,7 @@
         <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BasicTheory/BoolOps.tuf|org.eventb.theory.core.theoryRoot#BoolOps|org.eventb.theory.core.newOperatorDefinition#*"/>
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/BasicTheory/BoolOps.bpo|org.eventb.core.poFile#BoolOps|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/BasicTheory/BoolOps.bpo|org.eventb.core.poFile#BoolOps|org.eventb.core.poSequent#OR\/Op-ASSOC|org.eventb.core.poPredicateSet#SEQHYP"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="OR/Op-COMMUT" org.eventb.core.accurate="true" org.eventb.core.poDesc="Operator Commutativity" org.eventb.core.poStamp="1">
+    <org.eventb.core.poSequent name="OR/Op-COMMUT" org.eventb.core.accurate="true" org.eventb.core.poDesc="Operator Commutativity" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BasicTheory/BoolOps.bpo|org.eventb.core.poFile#BoolOps|org.eventb.core.poPredicateSet#ABSHYP"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀a⦂BOOL,b⦂BOOL·⊤⇒bool(a=TRUE∨b=TRUE)=bool(b=TRUE∨a=TRUE)" org.eventb.core.source="/BasicTheory/BoolOps.tuf|org.eventb.theory.core.theoryRoot#BoolOps|org.eventb.theory.core.newOperatorDefinition#*"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BasicTheory/BoolOps.tcf|org.eventb.theory.core.scTheoryRoot#BoolOps|org.eventb.theory.core.scNewOperatorDefinition#("/>

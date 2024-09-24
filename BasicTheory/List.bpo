@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="1">
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
     <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
         <org.eventb.core.poIdentifier name="S" org.eventb.core.type="ℙ(S)"/>
         <org.eventb.core.poIdentifier name="T" org.eventb.core.type="ℙ(T)"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="map/Op-WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Operator Well-Definedness Preservation" org.eventb.core.poStamp="1">
+    <org.eventb.core.poSequent name="map/Op-WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Operator Well-Definedness Preservation" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BasicTheory/List.bpo|org.eventb.core.poFile#List|org.eventb.core.poPredicateSet#ABSHYP"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀f⦂ℙ(T×S),l⦂List(T)·f∈T → S⇒(∀l0⦂List(T),x⦂T·l=cons(x,l0)⇒x∈dom(f)∧f∈T ⇸ S∧f∈T → S)" org.eventb.core.source="/BasicTheory/List.tuf|org.eventb.theory.core.theoryRoot#List|org.eventb.theory.core.newOperatorDefinition#-"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BasicTheory/List.tcf|org.eventb.theory.core.scTheoryRoot#List|org.eventb.theory.core.scNewOperatorDefinition#Lisx"/>

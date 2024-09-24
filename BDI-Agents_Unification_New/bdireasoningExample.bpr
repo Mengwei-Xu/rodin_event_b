@@ -2462,12 +2462,12 @@
                 <org.eventb.theory.core.scTypeArgument name="belief_predicates" org.eventb.theory.core.givenType="belief_predicates"/>
                 <org.eventb.theory.core.scTypeArgument name="non_belief_predicates" org.eventb.theory.core.givenType="non_belief_predicates"/>
                 <org.eventb.theory.core.scTypeArgument name="terms" org.eventb.theory.core.givenType="terms"/>
-                <org.eventb.theory.core.scDatatypeConstructor name="Constructor4DG">
+                <org.eventb.theory.core.scDatatypeConstructor name="constructDG">
                     <org.eventb.theory.core.scConstructorArgument name="SuccessConditions" org.eventb.core.type="ℙ(belief_predicates×terms)"/>
                     <org.eventb.theory.core.scConstructorArgument name="DGGoalPlanBodies" org.eventb.core.type="ℙ(non_belief_predicates)×terms"/>
                     <org.eventb.theory.core.scConstructorArgument name="FailureConditions" org.eventb.core.type="ℙ(belief_predicates×terms)"/>
                 </org.eventb.theory.core.scDatatypeConstructor>
-                <org.eventb.theory.core.scDatatypeConstructor name="Constructor4NDG">
+                <org.eventb.theory.core.scDatatypeConstructor name="constructNDG">
                     <org.eventb.theory.core.scConstructorArgument name="NDGGoalPlanBodies" org.eventb.core.type="ℙ(non_belief_predicates)×terms"/>
                 </org.eventb.theory.core.scDatatypeConstructor>
             </org.eventb.theory.core.scDatatypeDefinition>
@@ -2731,10 +2731,10 @@
             <org.eventb.core.prIdent name="plan1" org.eventb.core.type="None_belief_predicates"/>
             <org.eventb.core.prIdent name="plan4" org.eventb.core.type="None_belief_predicates"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL4"/>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
         <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="compute_plan2/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44,p45,p46,p47,p48,p49,p50,p51,p52,p53,p54,p55,p56,p57,p58,p59,p60,p61,p62,p63,p64,p65,p66,p67,p68,p69,p70,p71" org.eventb.core.prSets="Agent_programs,Belief_predicates,None_belief_predicates,Terms">
         <org.eventb.core.lang name="L">
@@ -3505,12 +3505,12 @@
                 <org.eventb.theory.core.scTypeArgument name="belief_predicates" org.eventb.theory.core.givenType="belief_predicates"/>
                 <org.eventb.theory.core.scTypeArgument name="non_belief_predicates" org.eventb.theory.core.givenType="non_belief_predicates"/>
                 <org.eventb.theory.core.scTypeArgument name="terms" org.eventb.theory.core.givenType="terms"/>
-                <org.eventb.theory.core.scDatatypeConstructor name="Constructor4DG">
+                <org.eventb.theory.core.scDatatypeConstructor name="constructDG">
                     <org.eventb.theory.core.scConstructorArgument name="SuccessConditions" org.eventb.core.type="ℙ(belief_predicates×terms)"/>
                     <org.eventb.theory.core.scConstructorArgument name="DGGoalPlanBodies" org.eventb.core.type="ℙ(non_belief_predicates)×terms"/>
                     <org.eventb.theory.core.scConstructorArgument name="FailureConditions" org.eventb.core.type="ℙ(belief_predicates×terms)"/>
                 </org.eventb.theory.core.scDatatypeConstructor>
-                <org.eventb.theory.core.scDatatypeConstructor name="Constructor4NDG">
+                <org.eventb.theory.core.scDatatypeConstructor name="constructNDG">
                     <org.eventb.theory.core.scConstructorArgument name="NDGGoalPlanBodies" org.eventb.core.type="ℙ(non_belief_predicates)×terms"/>
                 </org.eventb.theory.core.scDatatypeConstructor>
             </org.eventb.theory.core.scDatatypeDefinition>
@@ -3774,10 +3774,10 @@
             <org.eventb.core.prIdent name="plan1" org.eventb.core.type="None_belief_predicates"/>
             <org.eventb.core.prIdent name="plan4" org.eventb.core.type="None_belief_predicates"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL4"/>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
         <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="compute_plan3/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44,p45,p46,p47,p48,p49,p50,p51,p52,p53,p54,p55,p56,p57,p58,p59,p60,p61,p62,p63,p64,p65,p66,p67,p68,p69,p70,p71" org.eventb.core.prSets="Agent_programs,Belief_predicates,None_belief_predicates,Terms">
         <org.eventb.core.lang name="L">
@@ -4548,12 +4548,12 @@
                 <org.eventb.theory.core.scTypeArgument name="belief_predicates" org.eventb.theory.core.givenType="belief_predicates"/>
                 <org.eventb.theory.core.scTypeArgument name="non_belief_predicates" org.eventb.theory.core.givenType="non_belief_predicates"/>
                 <org.eventb.theory.core.scTypeArgument name="terms" org.eventb.theory.core.givenType="terms"/>
-                <org.eventb.theory.core.scDatatypeConstructor name="Constructor4DG">
+                <org.eventb.theory.core.scDatatypeConstructor name="constructDG">
                     <org.eventb.theory.core.scConstructorArgument name="SuccessConditions" org.eventb.core.type="ℙ(belief_predicates×terms)"/>
                     <org.eventb.theory.core.scConstructorArgument name="DGGoalPlanBodies" org.eventb.core.type="ℙ(non_belief_predicates)×terms"/>
                     <org.eventb.theory.core.scConstructorArgument name="FailureConditions" org.eventb.core.type="ℙ(belief_predicates×terms)"/>
                 </org.eventb.theory.core.scDatatypeConstructor>
-                <org.eventb.theory.core.scDatatypeConstructor name="Constructor4NDG">
+                <org.eventb.theory.core.scDatatypeConstructor name="constructNDG">
                     <org.eventb.theory.core.scConstructorArgument name="NDGGoalPlanBodies" org.eventb.core.type="ℙ(non_belief_predicates)×terms"/>
                 </org.eventb.theory.core.scDatatypeConstructor>
             </org.eventb.theory.core.scDatatypeDefinition>
@@ -4817,10 +4817,10 @@
             <org.eventb.core.prIdent name="plan1" org.eventb.core.type="None_belief_predicates"/>
             <org.eventb.core.prIdent name="plan4" org.eventb.core.type="None_belief_predicates"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL4"/>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
         <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="compute_plan4/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44,p45,p46,p47,p48,p49,p50,p51,p52,p53,p54,p55,p56,p57,p58,p59,p60,p61,p62,p63,p64,p65,p66,p67,p68,p69,p70,p71" org.eventb.core.prSets="Agent_programs,Belief_predicates,None_belief_predicates,Terms">
         <org.eventb.core.lang name="L">
@@ -5591,12 +5591,12 @@
                 <org.eventb.theory.core.scTypeArgument name="belief_predicates" org.eventb.theory.core.givenType="belief_predicates"/>
                 <org.eventb.theory.core.scTypeArgument name="non_belief_predicates" org.eventb.theory.core.givenType="non_belief_predicates"/>
                 <org.eventb.theory.core.scTypeArgument name="terms" org.eventb.theory.core.givenType="terms"/>
-                <org.eventb.theory.core.scDatatypeConstructor name="Constructor4DG">
+                <org.eventb.theory.core.scDatatypeConstructor name="constructDG">
                     <org.eventb.theory.core.scConstructorArgument name="SuccessConditions" org.eventb.core.type="ℙ(belief_predicates×terms)"/>
                     <org.eventb.theory.core.scConstructorArgument name="DGGoalPlanBodies" org.eventb.core.type="ℙ(non_belief_predicates)×terms"/>
                     <org.eventb.theory.core.scConstructorArgument name="FailureConditions" org.eventb.core.type="ℙ(belief_predicates×terms)"/>
                 </org.eventb.theory.core.scDatatypeConstructor>
-                <org.eventb.theory.core.scDatatypeConstructor name="Constructor4NDG">
+                <org.eventb.theory.core.scDatatypeConstructor name="constructNDG">
                     <org.eventb.theory.core.scConstructorArgument name="NDGGoalPlanBodies" org.eventb.core.type="ℙ(non_belief_predicates)×terms"/>
                 </org.eventb.theory.core.scDatatypeConstructor>
             </org.eventb.theory.core.scDatatypeDefinition>
@@ -5860,10 +5860,10 @@
             <org.eventb.core.prIdent name="plan1" org.eventb.core.type="None_belief_predicates"/>
             <org.eventb.core.prIdent name="plan4" org.eventb.core.type="None_belief_predicates"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL4"/>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
         <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="SelectRelevantPlans_Play/grd8/GRD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3" org.eventb.core.prSets="None_belief_predicates">
         <org.eventb.core.lang name="L">
@@ -5894,12 +5894,12 @@
                 <org.eventb.theory.core.scTypeArgument name="belief_predicates" org.eventb.theory.core.givenType="belief_predicates"/>
                 <org.eventb.theory.core.scTypeArgument name="non_belief_predicates" org.eventb.theory.core.givenType="non_belief_predicates"/>
                 <org.eventb.theory.core.scTypeArgument name="terms" org.eventb.theory.core.givenType="terms"/>
-                <org.eventb.theory.core.scDatatypeConstructor name="Constructor4DG">
+                <org.eventb.theory.core.scDatatypeConstructor name="constructDG">
                     <org.eventb.theory.core.scConstructorArgument name="SuccessConditions" org.eventb.core.type="ℙ(belief_predicates×terms)"/>
                     <org.eventb.theory.core.scConstructorArgument name="DGGoalPlanBodies" org.eventb.core.type="ℙ(non_belief_predicates)×terms"/>
                     <org.eventb.theory.core.scConstructorArgument name="FailureConditions" org.eventb.core.type="ℙ(belief_predicates×terms)"/>
                 </org.eventb.theory.core.scDatatypeConstructor>
-                <org.eventb.theory.core.scDatatypeConstructor name="Constructor4NDG">
+                <org.eventb.theory.core.scDatatypeConstructor name="constructNDG">
                     <org.eventb.theory.core.scConstructorArgument name="NDGGoalPlanBodies" org.eventb.core.type="ℙ(non_belief_predicates)×terms"/>
                 </org.eventb.theory.core.scDatatypeConstructor>
             </org.eventb.theory.core.scDatatypeDefinition>
@@ -6215,10 +6215,10 @@
             <org.eventb.core.prIdent name="plan1" org.eventb.core.type="None_belief_predicates"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL4"/>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
         <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
         <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.eqL2:1"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="SelectRelevantPlans_Arrive/grd8/GRD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3" org.eventb.core.prSets="None_belief_predicates">
@@ -6250,12 +6250,12 @@
                 <org.eventb.theory.core.scTypeArgument name="belief_predicates" org.eventb.theory.core.givenType="belief_predicates"/>
                 <org.eventb.theory.core.scTypeArgument name="non_belief_predicates" org.eventb.theory.core.givenType="non_belief_predicates"/>
                 <org.eventb.theory.core.scTypeArgument name="terms" org.eventb.theory.core.givenType="terms"/>
-                <org.eventb.theory.core.scDatatypeConstructor name="Constructor4DG">
+                <org.eventb.theory.core.scDatatypeConstructor name="constructDG">
                     <org.eventb.theory.core.scConstructorArgument name="SuccessConditions" org.eventb.core.type="ℙ(belief_predicates×terms)"/>
                     <org.eventb.theory.core.scConstructorArgument name="DGGoalPlanBodies" org.eventb.core.type="ℙ(non_belief_predicates)×terms"/>
                     <org.eventb.theory.core.scConstructorArgument name="FailureConditions" org.eventb.core.type="ℙ(belief_predicates×terms)"/>
                 </org.eventb.theory.core.scDatatypeConstructor>
-                <org.eventb.theory.core.scDatatypeConstructor name="Constructor4NDG">
+                <org.eventb.theory.core.scDatatypeConstructor name="constructNDG">
                     <org.eventb.theory.core.scConstructorArgument name="NDGGoalPlanBodies" org.eventb.core.type="ℙ(non_belief_predicates)×terms"/>
                 </org.eventb.theory.core.scDatatypeConstructor>
             </org.eventb.theory.core.scDatatypeDefinition>
@@ -6571,10 +6571,10 @@
             <org.eventb.core.prIdent name="plan4" org.eventb.core.type="None_belief_predicates"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL4"/>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
         <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
         <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.eqL2:1"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="SelectRelevantPlans_Play/plan_intention/EQL" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5" org.eventb.core.prSets="None_belief_predicates,Terms">
@@ -10440,12 +10440,12 @@
                 <org.eventb.theory.core.scTypeArgument name="belief_predicates" org.eventb.theory.core.givenType="belief_predicates"/>
                 <org.eventb.theory.core.scTypeArgument name="non_belief_predicates" org.eventb.theory.core.givenType="non_belief_predicates"/>
                 <org.eventb.theory.core.scTypeArgument name="terms" org.eventb.theory.core.givenType="terms"/>
-                <org.eventb.theory.core.scDatatypeConstructor name="Constructor4DG">
+                <org.eventb.theory.core.scDatatypeConstructor name="constructDG">
                     <org.eventb.theory.core.scConstructorArgument name="SuccessConditions" org.eventb.core.type="ℙ(belief_predicates×terms)"/>
                     <org.eventb.theory.core.scConstructorArgument name="DGGoalPlanBodies" org.eventb.core.type="ℙ(non_belief_predicates)×terms"/>
                     <org.eventb.theory.core.scConstructorArgument name="FailureConditions" org.eventb.core.type="ℙ(belief_predicates×terms)"/>
                 </org.eventb.theory.core.scDatatypeConstructor>
-                <org.eventb.theory.core.scDatatypeConstructor name="Constructor4NDG">
+                <org.eventb.theory.core.scDatatypeConstructor name="constructNDG">
                     <org.eventb.theory.core.scConstructorArgument name="NDGGoalPlanBodies" org.eventb.core.type="ℙ(non_belief_predicates)×terms"/>
                 </org.eventb.theory.core.scDatatypeConstructor>
             </org.eventb.theory.core.scDatatypeDefinition>
@@ -10747,11 +10747,11 @@
         <org.eventb.core.prPred name="p36" org.eventb.core.predicate="¬plan1=plan4">
             <org.eventb.core.prIdent name="plan1" org.eventb.core.type="None_belief_predicates"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL4"/>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
-        <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
         <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
         <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.eqL2:1"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="SelectRelevantPlans_Arrive/grd4/GRD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4" org.eventb.core.prSets="None_belief_predicates,Terms">
@@ -10783,12 +10783,12 @@
                 <org.eventb.theory.core.scTypeArgument name="belief_predicates" org.eventb.theory.core.givenType="belief_predicates"/>
                 <org.eventb.theory.core.scTypeArgument name="non_belief_predicates" org.eventb.theory.core.givenType="non_belief_predicates"/>
                 <org.eventb.theory.core.scTypeArgument name="terms" org.eventb.theory.core.givenType="terms"/>
-                <org.eventb.theory.core.scDatatypeConstructor name="Constructor4DG">
+                <org.eventb.theory.core.scDatatypeConstructor name="constructDG">
                     <org.eventb.theory.core.scConstructorArgument name="SuccessConditions" org.eventb.core.type="ℙ(belief_predicates×terms)"/>
                     <org.eventb.theory.core.scConstructorArgument name="DGGoalPlanBodies" org.eventb.core.type="ℙ(non_belief_predicates)×terms"/>
                     <org.eventb.theory.core.scConstructorArgument name="FailureConditions" org.eventb.core.type="ℙ(belief_predicates×terms)"/>
                 </org.eventb.theory.core.scDatatypeConstructor>
-                <org.eventb.theory.core.scDatatypeConstructor name="Constructor4NDG">
+                <org.eventb.theory.core.scDatatypeConstructor name="constructNDG">
                     <org.eventb.theory.core.scConstructorArgument name="NDGGoalPlanBodies" org.eventb.core.type="ℙ(non_belief_predicates)×terms"/>
                 </org.eventb.theory.core.scDatatypeConstructor>
             </org.eventb.theory.core.scDatatypeDefinition>
@@ -11090,11 +11090,11 @@
         <org.eventb.core.prPred name="p36" org.eventb.core.predicate="¬plan1=plan4">
             <org.eventb.core.prIdent name="plan4" org.eventb.core.type="None_belief_predicates"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL4"/>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
-        <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
         <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
         <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.eqL2:1"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="SelectRelevantPlans_Play/grd8/THM" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p37,p38,p39,p40,p41,p42,p43,p44,p45,p46,p47,p48,p49,p50,p51,p52,p53,p54,p55,p56,p57,p58,p59,p60,p61,p62,p63,p64,p65,p66,p67,p68,p69,p70,p71,p72,p73,p74,p75,p76" org.eventb.core.prSets="Agent_programs,Belief_predicates,None_belief_predicates,Terms">

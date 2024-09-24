@@ -2,8 +2,6 @@
 <org.eventb.theory.core.theoryLanguageRoot org.eventb.core.configuration="org.eventb.theory.core.tul">
     <org.eventb.theory.core.availableTheoryProject name="'" org.eventb.theory.core.availableTheoryProject="/BasicTheory">
         <org.eventb.theory.core.availableTheory name="'" org.eventb.theory.core.availableTheory="/BasicTheory/StackStructure.dtf|org.eventb.theory.core.deployedTheoryRoot#StackStructure"/>
-    </org.eventb.theory.core.availableTheoryProject>
-    <org.eventb.theory.core.availableTheoryProject name="(" org.eventb.theory.core.availableTheoryProject="/Constructors">
-        <org.eventb.theory.core.availableTheory name="'" org.eventb.theory.core.availableTheory="/Constructors/AgentProgramConstructors.dtf|org.eventb.theory.core.deployedTheoryRoot#AgentProgramConstructors"/>
+        <org.eventb.theory.core.availableTheory name="(" org.eventb.theory.core.availableTheory="/BasicTheory/AgentProgramConstructor.dtf|org.eventb.theory.core.deployedTheoryRoot#AgentProgramConstructor"/>
     </org.eventb.theory.core.availableTheoryProject>
 </org.eventb.theory.core.theoryLanguageRoot>

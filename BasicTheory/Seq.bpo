@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="1">
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
     <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
         <org.eventb.core.poIdentifier name="A" org.eventb.core.type="ℙ(A)"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="seqSize/Op-WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Operator Well-Definedness Preservation" org.eventb.core.poStamp="1">
+    <org.eventb.core.poSequent name="seqSize/Op-WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Operator Well-Definedness Preservation" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BasicTheory/Seq.bpo|org.eventb.core.poFile#Seq|org.eventb.core.poPredicateSet#ABSHYP"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀s⦂ℙ(ℤ×A)·s∈seq(A)⇒finite(s)" org.eventb.core.source="/BasicTheory/Seq.tuf|org.eventb.theory.core.theoryRoot#Seq|org.eventb.theory.core.newOperatorDefinition#)"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BasicTheory/Seq.tcf|org.eventb.theory.core.scTheoryRoot#Seq|org.eventb.theory.core.scNewOperatorDefinition#C"/>
         <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BasicTheory/Seq.tuf|org.eventb.theory.core.theoryRoot#Seq|org.eventb.theory.core.newOperatorDefinition#)"/>
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/BasicTheory/Seq.bpo|org.eventb.core.poFile#Seq|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/BasicTheory/Seq.bpo|org.eventb.core.poFile#Seq|org.eventb.core.poSequent#seqSize\/Op-WD|org.eventb.core.poPredicateSet#SEQHYP"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="seqHead/Op-WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Operator Well-Definedness Preservation" org.eventb.core.poStamp="1">
+    <org.eventb.core.poSequent name="seqHead/Op-WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Operator Well-Definedness Preservation" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BasicTheory/Seq.bpo|org.eventb.core.poFile#Seq|org.eventb.core.poPredicateSet#ABSHYP"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀s⦂ℙ(ℤ×A)·s∈seq(A)∧s≠(emptySeq ⦂ ℙ(ℤ×A))⇒1∈dom(s)∧s∈ℤ ⇸ A" org.eventb.core.source="/BasicTheory/Seq.tuf|org.eventb.theory.core.theoryRoot#Seq|org.eventb.theory.core.newOperatorDefinition#+"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BasicTheory/Seq.tcf|org.eventb.theory.core.scTheoryRoot#Seq|org.eventb.theory.core.scNewOperatorDefinition#E"/>
         <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BasicTheory/Seq.tuf|org.eventb.theory.core.theoryRoot#Seq|org.eventb.theory.core.newOperatorDefinition#+"/>
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/BasicTheory/Seq.bpo|org.eventb.core.poFile#Seq|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/BasicTheory/Seq.bpo|org.eventb.core.poFile#Seq|org.eventb.core.poSequent#seqHead\/Op-WD|org.eventb.core.poPredicateSet#SEQHYP"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="seqTail/Op-WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Operator Well-Definedness Preservation" org.eventb.core.poStamp="1">
+    <org.eventb.core.poSequent name="seqTail/Op-WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Operator Well-Definedness Preservation" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BasicTheory/Seq.bpo|org.eventb.core.poFile#Seq|org.eventb.core.poPredicateSet#ABSHYP"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀s⦂ℙ(ℤ×A)·s∈seq(A)∧s≠(emptySeq ⦂ ℙ(ℤ×A))⇒(∀i⦂ℤ·finite(s)∧(i∈1 ‥ card(s) − 1⇒i+1∈dom(s)∧s∈ℤ ⇸ A))" org.eventb.core.source="/BasicTheory/Seq.tuf|org.eventb.theory.core.theoryRoot#Seq|org.eventb.theory.core.newOperatorDefinition#,"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BasicTheory/Seq.tcf|org.eventb.theory.core.scTheoryRoot#Seq|org.eventb.theory.core.scNewOperatorDefinition#F"/>
         <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BasicTheory/Seq.tuf|org.eventb.theory.core.theoryRoot#Seq|org.eventb.theory.core.newOperatorDefinition#,"/>
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/BasicTheory/Seq.bpo|org.eventb.core.poFile#Seq|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/BasicTheory/Seq.bpo|org.eventb.core.poFile#Seq|org.eventb.core.poSequent#seqTail\/Op-WD|org.eventb.core.poPredicateSet#SEQHYP"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="seqPrepend/Op-WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Operator Well-Definedness Preservation" org.eventb.core.poStamp="1">
+    <org.eventb.core.poSequent name="seqPrepend/Op-WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Operator Well-Definedness Preservation" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BasicTheory/Seq.bpo|org.eventb.core.poFile#Seq|org.eventb.core.poPredicateSet#ABSHYP"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀s⦂ℙ(ℤ×A),e⦂A·s∈seq(A)⇒(∀i⦂ℤ·s∈seq(A)∧(i∈2 ‥ seqSize(s)+1⇒i − 1∈dom(s)∧s∈ℤ ⇸ A))" org.eventb.core.source="/BasicTheory/Seq.tuf|org.eventb.theory.core.theoryRoot#Seq|org.eventb.theory.core.newOperatorDefinition#-"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BasicTheory/Seq.tcf|org.eventb.theory.core.scTheoryRoot#Seq|org.eventb.theory.core.scNewOperatorDefinition#G"/>
         <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BasicTheory/Seq.tuf|org.eventb.theory.core.theoryRoot#Seq|org.eventb.theory.core.newOperatorDefinition#-"/>
         <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/BasicTheory/Seq.bpo|org.eventb.core.poFile#Seq|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/BasicTheory/Seq.bpo|org.eventb.core.poFile#Seq|org.eventb.core.poSequent#seqPrepend\/Op-WD|org.eventb.core.poPredicateSet#SEQHYP"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="seqAppend/Op-WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Operator Well-Definedness Preservation" org.eventb.core.poStamp="1">
+    <org.eventb.core.poSequent name="seqAppend/Op-WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Operator Well-Definedness Preservation" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BasicTheory/Seq.bpo|org.eventb.core.poFile#Seq|org.eventb.core.poPredicateSet#ABSHYP"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀s⦂ℙ(ℤ×A),e⦂A·s∈seq(A)⇒finite(s)" org.eventb.core.source="/BasicTheory/Seq.tuf|org.eventb.theory.core.theoryRoot#Seq|org.eventb.theory.core.newOperatorDefinition#."/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BasicTheory/Seq.tcf|org.eventb.theory.core.scTheoryRoot#Seq|org.eventb.theory.core.scNewOperatorDefinition#H"/>
