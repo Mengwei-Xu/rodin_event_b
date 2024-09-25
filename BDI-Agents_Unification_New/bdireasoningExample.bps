@@ -1,21 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.psFile>
-    <org.eventb.core.psStatus name="SelectRelevantPlans_Play/grd8/THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="SelectRelevantPlans_Play/grd4/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="SelectRelevantPlans_Play/grd8/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="SelectRelevantPlans_Arrive/grd8/THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="SelectRelevantPlans_Arrive/grd4/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="SelectRelevantPlans_Arrive/grd8/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="compute_plan1/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="compute_plan1/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="compute_plan1/grd3/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="compute_plan2/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="compute_plan2/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="compute_plan2/grd3/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="compute_plan3/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="compute_plan3/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="compute_plan3/grd3/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="compute_plan4/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="compute_plan4/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="compute_plan4/grd3/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SelectRelevantPlans_Play/grd8/THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="16" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SelectRelevantPlans_Play/grd3/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="16" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SelectRelevantPlans_Play/grd4/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="16" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SelectRelevantPlans_Play/act1/SIM" org.eventb.core.confidence="0" org.eventb.core.poStamp="16" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SelectRelevantPlans_Arrive/grd8/THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="16" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SelectRelevantPlans_Arrive/grd3/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="16" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SelectRelevantPlans_Arrive/grd4/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="16" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SelectRelevantPlans_Arrive/act1/SIM" org.eventb.core.confidence="0" org.eventb.core.poStamp="16" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="compute_plan1/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="16" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="compute_plan2/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="16" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="compute_plan3/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="16" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="compute_plan4/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="16" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>

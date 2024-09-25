@@ -29,7 +29,7 @@
     <org.eventb.core.axiom name="'`" org.eventb.core.label="axm9" org.eventb.core.predicate="Plan_body(arrive_at)(plan2)=plan_body_plan2"/>
     <org.eventb.core.axiom name="'a" org.eventb.core.label="axm10" org.eventb.core.predicate="Plan_body(play_at)(plan3)=plan_body_plan3"/>
     <org.eventb.core.axiom name="'b" org.eventb.core.label="axm11" org.eventb.core.predicate="Plan_body(play_at)(plan4)=plan_body_plan4"/>
-    <org.eventb.core.axiom name="'c" org.eventb.core.label="axm12" org.eventb.core.predicate="Initial_belief_base ={(at ↦ a),next↦Vector(a↦b),next↦Vector(b↦c)}"/>
+    <org.eventb.core.axiom name="'c" org.eventb.core.label="axm12" org.eventb.core.predicate="Initial_belief_base ={(at ↦ a),next↦Vector(a↦b),next↦Vector(b↦c),next↦Vector(a↦c)}"/>
     <org.eventb.core.axiom name="'d" org.eventb.core.label="axm13" org.eventb.core.predicate="Initial_external_event_set ={(arrive_at↦c)}"/>
     <org.eventb.core.axiom name="'i" org.eventb.core.label="axm14" org.eventb.core.predicate="plan_body_plan1 ∈ ℙ(Belief_predicates×Terms)×Terms ⇸ ℙ(STACK(ℙ(AgentPrograms(Belief_predicates,None_belief_predicates,Terms)))) "/>
     <org.eventb.core.axiom name="'j" org.eventb.core.label="axm15" org.eventb.core.predicate="plan_body_plan2 ∈ ℙ(Belief_predicates×Terms)×Terms ⇸ ℙ(STACK(ℙ(AgentPrograms(Belief_predicates,None_belief_predicates,Terms)))) "/>
