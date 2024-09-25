@@ -5,7 +5,7 @@
     <org.eventb.core.axiom name="axm2" org.eventb.core.label="axm2" org.eventb.core.predicate="Preconditions ∈ (Actions × Terms) ↔ (Belief_predicates × Terms) "/>
     <org.eventb.core.axiom name="axm3" org.eventb.core.label="axm3" org.eventb.core.predicate="Deletion_sets ∈ (Actions × Terms) ↔ (Belief_predicates × Terms) "/>
     <org.eventb.core.axiom name="axm4" org.eventb.core.label="axm4" org.eventb.core.predicate="Addition_sets ∈ (Actions × Terms) ↔ (Belief_predicates × Terms)"/>
-    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="true" name="set8" org.eventb.core.identifier="Preconditions"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="set8" org.eventb.core.identifier="Preconditions"/>
     <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="cst3" org.eventb.core.identifier="Addition_sets"/>
     <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="cst2" org.eventb.core.identifier="Deletion_sets"/>
     <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="cst4" org.eventb.core.identifier="Plan_body"/>
