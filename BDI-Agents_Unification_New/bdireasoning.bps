@@ -18,4 +18,8 @@
     <org.eventb.core.psStatus name="ExecuteAction/grd7/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="36" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="ExecuteAction/grd8/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="36" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="ExecuteAction/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="36" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="FailureRecoveryBlockedAction/grd3/THM" org.eventb.core.confidence="0" org.eventb.core.poStamp="38" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="FailureRecoveryBlockedAction/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="38" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="FailureRecoveryBlockedAction/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="40" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="FailureRecoveryBlockedAction/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="40" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>
