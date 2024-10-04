@@ -1255,7 +1255,7 @@
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
         <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
     </org.eventb.core.prProof>
-    <org.eventb.core.prProof name="ExecuteAction/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20" org.eventb.core.prSets="Belief_predicates,None_belief_predicates,Terms">
+    <org.eventb.core.prProof name="ExecuteAction/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22" org.eventb.core.prSets="Belief_predicates,None_belief_predicates,Terms">
         <org.eventb.core.lang name="L">
             <org.eventb.theory.core.scDatatypeDefinition name="STACK">
                 <org.eventb.theory.core.scTypeArgument name="EL" org.eventb.theory.core.givenType="EL"/>
@@ -1296,36 +1296,43 @@
         </org.eventb.core.lang>
         <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Terms,Point,VectorTerms))" org.eventb.core.prHyps="">
             <org.eventb.core.prAnte name="'">
-                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p19" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p21,p22"/>
-                <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p21,p22"/>
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p21" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p23,p24"/>
+                <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p23,p24"/>
                 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Point,{a},{b},{c}))" org.eventb.core.prHyps="">
                     <org.eventb.core.prAnte name="'">
-                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p23,p24,p25,p26"/>
-                        <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p23,p24,p25,p26"/>
+                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p25,p26,p27,p28"/>
+                        <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p25,p26,p27,p28"/>
                         <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(None_belief_predicates,Events,Actions,Plan_library))" org.eventb.core.prHyps="">
                             <org.eventb.core.prAnte name="'">
-                                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p27,p28,p29,p30"/>
-                                <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p27,p28,p29,p30"/>
+                                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p29,p30,p31,p32"/>
+                                <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p29,p30,p31,p32"/>
                                 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
                                     <org.eventb.core.prAnte name="'">
-                                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p31"/>
-                                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p32"/>
-                                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p33"/>
-                                        <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p34"/>
-                                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with next_intentions=(intentions ∖ {{event_real ↦ terms2} ↦ intention_stack})∪{{event_real ↦ terms2} ↦ next_stack(intention_stack)}" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p11">
-                                            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p35">
-                                                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p11"/>
-                                                <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with next_belief_base=(belief_base ∖ Deletion_sets[{action_real ↦ terms1}])∪Addition_sets[{action_real ↦ terms1}]" org.eventb.core.prHyps="p3">
+                                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p33"/>
+                                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p34"/>
+                                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p35"/>
+                                        <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p36"/>
+                                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with updated_top_stack=pop(intention_stack) ∖ {constructNDG({action} ↦ terms2)}" org.eventb.core.prHyps="p9">
+                                            <org.eventb.core.prAnte name="'">
+                                                <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p12" org.eventb.core.prInfHyps="p37"/>
+                                                <org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p12"/>
+                                                <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p9"/>
+                                                <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with next_belief_base=(belief_base ∖ Deletion_sets[{action ↦ terms2}])∪Addition_sets[{action ↦ terms2}]" org.eventb.core.prHyps="p17">
                                                     <org.eventb.core.prAnte name="'">
-                                                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p3"/>
-                                                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with Point={a,b,c}" org.eventb.core.prHyps="p23">
+                                                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p17"/>
+                                                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with Point={a,b,c}" org.eventb.core.prHyps="p25">
                                                             <org.eventb.core.prAnte name="'">
-                                                                <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p21" org.eventb.core.prInfHyps="p36"/>
-                                                                <org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p22" org.eventb.core.prInfHyps="p37"/>
-                                                                <org.eventb.core.prHypAction name="DESELECT2" org.eventb.core.prHyps="p21,p22"/>
-                                                                <org.eventb.core.prHypAction name="DESELECT3" org.eventb.core.prHyps="p23"/>
-                                                                <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p35" org.eventb.core.prHyps="p20,p6,p1,p10,p7,p13,p18,p15,p16,p17,p14,p9,p8,p5,p12,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p36,p37">
-                                                                    <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+                                                                <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p23" org.eventb.core.prInfHyps="p38"/>
+                                                                <org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p24" org.eventb.core.prInfHyps="p39"/>
+                                                                <org.eventb.core.prHypAction name="DESELECT2" org.eventb.core.prHyps="p23,p24"/>
+                                                                <org.eventb.core.prHypAction name="DESELECT3" org.eventb.core.prHyps="p25"/>
+                                                                <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with next_intentions=(intentions ∖ {{event ↦ terms1} ↦ intention_stack})∪{{event ↦ terms1} ↦ push(pop(intention_stack) ∖ {constructNDG({action} ↦ terms2)},next_stack(intention_stack))}" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p37">
+                                                                    <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p40">
+                                                                        <org.eventb.core.prHypAction name="DESELECT0" org.eventb.core.prHyps="p37"/>
+                                                                        <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p40" org.eventb.core.prHyps="p22,p5,p2,p8,p6,p13,p19,p15,p16,p11,p14,p18,p7,p10,p1,p20,p12,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p37,p38,p39">
+                                                                            <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+                                                                        </org.eventb.core.prRule>
+                                                                    </org.eventb.core.prAnte>
                                                                 </org.eventb.core.prRule>
                                                             </org.eventb.core.prAnte>
                                                         </org.eventb.core.prRule>
@@ -1356,12 +1363,12 @@
         <org.eventb.core.prIdent name="Vector" org.eventb.core.type="ℙ(Terms×Terms×Terms)"/>
         <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
         <org.eventb.core.prIdent name="a" org.eventb.core.type="Terms"/>
-        <org.eventb.core.prIdent name="action_real" org.eventb.core.type="None_belief_predicates"/>
+        <org.eventb.core.prIdent name="action" org.eventb.core.type="None_belief_predicates"/>
         <org.eventb.core.prIdent name="alreadytry" org.eventb.core.type="ℙ(None_belief_predicates×Terms×STACK(ℙ(AgentPrograms(Belief_predicates,None_belief_predicates,Terms))))"/>
         <org.eventb.core.prIdent name="b" org.eventb.core.type="Terms"/>
         <org.eventb.core.prIdent name="belief_base" org.eventb.core.type="ℙ(Belief_predicates×Terms)"/>
         <org.eventb.core.prIdent name="c" org.eventb.core.type="Terms"/>
-        <org.eventb.core.prIdent name="event_real" org.eventb.core.type="None_belief_predicates"/>
+        <org.eventb.core.prIdent name="event" org.eventb.core.type="None_belief_predicates"/>
         <org.eventb.core.prIdent name="external_events" org.eventb.core.type="ℙ(None_belief_predicates×Terms)"/>
         <org.eventb.core.prIdent name="intention_stack" org.eventb.core.type="STACK(ℙ(AgentPrograms(Belief_predicates,None_belief_predicates,Terms)))"/>
         <org.eventb.core.prIdent name="intentions" org.eventb.core.type="ℙ(ℙ(None_belief_predicates×Terms)×STACK(ℙ(AgentPrograms(Belief_predicates,None_belief_predicates,Terms))))"/>
@@ -1369,50 +1376,54 @@
         <org.eventb.core.prIdent name="next_intentions" org.eventb.core.type="ℙ(ℙ(None_belief_predicates×Terms)×STACK(ℙ(AgentPrograms(Belief_predicates,None_belief_predicates,Terms))))"/>
         <org.eventb.core.prIdent name="terms1" org.eventb.core.type="Terms"/>
         <org.eventb.core.prIdent name="terms2" org.eventb.core.type="Terms"/>
-        <org.eventb.core.prPred name="p31" org.eventb.core.predicate="Point⊆Terms"/>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="Deletion_sets∈Actions × Terms ↔ Belief_predicates × Terms"/>
-        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="partition(None_belief_predicates,Events,Actions,Plan_library)"/>
-        <org.eventb.core.prPred name="p36" org.eventb.core.predicate="Terms={a,b,c}∪VectorTerms"/>
+        <org.eventb.core.prIdent name="updated_top_stack" org.eventb.core.type="ℙ(AgentPrograms(Belief_predicates,None_belief_predicates,Terms))"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="action ↦ terms2∈dom(Preconditions)"/>
+        <org.eventb.core.prPred name="p33" org.eventb.core.predicate="Point⊆Terms"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="Deletion_sets∈Actions × Terms ↔ Belief_predicates × Terms"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="partition(None_belief_predicates,Events,Actions,Plan_library)"/>
+        <org.eventb.core.prPred name="p38" org.eventb.core.predicate="Terms={a,b,c}∪VectorTerms"/>
         <org.eventb.core.prPred name="p4" org.eventb.core.predicate="partition(Point,{a},{b},{c})"/>
-        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="Preconditions[{action_real ↦ terms1}]⊆belief_base"/>
-        <org.eventb.core.prPred name="p27" org.eventb.core.predicate="None_belief_predicates=Events∪Actions∪Plan_library"/>
-        <org.eventb.core.prPred name="p29" org.eventb.core.predicate="Events∩Plan_library=(∅ ⦂ ℙ(None_belief_predicates))"/>
-        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="action_real∈Actions"/>
-        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="Addition_sets∈Actions × Terms ↔ Belief_predicates × Terms"/>
-        <org.eventb.core.prPred name="p21" org.eventb.core.predicate="Terms=Point∪VectorTerms"/>
+        <org.eventb.core.prPred name="p29" org.eventb.core.predicate="None_belief_predicates=Events∪Actions∪Plan_library"/>
+        <org.eventb.core.prPred name="p31" org.eventb.core.predicate="Events∩Plan_library=(∅ ⦂ ℙ(None_belief_predicates))"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="Addition_sets∈Actions × Terms ↔ Belief_predicates × Terms"/>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="updated_top_stack=pop(intention_stack) ∖ {constructNDG({action} ↦ terms2)}"/>
+        <org.eventb.core.prPred name="p23" org.eventb.core.predicate="Terms=Point∪VectorTerms"/>
         <org.eventb.core.prPred name="p16" org.eventb.core.predicate="alreadytry∈Events × Terms ↔ STACK(ℙ(AgentPrograms(Belief_predicates,None_belief_predicates,Terms)))"/>
-        <org.eventb.core.prPred name="p32" org.eventb.core.predicate="VectorTerms⊆Terms"/>
-        <org.eventb.core.prPred name="p25" org.eventb.core.predicate="¬a=c"/>
-        <org.eventb.core.prPred name="p30" org.eventb.core.predicate="Actions∩Plan_library=(∅ ⦂ ℙ(None_belief_predicates))"/>
-        <org.eventb.core.prPred name="p35" org.eventb.core.predicate="(intentions ∖ {{event_real ↦ terms2} ↦ intention_stack})∪{{event_real ↦ terms2} ↦ next_stack(intention_stack)}∈ℙ(ℙ(Events × Terms) × STACK(ℙ(AgentPrograms(Belief_predicates,None_belief_predicates,Terms))))"/>
-        <org.eventb.core.prPred name="p18" org.eventb.core.predicate="external_events∈ℙ(Events × Terms)"/>
-        <org.eventb.core.prPred name="p26" org.eventb.core.predicate="¬b=c"/>
-        <org.eventb.core.prPred name="p28" org.eventb.core.predicate="Events∩Actions=(∅ ⦂ ℙ(None_belief_predicates))"/>
-        <org.eventb.core.prPred name="p19" org.eventb.core.predicate="partition(Terms,Point,VectorTerms)"/>
-        <org.eventb.core.prPred name="p20" org.eventb.core.predicate="Vector∈Point × Point ↣ VectorTerms"/>
+        <org.eventb.core.prPred name="p17" org.eventb.core.predicate="next_belief_base=(belief_base ∖ Deletion_sets[{action ↦ terms2}])∪Addition_sets[{action ↦ terms2}]"/>
+        <org.eventb.core.prPred name="p34" org.eventb.core.predicate="VectorTerms⊆Terms"/>
+        <org.eventb.core.prPred name="p18" org.eventb.core.predicate="action∈Actions"/>
+        <org.eventb.core.prPred name="p27" org.eventb.core.predicate="¬a=c"/>
+        <org.eventb.core.prPred name="p32" org.eventb.core.predicate="Actions∩Plan_library=(∅ ⦂ ℙ(None_belief_predicates))"/>
+        <org.eventb.core.prPred name="p19" org.eventb.core.predicate="external_events∈ℙ(Events × Terms)"/>
+        <org.eventb.core.prPred name="p20" org.eventb.core.predicate="Preconditions[{action ↦ terms2}]⊆belief_base"/>
+        <org.eventb.core.prPred name="p28" org.eventb.core.predicate="¬b=c"/>
+        <org.eventb.core.prPred name="p30" org.eventb.core.predicate="Events∩Actions=(∅ ⦂ ℙ(None_belief_predicates))"/>
+        <org.eventb.core.prPred name="p21" org.eventb.core.predicate="partition(Terms,Point,VectorTerms)"/>
+        <org.eventb.core.prPred name="p22" org.eventb.core.predicate="Vector∈Point × Point ↣ VectorTerms"/>
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="next_intentions∈ℙ(ℙ(Events × Terms) × STACK(ℙ(AgentPrograms(Belief_predicates,None_belief_predicates,Terms))))"/>
-        <org.eventb.core.prPred name="p23" org.eventb.core.predicate="Point={a,b,c}"/>
-        <org.eventb.core.prPred name="p24" org.eventb.core.predicate="¬a=b"/>
-        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="next_belief_base=(belief_base ∖ Deletion_sets[{action_real ↦ terms1}])∪Addition_sets[{action_real ↦ terms1}]"/>
-        <org.eventb.core.prPred name="p34" org.eventb.core.predicate="belief_base∈ℙ(Belief_predicates × Terms)"/>
-        <org.eventb.core.prPred name="p37" org.eventb.core.predicate="{a,b,c}∩VectorTerms=(∅ ⦂ ℙ(Terms))"/>
-        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="Preconditions∈Actions × Terms ↔ Belief_predicates × Terms"/>
-        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="Plan_body∈Events ⇸ (Plan_library ⇸ (ℙ(Belief_predicates × Terms) × Terms ⇸ ℙ(STACK(ℙ(AgentPrograms(Belief_predicates,None_belief_predicates,Terms))))))"/>
-        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="action_real ↦ terms1∈dom(Preconditions)"/>
-        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="next_intentions=(intentions ∖ {{event_real ↦ terms2} ↦ intention_stack})∪{{event_real ↦ terms2} ↦ next_stack(intention_stack)}"/>
-        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="∃pop0⦂ℙ(AgentPrograms(Belief_predicates,None_belief_predicates,Terms)),next_stack1⦂STACK(ℙ(AgentPrograms(Belief_predicates,None_belief_predicates,Terms)))·intention_stack=push(pop0,next_stack1)"/>
+        <org.eventb.core.prPred name="p25" org.eventb.core.predicate="Point={a,b,c}"/>
+        <org.eventb.core.prPred name="p26" org.eventb.core.predicate="¬a=b"/>
+        <org.eventb.core.prPred name="p36" org.eventb.core.predicate="belief_base∈ℙ(Belief_predicates × Terms)"/>
+        <org.eventb.core.prPred name="p39" org.eventb.core.predicate="{a,b,c}∩VectorTerms=(∅ ⦂ ℙ(Terms))"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="Preconditions∈Actions × Terms ↔ Belief_predicates × Terms"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="Plan_body∈Events ⇸ (Plan_library ⇸ (ℙ(Belief_predicates × Terms) × Terms ⇸ ℙ(STACK(ℙ(AgentPrograms(Belief_predicates,None_belief_predicates,Terms))))))"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="constructNDG({action} ↦ terms2)∈pop(intention_stack)"/>
+        <org.eventb.core.prPred name="p40" org.eventb.core.predicate="(intentions ∖ {{event ↦ terms1} ↦ intention_stack})∪{{event ↦ terms1} ↦ push(pop(intention_stack) ∖ {constructNDG({action} ↦ terms2)},next_stack(intention_stack))}∈ℙ(ℙ(Events × Terms) × STACK(ℙ(AgentPrograms(Belief_predicates,None_belief_predicates,Terms))))"/>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="∃pop0⦂ℙ(AgentPrograms(Belief_predicates,None_belief_predicates,Terms)),next_stack1⦂STACK(ℙ(AgentPrograms(Belief_predicates,None_belief_predicates,Terms)))·intention_stack=push(pop0,next_stack1)"/>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="{event ↦ terms1} ↦ intention_stack∈intentions"/>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="next_intentions=(intentions ∖ {{event ↦ terms1} ↦ intention_stack})∪{{event ↦ terms1} ↦ push(updated_top_stack,next_stack(intention_stack))}"/>
         <org.eventb.core.prPred name="p13" org.eventb.core.predicate="Initial_external_event_set∈ℙ(Events × Terms)"/>
         <org.eventb.core.prPred name="p14" org.eventb.core.predicate="notEmpty(intention_stack)"/>
-        <org.eventb.core.prPred name="p33" org.eventb.core.predicate="Initial_belief_base∈ℙ(Belief_predicates × Terms)">
+        <org.eventb.core.prPred name="p35" org.eventb.core.predicate="Initial_belief_base∈ℙ(Belief_predicates × Terms)">
             <org.eventb.core.prIdent name="Initial_belief_base" org.eventb.core.type="ℙ(Belief_predicates×Terms)"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p22" org.eventb.core.predicate="Point∩VectorTerms=(∅ ⦂ ℙ(Terms))"/>
+        <org.eventb.core.prPred name="p24" org.eventb.core.predicate="Point∩VectorTerms=(∅ ⦂ ℙ(Terms))"/>
         <org.eventb.core.prPred name="p15" org.eventb.core.predicate="intentions∈ℙ(ℙ(Events × Terms) × STACK(ℙ(AgentPrograms(Belief_predicates,None_belief_predicates,Terms))))"/>
-        <org.eventb.core.prPred name="p17" org.eventb.core.predicate="{event_real ↦ terms2} ↦ intention_stack∈intentions"/>
+        <org.eventb.core.prPred name="p37" org.eventb.core.predicate="next_intentions=(intentions ∖ {{event ↦ terms1} ↦ intention_stack})∪{{event ↦ terms1} ↦ push(pop(intention_stack) ∖ {constructNDG({action} ↦ terms2)},next_stack(intention_stack))}"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
         <org.eventb.core.prReas name="r3" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.eqL2:1"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.eqL2:1"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="AddressExternalEvent/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13" org.eventb.core.prSets="Belief_predicates,None_belief_predicates,Terms">
         <org.eventb.core.lang name="L">
@@ -6873,7 +6884,7 @@
                                                                 <org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p23" org.eventb.core.prInfHyps="p40"/>
                                                                 <org.eventb.core.prHypAction name="DESELECT2" org.eventb.core.prHyps="p22,p23"/>
                                                                 <org.eventb.core.prHypAction name="DESELECT3" org.eventb.core.prHyps="p24"/>
-                                                                <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p38" org.eventb.core.prHyps="p20,p8,p3,p11,p9,p14,p18,p16,p17,p10,p15,p13,p12,p1,p5,p6,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p39,p40">
+                                                                <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p38" org.eventb.core.prHyps="p20,p8,p3,p12,p9,p14,p18,p16,p17,p10,p15,p11,p13,p1,p5,p6,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p39,p40">
                                                                     <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
                                                                 </org.eventb.core.prRule>
                                                             </org.eventb.core.prAnte>
@@ -6922,8 +6933,7 @@
         <org.eventb.core.prPred name="p7" org.eventb.core.predicate="partition(Point,{a},{b},{c})"/>
         <org.eventb.core.prPred name="p28" org.eventb.core.predicate="None_belief_predicates=Events∪Actions∪Plan_library"/>
         <org.eventb.core.prPred name="p30" org.eventb.core.predicate="Events∩Plan_library=(∅ ⦂ ℙ(None_belief_predicates))"/>
-        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="Addition_sets∈Actions × Terms ↔ Belief_predicates × Terms"/>
-        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="pop(intention_stack)={constructNDG({event} ↦ terms)}"/>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="Addition_sets∈Actions × Terms ↔ Belief_predicates × Terms"/>
         <org.eventb.core.prPred name="p22" org.eventb.core.predicate="Terms=Point∪VectorTerms"/>
         <org.eventb.core.prPred name="p17" org.eventb.core.predicate="alreadytry∈Events × Terms ↔ STACK(ℙ(AgentPrograms(Belief_predicates,None_belief_predicates,Terms)))"/>
         <org.eventb.core.prPred name="p34" org.eventb.core.predicate="VectorTerms⊆Terms"/>
@@ -6950,8 +6960,9 @@
         <org.eventb.core.prPred name="p8" org.eventb.core.predicate="Preconditions∈Actions × Terms ↔ Belief_predicates × Terms"/>
         <org.eventb.core.prPred name="p9" org.eventb.core.predicate="Plan_body∈Events ⇸ (Plan_library ⇸ (ℙ(Belief_predicates × Terms) × Terms ⇸ ℙ(STACK(ℙ(AgentPrograms(Belief_predicates,None_belief_predicates,Terms))))))"/>
         <org.eventb.core.prPred name="p10" org.eventb.core.predicate="intention_stack∈ran(intentions)"/>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="constructNDG({event} ↦ terms)∈pop(intention_stack)"/>
         <org.eventb.core.prPred name="p38" org.eventb.core.predicate="intentions∪{{event ↦ terms} ↦ push({constructNDG(dom(Plan_body(event)) ↦ terms)},Empty ⦂ STACK(ℙ(AgentPrograms(Belief_predicates,None_belief_predicates,Terms))))}∈ℙ(ℙ(Events × Terms) × STACK(ℙ(AgentPrograms(Belief_predicates,None_belief_predicates,Terms))))"/>
-        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="∃pop0⦂ℙ(AgentPrograms(Belief_predicates,None_belief_predicates,Terms)),next_stack1⦂STACK(ℙ(AgentPrograms(Belief_predicates,None_belief_predicates,Terms)))·intention_stack=push(pop0,next_stack1)"/>
+        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="∃pop0⦂ℙ(AgentPrograms(Belief_predicates,None_belief_predicates,Terms)),next_stack1⦂STACK(ℙ(AgentPrograms(Belief_predicates,None_belief_predicates,Terms)))·intention_stack=push(pop0,next_stack1)"/>
         <org.eventb.core.prPred name="p14" org.eventb.core.predicate="Initial_external_event_set∈ℙ(Events × Terms)"/>
         <org.eventb.core.prPred name="p15" org.eventb.core.predicate="notEmpty(intention_stack)"/>
         <org.eventb.core.prPred name="p35" org.eventb.core.predicate="Initial_belief_base∈ℙ(Belief_predicates × Terms)">
@@ -6959,11 +6970,11 @@
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p23" org.eventb.core.predicate="Point∩VectorTerms=(∅ ⦂ ℙ(Terms))"/>
         <org.eventb.core.prPred name="p16" org.eventb.core.predicate="intentions∈ℙ(ℙ(Events × Terms) × STACK(ℙ(AgentPrograms(Belief_predicates,None_belief_predicates,Terms))))"/>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
         <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.eqL2:1"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
         <org.eventb.core.prReas name="r4" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="FailureRecoveryBlockedAction/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34" org.eventb.core.prSets="Agent_programs,Belief_predicates,None_belief_predicates,Terms">
         <org.eventb.core.lang name="L">
@@ -7140,7 +7151,7 @@
         <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.eqL2:1"/>
         <org.eventb.core.prReas name="r4" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
     </org.eventb.core.prProof>
-    <org.eventb.core.prProof name="ExecuteAction/grd7/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0" org.eventb.core.prSets="Agent_programs">
+    <org.eventb.core.prProof name="ExecuteAction/grd7/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0" org.eventb.core.prSets="Belief_predicates,None_belief_predicates,Terms">
         <org.eventb.core.lang name="L">
             <org.eventb.theory.core.scDatatypeDefinition name="STACK">
                 <org.eventb.theory.core.scTypeArgument name="EL" org.eventb.theory.core.givenType="EL"/>
@@ -7165,13 +7176,26 @@
                     <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="push(e,s)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="⊤"/>
                 </org.eventb.theory.core.scRecursiveOperatorDefinition>
             </org.eventb.theory.core.scNewOperatorDefinition>
+            <org.eventb.theory.core.scDatatypeDefinition name="AgentPrograms">
+                <org.eventb.theory.core.scTypeArgument name="belief_predicates" org.eventb.theory.core.givenType="belief_predicates"/>
+                <org.eventb.theory.core.scTypeArgument name="non_belief_predicates" org.eventb.theory.core.givenType="non_belief_predicates"/>
+                <org.eventb.theory.core.scTypeArgument name="terms" org.eventb.theory.core.givenType="terms"/>
+                <org.eventb.theory.core.scDatatypeConstructor name="constructDG">
+                    <org.eventb.theory.core.scConstructorArgument name="SuccessConditions" org.eventb.core.type="ℙ(belief_predicates×terms)"/>
+                    <org.eventb.theory.core.scConstructorArgument name="DGGoalPlanBodies" org.eventb.core.type="ℙ(non_belief_predicates)×terms"/>
+                    <org.eventb.theory.core.scConstructorArgument name="FailureConditions" org.eventb.core.type="ℙ(belief_predicates×terms)"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+                <org.eventb.theory.core.scDatatypeConstructor name="constructNDG">
+                    <org.eventb.theory.core.scConstructorArgument name="NDGGoalPlanBodies" org.eventb.core.type="ℙ(non_belief_predicates)×terms"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+            </org.eventb.theory.core.scDatatypeDefinition>
         </org.eventb.core.lang>
         <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0"/>
-        <org.eventb.core.prIdent name="intention_stack" org.eventb.core.type="STACK(ℙ(Agent_programs))"/>
-        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="∃pop0⦂ℙ(Agent_programs),next_stack1⦂STACK(ℙ(Agent_programs))·intention_stack=push(pop0,next_stack1)"/>
+        <org.eventb.core.prIdent name="intention_stack" org.eventb.core.type="STACK(ℙ(AgentPrograms(Belief_predicates,None_belief_predicates,Terms)))"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="∃pop0⦂ℙ(AgentPrograms(Belief_predicates,None_belief_predicates,Terms)),next_stack1⦂STACK(ℙ(AgentPrograms(Belief_predicates,None_belief_predicates,Terms)))·intention_stack=push(pop0,next_stack1)"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
     </org.eventb.core.prProof>
-    <org.eventb.core.prProof name="ExecuteAction/grd8/WD" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7" org.eventb.core.prSets="Belief_predicates,Predicate,Terms">
+    <org.eventb.core.prProof name="ExecuteAction/grd8/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0" org.eventb.core.prSets="Belief_predicates,None_belief_predicates,Terms">
         <org.eventb.core.lang name="L">
             <org.eventb.theory.core.scDatatypeDefinition name="STACK">
                 <org.eventb.theory.core.scTypeArgument name="EL" org.eventb.theory.core.givenType="EL"/>
@@ -7196,329 +7220,26 @@
                     <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="push(e,s)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="⊤"/>
                 </org.eventb.theory.core.scRecursiveOperatorDefinition>
             </org.eventb.theory.core.scNewOperatorDefinition>
+            <org.eventb.theory.core.scDatatypeDefinition name="AgentPrograms">
+                <org.eventb.theory.core.scTypeArgument name="belief_predicates" org.eventb.theory.core.givenType="belief_predicates"/>
+                <org.eventb.theory.core.scTypeArgument name="non_belief_predicates" org.eventb.theory.core.givenType="non_belief_predicates"/>
+                <org.eventb.theory.core.scTypeArgument name="terms" org.eventb.theory.core.givenType="terms"/>
+                <org.eventb.theory.core.scDatatypeConstructor name="constructDG">
+                    <org.eventb.theory.core.scConstructorArgument name="SuccessConditions" org.eventb.core.type="ℙ(belief_predicates×terms)"/>
+                    <org.eventb.theory.core.scConstructorArgument name="DGGoalPlanBodies" org.eventb.core.type="ℙ(non_belief_predicates)×terms"/>
+                    <org.eventb.theory.core.scConstructorArgument name="FailureConditions" org.eventb.core.type="ℙ(belief_predicates×terms)"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+                <org.eventb.theory.core.scDatatypeConstructor name="constructNDG">
+                    <org.eventb.theory.core.scConstructorArgument name="NDGGoalPlanBodies" org.eventb.core.type="ℙ(non_belief_predicates)×terms"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+            </org.eventb.theory.core.scDatatypeDefinition>
         </org.eventb.core.lang>
-        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Point,{a},{b},{c}))" org.eventb.core.prHyps="">
-            <org.eventb.core.prAnte name="'">
-                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p8,p9,p10,p11"/>
-                <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p8,p9,p10,p11"/>
-                <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Predicate,Events,Actions,Plan_library))" org.eventb.core.prHyps="">
-                    <org.eventb.core.prAnte name="'">
-                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p12" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p13,p14,p15,p16"/>
-                        <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p13,p14,p15,p16"/>
-                        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Belief_predicates,{at},{smiled_at},{cried_at},{next}))" org.eventb.core.prHyps="">
-                            <org.eventb.core.prAnte name="'">
-                                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p17" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p18,p19,p20,p21,p22,p23,p24"/>
-                                <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p18,p19,p20,p21,p22,p23,p24"/>
-                                <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Events,{arrive_at},{play_at}))" org.eventb.core.prHyps="">
-                                    <org.eventb.core.prAnte name="'">
-                                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p25,p26"/>
-                                        <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p25,p26"/>
-                                        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Actions,{travel},{smile_at},{cry_at}))" org.eventb.core.prHyps="">
-                                            <org.eventb.core.prAnte name="'">
-                                                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p27,p28,p29,p30"/>
-                                                <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p27,p28,p29,p30"/>
-                                                <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Plan_library,{plan1},{plan2},{plan3},{plan4}))" org.eventb.core.prHyps="">
-                                                    <org.eventb.core.prAnte name="'">
-                                                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p7" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p31,p32,p33,p34,p35,p36,p37"/>
-                                                        <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p31,p32,p33,p34,p35,p36,p37"/>
-                                                        <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prHyps="">
-                                                            <org.eventb.core.prAnte name="'">
-                                                                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p38" org.eventb.core.prHyps="p40" org.eventb.core.prInfHyps="p39"/>
-                                                                <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p41" org.eventb.core.prHyps="p40" org.eventb.core.prInfHyps="p42"/>
-                                                                <org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p43" org.eventb.core.prHyps="p40" org.eventb.core.prInfHyps="p44"/>
-                                                                <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
-                                                                    <org.eventb.core.prAnte name="'">
-                                                                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p45" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p46"/>
-                                                                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p47"/>
-                                                                        <org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p48" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p49"/>
-                                                                        <org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p39" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p50"/>
-                                                                        <org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p42" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p51"/>
-                                                                        <org.eventb.core.prHypAction name="REWRITE5" org.eventb.core.prHidden="p44" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p52"/>
-                                                                        <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
-                                                                            <org.eventb.core.prAnte name="'">
-                                                                                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p53"/>
-                                                                                <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p54"/>
-                                                                                <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ goal" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
-                                                                                    <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p55">
-                                                                                        <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with next_intentions=(intentions ∖ {{event_real ↦ terms2} ↦ intention_stack})∪{{event_real ↦ terms2} ↦ next_stack(intention_stack)}" org.eventb.core.prHyps="p3">
-                                                                                            <org.eventb.core.prAnte name="'">
-                                                                                                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p3"/>
-                                                                                                <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with Point={a,b,c}" org.eventb.core.prHyps="p8">
-                                                                                                    <org.eventb.core.prAnte name="'">
-                                                                                                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p8"/>
-                                                                                                        <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with Events={arrive_at,play_at}" org.eventb.core.prHyps="p25">
-                                                                                                            <org.eventb.core.prAnte name="'">
-                                                                                                                <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p13" org.eventb.core.prInfHyps="p56"/>
-                                                                                                                <org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p14" org.eventb.core.prInfHyps="p57"/>
-                                                                                                                <org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p15" org.eventb.core.prInfHyps="p58"/>
-                                                                                                                <org.eventb.core.prHypAction name="DESELECT3" org.eventb.core.prHyps="p13,p14,p15"/>
-                                                                                                                <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p25"/>
-                                                                                                                <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with Actions={travel,smile_at,cry_at}" org.eventb.core.prHyps="p27">
-                                                                                                                    <org.eventb.core.prAnte name="'">
-                                                                                                                        <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p59" org.eventb.core.prInfHyps="p60"/>
-                                                                                                                        <org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p16" org.eventb.core.prInfHyps="p61"/>
-                                                                                                                        <org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p56" org.eventb.core.prInfHyps="p62"/>
-                                                                                                                        <org.eventb.core.prHypAction name="FORWARD_INF3" org.eventb.core.prHyps="p57" org.eventb.core.prInfHyps="p63"/>
-                                                                                                                        <org.eventb.core.prHypAction name="DESELECT4" org.eventb.core.prHyps="p59,p16,p56,p57"/>
-                                                                                                                        <org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p27"/>
-                                                                                                                        <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with Plan_library={plan1,plan2,plan3,plan4}" org.eventb.core.prHyps="p31">
-                                                                                                                            <org.eventb.core.prAnte name="'">
-                                                                                                                                <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p58" org.eventb.core.prInfHyps="p64"/>
-                                                                                                                                <org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p61" org.eventb.core.prInfHyps="p65"/>
-                                                                                                                                <org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p62" org.eventb.core.prInfHyps="p66"/>
-                                                                                                                                <org.eventb.core.prHypAction name="DESELECT3" org.eventb.core.prHyps="p58,p61,p62"/>
-                                                                                                                                <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p31"/>
-                                                                                                                            </org.eventb.core.prAnte>
-                                                                                                                        </org.eventb.core.prRule>
-                                                                                                                    </org.eventb.core.prAnte>
-                                                                                                                </org.eventb.core.prRule>
-                                                                                                            </org.eventb.core.prAnte>
-                                                                                                        </org.eventb.core.prRule>
-                                                                                                    </org.eventb.core.prAnte>
-                                                                                                </org.eventb.core.prRule>
-                                                                                            </org.eventb.core.prAnte>
-                                                                                        </org.eventb.core.prRule>
-                                                                                    </org.eventb.core.prAnte>
-                                                                                    <org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p67">
-                                                                                        <org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional goal" org.eventb.core.prGoal="p67" org.eventb.core.prHyps="p4"/>
-                                                                                    </org.eventb.core.prAnte>
-                                                                                    <org.eventb.core.prAnte name=")" org.eventb.core.prGoal="p68">
-                                                                                        <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with next_intentions=(intentions ∖ {{event_real ↦ terms2} ↦ intention_stack})∪{{event_real ↦ terms2} ↦ next_stack(intention_stack)}" org.eventb.core.prHyps="p3">
-                                                                                            <org.eventb.core.prAnte name="'">
-                                                                                                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p3"/>
-                                                                                                <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with Point={a,b,c}" org.eventb.core.prHyps="p8">
-                                                                                                    <org.eventb.core.prAnte name="'">
-                                                                                                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p8"/>
-                                                                                                        <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with Events={arrive_at,play_at}" org.eventb.core.prHyps="p25">
-                                                                                                            <org.eventb.core.prAnte name="'">
-                                                                                                                <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p13" org.eventb.core.prInfHyps="p56"/>
-                                                                                                                <org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p14" org.eventb.core.prInfHyps="p57"/>
-                                                                                                                <org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p15" org.eventb.core.prInfHyps="p58"/>
-                                                                                                                <org.eventb.core.prHypAction name="DESELECT3" org.eventb.core.prHyps="p13,p14,p15"/>
-                                                                                                                <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p25"/>
-                                                                                                                <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with Actions={travel,smile_at,cry_at}" org.eventb.core.prHyps="p27">
-                                                                                                                    <org.eventb.core.prAnte name="'">
-                                                                                                                        <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p59" org.eventb.core.prInfHyps="p60"/>
-                                                                                                                        <org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p16" org.eventb.core.prInfHyps="p61"/>
-                                                                                                                        <org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p56" org.eventb.core.prInfHyps="p62"/>
-                                                                                                                        <org.eventb.core.prHypAction name="FORWARD_INF3" org.eventb.core.prHyps="p57" org.eventb.core.prInfHyps="p63"/>
-                                                                                                                        <org.eventb.core.prHypAction name="DESELECT4" org.eventb.core.prHyps="p59,p16,p56,p57"/>
-                                                                                                                        <org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p27"/>
-                                                                                                                        <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with Plan_library={plan1,plan2,plan3,plan4}" org.eventb.core.prHyps="p31">
-                                                                                                                            <org.eventb.core.prAnte name="'">
-                                                                                                                                <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p58" org.eventb.core.prInfHyps="p64"/>
-                                                                                                                                <org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p61" org.eventb.core.prInfHyps="p65"/>
-                                                                                                                                <org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p62" org.eventb.core.prInfHyps="p66"/>
-                                                                                                                                <org.eventb.core.prHypAction name="DESELECT3" org.eventb.core.prHyps="p58,p61,p62"/>
-                                                                                                                                <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p31"/>
-                                                                                                                            </org.eventb.core.prAnte>
-                                                                                                                        </org.eventb.core.prRule>
-                                                                                                                    </org.eventb.core.prAnte>
-                                                                                                                </org.eventb.core.prRule>
-                                                                                                            </org.eventb.core.prAnte>
-                                                                                                        </org.eventb.core.prRule>
-                                                                                                    </org.eventb.core.prAnte>
-                                                                                                </org.eventb.core.prRule>
-                                                                                            </org.eventb.core.prAnte>
-                                                                                        </org.eventb.core.prRule>
-                                                                                    </org.eventb.core.prAnte>
-                                                                                    <org.eventb.core.prAnte name="*" org.eventb.core.prGoal="p69">
-                                                                                        <org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional goal" org.eventb.core.prGoal="p69" org.eventb.core.prHyps="p6"/>
-                                                                                    </org.eventb.core.prAnte>
-                                                                                </org.eventb.core.prRule>
-                                                                            </org.eventb.core.prAnte>
-                                                                        </org.eventb.core.prRule>
-                                                                    </org.eventb.core.prAnte>
-                                                                </org.eventb.core.prRule>
-                                                            </org.eventb.core.prAnte>
-                                                        </org.eventb.core.prRule>
-                                                    </org.eventb.core.prAnte>
-                                                    <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
-                                                </org.eventb.core.prRule>
-                                            </org.eventb.core.prAnte>
-                                            <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
-                                        </org.eventb.core.prRule>
-                                    </org.eventb.core.prAnte>
-                                    <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
-                                </org.eventb.core.prRule>
-                            </org.eventb.core.prAnte>
-                            <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
-                        </org.eventb.core.prRule>
-                    </org.eventb.core.prAnte>
-                    <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
-                </org.eventb.core.prRule>
-            </org.eventb.core.prAnte>
-            <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
-        </org.eventb.core.prRule>
-        <org.eventb.core.prIdent name="Actions" org.eventb.core.type="ℙ(Predicate)"/>
-        <org.eventb.core.prIdent name="Events" org.eventb.core.type="ℙ(Predicate)"/>
-        <org.eventb.core.prIdent name="Plan_library" org.eventb.core.type="ℙ(Predicate)"/>
-        <org.eventb.core.prIdent name="Point" org.eventb.core.type="ℙ(Terms)"/>
-        <org.eventb.core.prIdent name="a" org.eventb.core.type="Terms"/>
-        <org.eventb.core.prIdent name="action_real" org.eventb.core.type="Predicate"/>
-        <org.eventb.core.prIdent name="add_set" org.eventb.core.type="ℙ(Predicate×Terms×ℙ(Belief_predicates×Terms))"/>
-        <org.eventb.core.prIdent name="arrive_at" org.eventb.core.type="Predicate"/>
-        <org.eventb.core.prIdent name="b" org.eventb.core.type="Terms"/>
-        <org.eventb.core.prIdent name="c" org.eventb.core.type="Terms"/>
-        <org.eventb.core.prIdent name="cry_at" org.eventb.core.type="Predicate"/>
-        <org.eventb.core.prIdent name="delete_set" org.eventb.core.type="ℙ(Predicate×Terms×ℙ(Belief_predicates×Terms))"/>
-        <org.eventb.core.prIdent name="event_real" org.eventb.core.type="Predicate"/>
-        <org.eventb.core.prIdent name="intention_stack" org.eventb.core.type="STACK(ℙ(Predicate×Terms))"/>
-        <org.eventb.core.prIdent name="intentions" org.eventb.core.type="ℙ(ℙ(Predicate×Terms)×STACK(ℙ(Predicate×Terms)))"/>
-        <org.eventb.core.prIdent name="next_intentions" org.eventb.core.type="ℙ(ℙ(Predicate×Terms)×STACK(ℙ(Predicate×Terms)))"/>
-        <org.eventb.core.prIdent name="plan1" org.eventb.core.type="Predicate"/>
-        <org.eventb.core.prIdent name="plan2" org.eventb.core.type="Predicate"/>
-        <org.eventb.core.prIdent name="plan3" org.eventb.core.type="Predicate"/>
-        <org.eventb.core.prIdent name="plan4" org.eventb.core.type="Predicate"/>
-        <org.eventb.core.prIdent name="play_at" org.eventb.core.type="Predicate"/>
-        <org.eventb.core.prIdent name="smile_at" org.eventb.core.type="Predicate"/>
-        <org.eventb.core.prIdent name="terms1" org.eventb.core.type="Terms"/>
-        <org.eventb.core.prIdent name="terms2" org.eventb.core.type="Terms"/>
-        <org.eventb.core.prIdent name="travel" org.eventb.core.type="Predicate"/>
-        <org.eventb.core.prPred name="p29" org.eventb.core.predicate="¬travel=cry_at"/>
-        <org.eventb.core.prPred name="p53" org.eventb.core.predicate="Point⊆Terms"/>
-        <org.eventb.core.prPred name="p21" org.eventb.core.predicate="¬at=next">
-            <org.eventb.core.prIdent name="at" org.eventb.core.type="Belief_predicates"/>
-            <org.eventb.core.prIdent name="next" org.eventb.core.type="Belief_predicates"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p38" org.eventb.core.predicate="∀action⦂Predicate,terms1⦂Terms,terms2⦂Terms·action=travel∧terms1∈Point∧terms2∈Point⇒terms1 ↦ terms2∈dom(Vector)∧Vector∈Terms × Terms ⇸ Terms">
-            <org.eventb.core.prIdent name="Vector" org.eventb.core.type="ℙ(Terms×Terms×Terms)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p40" org.eventb.core.predicate="Vector∈Terms × Terms ⇸ Terms">
-            <org.eventb.core.prIdent name="Vector" org.eventb.core.type="ℙ(Terms×Terms×Terms)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="action_real ↦ terms1∈dom(delete_set)∧delete_set∈Predicate × Terms ⇸ ℙ(Belief_predicates × Terms)∧action_real ↦ terms1∈dom(add_set)∧add_set∈Predicate × Terms ⇸ ℙ(Belief_predicates × Terms)"/>
-        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="partition(Plan_library,{plan1},{plan2},{plan3},{plan4})"/>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(Actions,{travel},{smile_at},{cry_at})"/>
-        <org.eventb.core.prPred name="p67" org.eventb.core.predicate="delete_set∈Predicate × Terms ⇸ ℙ(Belief_predicates × Terms)"/>
-        <org.eventb.core.prPred name="p51" org.eventb.core.predicate="∀terms1⦂Terms,terms2⦂Terms,terms3⦂Terms,belief⦂ℙ(Belief_predicates×Terms)·terms3∈Point∧terms2∈Point∧terms1∈Point⇒terms1 ↦ terms2∈dom(Vector)∧(next ↦ Vector(terms1 ↦ terms2)∈belief⇒terms2 ↦ terms3∈dom(Vector))">
-            <org.eventb.core.prIdent name="Vector" org.eventb.core.type="ℙ(Terms×Terms×Terms)"/>
-            <org.eventb.core.prIdent name="next" org.eventb.core.type="Belief_predicates"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p41" org.eventb.core.predicate="∀terms1⦂Terms,terms2⦂Terms,terms3⦂Terms,belief⦂ℙ(Belief_predicates×Terms)·terms3∈Point∧terms2∈Point∧terms1∈Point⇒terms1 ↦ terms2∈dom(Vector)∧Vector∈Terms × Terms ⇸ Terms∧(next ↦ Vector(terms1 ↦ terms2)∈belief⇒terms2 ↦ terms3∈dom(Vector))">
-            <org.eventb.core.prIdent name="Vector" org.eventb.core.type="ℙ(Terms×Terms×Terms)"/>
-            <org.eventb.core.prIdent name="next" org.eventb.core.type="Belief_predicates"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p32" org.eventb.core.predicate="¬plan1=plan2"/>
-        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬b=c"/>
-        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="Events∩Actions=(∅ ⦂ ℙ(Predicate))"/>
-        <org.eventb.core.prPred name="p68" org.eventb.core.predicate="action_real ↦ terms1∈dom(add_set)"/>
-        <org.eventb.core.prPred name="p52" org.eventb.core.predicate="∀terms1⦂Terms,terms2⦂Terms·terms2∈Point∧terms1∈Point⇒terms1 ↦ terms2∈dom(Vector)">
-            <org.eventb.core.prIdent name="Vector" org.eventb.core.type="ℙ(Terms×Terms×Terms)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p56" org.eventb.core.predicate="Predicate={arrive_at,play_at}∪Actions∪Plan_library"/>
-        <org.eventb.core.prPred name="p25" org.eventb.core.predicate="Events={arrive_at,play_at}"/>
-        <org.eventb.core.prPred name="p26" org.eventb.core.predicate="¬arrive_at=play_at"/>
-        <org.eventb.core.prPred name="p66" org.eventb.core.predicate="Predicate={arrive_at,play_at}∪{travel,smile_at,cry_at}∪{plan1,plan2,plan3,plan4}"/>
-        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬a=b"/>
-        <org.eventb.core.prPred name="p33" org.eventb.core.predicate="¬plan1=plan3"/>
-        <org.eventb.core.prPred name="p20" org.eventb.core.predicate="¬at=cried_at">
-            <org.eventb.core.prIdent name="at" org.eventb.core.type="Belief_predicates"/>
-            <org.eventb.core.prIdent name="cried_at" org.eventb.core.type="Belief_predicates"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="next_intentions=(intentions ∖ {{event_real ↦ terms2} ↦ intention_stack})∪{{event_real ↦ terms2} ↦ next_stack(intention_stack)}"/>
-        <org.eventb.core.prPred name="p43" org.eventb.core.predicate="∀terms1⦂Terms,terms2⦂Terms·terms2∈Point∧terms1∈Point⇒terms1 ↦ terms2∈dom(Vector)∧Vector∈Terms × Terms ⇸ Terms">
-            <org.eventb.core.prIdent name="Vector" org.eventb.core.type="ℙ(Terms×Terms×Terms)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p36" org.eventb.core.predicate="¬plan2=plan4"/>
-        <org.eventb.core.prPred name="p45" org.eventb.core.predicate="{action⦂Predicate,terms⦂Terms,terms1⦂Terms,terms2⦂Terms·action=travel∧terms1∈Point∧terms2∈Point∧terms=Vector(terms1 ↦ terms2) ∣ action ↦ terms ↦ (at ↦ terms1)}⊆precondition">
-            <org.eventb.core.prIdent name="Vector" org.eventb.core.type="ℙ(Terms×Terms×Terms)"/>
-            <org.eventb.core.prIdent name="at" org.eventb.core.type="Belief_predicates"/>
-            <org.eventb.core.prIdent name="precondition" org.eventb.core.type="ℙ(Predicate×Terms×(Belief_predicates×Terms))"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p24" org.eventb.core.predicate="¬cried_at=next">
-            <org.eventb.core.prIdent name="cried_at" org.eventb.core.type="Belief_predicates"/>
-            <org.eventb.core.prIdent name="next" org.eventb.core.type="Belief_predicates"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p46" org.eventb.core.predicate="∀action⦂Predicate,terms⦂Terms,terms1⦂Terms,terms2⦂Terms·action=travel∧terms1∈Point∧terms2∈Point∧terms=Vector(terms1 ↦ terms2)⇒action ↦ terms ↦ (at ↦ terms1)∈precondition">
-            <org.eventb.core.prIdent name="Vector" org.eventb.core.type="ℙ(Terms×Terms×Terms)"/>
-            <org.eventb.core.prIdent name="at" org.eventb.core.type="Belief_predicates"/>
-            <org.eventb.core.prIdent name="precondition" org.eventb.core.type="ℙ(Predicate×Terms×(Belief_predicates×Terms))"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p69" org.eventb.core.predicate="add_set∈Predicate × Terms ⇸ ℙ(Belief_predicates × Terms)"/>
-        <org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬at=smiled_at">
-            <org.eventb.core.prIdent name="at" org.eventb.core.type="Belief_predicates"/>
-            <org.eventb.core.prIdent name="smiled_at" org.eventb.core.type="Belief_predicates"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="delete_set∈Actions × Terms ⇸ ℙ(Belief_predicates × Terms)"/>
-        <org.eventb.core.prPred name="p48" org.eventb.core.predicate="belief_base≠(∅ ⦂ ℙ(Belief_predicates×Terms))">
-            <org.eventb.core.prIdent name="belief_base" org.eventb.core.type="ℙ(Belief_predicates×Terms)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="partition(Point,{a},{b},{c})"/>
-        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="partition(Predicate,Events,Actions,Plan_library)"/>
-        <org.eventb.core.prPred name="p28" org.eventb.core.predicate="¬travel=smile_at"/>
-        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="Events∩Plan_library=(∅ ⦂ ℙ(Predicate))"/>
-        <org.eventb.core.prPred name="p59" org.eventb.core.predicate="action_real∈Actions"/>
-        <org.eventb.core.prPred name="p31" org.eventb.core.predicate="Plan_library={plan1,plan2,plan3,plan4}"/>
-        <org.eventb.core.prPred name="p62" org.eventb.core.predicate="Predicate={arrive_at,play_at}∪{travel,smile_at,cry_at}∪Plan_library"/>
-        <org.eventb.core.prPred name="p23" org.eventb.core.predicate="¬smiled_at=next">
-            <org.eventb.core.prIdent name="next" org.eventb.core.type="Belief_predicates"/>
-            <org.eventb.core.prIdent name="smiled_at" org.eventb.core.type="Belief_predicates"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p63" org.eventb.core.predicate="{arrive_at,play_at}∩{travel,smile_at,cry_at}=(∅ ⦂ ℙ(Predicate))"/>
-        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬a=c"/>
-        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="Actions∩Plan_library=(∅ ⦂ ℙ(Predicate))"/>
-        <org.eventb.core.prPred name="p44" org.eventb.core.predicate="∀terms1⦂Terms,terms2⦂Terms·terms2∈Point∧terms1∈Point⇒terms1 ↦ terms2∈dom(Vector)∧⊤">
-            <org.eventb.core.prIdent name="Vector" org.eventb.core.type="ℙ(Terms×Terms×Terms)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="partition(Events,{arrive_at},{play_at})"/>
-        <org.eventb.core.prPred name="p47" org.eventb.core.predicate="⊤"/>
-        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="Predicate=Events∪Actions∪Plan_library"/>
-        <org.eventb.core.prPred name="p22" org.eventb.core.predicate="¬smiled_at=cried_at">
-            <org.eventb.core.prIdent name="cried_at" org.eventb.core.type="Belief_predicates"/>
-            <org.eventb.core.prIdent name="smiled_at" org.eventb.core.type="Belief_predicates"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="Point={a,b,c}"/>
-        <org.eventb.core.prPred name="p17" org.eventb.core.predicate="partition(Belief_predicates,{at},{smiled_at},{cried_at},{next})">
-            <org.eventb.core.prIdent name="at" org.eventb.core.type="Belief_predicates"/>
-            <org.eventb.core.prIdent name="cried_at" org.eventb.core.type="Belief_predicates"/>
-            <org.eventb.core.prIdent name="next" org.eventb.core.type="Belief_predicates"/>
-            <org.eventb.core.prIdent name="smiled_at" org.eventb.core.type="Belief_predicates"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p65" org.eventb.core.predicate="{travel,smile_at,cry_at}∩{plan1,plan2,plan3,plan4}=(∅ ⦂ ℙ(Predicate))"/>
-        <org.eventb.core.prPred name="p54" org.eventb.core.predicate="belief_base∈ℙ(Belief_predicates × Terms)">
-            <org.eventb.core.prIdent name="belief_base" org.eventb.core.type="ℙ(Belief_predicates×Terms)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p57" org.eventb.core.predicate="{arrive_at,play_at}∩Actions=(∅ ⦂ ℙ(Predicate))"/>
-        <org.eventb.core.prPred name="p35" org.eventb.core.predicate="¬plan2=plan3"/>
-        <org.eventb.core.prPred name="p61" org.eventb.core.predicate="{travel,smile_at,cry_at}∩Plan_library=(∅ ⦂ ℙ(Predicate))"/>
-        <org.eventb.core.prPred name="p49" org.eventb.core.predicate="¬belief_base=(∅ ⦂ ℙ(Belief_predicates×Terms))">
-            <org.eventb.core.prIdent name="belief_base" org.eventb.core.type="ℙ(Belief_predicates×Terms)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p37" org.eventb.core.predicate="¬plan3=plan4"/>
-        <org.eventb.core.prPred name="p60" org.eventb.core.predicate="action_real∈{travel,smile_at,cry_at}"/>
-        <org.eventb.core.prPred name="p64" org.eventb.core.predicate="{arrive_at,play_at}∩{plan1,plan2,plan3,plan4}=(∅ ⦂ ℙ(Predicate))"/>
-        <org.eventb.core.prPred name="p30" org.eventb.core.predicate="¬smile_at=cry_at"/>
-        <org.eventb.core.prPred name="p27" org.eventb.core.predicate="Actions={travel,smile_at,cry_at}"/>
-        <org.eventb.core.prPred name="p39" org.eventb.core.predicate="∀action⦂Predicate,terms1⦂Terms,terms2⦂Terms·action=travel∧terms1∈Point∧terms2∈Point⇒terms1 ↦ terms2∈dom(Vector)∧⊤">
-            <org.eventb.core.prIdent name="Vector" org.eventb.core.type="ℙ(Terms×Terms×Terms)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p42" org.eventb.core.predicate="∀terms1⦂Terms,terms2⦂Terms,terms3⦂Terms,belief⦂ℙ(Belief_predicates×Terms)·terms3∈Point∧terms2∈Point∧terms1∈Point⇒terms1 ↦ terms2∈dom(Vector)∧⊤∧(next ↦ Vector(terms1 ↦ terms2)∈belief⇒terms2 ↦ terms3∈dom(Vector))">
-            <org.eventb.core.prIdent name="Vector" org.eventb.core.type="ℙ(Terms×Terms×Terms)"/>
-            <org.eventb.core.prIdent name="next" org.eventb.core.type="Belief_predicates"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p50" org.eventb.core.predicate="∀action⦂Predicate,terms1⦂Terms,terms2⦂Terms·action=travel∧terms1∈Point∧terms2∈Point⇒terms1 ↦ terms2∈dom(Vector)">
-            <org.eventb.core.prIdent name="Vector" org.eventb.core.type="ℙ(Terms×Terms×Terms)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p58" org.eventb.core.predicate="{arrive_at,play_at}∩Plan_library=(∅ ⦂ ℙ(Predicate))"/>
-        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="add_set∈Actions × Terms ⇸ ℙ(Belief_predicates × Terms)"/>
-        <org.eventb.core.prPred name="p18" org.eventb.core.predicate="Belief_predicates={at,smiled_at,cried_at,next}">
-            <org.eventb.core.prIdent name="at" org.eventb.core.type="Belief_predicates"/>
-            <org.eventb.core.prIdent name="cried_at" org.eventb.core.type="Belief_predicates"/>
-            <org.eventb.core.prIdent name="next" org.eventb.core.type="Belief_predicates"/>
-            <org.eventb.core.prIdent name="smiled_at" org.eventb.core.type="Belief_predicates"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p55" org.eventb.core.predicate="action_real ↦ terms1∈dom(delete_set)"/>
-        <org.eventb.core.prPred name="p34" org.eventb.core.predicate="¬plan1=plan4"/>
-        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL4"/>
-        <org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
-        <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.eqL1:1"/>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-        <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0"/>
+        <org.eventb.core.prIdent name="intention_stack" org.eventb.core.type="STACK(ℙ(AgentPrograms(Belief_predicates,None_belief_predicates,Terms)))"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="∃pop0⦂ℙ(AgentPrograms(Belief_predicates,None_belief_predicates,Terms)),next_stack1⦂STACK(ℙ(AgentPrograms(Belief_predicates,None_belief_predicates,Terms)))·intention_stack=push(pop0,next_stack1)"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
     </org.eventb.core.prProof>
-    <org.eventb.core.prProof name="ExecuteAction/grd9/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prHyps="p0">
+    <org.eventb.core.prProof name="ExecuteAction/grd9/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0" org.eventb.core.prSets="Belief_predicates,None_belief_predicates,Terms">
         <org.eventb.core.lang name="L">
             <org.eventb.theory.core.scDatatypeDefinition name="STACK">
                 <org.eventb.theory.core.scTypeArgument name="EL" org.eventb.theory.core.givenType="EL"/>
@@ -7528,25 +7249,39 @@
                     <org.eventb.theory.core.scConstructorArgument name="next_stack" org.eventb.core.type="STACK"/>
                 </org.eventb.theory.core.scDatatypeConstructor>
             </org.eventb.theory.core.scDatatypeDefinition>
-            <org.eventb.theory.core.scNewOperatorDefinition name="@" org.eventb.core.label="@" org.eventb.core.predicate="⊤" org.eventb.core.source="/StackTheory/StackTheo.tuf|org.eventb.theory.core.theoryRoot#StackTheo|org.eventb.theory.core.newOperatorDefinition#)" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="infix extended expression group" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="INFIX" org.eventb.theory.core.type="STACK(EL)" org.eventb.theory.core.wd="⊤">
-                <org.eventb.theory.core.scOperatorArgument name="stack1" org.eventb.core.source="/StackTheory/StackTheo.tuf|org.eventb.theory.core.theoryRoot#StackTheo|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="STACK(EL)"/>
-                <org.eventb.theory.core.scOperatorArgument name="stack2" org.eventb.core.source="/StackTheory/StackTheo.tuf|org.eventb.theory.core.theoryRoot#StackTheo|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.operatorArgument#(" org.eventb.core.type="STACK(EL)"/>
-                <org.eventb.theory.core.scRecursiveOperatorDefinition name=")" org.eventb.core.source="/StackTheory/StackTheo.tuf|org.eventb.theory.core.theoryRoot#StackTheo|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.recursiveOperatorDefinition#)" org.eventb.theory.core.inductiveArgument="stack1">
-                    <org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="Empty ⦂ STACK(EL)" org.eventb.core.source="/StackTheory/StackTheo.tuf|org.eventb.theory.core.theoryRoot#StackTheo|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.recursiveOperatorDefinition#)|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="stack2"/>
-                    <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="push(e,s)" org.eventb.core.source="/StackTheory/StackTheo.tuf|org.eventb.theory.core.theoryRoot#StackTheo|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.recursiveOperatorDefinition#)|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="push(e,s @ stack2)"/>
+            <org.eventb.theory.core.scNewOperatorDefinition name="@" org.eventb.core.label="@" org.eventb.core.predicate="⊤" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="infix extended expression group" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="INFIX" org.eventb.theory.core.type="STACK(EL)" org.eventb.theory.core.wd="⊤">
+                <org.eventb.theory.core.scOperatorArgument name="stack1" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="STACK(EL)"/>
+                <org.eventb.theory.core.scOperatorArgument name="stack2" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.operatorArgument#(" org.eventb.core.type="STACK(EL)"/>
+                <org.eventb.theory.core.scRecursiveOperatorDefinition name=")" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.recursiveOperatorDefinition#)" org.eventb.theory.core.inductiveArgument="stack1">
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="Empty ⦂ STACK(EL)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.recursiveOperatorDefinition#)|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="stack2"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="push(e,s)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.recursiveOperatorDefinition#)|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="push(e,s @ stack2)"/>
                 </org.eventb.theory.core.scRecursiveOperatorDefinition>
             </org.eventb.theory.core.scNewOperatorDefinition>
-            <org.eventb.theory.core.scNewOperatorDefinition name="notEmpty" org.eventb.core.label="notEmpty" org.eventb.core.predicate="⊤" org.eventb.core.source="/StackTheory/StackTheo.tuf|org.eventb.theory.core.theoryRoot#StackTheo|org.eventb.theory.core.newOperatorDefinition#*" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.wd="⊤">
-                <org.eventb.theory.core.scOperatorArgument name="stack" org.eventb.core.source="/StackTheory/StackTheo.tuf|org.eventb.theory.core.theoryRoot#StackTheo|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="STACK(EL)"/>
-                <org.eventb.theory.core.scRecursiveOperatorDefinition name="(" org.eventb.core.source="/StackTheory/StackTheo.tuf|org.eventb.theory.core.theoryRoot#StackTheo|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(" org.eventb.theory.core.inductiveArgument="stack">
-                    <org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="Empty ⦂ STACK(EL)" org.eventb.core.source="/StackTheory/StackTheo.tuf|org.eventb.theory.core.theoryRoot#StackTheo|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="⊥"/>
-                    <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="push(e,s)" org.eventb.core.source="/StackTheory/StackTheo.tuf|org.eventb.theory.core.theoryRoot#StackTheo|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="⊤"/>
+            <org.eventb.theory.core.scNewOperatorDefinition name="notEmpty" org.eventb.core.label="notEmpty" org.eventb.core.predicate="⊤" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.wd="⊤">
+                <org.eventb.theory.core.scOperatorArgument name="stack" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="STACK(EL)"/>
+                <org.eventb.theory.core.scRecursiveOperatorDefinition name="(" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(" org.eventb.theory.core.inductiveArgument="stack">
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="Empty ⦂ STACK(EL)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="push(e,s)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="⊤"/>
                 </org.eventb.theory.core.scRecursiveOperatorDefinition>
             </org.eventb.theory.core.scNewOperatorDefinition>
+            <org.eventb.theory.core.scDatatypeDefinition name="AgentPrograms">
+                <org.eventb.theory.core.scTypeArgument name="belief_predicates" org.eventb.theory.core.givenType="belief_predicates"/>
+                <org.eventb.theory.core.scTypeArgument name="non_belief_predicates" org.eventb.theory.core.givenType="non_belief_predicates"/>
+                <org.eventb.theory.core.scTypeArgument name="terms" org.eventb.theory.core.givenType="terms"/>
+                <org.eventb.theory.core.scDatatypeConstructor name="constructDG">
+                    <org.eventb.theory.core.scConstructorArgument name="SuccessConditions" org.eventb.core.type="ℙ(belief_predicates×terms)"/>
+                    <org.eventb.theory.core.scConstructorArgument name="DGGoalPlanBodies" org.eventb.core.type="ℙ(non_belief_predicates)×terms"/>
+                    <org.eventb.theory.core.scConstructorArgument name="FailureConditions" org.eventb.core.type="ℙ(belief_predicates×terms)"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+                <org.eventb.theory.core.scDatatypeConstructor name="constructNDG">
+                    <org.eventb.theory.core.scConstructorArgument name="NDGGoalPlanBodies" org.eventb.core.type="ℙ(non_belief_predicates)×terms"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+            </org.eventb.theory.core.scDatatypeDefinition>
         </org.eventb.core.lang>
-        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊥ hyp" org.eventb.core.prHyps="p0"/>
-        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="⊥"/>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.falseHyp"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0"/>
+        <org.eventb.core.prIdent name="intention_stack" org.eventb.core.type="STACK(ℙ(AgentPrograms(Belief_predicates,None_belief_predicates,Terms)))"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="∃pop0⦂ℙ(AgentPrograms(Belief_predicates,None_belief_predicates,Terms)),next_stack1⦂STACK(ℙ(AgentPrograms(Belief_predicates,None_belief_predicates,Terms)))·intention_stack=push(pop0,next_stack1)"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="INITIALISATION/act1/WD" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="Terms" org.eventb.core.psManual="true">
         <org.eventb.core.lang name="L">
@@ -10358,7 +10093,7 @@
         <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
         <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.eqL2:1"/>
     </org.eventb.core.prProof>
-    <org.eventb.core.prProof name="SelectRelevantPlans/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6" org.eventb.core.prSets="Agent_programs,Belief_predicates,None_belief_predicates,Terms">
+    <org.eventb.core.prProof name="SelectRelevantPlans/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0" org.eventb.core.prSets="Belief_predicates,None_belief_predicates,Terms">
         <org.eventb.core.lang name="L">
             <org.eventb.theory.core.scDatatypeDefinition name="STACK">
                 <org.eventb.theory.core.scTypeArgument name="EL" org.eventb.theory.core.givenType="EL"/>
@@ -10383,197 +10118,24 @@
                     <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="push(e,s)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="⊤"/>
                 </org.eventb.theory.core.scRecursiveOperatorDefinition>
             </org.eventb.theory.core.scNewOperatorDefinition>
+            <org.eventb.theory.core.scDatatypeDefinition name="AgentPrograms">
+                <org.eventb.theory.core.scTypeArgument name="belief_predicates" org.eventb.theory.core.givenType="belief_predicates"/>
+                <org.eventb.theory.core.scTypeArgument name="non_belief_predicates" org.eventb.theory.core.givenType="non_belief_predicates"/>
+                <org.eventb.theory.core.scTypeArgument name="terms" org.eventb.theory.core.givenType="terms"/>
+                <org.eventb.theory.core.scDatatypeConstructor name="constructDG">
+                    <org.eventb.theory.core.scConstructorArgument name="SuccessConditions" org.eventb.core.type="ℙ(belief_predicates×terms)"/>
+                    <org.eventb.theory.core.scConstructorArgument name="DGGoalPlanBodies" org.eventb.core.type="ℙ(non_belief_predicates)×terms"/>
+                    <org.eventb.theory.core.scConstructorArgument name="FailureConditions" org.eventb.core.type="ℙ(belief_predicates×terms)"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+                <org.eventb.theory.core.scDatatypeConstructor name="constructNDG">
+                    <org.eventb.theory.core.scConstructorArgument name="NDGGoalPlanBodies" org.eventb.core.type="ℙ(non_belief_predicates)×terms"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+            </org.eventb.theory.core.scDatatypeDefinition>
         </org.eventb.core.lang>
-        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Terms,Point,VectorTerms))" org.eventb.core.prHyps="">
-            <org.eventb.core.prAnte name="'">
-                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p7" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p8,p9"/>
-                <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p8,p9"/>
-                <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Point,{a},{b},{c}))" org.eventb.core.prHyps="">
-                    <org.eventb.core.prAnte name="'">
-                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p10,p11,p12,p13"/>
-                        <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p10,p11,p12,p13"/>
-                        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(None_belief_predicates,Events,Actions,Plan_library))" org.eventb.core.prHyps="">
-                            <org.eventb.core.prAnte name="'">
-                                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p14" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p15,p16,p17,p18"/>
-                                <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p15,p16,p17,p18"/>
-                                <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Agent_programs,None_declarative_goal_programs,Declarative_goal_programs))" org.eventb.core.prHyps="">
-                                    <org.eventb.core.prAnte name="'">
-                                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p19" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p20,p21"/>
-                                        <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p20,p21"/>
-                                        <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1">
-                                            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p22">
-                                                <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p22" org.eventb.core.prHyps="">
-                                                    <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p28">
-                                                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p23"/>
-                                                        <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p24" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p25"/>
-                                                        <org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p26" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p27"/>
-                                                        <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
-                                                            <org.eventb.core.prAnte name="'">
-                                                                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p29"/>
-                                                                <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p30"/>
-                                                                <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p31"/>
-                                                                <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p32"/>
-                                                                <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p33"/>
-                                                                <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with relevant_plans=dom(Plan_body(event_real))" org.eventb.core.prGoal="p28" org.eventb.core.prHyps="p5">
-                                                                    <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p36">
-                                                                        <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p34" org.eventb.core.prInfHyps="p35"/>
-                                                                        <org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p34"/>
-                                                                        <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p5"/>
-                                                                        <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with Point={a,b,c}" org.eventb.core.prHyps="p10">
-                                                                            <org.eventb.core.prAnte name="'">
-                                                                                <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p8" org.eventb.core.prInfHyps="p37"/>
-                                                                                <org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p9" org.eventb.core.prInfHyps="p38"/>
-                                                                                <org.eventb.core.prHypAction name="DESELECT2" org.eventb.core.prHyps="p8,p9"/>
-                                                                                <org.eventb.core.prHypAction name="DESELECT3" org.eventb.core.prHyps="p10"/>
-                                                                                <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional image goal for Plan_body(event_real)" org.eventb.core.prGoal="p36" org.eventb.core.prHyps="p2">
-                                                                                    <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p36" org.eventb.core.prHyps="p39">
-                                                                                        <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional image goal for Plan_body(event_real)" org.eventb.core.prGoal="p36" org.eventb.core.prHyps="p6">
-                                                                                            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p36" org.eventb.core.prHyps="p40">
-                                                                                                <org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p36" org.eventb.core.prHyps="p3">
-                                                                                                    <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p41">
-                                                                                                        <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p41" org.eventb.core.prHyps="">
-                                                                                                            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p23">
-                                                                                                                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p40"/>
-                                                                                                                <org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p23" org.eventb.core.prHyps=""/>
-                                                                                                            </org.eventb.core.prAnte>
-                                                                                                        </org.eventb.core.prRule>
-                                                                                                    </org.eventb.core.prAnte>
-                                                                                                    <org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
-                                                                                                    <org.eventb.core.prExprRef name=".subst" org.eventb.core.prRef="e0"/>
-                                                                                                </org.eventb.core.prRule>
-                                                                                            </org.eventb.core.prAnte>
-                                                                                            <org.eventb.core.prString name=".pos" org.eventb.core.prSValue="0.0.0"/>
-                                                                                        </org.eventb.core.prRule>
-                                                                                    </org.eventb.core.prAnte>
-                                                                                    <org.eventb.core.prString name=".pos" org.eventb.core.prSValue="0.0.0"/>
-                                                                                </org.eventb.core.prRule>
-                                                                            </org.eventb.core.prAnte>
-                                                                        </org.eventb.core.prRule>
-                                                                    </org.eventb.core.prAnte>
-                                                                </org.eventb.core.prRule>
-                                                            </org.eventb.core.prAnte>
-                                                        </org.eventb.core.prRule>
-                                                    </org.eventb.core.prAnte>
-                                                </org.eventb.core.prRule>
-                                            </org.eventb.core.prAnte>
-                                        </org.eventb.core.prRule>
-                                    </org.eventb.core.prAnte>
-                                    <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
-                                </org.eventb.core.prRule>
-                            </org.eventb.core.prAnte>
-                            <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
-                        </org.eventb.core.prRule>
-                    </org.eventb.core.prAnte>
-                    <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
-                </org.eventb.core.prRule>
-            </org.eventb.core.prAnte>
-            <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
-        </org.eventb.core.prRule>
-        <org.eventb.core.prIdent name="Constructor4NDG" org.eventb.core.type="ℙ(ℙ(None_belief_predicates)×Terms×Agent_programs)"/>
-        <org.eventb.core.prIdent name="Events" org.eventb.core.type="ℙ(None_belief_predicates)"/>
-        <org.eventb.core.prIdent name="None_declarative_goal_programs" org.eventb.core.type="ℙ(Agent_programs)"/>
-        <org.eventb.core.prIdent name="Plan_body" org.eventb.core.type="ℙ(None_belief_predicates×ℙ(None_belief_predicates×ℙ(ℙ(Belief_predicates×Terms)×Terms×ℙ(STACK(ℙ(Agent_programs))))))"/>
-        <org.eventb.core.prIdent name="Plan_library" org.eventb.core.type="ℙ(None_belief_predicates)"/>
-        <org.eventb.core.prIdent name="Point" org.eventb.core.type="ℙ(Terms)"/>
-        <org.eventb.core.prIdent name="a" org.eventb.core.type="Terms"/>
-        <org.eventb.core.prIdent name="b" org.eventb.core.type="Terms"/>
-        <org.eventb.core.prIdent name="c" org.eventb.core.type="Terms"/>
-        <org.eventb.core.prIdent name="event_real" org.eventb.core.type="None_belief_predicates"/>
-        <org.eventb.core.prIdent name="relevant_plans" org.eventb.core.type="ℙ(None_belief_predicates)"/>
-        <org.eventb.core.prIdent name="terms" org.eventb.core.type="Terms"/>
-        <org.eventb.core.prPred name="p29" org.eventb.core.predicate="Point⊆Terms"/>
-        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="partition(None_belief_predicates,Events,Actions,Plan_library)">
-            <org.eventb.core.prIdent name="Actions" org.eventb.core.type="ℙ(None_belief_predicates)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p24" org.eventb.core.predicate="belief_base≠(∅ ⦂ ℙ(Belief_predicates×Terms))">
-            <org.eventb.core.prIdent name="belief_base" org.eventb.core.type="ℙ(Belief_predicates×Terms)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p37" org.eventb.core.predicate="Terms={a,b,c}∪VectorTerms">
-            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="partition(Point,{a},{b},{c})"/>
-        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="relevant_plans ↦ terms∈dom(Constructor4NDG)∧Constructor4NDG∈ℙ(None_belief_predicates) × Terms ⇸ Agent_programs"/>
-        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="relevant_plans=dom(Plan_body(event_real))"/>
-        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="None_belief_predicates=Events∪Actions∪Plan_library">
-            <org.eventb.core.prIdent name="Actions" org.eventb.core.type="ℙ(None_belief_predicates)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p28" org.eventb.core.predicate="relevant_plans ↦ terms∈dom(Constructor4NDG)"/>
-        <org.eventb.core.prPred name="p17" org.eventb.core.predicate="Events∩Plan_library=(∅ ⦂ ℙ(None_belief_predicates))"/>
-        <org.eventb.core.prPred name="p39" org.eventb.core.predicate="Plan_body(event_real)∈Plan_library ⇸ (ℙ(Belief_predicates × Terms) × Terms ⇸ ℙ(STACK(ℙ(Agent_programs))))"/>
-        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="Terms=Point∪VectorTerms">
-            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p30" org.eventb.core.predicate="VectorTerms⊆Terms">
-            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬a=c"/>
-        <org.eventb.core.prPred name="p18" org.eventb.core.predicate="Actions∩Plan_library=(∅ ⦂ ℙ(None_belief_predicates))">
-            <org.eventb.core.prIdent name="Actions" org.eventb.core.type="ℙ(None_belief_predicates)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p21" org.eventb.core.predicate="None_declarative_goal_programs∩Declarative_goal_programs=(∅ ⦂ ℙ(Agent_programs))">
-            <org.eventb.core.prIdent name="Declarative_goal_programs" org.eventb.core.type="ℙ(Agent_programs)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="Plan_body∈None_belief_predicates ⇸ ℙ(None_belief_predicates × ℙ(ℙ(Belief_predicates × Terms) × Terms × ℙ(STACK(ℙ(Agent_programs)))))"/>
-        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="¬b=c"/>
-        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="Events∩Actions=(∅ ⦂ ℙ(None_belief_predicates))">
-            <org.eventb.core.prIdent name="Actions" org.eventb.core.type="ℙ(None_belief_predicates)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="partition(Terms,Point,VectorTerms)">
-            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p19" org.eventb.core.predicate="partition(Agent_programs,None_declarative_goal_programs,Declarative_goal_programs)">
-            <org.eventb.core.prIdent name="Declarative_goal_programs" org.eventb.core.type="ℙ(Agent_programs)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p36" org.eventb.core.predicate="dom(Plan_body(event_real)) ↦ terms∈dom(Constructor4NDG)"/>
-        <org.eventb.core.prPred name="p41" org.eventb.core.predicate="dom(Plan_body(event_real)) ↦ terms∈ℙ(None_belief_predicates) × Terms"/>
-        <org.eventb.core.prPred name="p23" org.eventb.core.predicate="⊤"/>
-        <org.eventb.core.prPred name="p26" org.eventb.core.predicate="{event_real ↦ terms}∉dom(intentions)">
-            <org.eventb.core.prIdent name="intentions" org.eventb.core.type="ℙ(ℙ(None_belief_predicates×Terms)×STACK(ℙ(Agent_programs)))"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p33" org.eventb.core.predicate="relevant_plans∈ℙ(None_belief_predicates)"/>
-        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="Constructor4NDG∈ℙ(None_belief_predicates) × Terms ⤖ None_declarative_goal_programs"/>
-        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="Point={a,b,c}"/>
-        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬a=b"/>
-        <org.eventb.core.prPred name="p22" org.eventb.core.predicate="relevant_plans ↦ terms∈dom(Constructor4NDG)∧⊤"/>
-        <org.eventb.core.prPred name="p32" org.eventb.core.predicate="belief_base∈ℙ(Belief_predicates × Terms)">
-            <org.eventb.core.prIdent name="belief_base" org.eventb.core.type="ℙ(Belief_predicates×Terms)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p38" org.eventb.core.predicate="{a,b,c}∩VectorTerms=(∅ ⦂ ℙ(Terms))">
-            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p20" org.eventb.core.predicate="Agent_programs=None_declarative_goal_programs∪Declarative_goal_programs">
-            <org.eventb.core.prIdent name="Declarative_goal_programs" org.eventb.core.type="ℙ(Agent_programs)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p27" org.eventb.core.predicate="¬{event_real ↦ terms}∈dom(intentions)">
-            <org.eventb.core.prIdent name="intentions" org.eventb.core.type="ℙ(ℙ(None_belief_predicates×Terms)×STACK(ℙ(Agent_programs)))"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p35" org.eventb.core.predicate="one_plan∈dom(Plan_body(event_real))">
-            <org.eventb.core.prIdent name="one_plan" org.eventb.core.type="None_belief_predicates"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="Constructor4NDG∈ℙ(None_belief_predicates) × Terms ⇸ Agent_programs"/>
-        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="Plan_body∈Events ⇸ (Plan_library ⇸ (ℙ(Belief_predicates × Terms) × Terms ⇸ ℙ(STACK(ℙ(Agent_programs)))))"/>
-        <org.eventb.core.prPred name="p25" org.eventb.core.predicate="¬belief_base=(∅ ⦂ ℙ(Belief_predicates×Terms))">
-            <org.eventb.core.prIdent name="belief_base" org.eventb.core.type="ℙ(Belief_predicates×Terms)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p34" org.eventb.core.predicate="one_plan∈relevant_plans">
-            <org.eventb.core.prIdent name="one_plan" org.eventb.core.type="None_belief_predicates"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p31" org.eventb.core.predicate="Initial_belief_base∈ℙ(Belief_predicates × Terms)">
-            <org.eventb.core.prIdent name="Initial_belief_base" org.eventb.core.type="ℙ(Belief_predicates×Terms)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p40" org.eventb.core.predicate="Plan_body(event_real)∈ℙ(None_belief_predicates × ℙ(ℙ(Belief_predicates × Terms) × Terms × ℙ(STACK(ℙ(Agent_programs)))))"/>
-        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="Point∩VectorTerms=(∅ ⦂ ℙ(Terms))">
-            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prExpr name="e0" org.eventb.core.expression="ℙ(None_belief_predicates) × Terms"/>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
-        <org.eventb.core.prReas name="r7" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
-        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.eqL2:1"/>
-        <org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
-        <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.funImgGoal"/>
-        <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL4"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0"/>
+        <org.eventb.core.prIdent name="intention_stack" org.eventb.core.type="STACK(ℙ(AgentPrograms(Belief_predicates,None_belief_predicates,Terms)))"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="∃pop0⦂ℙ(AgentPrograms(Belief_predicates,None_belief_predicates,Terms)),next_stack1⦂STACK(ℙ(AgentPrograms(Belief_predicates,None_belief_predicates,Terms)))·intention_stack=push(pop0,next_stack1)"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="&#9;END&#10;&#10;&#9;⚬&#9;FailureRecoveryBlockedAction/grd2/WD" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.prSets="Agent_programs,None_belief_predicates,Terms">
         <org.eventb.core.lang name="L">
