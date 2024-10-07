@@ -10,7 +10,7 @@
     <org.eventb.core.event name=")" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AddressExternalEvent">
         <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="event ↦ terms ∈ external_events"/>
         <org.eventb.core.parameter name="(" org.eventb.core.identifier="event"/>
-        <org.eventb.core.action name="*" org.eventb.core.assignment="intentions ≔ intentions ∪ {∅ ↦ push({constructNDG({event} ↦ terms)},Empty)}" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="*" org.eventb.core.assignment="intentions ≔ intentions ∪ {∅ ↦ push({constructNDG({event} ↦ terms)},Empty)}" org.eventb.core.comment="Here for type convenience the external event is treated as a non-declarative problem which is the case " org.eventb.core.label="act1"/>
         <org.eventb.core.parameter name="+" org.eventb.core.identifier="terms"/>
         <org.eventb.core.action name="," org.eventb.core.assignment="external_events ≔ external_events ∖ {(event ↦ terms)} " org.eventb.core.label="act2"/>
     </org.eventb.core.event>
@@ -28,10 +28,8 @@
         <org.eventb.core.parameter name="," org.eventb.core.identifier="intention_stack"/>
         <org.eventb.core.guard name="4" org.eventb.core.comment="this may require some changes ?" org.eventb.core.label="grd2" org.eventb.core.predicate="notEmpty(intention_stack)"/>
         <org.eventb.core.guard name="-" org.eventb.core.comment="in case there are concurrent programs such as e1||e2" org.eventb.core.label="grd3" org.eventb.core.predicate="constructNDG({event} ↦ terms) ∈ pop(intention_stack) "/>
-        <org.eventb.core.guard name="3" org.eventb.core.label="grd4" org.eventb.core.predicate="event ∈ Events"/>
-        <org.eventb.core.guard name="2" org.eventb.core.comment="this event is not being addressed atm" org.eventb.core.label="grd5" org.eventb.core.predicate="{(event ↦ terms)} ∉ dom(intentions) "/>
-        <org.eventb.core.guard name="/" org.eventb.core.label="grd6" org.eventb.core.predicate="relevant_plans ∈ ℙ(None_belief_predicates)"/>
-        <org.eventb.core.guard name="." org.eventb.core.label="grd7" org.eventb.core.predicate="relevant_plans =dom(Plan_body(event))" org.eventb.core.theorem="true"/>
+        <org.eventb.core.guard name="2" org.eventb.core.comment="this event is not being addressed atm, but i am not too sure. What if you have e1 || e1 (which is odd but syntactically right), e1; e1 (in this case, can we ensure we remove the completed stack for the first e1 before the section e1 starts. " org.eventb.core.label="grd4" org.eventb.core.predicate="{(event ↦ terms)} ∉ dom(intentions) "/>
+        <org.eventb.core.guard name="." org.eventb.core.label="grd5" org.eventb.core.predicate="relevant_plans =dom(Plan_body(event))" org.eventb.core.theorem="true"/>
         <org.eventb.core.action name="0" org.eventb.core.assignment="intentions ≔ intentions ∪ {{(event ↦ terms)} ↦ push({constructNDG(relevant_plans ↦terms)},Empty)}" org.eventb.core.comment="add a new stack for the event regardless it is being external or internal" org.eventb.core.label="act1"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="evt1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="SelectApplicablePlan">
@@ -112,19 +110,49 @@
         <org.eventb.core.guard name="-" org.eventb.core.label="grd3" org.eventb.core.predicate="notEmpty(intention_stack1)"/>
         <org.eventb.core.guard name="." org.eventb.core.label="grd4" org.eventb.core.predicate="notEmpty(intention_stack2)"/>
         <org.eventb.core.guard name="/" org.eventb.core.label="grd5" org.eventb.core.predicate="constructNDG(relevant_plans1 ↦ terms1) ∈ pop(intention_stack1)"/>
-        <org.eventb.core.guard name="0" org.eventb.core.label="grd6" org.eventb.core.predicate="constructNDG({event1} ↦ terms1) ∈ pop(intention_stack2) "/>
+        <org.eventb.core.guard name="0" org.eventb.core.comment="i use the more precise version to hightlight the unique situation when it is for external event" org.eventb.core.label="grd6" org.eventb.core.predicate="{constructNDG({event1} ↦ terms1)} = pop(intention_stack2) "/>
         <org.eventb.core.guard name="1" org.eventb.core.label="grd7" org.eventb.core.predicate="∀ plan · plan ∈ relevant_plans1 ⇒  (Plan_body(event1)(plan)(belief_base↦terms1) = ∅ ∨  ( ∃ applicable_plan_body_stack · applicable_plan_body_stack ∈ Plan_body(event1)(plan)(belief_base↦terms1) ∧ event1↦terms1↦applicable_plan_body_stack  ∈ alreadytry))"/>
         <org.eventb.core.action name="2" org.eventb.core.assignment="intentions ≔ (intentions ∖ {{event1 ↦ terms1} ↦ intention_stack1, ∅ ↦ intention_stack2}) " org.eventb.core.comment="i may need to add a belief token to track the failure of this external event for reachability check" org.eventb.core.label="act1"/>
     </org.eventb.core.event>
-    <org.eventb.core.event name="evt9" org.eventb.core.comment="this means that the intention has been successfully executed" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="RemoveEmptyNoneRootStack">
+    <org.eventb.core.event name="evt9" org.eventb.core.comment="this means that the intention has been successfully executed for an internal event" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="RemoveEmptyNoneRootStack">
+        <org.eventb.core.parameter name="'" org.eventb.core.identifier="event1"/>
+        <org.eventb.core.parameter name="(" org.eventb.core.identifier="terms1"/>
+        <org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="{event1 ↦ terms1} ↦ Empty ∈ intentions " org.eventb.core.theorem="true"/>
+        <org.eventb.core.action name="+" org.eventb.core.assignment="intentions ≔ (intentions ∖ ({{event1 ↦ terms1} ↦ Empty} ∪ {{event2 ↦ terms2} ↦intention_stack })) ∪ {{event2↦terms2} ↦next_intention_stack} " org.eventb.core.label="act1"/>
+        <org.eventb.core.parameter name="," org.eventb.core.identifier="intention_stack"/>
+        <org.eventb.core.parameter name="/" org.eventb.core.identifier="event2"/>
+        <org.eventb.core.parameter name="0" org.eventb.core.identifier="terms2"/>
+        <org.eventb.core.guard name="-" org.eventb.core.label="grd2" org.eventb.core.predicate="{event2 ↦ terms2} ↦ intention_stack ∈ intentions"/>
+        <org.eventb.core.guard name="." org.eventb.core.label="grd3" org.eventb.core.predicate="constructNDG({event1} ↦ terms1) ∈ pop(intention_stack)"/>
+        <org.eventb.core.parameter name="1" org.eventb.core.identifier="updated_top_stack"/>
+        <org.eventb.core.guard name="2" org.eventb.core.label="grd4" org.eventb.core.predicate="updated_top_stack = pop(intention_stack) ∖ {constructNDG({event1} ↦ terms1)}"/>
+        <org.eventb.core.parameter name="3" org.eventb.core.identifier="next_intention_stack"/>
+        <org.eventb.core.guard name="4" org.eventb.core.comment="once i removed a stack i have to pop the internal event on the top of another stack" org.eventb.core.label="grd5" org.eventb.core.predicate="next_intention_stack = push(updated_top_stack, next_stack(intention_stack)) "/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="evt:" org.eventb.core.comment="this feels a bit like a replicate of the above rule, but by doing so, it allows m to know which event this stack correponds to in the beginning " org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="RemoveEmptyRootStack">
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="{event1 ↦ terms1} ↦ Empty ∈ intentions "/>
+        <org.eventb.core.parameter name=")" org.eventb.core.identifier="event1"/>
+        <org.eventb.core.parameter name="*" org.eventb.core.identifier="terms1"/>
+        <org.eventb.core.parameter name="+" org.eventb.core.identifier="intention_stack"/>
+        <org.eventb.core.guard name="." org.eventb.core.label="grd2" org.eventb.core.predicate="∅  ↦ intention_stack ∈ intentions"/>
+        <org.eventb.core.guard name="/" org.eventb.core.comment="i deliberately use the specific version to highlight the case of the root stack" org.eventb.core.label="grd3" org.eventb.core.predicate="{constructNDG({event1} ↦ terms1)} =  pop(intention_stack)"/>
+        <org.eventb.core.action name="0" org.eventb.core.assignment="intentions ≔ intentions ∖ ({{event1 ↦ terms1} ↦ Empty} ∪ {∅ ↦intention_stack}) " org.eventb.core.comment="i could add more rules to track {event1} ↦ terms1) for LTL reachability checking" org.eventb.core.label="act1"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="evt=" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="DGSelectRelevantPlans">
         <org.eventb.core.parameter name="'" org.eventb.core.identifier="event"/>
         <org.eventb.core.parameter name="(" org.eventb.core.identifier="terms"/>
-        <org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="({event ↦ terms} ↦ Empty) ∈ intentions " org.eventb.core.theorem="true"/>
-        <org.eventb.core.action name="+" org.eventb.core.assignment="intentions ≔ intentions ∖ {{event ↦ terms} ↦ Empty}" org.eventb.core.label="act1"/>
-    </org.eventb.core.event>
-    <org.eventb.core.event name="evt:" org.eventb.core.comment="this means that the intention has been successfully executed" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="RemoveEmptyRootStack">
-        <org.eventb.core.action name="'" org.eventb.core.assignment="intentions ≔ intentions ∖ {∅↦ Empty}" org.eventb.core.comment="To do the final reachability check we can add belief token to track the success of an event achievement" org.eventb.core.label="act1"/>
-        <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="(∅ ↦ Empty) ∈ intentions "/>
+        <org.eventb.core.parameter name=")" org.eventb.core.identifier="relevant_plans"/>
+        <org.eventb.core.parameter name="*" org.eventb.core.identifier="intention_stack"/>
+        <org.eventb.core.guard name="+" org.eventb.core.label="grd1" org.eventb.core.predicate="intention_stack ∈ ran(intentions)"/>
+        <org.eventb.core.guard name="," org.eventb.core.label="grd2" org.eventb.core.predicate="notEmpty(intention_stack)"/>
+        <org.eventb.core.guard name="-" org.eventb.core.comment="success_conditions and failure conditions should have already inferred grounded terms if i am right" org.eventb.core.label="grd3" org.eventb.core.predicate="constructDG(success_conditions, {event} ↦ terms, failure_conditions) ∈ pop(intention_stack)"/>
+        <org.eventb.core.guard name="." org.eventb.core.label="grd4" org.eventb.core.predicate="{event ↦ terms} ∉ dom(intentions)"/>
+        <org.eventb.core.guard name="/" org.eventb.core.label="grd5" org.eventb.core.predicate="relevant_plans =dom(Plan_body(event))"/>
+        <org.eventb.core.guard name="0" org.eventb.core.label="grd6" org.eventb.core.predicate="success_conditions ⊈ belief_base"/>
+        <org.eventb.core.guard name="1" org.eventb.core.label="grd7" org.eventb.core.predicate="failure_conditions ⊈ belief_base"/>
+        <org.eventb.core.parameter name="4" org.eventb.core.identifier="success_conditions"/>
+        <org.eventb.core.parameter name="5" org.eventb.core.identifier="failure_conditions"/>
+        <org.eventb.core.action name="6" org.eventb.core.assignment="intentions ≔ intentions ∪ {{(event ↦ terms)} ↦ push({constructDG(success_conditions, relevant_plans ↦terms, failure_conditions)},Empty)}" org.eventb.core.comment="the newly added stack has to inherit the success/failure conditions of the original declarative goals " org.eventb.core.label="act1"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="evt7" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="test">
         <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="dgp ∈ Declarative_goal_programs"/>
