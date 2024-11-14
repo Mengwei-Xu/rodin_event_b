@@ -753,4 +753,5 @@
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="finite(Terms)"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
     </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="axm2/THM"/>
 </org.eventb.core.prFile>

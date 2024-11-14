@@ -4,13 +4,12 @@
         <org.eventb.core.action name="'" org.eventb.core.assignment="belief_base ≔ Initial_belief_base" org.eventb.core.label="act1"/>
         <org.eventb.core.action name="(" org.eventb.core.assignment="external_events ≔ Initial_external_event_set" org.eventb.core.label="act2"/>
         <org.eventb.core.action name=")" org.eventb.core.assignment="intentions ≔ ∅" org.eventb.core.label="act3"/>
-        <org.eventb.core.action name="+" org.eventb.core.assignment="alreadytry ≔ ∅" org.eventb.core.label="act4"/>
     </org.eventb.core.event>
     <org.eventb.core.seesContext name="(" org.eventb.core.target="BDIcontext"/>
     <org.eventb.core.event name=")" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AddressExternalEvent">
         <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="event ↦ terms ∈ external_events"/>
         <org.eventb.core.parameter name="(" org.eventb.core.identifier="event"/>
-        <org.eventb.core.action name="*" org.eventb.core.assignment="intentions ≔ intentions ∪ {∅ ↦ push({constructNDG({event} ↦ terms)},Empty)}" org.eventb.core.comment="Here for type convenience the external event is treated as a non-declarative problem which is the case " org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="*" org.eventb.core.assignment="intentions ≔ intentions ∪ {EventComp(event↦terms, Plan_body_def(event))}" org.eventb.core.comment="Here for type convenience the external event is treated as a non-declarative problem which is the case " org.eventb.core.label="act1"/>
         <org.eventb.core.parameter name="+" org.eventb.core.identifier="terms"/>
         <org.eventb.core.action name="," org.eventb.core.assignment="external_events ≔ external_events ∖ {(event ↦ terms)} " org.eventb.core.label="act2"/>
     </org.eventb.core.event>
@@ -19,20 +18,23 @@
     <org.eventb.core.variable name="," org.eventb.core.identifier="external_events"/>
     <org.eventb.core.invariant name="-" org.eventb.core.label="inv2" org.eventb.core.predicate="external_events ∈ ℙ(Events × Terms)"/>
     <org.eventb.core.variable name="." org.eventb.core.identifier="intentions"/>
-    <org.eventb.core.invariant name="/" org.eventb.core.label="inv3" org.eventb.core.predicate="intentions ∈ ℙ (ℙ(Events × Terms) × STACK(ℙ(AgentPrograms(Belief_predicates,None_belief_predicates,Terms)))) "/>
-    <org.eventb.core.event name="6" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="SelectRelevantPlans">
+    <org.eventb.core.invariant name="/" org.eventb.core.label="inv3" org.eventb.core.predicate="intentions ∈ ℙ(Plan_body(Belief_predicates,None_belief_predicates,Terms)) "/>
+    <org.eventb.core.event name="6" org.eventb.core.comment="Maybe change the name of the event" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="SelectRelevantPlans">
         <org.eventb.core.parameter name="'" org.eventb.core.identifier="event"/>
-        <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="intention_stack ∈ ran(intentions)"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="intention ∈ intentions"/>
         <org.eventb.core.parameter name="*" org.eventb.core.identifier="terms"/>
-        <org.eventb.core.parameter name="+" org.eventb.core.identifier="relevant_plans"/>
-        <org.eventb.core.parameter name="," org.eventb.core.identifier="intention_stack"/>
-        <org.eventb.core.guard name="4" org.eventb.core.comment="this may require some changes ?" org.eventb.core.label="grd2" org.eventb.core.predicate="notEmpty(intention_stack)"/>
-        <org.eventb.core.guard name="-" org.eventb.core.comment="in case there are concurrent programs such as e1||e2" org.eventb.core.label="grd3" org.eventb.core.predicate="constructNDG({event} ↦ terms) ∈ pop(intention_stack) "/>
-        <org.eventb.core.guard name="2" org.eventb.core.comment="this event is not being addressed atm, but i am not too sure. What if you have e1 || e1 (which is odd but syntactically right), e1; e1 (in this case, can we ensure we remove the completed stack for the first e1 before the section e1 starts. " org.eventb.core.label="grd4" org.eventb.core.predicate="{(event ↦ terms)} ∉ dom(intentions) "/>
-        <org.eventb.core.guard name="." org.eventb.core.label="grd5" org.eventb.core.predicate="relevant_plans =dom(Plan_body(event))" org.eventb.core.theorem="true"/>
-        <org.eventb.core.action name="0" org.eventb.core.assignment="intentions ≔ intentions ∪ {{(event ↦ terms)} ↦ push({constructNDG(relevant_plans ↦terms)},Empty)}" org.eventb.core.comment="add a new stack for the event regardless it is being external or internal" org.eventb.core.label="act1"/>
+        <org.eventb.core.parameter name="+" org.eventb.core.identifier="relevant_plan"/>
+        <org.eventb.core.parameter name="," org.eventb.core.identifier="intention"/>
+        <org.eventb.core.guard name="6" org.eventb.core.label="grd6" org.eventb.core.predicate="eventcomp∈GetFirsts(intention)"/>
+        <org.eventb.core.guard name="4" org.eventb.core.comment="check the chosen top element is e EventComp " org.eventb.core.label="grd2" org.eventb.core.predicate="isEventComp(eventcomp)"/>
+        <org.eventb.core.guard name="-" org.eventb.core.comment="destruct eventcomp to extract the terms and the event " org.eventb.core.label="grd3" org.eventb.core.predicate="getEvent(eventcomp)=event↦terms "/>
+        <org.eventb.core.guard name="." org.eventb.core.comment=" get one applicable plan in the set of plan   " org.eventb.core.label="grd5" org.eventb.core.predicate="relevant_plan ∈UserPlan(intention)(belief_base↦terms)  "/>
+        <org.eventb.core.action name="0" org.eventb.core.assignment="intentions ≔ (intentions∖{intention}) ∪ { update(intention,eventcomp,newplan)}" org.eventb.core.comment="add a new stack for the event regardless it is being external or internal" org.eventb.core.label="act1"/>
+        <org.eventb.core.parameter name="5" org.eventb.core.identifier="eventcomp"/>
+        <org.eventb.core.parameter name="7" org.eventb.core.identifier="newplan"/>
+        <org.eventb.core.guard name="8" org.eventb.core.comment=" update the eventComp to  a backup plan and in the backup we remove the applicable plan " org.eventb.core.label="grd7" org.eventb.core.predicate="newplan=Rhd(UserP2Plan_body(relevant_plan,Plan_body_def) ,EventComp(event↦terms,(λbelief↦terms1·terms1∈Point∣UserPlan(intention)(belief↦terms1)∖{relevant_plan}) ) )"/>
     </org.eventb.core.event>
-    <org.eventb.core.event name="evt1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="SelectApplicablePlan">
+    <org.eventb.core.event name="evt1" org.eventb.core.comment="Maybe no need " org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="SelectApplicablePlan">
         <org.eventb.core.guard name="0" org.eventb.core.comment="the mean-end relation is established after SelectRelevantPlans, hence no need forintention_stack ∈ ran(intentions) " org.eventb.core.label="grd1" org.eventb.core.predicate="{event ↦ terms}↦intention_stack ∈ intentions"/>
         <org.eventb.core.guard name="8" org.eventb.core.label="grd2" org.eventb.core.predicate="notEmpty(intention_stack)"/>
         <org.eventb.core.guard name="?" org.eventb.core.comment="since addressing event always gives rise to a new stack in this case i could have {constructNDG(relevant_plans ↦ terms)} = pop(intention_stack) " org.eventb.core.label="grd3" org.eventb.core.predicate="constructNDG(relevant_plans ↦ terms) ∈ pop(intention_stack)"/>
@@ -67,8 +69,6 @@
         <org.eventb.core.guard name="=" org.eventb.core.label="grd9" org.eventb.core.predicate="next_belief_base=(belief_base ∖ Deletion_sets[{action ↦ terms2}]) ∪ Addition_sets[{action ↦ terms2}]"/>
         <org.eventb.core.parameter name="A" org.eventb.core.identifier="updated_top_stack"/>
     </org.eventb.core.event>
-    <org.eventb.core.variable name="3" org.eventb.core.identifier="alreadytry"/>
-    <org.eventb.core.invariant name="5" org.eventb.core.label="inv4" org.eventb.core.predicate="alreadytry ∈ (Events × Terms) ↔ STACK(ℙ(AgentPrograms(Belief_predicates,None_belief_predicates,Terms)))"/>
     <org.eventb.core.event name="7" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="FailureRecoveryBlockedAction">
         <org.eventb.core.parameter name="'" org.eventb.core.identifier="intention_stack"/>
         <org.eventb.core.guard name="4" org.eventb.core.label="grd1" org.eventb.core.predicate="({(event ↦ terms1)} ↦ intention_stack) ∈ intentions"/>
