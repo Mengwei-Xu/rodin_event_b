@@ -102,4 +102,64 @@
             <org.eventb.theory.core.recursiveDefinitionCase name="-" org.eventb.core.expression="EventComp(evt,planlib)" org.eventb.theory.core.formula="new"/>
         </org.eventb.theory.core.recursiveOperatorDefinition>
     </org.eventb.theory.core.newOperatorDefinition>
+    <org.eventb.theory.core.newOperatorDefinition name="element?" org.eventb.core.label="isBasicComp" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.notationType="PREFIX">
+        <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="Plan_body(belief_predicates,non_belief_predicates,terms) " org.eventb.core.identifier="plan"/>
+        <org.eventb.theory.core.recursiveOperatorDefinition name="(" org.eventb.theory.core.inductiveArgument="plan">
+            <org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="NilComp" org.eventb.theory.core.formula="⊥ "/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="BasicPComp(evt)" org.eventb.theory.core.formula="⊤ "/>
+            <org.eventb.theory.core.recursiveDefinitionCase name=")" org.eventb.core.expression="SeqComp(l,r)" org.eventb.theory.core.formula="⊥ "/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="*" org.eventb.core.expression="ConcurrentComp(l,r)" org.eventb.theory.core.formula="⊥ "/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="+" org.eventb.core.expression="GoalComp(succes,planrec,failure)" org.eventb.theory.core.formula="⊥ "/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="," org.eventb.core.expression="Rhd(cur,back)" org.eventb.theory.core.formula="⊥ "/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="-" org.eventb.core.expression="EventComp(evt,planlib)" org.eventb.theory.core.formula="⊥ "/>
+        </org.eventb.theory.core.recursiveOperatorDefinition>
+    </org.eventb.theory.core.newOperatorDefinition>
+    <org.eventb.theory.core.newOperatorDefinition name="element@" org.eventb.core.label="isSeqComp" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.notationType="PREFIX">
+        <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="Plan_body(belief_predicates,non_belief_predicates,terms) " org.eventb.core.identifier="plan"/>
+        <org.eventb.theory.core.recursiveOperatorDefinition name="(" org.eventb.theory.core.inductiveArgument="plan">
+            <org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="NilComp" org.eventb.theory.core.formula="⊥ "/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="BasicPComp(evt)" org.eventb.theory.core.formula="⊥ "/>
+            <org.eventb.theory.core.recursiveDefinitionCase name=")" org.eventb.core.expression="SeqComp(l,r)" org.eventb.theory.core.formula="⊤ "/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="*" org.eventb.core.expression="ConcurrentComp(l,r)" org.eventb.theory.core.formula="⊥ "/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="+" org.eventb.core.expression="GoalComp(succes,planrec,failure)" org.eventb.theory.core.formula="⊥ "/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="," org.eventb.core.expression="Rhd(cur,back)" org.eventb.theory.core.formula="⊥ "/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="-" org.eventb.core.expression="EventComp(evt,planlib)" org.eventb.theory.core.formula="⊥ "/>
+        </org.eventb.theory.core.recursiveOperatorDefinition>
+    </org.eventb.theory.core.newOperatorDefinition>
+    <org.eventb.theory.core.newOperatorDefinition name="elementA" org.eventb.core.label="isConcurrentComp" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.notationType="PREFIX">
+        <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="Plan_body(belief_predicates,non_belief_predicates,terms) " org.eventb.core.identifier="plan"/>
+        <org.eventb.theory.core.recursiveOperatorDefinition name="(" org.eventb.theory.core.inductiveArgument="plan">
+            <org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="NilComp" org.eventb.theory.core.formula="⊥ "/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="BasicPComp(evt)" org.eventb.theory.core.formula="⊥ "/>
+            <org.eventb.theory.core.recursiveDefinitionCase name=")" org.eventb.core.expression="SeqComp(l,r)" org.eventb.theory.core.formula="⊥ "/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="*" org.eventb.core.expression="ConcurrentComp(l,r)" org.eventb.theory.core.formula="⊤ "/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="+" org.eventb.core.expression="GoalComp(succes,planrec,failure)" org.eventb.theory.core.formula="⊥ "/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="," org.eventb.core.expression="Rhd(cur,back)" org.eventb.theory.core.formula="⊥"/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="-" org.eventb.core.expression="EventComp(evt,planlib)" org.eventb.theory.core.formula="⊥"/>
+        </org.eventb.theory.core.recursiveOperatorDefinition>
+    </org.eventb.theory.core.newOperatorDefinition>
+    <org.eventb.theory.core.newOperatorDefinition name="elementB" org.eventb.core.label="isGoalComp" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.notationType="PREFIX">
+        <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="Plan_body(belief_predicates,non_belief_predicates,terms) " org.eventb.core.identifier="plan"/>
+        <org.eventb.theory.core.recursiveOperatorDefinition name="(" org.eventb.theory.core.inductiveArgument="plan">
+            <org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="NilComp" org.eventb.theory.core.formula="⊥"/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="BasicPComp(evt)" org.eventb.theory.core.formula="⊥"/>
+            <org.eventb.theory.core.recursiveDefinitionCase name=")" org.eventb.core.expression="SeqComp(l,r)" org.eventb.theory.core.formula="⊥"/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="*" org.eventb.core.expression="ConcurrentComp(l,r)" org.eventb.theory.core.formula="⊥ "/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="+" org.eventb.core.expression="GoalComp(succes,planrec,failure)" org.eventb.theory.core.formula="⊤ "/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="," org.eventb.core.expression="Rhd(cur,back)" org.eventb.theory.core.formula="⊥ "/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="-" org.eventb.core.expression="EventComp(evt,planlib)" org.eventb.theory.core.formula="⊥ "/>
+        </org.eventb.theory.core.recursiveOperatorDefinition>
+    </org.eventb.theory.core.newOperatorDefinition>
+    <org.eventb.theory.core.newOperatorDefinition name="elementC" org.eventb.core.label="isRhd" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.notationType="PREFIX">
+        <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="Plan_body(belief_predicates,non_belief_predicates,terms) " org.eventb.core.identifier="plan"/>
+        <org.eventb.theory.core.recursiveOperatorDefinition name="(" org.eventb.theory.core.inductiveArgument="plan">
+            <org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="NilComp" org.eventb.theory.core.formula="⊥"/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="BasicPComp(evt)" org.eventb.theory.core.formula="⊥"/>
+            <org.eventb.theory.core.recursiveDefinitionCase name=")" org.eventb.core.expression="SeqComp(l,r)" org.eventb.theory.core.formula="⊥"/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="*" org.eventb.core.expression="ConcurrentComp(l,r)" org.eventb.theory.core.formula="⊥"/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="+" org.eventb.core.expression="GoalComp(succes,planrec,failure)" org.eventb.theory.core.formula="⊥"/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="," org.eventb.core.expression="Rhd(cur,back)" org.eventb.theory.core.formula="⊤ "/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="-" org.eventb.core.expression="EventComp(evt,planlib)" org.eventb.theory.core.formula="⊥"/>
+        </org.eventb.theory.core.recursiveOperatorDefinition>
+    </org.eventb.theory.core.newOperatorDefinition>
 </org.eventb.theory.core.theoryRoot>

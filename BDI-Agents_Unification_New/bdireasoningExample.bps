@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.psFile>
-    <org.eventb.core.psStatus name="SelectRelevantPlans_Play/grd8/THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="34" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="SelectRelevantPlans_Play/grd3/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="34" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="SelectRelevantPlans_Play/grd4/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="34" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="SelectRelevantPlans_Play/grd5/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="34" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="SelectRelevantPlans_Play/act1/SIM" org.eventb.core.confidence="0" org.eventb.core.poStamp="34" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="SelectRelevantPlans_Arrive/grd8/THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="34" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="SelectRelevantPlans_Arrive/grd3/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="34" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="SelectRelevantPlans_Arrive/grd4/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="34" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="SelectRelevantPlans_Arrive/grd5/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="34" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="SelectRelevantPlans_Arrive/act1/SIM" org.eventb.core.confidence="0" org.eventb.core.poStamp="34" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SelectRelevantPlans_Play/grd1/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SelectRelevantPlans_Play/grd6/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SelectRelevantPlans_Play/grd2/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SelectRelevantPlans_Play/grd3/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SelectRelevantPlans_Play/grd5/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SelectRelevantPlans_Play/grd7/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SelectRelevantPlans_Play/act1/SIM" org.eventb.core.confidence="0" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SelectRelevantPlans_Arrive/grd1/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SelectRelevantPlans_Arrive/grd6/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SelectRelevantPlans_Arrive/grd2/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SelectRelevantPlans_Arrive/grd3/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SelectRelevantPlans_Arrive/grd5/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SelectRelevantPlans_Arrive/grd7/GRD" org.eventb.core.confidence="0" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SelectRelevantPlans_Arrive/act1/SIM" org.eventb.core.confidence="0" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>
