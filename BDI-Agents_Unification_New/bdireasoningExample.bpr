@@ -521,7 +521,7 @@
                 <org.eventb.theory.core.scTypeArgument name="terms" org.eventb.theory.core.givenType="terms"/>
                 <org.eventb.theory.core.scDatatypeConstructor name="NilComp"/>
                 <org.eventb.theory.core.scDatatypeConstructor name="BasicPComp">
-                    <org.eventb.theory.core.scConstructorArgument name="NDGGoalPlanBodies" org.eventb.core.type="non_belief_predicates×terms"/>
+                    <org.eventb.theory.core.scConstructorArgument name="GetBasicP" org.eventb.core.type="non_belief_predicates×terms"/>
                 </org.eventb.theory.core.scDatatypeConstructor>
                 <org.eventb.theory.core.scDatatypeConstructor name="SeqComp">
                     <org.eventb.theory.core.scConstructorArgument name="head" org.eventb.core.type="Plan_body"/>
@@ -792,6 +792,10 @@
         <org.eventb.core.prPred name="p30" org.eventb.core.predicate="Vector∈Terms × Terms ⇸ Terms">
             <org.eventb.core.prIdent name="Vector" org.eventb.core.type="ℙ(Terms×Terms×Terms)"/>
         </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p53" org.eventb.core.predicate="intentions∈ℙ(Plan_body(Belief_predicates,None_belief_predicates,Terms))">
+            <org.eventb.core.prIdent name="Belief_predicates" org.eventb.core.type="ℙ(Belief_predicates)"/>
+            <org.eventb.core.prIdent name="intentions" org.eventb.core.type="ℙ(Plan_body(Belief_predicates,None_belief_predicates,Terms))"/>
+        </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="partition(Actions,{travel},{smile_at},{cry_at})"/>
         <org.eventb.core.prPred name="p40" org.eventb.core.predicate="∀belief⦂ℙ(Belief_predicates×Terms),terms1⦂Terms·terms1∈Point⇒belief ↦ terms1∈dom(plan_body_plan3)∧⊤∧belief ↦ terms1∈dom(plan_body_plan4)∧⊤">
             <org.eventb.core.prIdent name="Belief_predicates" org.eventb.core.type="ℙ(Belief_predicates)"/>
@@ -873,10 +877,6 @@
         <org.eventb.core.prPred name="p42" org.eventb.core.predicate="plan_body_plan4∈ℙ(Belief_predicates × Terms) × Terms ⇸ ℙ(UserP(Belief_predicates,None_belief_predicates,Terms))">
             <org.eventb.core.prIdent name="Belief_predicates" org.eventb.core.type="ℙ(Belief_predicates)"/>
             <org.eventb.core.prIdent name="plan_body_plan4" org.eventb.core.type="ℙ(ℙ(Belief_predicates×Terms)×Terms×ℙ(UserP(Belief_predicates,None_belief_predicates,Terms)))"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p53" org.eventb.core.predicate="intentions∈ℙ(Plan_body(Belief_predicates,None_belief_predicates,Terms))">
-            <org.eventb.core.prIdent name="Belief_predicates" org.eventb.core.type="ℙ(Belief_predicates)"/>
-            <org.eventb.core.prIdent name="intentions" org.eventb.core.type="ℙ(Plan_body(Belief_predicates,None_belief_predicates,Terms))"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p4" org.eventb.core.predicate="partition(Terms,Point,VectorTerms)">
             <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
@@ -1474,7 +1474,7 @@
                 <org.eventb.theory.core.scTypeArgument name="terms" org.eventb.theory.core.givenType="terms"/>
                 <org.eventb.theory.core.scDatatypeConstructor name="NilComp"/>
                 <org.eventb.theory.core.scDatatypeConstructor name="BasicPComp">
-                    <org.eventb.theory.core.scConstructorArgument name="NDGGoalPlanBodies" org.eventb.core.type="non_belief_predicates×terms"/>
+                    <org.eventb.theory.core.scConstructorArgument name="GetBasicP" org.eventb.core.type="non_belief_predicates×terms"/>
                 </org.eventb.theory.core.scDatatypeConstructor>
                 <org.eventb.theory.core.scDatatypeConstructor name="SeqComp">
                     <org.eventb.theory.core.scConstructorArgument name="head" org.eventb.core.type="Plan_body"/>
@@ -1744,6 +1744,10 @@
         <org.eventb.core.prPred name="p30" org.eventb.core.predicate="Vector∈Terms × Terms ⇸ Terms">
             <org.eventb.core.prIdent name="Vector" org.eventb.core.type="ℙ(Terms×Terms×Terms)"/>
         </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p53" org.eventb.core.predicate="intentions∈ℙ(Plan_body(Belief_predicates,None_belief_predicates,Terms))">
+            <org.eventb.core.prIdent name="Belief_predicates" org.eventb.core.type="ℙ(Belief_predicates)"/>
+            <org.eventb.core.prIdent name="intentions" org.eventb.core.type="ℙ(Plan_body(Belief_predicates,None_belief_predicates,Terms))"/>
+        </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="partition(Actions,{travel},{smile_at},{cry_at})"/>
         <org.eventb.core.prPred name="p40" org.eventb.core.predicate="∀belief⦂ℙ(Belief_predicates×Terms),terms1⦂Terms·terms1∈Point⇒belief ↦ terms1∈dom(plan_body_plan3)∧⊤∧belief ↦ terms1∈dom(plan_body_plan4)∧⊤">
             <org.eventb.core.prIdent name="Belief_predicates" org.eventb.core.type="ℙ(Belief_predicates)"/>
@@ -1826,10 +1830,6 @@
         <org.eventb.core.prPred name="p42" org.eventb.core.predicate="plan_body_plan4∈ℙ(Belief_predicates × Terms) × Terms ⇸ ℙ(UserP(Belief_predicates,None_belief_predicates,Terms))">
             <org.eventb.core.prIdent name="Belief_predicates" org.eventb.core.type="ℙ(Belief_predicates)"/>
             <org.eventb.core.prIdent name="plan_body_plan4" org.eventb.core.type="ℙ(ℙ(Belief_predicates×Terms)×Terms×ℙ(UserP(Belief_predicates,None_belief_predicates,Terms)))"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p53" org.eventb.core.predicate="intentions∈ℙ(Plan_body(Belief_predicates,None_belief_predicates,Terms))">
-            <org.eventb.core.prIdent name="Belief_predicates" org.eventb.core.type="ℙ(Belief_predicates)"/>
-            <org.eventb.core.prIdent name="intentions" org.eventb.core.type="ℙ(Plan_body(Belief_predicates,None_belief_predicates,Terms))"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p4" org.eventb.core.predicate="partition(Terms,Point,VectorTerms)">
             <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
@@ -9398,7 +9398,7 @@
                 <org.eventb.theory.core.scTypeArgument name="terms" org.eventb.theory.core.givenType="terms"/>
                 <org.eventb.theory.core.scDatatypeConstructor name="NilComp"/>
                 <org.eventb.theory.core.scDatatypeConstructor name="BasicPComp">
-                    <org.eventb.theory.core.scConstructorArgument name="NDGGoalPlanBodies" org.eventb.core.type="non_belief_predicates×terms"/>
+                    <org.eventb.theory.core.scConstructorArgument name="GetBasicP" org.eventb.core.type="non_belief_predicates×terms"/>
                 </org.eventb.theory.core.scDatatypeConstructor>
                 <org.eventb.theory.core.scDatatypeConstructor name="SeqComp">
                     <org.eventb.theory.core.scConstructorArgument name="head" org.eventb.core.type="Plan_body"/>
@@ -9669,6 +9669,10 @@
         <org.eventb.core.prPred name="p30" org.eventb.core.predicate="Vector∈Terms × Terms ⇸ Terms">
             <org.eventb.core.prIdent name="Vector" org.eventb.core.type="ℙ(Terms×Terms×Terms)"/>
         </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p53" org.eventb.core.predicate="intentions∈ℙ(Plan_body(Belief_predicates,None_belief_predicates,Terms))">
+            <org.eventb.core.prIdent name="Belief_predicates" org.eventb.core.type="ℙ(Belief_predicates)"/>
+            <org.eventb.core.prIdent name="intentions" org.eventb.core.type="ℙ(Plan_body(Belief_predicates,None_belief_predicates,Terms))"/>
+        </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="partition(Actions,{travel},{smile_at},{cry_at})"/>
         <org.eventb.core.prPred name="p40" org.eventb.core.predicate="∀belief⦂ℙ(Belief_predicates×Terms),terms1⦂Terms·terms1∈Point⇒belief ↦ terms1∈dom(plan_body_plan3)∧⊤∧belief ↦ terms1∈dom(plan_body_plan4)∧⊤">
             <org.eventb.core.prIdent name="Belief_predicates" org.eventb.core.type="ℙ(Belief_predicates)"/>
@@ -9750,10 +9754,6 @@
         <org.eventb.core.prPred name="p42" org.eventb.core.predicate="plan_body_plan4∈ℙ(Belief_predicates × Terms) × Terms ⇸ ℙ(UserP(Belief_predicates,None_belief_predicates,Terms))">
             <org.eventb.core.prIdent name="Belief_predicates" org.eventb.core.type="ℙ(Belief_predicates)"/>
             <org.eventb.core.prIdent name="plan_body_plan4" org.eventb.core.type="ℙ(ℙ(Belief_predicates×Terms)×Terms×ℙ(UserP(Belief_predicates,None_belief_predicates,Terms)))"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p53" org.eventb.core.predicate="intentions∈ℙ(Plan_body(Belief_predicates,None_belief_predicates,Terms))">
-            <org.eventb.core.prIdent name="Belief_predicates" org.eventb.core.type="ℙ(Belief_predicates)"/>
-            <org.eventb.core.prIdent name="intentions" org.eventb.core.type="ℙ(Plan_body(Belief_predicates,None_belief_predicates,Terms))"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p4" org.eventb.core.predicate="partition(Terms,Point,VectorTerms)">
             <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
@@ -9860,7 +9860,7 @@
                 <org.eventb.theory.core.scTypeArgument name="terms" org.eventb.theory.core.givenType="terms"/>
                 <org.eventb.theory.core.scDatatypeConstructor name="NilComp"/>
                 <org.eventb.theory.core.scDatatypeConstructor name="BasicPComp">
-                    <org.eventb.theory.core.scConstructorArgument name="NDGGoalPlanBodies" org.eventb.core.type="non_belief_predicates×terms"/>
+                    <org.eventb.theory.core.scConstructorArgument name="GetBasicP" org.eventb.core.type="non_belief_predicates×terms"/>
                 </org.eventb.theory.core.scDatatypeConstructor>
                 <org.eventb.theory.core.scDatatypeConstructor name="SeqComp">
                     <org.eventb.theory.core.scConstructorArgument name="head" org.eventb.core.type="Plan_body"/>
@@ -10130,6 +10130,10 @@
         <org.eventb.core.prPred name="p30" org.eventb.core.predicate="Vector∈Terms × Terms ⇸ Terms">
             <org.eventb.core.prIdent name="Vector" org.eventb.core.type="ℙ(Terms×Terms×Terms)"/>
         </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p53" org.eventb.core.predicate="intentions∈ℙ(Plan_body(Belief_predicates,None_belief_predicates,Terms))">
+            <org.eventb.core.prIdent name="Belief_predicates" org.eventb.core.type="ℙ(Belief_predicates)"/>
+            <org.eventb.core.prIdent name="intentions" org.eventb.core.type="ℙ(Plan_body(Belief_predicates,None_belief_predicates,Terms))"/>
+        </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="partition(Actions,{travel},{smile_at},{cry_at})"/>
         <org.eventb.core.prPred name="p40" org.eventb.core.predicate="∀belief⦂ℙ(Belief_predicates×Terms),terms1⦂Terms·terms1∈Point⇒belief ↦ terms1∈dom(plan_body_plan3)∧⊤∧belief ↦ terms1∈dom(plan_body_plan4)∧⊤">
             <org.eventb.core.prIdent name="Belief_predicates" org.eventb.core.type="ℙ(Belief_predicates)"/>
@@ -10212,10 +10216,6 @@
         <org.eventb.core.prPred name="p42" org.eventb.core.predicate="plan_body_plan4∈ℙ(Belief_predicates × Terms) × Terms ⇸ ℙ(UserP(Belief_predicates,None_belief_predicates,Terms))">
             <org.eventb.core.prIdent name="Belief_predicates" org.eventb.core.type="ℙ(Belief_predicates)"/>
             <org.eventb.core.prIdent name="plan_body_plan4" org.eventb.core.type="ℙ(ℙ(Belief_predicates×Terms)×Terms×ℙ(UserP(Belief_predicates,None_belief_predicates,Terms)))"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p53" org.eventb.core.predicate="intentions∈ℙ(Plan_body(Belief_predicates,None_belief_predicates,Terms))">
-            <org.eventb.core.prIdent name="Belief_predicates" org.eventb.core.type="ℙ(Belief_predicates)"/>
-            <org.eventb.core.prIdent name="intentions" org.eventb.core.type="ℙ(Plan_body(Belief_predicates,None_belief_predicates,Terms))"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p4" org.eventb.core.predicate="partition(Terms,Point,VectorTerms)">
             <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
@@ -10322,7 +10322,7 @@
                 <org.eventb.theory.core.scTypeArgument name="terms" org.eventb.theory.core.givenType="terms"/>
                 <org.eventb.theory.core.scDatatypeConstructor name="NilComp"/>
                 <org.eventb.theory.core.scDatatypeConstructor name="BasicPComp">
-                    <org.eventb.theory.core.scConstructorArgument name="NDGGoalPlanBodies" org.eventb.core.type="non_belief_predicates×terms"/>
+                    <org.eventb.theory.core.scConstructorArgument name="GetBasicP" org.eventb.core.type="non_belief_predicates×terms"/>
                 </org.eventb.theory.core.scDatatypeConstructor>
                 <org.eventb.theory.core.scDatatypeConstructor name="SeqComp">
                     <org.eventb.theory.core.scConstructorArgument name="head" org.eventb.core.type="Plan_body"/>
@@ -10593,6 +10593,10 @@
         <org.eventb.core.prPred name="p30" org.eventb.core.predicate="Vector∈Terms × Terms ⇸ Terms">
             <org.eventb.core.prIdent name="Vector" org.eventb.core.type="ℙ(Terms×Terms×Terms)"/>
         </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p53" org.eventb.core.predicate="intentions∈ℙ(Plan_body(Belief_predicates,None_belief_predicates,Terms))">
+            <org.eventb.core.prIdent name="Belief_predicates" org.eventb.core.type="ℙ(Belief_predicates)"/>
+            <org.eventb.core.prIdent name="intentions" org.eventb.core.type="ℙ(Plan_body(Belief_predicates,None_belief_predicates,Terms))"/>
+        </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="partition(Actions,{travel},{smile_at},{cry_at})"/>
         <org.eventb.core.prPred name="p40" org.eventb.core.predicate="∀belief⦂ℙ(Belief_predicates×Terms),terms1⦂Terms·terms1∈Point⇒belief ↦ terms1∈dom(plan_body_plan3)∧⊤∧belief ↦ terms1∈dom(plan_body_plan4)∧⊤">
             <org.eventb.core.prIdent name="Belief_predicates" org.eventb.core.type="ℙ(Belief_predicates)"/>
@@ -10674,10 +10678,6 @@
         <org.eventb.core.prPred name="p42" org.eventb.core.predicate="plan_body_plan4∈ℙ(Belief_predicates × Terms) × Terms ⇸ ℙ(UserP(Belief_predicates,None_belief_predicates,Terms))">
             <org.eventb.core.prIdent name="Belief_predicates" org.eventb.core.type="ℙ(Belief_predicates)"/>
             <org.eventb.core.prIdent name="plan_body_plan4" org.eventb.core.type="ℙ(ℙ(Belief_predicates×Terms)×Terms×ℙ(UserP(Belief_predicates,None_belief_predicates,Terms)))"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p53" org.eventb.core.predicate="intentions∈ℙ(Plan_body(Belief_predicates,None_belief_predicates,Terms))">
-            <org.eventb.core.prIdent name="Belief_predicates" org.eventb.core.type="ℙ(Belief_predicates)"/>
-            <org.eventb.core.prIdent name="intentions" org.eventb.core.type="ℙ(Plan_body(Belief_predicates,None_belief_predicates,Terms))"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p4" org.eventb.core.predicate="partition(Terms,Point,VectorTerms)">
             <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
@@ -10784,7 +10784,7 @@
                 <org.eventb.theory.core.scTypeArgument name="terms" org.eventb.theory.core.givenType="terms"/>
                 <org.eventb.theory.core.scDatatypeConstructor name="NilComp"/>
                 <org.eventb.theory.core.scDatatypeConstructor name="BasicPComp">
-                    <org.eventb.theory.core.scConstructorArgument name="NDGGoalPlanBodies" org.eventb.core.type="non_belief_predicates×terms"/>
+                    <org.eventb.theory.core.scConstructorArgument name="GetBasicP" org.eventb.core.type="non_belief_predicates×terms"/>
                 </org.eventb.theory.core.scDatatypeConstructor>
                 <org.eventb.theory.core.scDatatypeConstructor name="SeqComp">
                     <org.eventb.theory.core.scConstructorArgument name="head" org.eventb.core.type="Plan_body"/>
@@ -11054,6 +11054,10 @@
         <org.eventb.core.prPred name="p30" org.eventb.core.predicate="Vector∈Terms × Terms ⇸ Terms">
             <org.eventb.core.prIdent name="Vector" org.eventb.core.type="ℙ(Terms×Terms×Terms)"/>
         </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p53" org.eventb.core.predicate="intentions∈ℙ(Plan_body(Belief_predicates,None_belief_predicates,Terms))">
+            <org.eventb.core.prIdent name="Belief_predicates" org.eventb.core.type="ℙ(Belief_predicates)"/>
+            <org.eventb.core.prIdent name="intentions" org.eventb.core.type="ℙ(Plan_body(Belief_predicates,None_belief_predicates,Terms))"/>
+        </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="partition(Actions,{travel},{smile_at},{cry_at})"/>
         <org.eventb.core.prPred name="p40" org.eventb.core.predicate="∀belief⦂ℙ(Belief_predicates×Terms),terms1⦂Terms·terms1∈Point⇒belief ↦ terms1∈dom(plan_body_plan3)∧⊤∧belief ↦ terms1∈dom(plan_body_plan4)∧⊤">
             <org.eventb.core.prIdent name="Belief_predicates" org.eventb.core.type="ℙ(Belief_predicates)"/>
@@ -11136,10 +11140,6 @@
         <org.eventb.core.prPred name="p42" org.eventb.core.predicate="plan_body_plan4∈ℙ(Belief_predicates × Terms) × Terms ⇸ ℙ(UserP(Belief_predicates,None_belief_predicates,Terms))">
             <org.eventb.core.prIdent name="Belief_predicates" org.eventb.core.type="ℙ(Belief_predicates)"/>
             <org.eventb.core.prIdent name="plan_body_plan4" org.eventb.core.type="ℙ(ℙ(Belief_predicates×Terms)×Terms×ℙ(UserP(Belief_predicates,None_belief_predicates,Terms)))"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p53" org.eventb.core.predicate="intentions∈ℙ(Plan_body(Belief_predicates,None_belief_predicates,Terms))">
-            <org.eventb.core.prIdent name="Belief_predicates" org.eventb.core.type="ℙ(Belief_predicates)"/>
-            <org.eventb.core.prIdent name="intentions" org.eventb.core.type="ℙ(Plan_body(Belief_predicates,None_belief_predicates,Terms))"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p4" org.eventb.core.predicate="partition(Terms,Point,VectorTerms)">
             <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
@@ -12734,7 +12734,7 @@
                 <org.eventb.theory.core.scTypeArgument name="terms" org.eventb.theory.core.givenType="terms"/>
                 <org.eventb.theory.core.scDatatypeConstructor name="NilComp"/>
                 <org.eventb.theory.core.scDatatypeConstructor name="BasicPComp">
-                    <org.eventb.theory.core.scConstructorArgument name="NDGGoalPlanBodies" org.eventb.core.type="non_belief_predicates×terms"/>
+                    <org.eventb.theory.core.scConstructorArgument name="GetBasicP" org.eventb.core.type="non_belief_predicates×terms"/>
                 </org.eventb.theory.core.scDatatypeConstructor>
                 <org.eventb.theory.core.scDatatypeConstructor name="SeqComp">
                     <org.eventb.theory.core.scConstructorArgument name="head" org.eventb.core.type="Plan_body"/>
@@ -13005,6 +13005,10 @@
         <org.eventb.core.prPred name="p30" org.eventb.core.predicate="Vector∈Terms × Terms ⇸ Terms">
             <org.eventb.core.prIdent name="Vector" org.eventb.core.type="ℙ(Terms×Terms×Terms)"/>
         </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p53" org.eventb.core.predicate="intentions∈ℙ(Plan_body(Belief_predicates,None_belief_predicates,Terms))">
+            <org.eventb.core.prIdent name="Belief_predicates" org.eventb.core.type="ℙ(Belief_predicates)"/>
+            <org.eventb.core.prIdent name="intentions" org.eventb.core.type="ℙ(Plan_body(Belief_predicates,None_belief_predicates,Terms))"/>
+        </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="partition(Actions,{travel},{smile_at},{cry_at})"/>
         <org.eventb.core.prPred name="p40" org.eventb.core.predicate="∀belief⦂ℙ(Belief_predicates×Terms),terms1⦂Terms·terms1∈Point⇒belief ↦ terms1∈dom(plan_body_plan3)∧⊤∧belief ↦ terms1∈dom(plan_body_plan4)∧⊤">
             <org.eventb.core.prIdent name="Belief_predicates" org.eventb.core.type="ℙ(Belief_predicates)"/>
@@ -13086,10 +13090,6 @@
         <org.eventb.core.prPred name="p42" org.eventb.core.predicate="plan_body_plan4∈ℙ(Belief_predicates × Terms) × Terms ⇸ ℙ(UserP(Belief_predicates,None_belief_predicates,Terms))">
             <org.eventb.core.prIdent name="Belief_predicates" org.eventb.core.type="ℙ(Belief_predicates)"/>
             <org.eventb.core.prIdent name="plan_body_plan4" org.eventb.core.type="ℙ(ℙ(Belief_predicates×Terms)×Terms×ℙ(UserP(Belief_predicates,None_belief_predicates,Terms)))"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p53" org.eventb.core.predicate="intentions∈ℙ(Plan_body(Belief_predicates,None_belief_predicates,Terms))">
-            <org.eventb.core.prIdent name="Belief_predicates" org.eventb.core.type="ℙ(Belief_predicates)"/>
-            <org.eventb.core.prIdent name="intentions" org.eventb.core.type="ℙ(Plan_body(Belief_predicates,None_belief_predicates,Terms))"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p4" org.eventb.core.predicate="partition(Terms,Point,VectorTerms)">
             <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
@@ -13196,7 +13196,7 @@
                 <org.eventb.theory.core.scTypeArgument name="terms" org.eventb.theory.core.givenType="terms"/>
                 <org.eventb.theory.core.scDatatypeConstructor name="NilComp"/>
                 <org.eventb.theory.core.scDatatypeConstructor name="BasicPComp">
-                    <org.eventb.theory.core.scConstructorArgument name="NDGGoalPlanBodies" org.eventb.core.type="non_belief_predicates×terms"/>
+                    <org.eventb.theory.core.scConstructorArgument name="GetBasicP" org.eventb.core.type="non_belief_predicates×terms"/>
                 </org.eventb.theory.core.scDatatypeConstructor>
                 <org.eventb.theory.core.scDatatypeConstructor name="SeqComp">
                     <org.eventb.theory.core.scConstructorArgument name="head" org.eventb.core.type="Plan_body"/>
@@ -13466,6 +13466,10 @@
         <org.eventb.core.prPred name="p30" org.eventb.core.predicate="Vector∈Terms × Terms ⇸ Terms">
             <org.eventb.core.prIdent name="Vector" org.eventb.core.type="ℙ(Terms×Terms×Terms)"/>
         </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p53" org.eventb.core.predicate="intentions∈ℙ(Plan_body(Belief_predicates,None_belief_predicates,Terms))">
+            <org.eventb.core.prIdent name="Belief_predicates" org.eventb.core.type="ℙ(Belief_predicates)"/>
+            <org.eventb.core.prIdent name="intentions" org.eventb.core.type="ℙ(Plan_body(Belief_predicates,None_belief_predicates,Terms))"/>
+        </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="partition(Actions,{travel},{smile_at},{cry_at})"/>
         <org.eventb.core.prPred name="p40" org.eventb.core.predicate="∀belief⦂ℙ(Belief_predicates×Terms),terms1⦂Terms·terms1∈Point⇒belief ↦ terms1∈dom(plan_body_plan3)∧⊤∧belief ↦ terms1∈dom(plan_body_plan4)∧⊤">
             <org.eventb.core.prIdent name="Belief_predicates" org.eventb.core.type="ℙ(Belief_predicates)"/>
@@ -13548,10 +13552,6 @@
         <org.eventb.core.prPred name="p42" org.eventb.core.predicate="plan_body_plan4∈ℙ(Belief_predicates × Terms) × Terms ⇸ ℙ(UserP(Belief_predicates,None_belief_predicates,Terms))">
             <org.eventb.core.prIdent name="Belief_predicates" org.eventb.core.type="ℙ(Belief_predicates)"/>
             <org.eventb.core.prIdent name="plan_body_plan4" org.eventb.core.type="ℙ(ℙ(Belief_predicates×Terms)×Terms×ℙ(UserP(Belief_predicates,None_belief_predicates,Terms)))"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p53" org.eventb.core.predicate="intentions∈ℙ(Plan_body(Belief_predicates,None_belief_predicates,Terms))">
-            <org.eventb.core.prIdent name="Belief_predicates" org.eventb.core.type="ℙ(Belief_predicates)"/>
-            <org.eventb.core.prIdent name="intentions" org.eventb.core.type="ℙ(Plan_body(Belief_predicates,None_belief_predicates,Terms))"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p4" org.eventb.core.predicate="partition(Terms,Point,VectorTerms)">
             <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
@@ -16542,7 +16542,7 @@
                 <org.eventb.theory.core.scTypeArgument name="terms" org.eventb.theory.core.givenType="terms"/>
                 <org.eventb.theory.core.scDatatypeConstructor name="NilComp"/>
                 <org.eventb.theory.core.scDatatypeConstructor name="BasicPComp">
-                    <org.eventb.theory.core.scConstructorArgument name="NDGGoalPlanBodies" org.eventb.core.type="non_belief_predicates×terms"/>
+                    <org.eventb.theory.core.scConstructorArgument name="GetBasicP" org.eventb.core.type="non_belief_predicates×terms"/>
                 </org.eventb.theory.core.scDatatypeConstructor>
                 <org.eventb.theory.core.scDatatypeConstructor name="SeqComp">
                     <org.eventb.theory.core.scConstructorArgument name="head" org.eventb.core.type="Plan_body"/>
@@ -16813,6 +16813,10 @@
         <org.eventb.core.prPred name="p30" org.eventb.core.predicate="Vector∈Terms × Terms ⇸ Terms">
             <org.eventb.core.prIdent name="Vector" org.eventb.core.type="ℙ(Terms×Terms×Terms)"/>
         </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p53" org.eventb.core.predicate="intentions∈ℙ(Plan_body(Belief_predicates,None_belief_predicates,Terms))">
+            <org.eventb.core.prIdent name="Belief_predicates" org.eventb.core.type="ℙ(Belief_predicates)"/>
+            <org.eventb.core.prIdent name="intentions" org.eventb.core.type="ℙ(Plan_body(Belief_predicates,None_belief_predicates,Terms))"/>
+        </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="partition(Actions,{travel},{smile_at},{cry_at})"/>
         <org.eventb.core.prPred name="p40" org.eventb.core.predicate="∀belief⦂ℙ(Belief_predicates×Terms),terms1⦂Terms·terms1∈Point⇒belief ↦ terms1∈dom(plan_body_plan3)∧⊤∧belief ↦ terms1∈dom(plan_body_plan4)∧⊤">
             <org.eventb.core.prIdent name="Belief_predicates" org.eventb.core.type="ℙ(Belief_predicates)"/>
@@ -16894,10 +16898,6 @@
         <org.eventb.core.prPred name="p42" org.eventb.core.predicate="plan_body_plan4∈ℙ(Belief_predicates × Terms) × Terms ⇸ ℙ(UserP(Belief_predicates,None_belief_predicates,Terms))">
             <org.eventb.core.prIdent name="Belief_predicates" org.eventb.core.type="ℙ(Belief_predicates)"/>
             <org.eventb.core.prIdent name="plan_body_plan4" org.eventb.core.type="ℙ(ℙ(Belief_predicates×Terms)×Terms×ℙ(UserP(Belief_predicates,None_belief_predicates,Terms)))"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p53" org.eventb.core.predicate="intentions∈ℙ(Plan_body(Belief_predicates,None_belief_predicates,Terms))">
-            <org.eventb.core.prIdent name="Belief_predicates" org.eventb.core.type="ℙ(Belief_predicates)"/>
-            <org.eventb.core.prIdent name="intentions" org.eventb.core.type="ℙ(Plan_body(Belief_predicates,None_belief_predicates,Terms))"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p4" org.eventb.core.predicate="partition(Terms,Point,VectorTerms)">
             <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
@@ -17004,7 +17004,7 @@
                 <org.eventb.theory.core.scTypeArgument name="terms" org.eventb.theory.core.givenType="terms"/>
                 <org.eventb.theory.core.scDatatypeConstructor name="NilComp"/>
                 <org.eventb.theory.core.scDatatypeConstructor name="BasicPComp">
-                    <org.eventb.theory.core.scConstructorArgument name="NDGGoalPlanBodies" org.eventb.core.type="non_belief_predicates×terms"/>
+                    <org.eventb.theory.core.scConstructorArgument name="GetBasicP" org.eventb.core.type="non_belief_predicates×terms"/>
                 </org.eventb.theory.core.scDatatypeConstructor>
                 <org.eventb.theory.core.scDatatypeConstructor name="SeqComp">
                     <org.eventb.theory.core.scConstructorArgument name="head" org.eventb.core.type="Plan_body"/>
@@ -17274,6 +17274,10 @@
         <org.eventb.core.prPred name="p30" org.eventb.core.predicate="Vector∈Terms × Terms ⇸ Terms">
             <org.eventb.core.prIdent name="Vector" org.eventb.core.type="ℙ(Terms×Terms×Terms)"/>
         </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p53" org.eventb.core.predicate="intentions∈ℙ(Plan_body(Belief_predicates,None_belief_predicates,Terms))">
+            <org.eventb.core.prIdent name="Belief_predicates" org.eventb.core.type="ℙ(Belief_predicates)"/>
+            <org.eventb.core.prIdent name="intentions" org.eventb.core.type="ℙ(Plan_body(Belief_predicates,None_belief_predicates,Terms))"/>
+        </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="partition(Actions,{travel},{smile_at},{cry_at})"/>
         <org.eventb.core.prPred name="p40" org.eventb.core.predicate="∀belief⦂ℙ(Belief_predicates×Terms),terms1⦂Terms·terms1∈Point⇒belief ↦ terms1∈dom(plan_body_plan3)∧⊤∧belief ↦ terms1∈dom(plan_body_plan4)∧⊤">
             <org.eventb.core.prIdent name="Belief_predicates" org.eventb.core.type="ℙ(Belief_predicates)"/>
@@ -17356,10 +17360,6 @@
         <org.eventb.core.prPred name="p42" org.eventb.core.predicate="plan_body_plan4∈ℙ(Belief_predicates × Terms) × Terms ⇸ ℙ(UserP(Belief_predicates,None_belief_predicates,Terms))">
             <org.eventb.core.prIdent name="Belief_predicates" org.eventb.core.type="ℙ(Belief_predicates)"/>
             <org.eventb.core.prIdent name="plan_body_plan4" org.eventb.core.type="ℙ(ℙ(Belief_predicates×Terms)×Terms×ℙ(UserP(Belief_predicates,None_belief_predicates,Terms)))"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p53" org.eventb.core.predicate="intentions∈ℙ(Plan_body(Belief_predicates,None_belief_predicates,Terms))">
-            <org.eventb.core.prIdent name="Belief_predicates" org.eventb.core.type="ℙ(Belief_predicates)"/>
-            <org.eventb.core.prIdent name="intentions" org.eventb.core.type="ℙ(Plan_body(Belief_predicates,None_belief_predicates,Terms))"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p4" org.eventb.core.predicate="partition(Terms,Point,VectorTerms)">
             <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
@@ -17466,7 +17466,7 @@
                 <org.eventb.theory.core.scTypeArgument name="terms" org.eventb.theory.core.givenType="terms"/>
                 <org.eventb.theory.core.scDatatypeConstructor name="NilComp"/>
                 <org.eventb.theory.core.scDatatypeConstructor name="BasicPComp">
-                    <org.eventb.theory.core.scConstructorArgument name="NDGGoalPlanBodies" org.eventb.core.type="non_belief_predicates×terms"/>
+                    <org.eventb.theory.core.scConstructorArgument name="GetBasicP" org.eventb.core.type="non_belief_predicates×terms"/>
                 </org.eventb.theory.core.scDatatypeConstructor>
                 <org.eventb.theory.core.scDatatypeConstructor name="SeqComp">
                     <org.eventb.theory.core.scConstructorArgument name="head" org.eventb.core.type="Plan_body"/>
@@ -17723,6 +17723,7 @@
             <org.eventb.core.prIdent name="Vector" org.eventb.core.type="ℙ(Terms×Terms×Terms)"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p50" org.eventb.core.predicate="Point⊆Terms"/>
+        <org.eventb.core.prPred name="p58" org.eventb.core.predicate="newplan=Rhd(UserP2Plan_body(relevant_plan,Plan_body_def),EventComp(event ↦ terms,λbelief⦂ℙ(Belief_predicates×Terms) ↦ terms1⦂Terms·terms1∈{a,b,c} ∣ UserPlan(intention)(belief ↦ terms1) ∖ {relevant_plan}))"/>
         <org.eventb.core.prPred name="p59" org.eventb.core.predicate="None_belief_predicates={arrive_at,play_at}∪Actions"/>
         <org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬at=next">
             <org.eventb.core.prIdent name="at" org.eventb.core.type="Belief_predicates"/>
@@ -17740,6 +17741,9 @@
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p31" org.eventb.core.predicate="Vector∈Terms × Terms ⇸ Terms">
             <org.eventb.core.prIdent name="Vector" org.eventb.core.type="ℙ(Terms×Terms×Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p54" org.eventb.core.predicate="intentions∈ℙ(Plan_body(Belief_predicates,None_belief_predicates,Terms))">
+            <org.eventb.core.prIdent name="intentions" org.eventb.core.type="ℙ(Plan_body(Belief_predicates,None_belief_predicates,Terms))"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(Actions,{travel},{smile_at},{cry_at})"/>
         <org.eventb.core.prPred name="p41" org.eventb.core.predicate="∀belief⦂ℙ(Belief_predicates×Terms),terms1⦂Terms·terms1∈Point⇒belief ↦ terms1∈dom(plan_body_plan3)∧⊤∧belief ↦ terms1∈dom(plan_body_plan4)∧⊤">
@@ -17780,7 +17784,6 @@
             <org.eventb.core.prIdent name="cried_at" org.eventb.core.type="Belief_predicates"/>
             <org.eventb.core.prIdent name="next" org.eventb.core.type="Belief_predicates"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p58" org.eventb.core.predicate="newplan=Rhd(UserP2Plan_body(relevant_plan,Plan_body_def),EventComp(event ↦ terms,λbelief⦂ℙ(Belief_predicates×Terms) ↦ terms1⦂Terms·terms1∈{a,b,c} ∣ UserPlan(intention)(belief ↦ terms1) ∖ {relevant_plan}))"/>
         <org.eventb.core.prPred name="p37" org.eventb.core.predicate="∀belief⦂ℙ(Belief_predicates×Terms),terms1⦂Terms·terms1∈Point⇒belief ↦ terms1∈dom(plan_body_plan1)∧⊤∧belief ↦ terms1∈dom(plan_body_plan2)∧⊤">
             <org.eventb.core.prIdent name="plan_body_plan1" org.eventb.core.type="ℙ(ℙ(Belief_predicates×Terms)×Terms×ℙ(UserP(Belief_predicates,None_belief_predicates,Terms)))"/>
             <org.eventb.core.prIdent name="plan_body_plan2" org.eventb.core.type="ℙ(ℙ(Belief_predicates×Terms)×Terms×ℙ(UserP(Belief_predicates,None_belief_predicates,Terms)))"/>
@@ -17794,11 +17797,11 @@
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p4" org.eventb.core.predicate="partition(Point,{a},{b},{c})"/>
         <org.eventb.core.prPred name="p26" org.eventb.core.predicate="¬travel=smile_at"/>
-        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="newplan=Rhd(UserP2Plan_body(relevant_plan,Plan_body_def),EventComp(event ↦ terms,λbelief⦂ℙ(Belief_predicates×Terms) ↦ terms1⦂Terms·terms1∈Point ∣ UserPlan(intention)(belief ↦ terms1) ∖ {relevant_plan}))"/>
         <org.eventb.core.prPred name="p48" org.eventb.core.predicate="∀belief⦂ℙ(Belief_predicates×Terms),terms1⦂Terms·terms1∈Point⇒belief ↦ terms1∈dom(plan_body_plan1)∧belief ↦ terms1∈dom(plan_body_plan2)">
             <org.eventb.core.prIdent name="plan_body_plan1" org.eventb.core.type="ℙ(ℙ(Belief_predicates×Terms)×Terms×ℙ(UserP(Belief_predicates,None_belief_predicates,Terms)))"/>
             <org.eventb.core.prIdent name="plan_body_plan2" org.eventb.core.type="ℙ(ℙ(Belief_predicates×Terms)×Terms×ℙ(UserP(Belief_predicates,None_belief_predicates,Terms)))"/>
         </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="newplan=Rhd(UserP2Plan_body(relevant_plan,Plan_body_def),EventComp(event ↦ terms,λbelief⦂ℙ(Belief_predicates×Terms) ↦ terms1⦂Terms·terms1∈Point ∣ UserPlan(intention)(belief ↦ terms1) ∖ {relevant_plan}))"/>
         <org.eventb.core.prPred name="p29" org.eventb.core.predicate="∀terms1⦂Terms,terms2⦂Terms·terms1∈Point∧terms2∈Point⇒terms1 ↦ terms2∈dom(Vector)∧Vector∈Terms × Terms ⇸ Terms">
             <org.eventb.core.prIdent name="Vector" org.eventb.core.type="ℙ(Terms×Terms×Terms)"/>
         </org.eventb.core.prPred>
@@ -17813,9 +17816,6 @@
         <org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬a=c"/>
         <org.eventb.core.prPred name="p43" org.eventb.core.predicate="plan_body_plan4∈ℙ(Belief_predicates × Terms) × Terms ⇸ ℙ(UserP(Belief_predicates,None_belief_predicates,Terms))">
             <org.eventb.core.prIdent name="plan_body_plan4" org.eventb.core.type="ℙ(ℙ(Belief_predicates×Terms)×Terms×ℙ(UserP(Belief_predicates,None_belief_predicates,Terms)))"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p54" org.eventb.core.predicate="intentions∈ℙ(Plan_body(Belief_predicates,None_belief_predicates,Terms))">
-            <org.eventb.core.prIdent name="intentions" org.eventb.core.type="ℙ(Plan_body(Belief_predicates,None_belief_predicates,Terms))"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p5" org.eventb.core.predicate="partition(Terms,Point,VectorTerms)">
             <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
@@ -17912,7 +17912,7 @@
                 <org.eventb.theory.core.scTypeArgument name="terms" org.eventb.theory.core.givenType="terms"/>
                 <org.eventb.theory.core.scDatatypeConstructor name="NilComp"/>
                 <org.eventb.theory.core.scDatatypeConstructor name="BasicPComp">
-                    <org.eventb.theory.core.scConstructorArgument name="NDGGoalPlanBodies" org.eventb.core.type="non_belief_predicates×terms"/>
+                    <org.eventb.theory.core.scConstructorArgument name="GetBasicP" org.eventb.core.type="non_belief_predicates×terms"/>
                 </org.eventb.theory.core.scDatatypeConstructor>
                 <org.eventb.theory.core.scDatatypeConstructor name="SeqComp">
                     <org.eventb.theory.core.scConstructorArgument name="head" org.eventb.core.type="Plan_body"/>
@@ -18168,6 +18168,7 @@
             <org.eventb.core.prIdent name="Vector" org.eventb.core.type="ℙ(Terms×Terms×Terms)"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p50" org.eventb.core.predicate="Point⊆Terms"/>
+        <org.eventb.core.prPred name="p58" org.eventb.core.predicate="newplan=Rhd(UserP2Plan_body(relevant_plan,Plan_body_def),EventComp(event ↦ terms,λbelief⦂ℙ(Belief_predicates×Terms) ↦ terms1⦂Terms·terms1∈{a,b,c} ∣ UserPlan(intention)(belief ↦ terms1) ∖ {relevant_plan}))"/>
         <org.eventb.core.prPred name="p59" org.eventb.core.predicate="None_belief_predicates={arrive_at,play_at}∪Actions"/>
         <org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬at=next">
             <org.eventb.core.prIdent name="at" org.eventb.core.type="Belief_predicates"/>
@@ -18185,6 +18186,9 @@
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p31" org.eventb.core.predicate="Vector∈Terms × Terms ⇸ Terms">
             <org.eventb.core.prIdent name="Vector" org.eventb.core.type="ℙ(Terms×Terms×Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p54" org.eventb.core.predicate="intentions∈ℙ(Plan_body(Belief_predicates,None_belief_predicates,Terms))">
+            <org.eventb.core.prIdent name="intentions" org.eventb.core.type="ℙ(Plan_body(Belief_predicates,None_belief_predicates,Terms))"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(Actions,{travel},{smile_at},{cry_at})"/>
         <org.eventb.core.prPred name="p41" org.eventb.core.predicate="∀belief⦂ℙ(Belief_predicates×Terms),terms1⦂Terms·terms1∈Point⇒belief ↦ terms1∈dom(plan_body_plan3)∧⊤∧belief ↦ terms1∈dom(plan_body_plan4)∧⊤">
@@ -18225,7 +18229,6 @@
             <org.eventb.core.prIdent name="cried_at" org.eventb.core.type="Belief_predicates"/>
             <org.eventb.core.prIdent name="next" org.eventb.core.type="Belief_predicates"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p58" org.eventb.core.predicate="newplan=Rhd(UserP2Plan_body(relevant_plan,Plan_body_def),EventComp(event ↦ terms,λbelief⦂ℙ(Belief_predicates×Terms) ↦ terms1⦂Terms·terms1∈{a,b,c} ∣ UserPlan(intention)(belief ↦ terms1) ∖ {relevant_plan}))"/>
         <org.eventb.core.prPred name="p37" org.eventb.core.predicate="∀belief⦂ℙ(Belief_predicates×Terms),terms1⦂Terms·terms1∈Point⇒belief ↦ terms1∈dom(plan_body_plan1)∧⊤∧belief ↦ terms1∈dom(plan_body_plan2)∧⊤">
             <org.eventb.core.prIdent name="plan_body_plan1" org.eventb.core.type="ℙ(ℙ(Belief_predicates×Terms)×Terms×ℙ(UserP(Belief_predicates,None_belief_predicates,Terms)))"/>
             <org.eventb.core.prIdent name="plan_body_plan2" org.eventb.core.type="ℙ(ℙ(Belief_predicates×Terms)×Terms×ℙ(UserP(Belief_predicates,None_belief_predicates,Terms)))"/>
@@ -18239,11 +18242,11 @@
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p4" org.eventb.core.predicate="partition(Point,{a},{b},{c})"/>
         <org.eventb.core.prPred name="p26" org.eventb.core.predicate="¬travel=smile_at"/>
-        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="newplan=Rhd(UserP2Plan_body(relevant_plan,Plan_body_def),EventComp(event ↦ terms,λbelief⦂ℙ(Belief_predicates×Terms) ↦ terms1⦂Terms·terms1∈Point ∣ UserPlan(intention)(belief ↦ terms1) ∖ {relevant_plan}))"/>
         <org.eventb.core.prPred name="p48" org.eventb.core.predicate="∀belief⦂ℙ(Belief_predicates×Terms),terms1⦂Terms·terms1∈Point⇒belief ↦ terms1∈dom(plan_body_plan1)∧belief ↦ terms1∈dom(plan_body_plan2)">
             <org.eventb.core.prIdent name="plan_body_plan1" org.eventb.core.type="ℙ(ℙ(Belief_predicates×Terms)×Terms×ℙ(UserP(Belief_predicates,None_belief_predicates,Terms)))"/>
             <org.eventb.core.prIdent name="plan_body_plan2" org.eventb.core.type="ℙ(ℙ(Belief_predicates×Terms)×Terms×ℙ(UserP(Belief_predicates,None_belief_predicates,Terms)))"/>
         </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="newplan=Rhd(UserP2Plan_body(relevant_plan,Plan_body_def),EventComp(event ↦ terms,λbelief⦂ℙ(Belief_predicates×Terms) ↦ terms1⦂Terms·terms1∈Point ∣ UserPlan(intention)(belief ↦ terms1) ∖ {relevant_plan}))"/>
         <org.eventb.core.prPred name="p3" org.eventb.core.predicate="event_real=arrive_at"/>
         <org.eventb.core.prPred name="p29" org.eventb.core.predicate="∀terms1⦂Terms,terms2⦂Terms·terms1∈Point∧terms2∈Point⇒terms1 ↦ terms2∈dom(Vector)∧Vector∈Terms × Terms ⇸ Terms">
             <org.eventb.core.prIdent name="Vector" org.eventb.core.type="ℙ(Terms×Terms×Terms)"/>
@@ -18259,9 +18262,6 @@
         <org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬a=c"/>
         <org.eventb.core.prPred name="p43" org.eventb.core.predicate="plan_body_plan4∈ℙ(Belief_predicates × Terms) × Terms ⇸ ℙ(UserP(Belief_predicates,None_belief_predicates,Terms))">
             <org.eventb.core.prIdent name="plan_body_plan4" org.eventb.core.type="ℙ(ℙ(Belief_predicates×Terms)×Terms×ℙ(UserP(Belief_predicates,None_belief_predicates,Terms)))"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p54" org.eventb.core.predicate="intentions∈ℙ(Plan_body(Belief_predicates,None_belief_predicates,Terms))">
-            <org.eventb.core.prIdent name="intentions" org.eventb.core.type="ℙ(Plan_body(Belief_predicates,None_belief_predicates,Terms))"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p5" org.eventb.core.predicate="partition(Terms,Point,VectorTerms)">
             <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>

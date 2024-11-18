@@ -4382,7 +4382,7 @@
                 <org.eventb.theory.core.scTypeArgument name="terms" org.eventb.theory.core.givenType="terms"/>
                 <org.eventb.theory.core.scDatatypeConstructor name="NilComp"/>
                 <org.eventb.theory.core.scDatatypeConstructor name="BasicPComp">
-                    <org.eventb.theory.core.scConstructorArgument name="NDGGoalPlanBodies" org.eventb.core.type="non_belief_predicates×terms"/>
+                    <org.eventb.theory.core.scConstructorArgument name="getBasicPB" org.eventb.core.type="non_belief_predicates×terms"/>
                 </org.eventb.theory.core.scDatatypeConstructor>
                 <org.eventb.theory.core.scDatatypeConstructor name="SeqComp">
                     <org.eventb.theory.core.scConstructorArgument name="head" org.eventb.core.type="Plan_body"/>
@@ -5790,7 +5790,7 @@
                 <org.eventb.theory.core.scTypeArgument name="terms" org.eventb.theory.core.givenType="terms"/>
                 <org.eventb.theory.core.scDatatypeConstructor name="NilComp"/>
                 <org.eventb.theory.core.scDatatypeConstructor name="BasicPComp">
-                    <org.eventb.theory.core.scConstructorArgument name="NDGGoalPlanBodies" org.eventb.core.type="non_belief_predicates×terms"/>
+                    <org.eventb.theory.core.scConstructorArgument name="getBasicPB" org.eventb.core.type="non_belief_predicates×terms"/>
                 </org.eventb.theory.core.scDatatypeConstructor>
                 <org.eventb.theory.core.scDatatypeConstructor name="SeqComp">
                     <org.eventb.theory.core.scConstructorArgument name="head" org.eventb.core.type="Plan_body"/>
@@ -18171,7 +18171,7 @@
                 <org.eventb.theory.core.scTypeArgument name="terms" org.eventb.theory.core.givenType="terms"/>
                 <org.eventb.theory.core.scDatatypeConstructor name="NilComp"/>
                 <org.eventb.theory.core.scDatatypeConstructor name="BasicPComp">
-                    <org.eventb.theory.core.scConstructorArgument name="NDGGoalPlanBodies" org.eventb.core.type="non_belief_predicates×terms"/>
+                    <org.eventb.theory.core.scConstructorArgument name="getBasicPB" org.eventb.core.type="non_belief_predicates×terms"/>
                 </org.eventb.theory.core.scDatatypeConstructor>
                 <org.eventb.theory.core.scDatatypeConstructor name="SeqComp">
                     <org.eventb.theory.core.scConstructorArgument name="head" org.eventb.core.type="Plan_body"/>
@@ -20737,7 +20737,7 @@
                 <org.eventb.theory.core.scTypeArgument name="terms" org.eventb.theory.core.givenType="terms"/>
                 <org.eventb.theory.core.scDatatypeConstructor name="NilComp"/>
                 <org.eventb.theory.core.scDatatypeConstructor name="BasicPComp">
-                    <org.eventb.theory.core.scConstructorArgument name="NDGGoalPlanBodies" org.eventb.core.type="non_belief_predicates×terms"/>
+                    <org.eventb.theory.core.scConstructorArgument name="getBasicPB" org.eventb.core.type="non_belief_predicates×terms"/>
                 </org.eventb.theory.core.scDatatypeConstructor>
                 <org.eventb.theory.core.scDatatypeConstructor name="SeqComp">
                     <org.eventb.theory.core.scConstructorArgument name="head" org.eventb.core.type="Plan_body"/>
@@ -21095,7 +21095,7 @@
                 <org.eventb.theory.core.scTypeArgument name="terms" org.eventb.theory.core.givenType="terms"/>
                 <org.eventb.theory.core.scDatatypeConstructor name="NilComp"/>
                 <org.eventb.theory.core.scDatatypeConstructor name="BasicPComp">
-                    <org.eventb.theory.core.scConstructorArgument name="NDGGoalPlanBodies" org.eventb.core.type="non_belief_predicates×terms"/>
+                    <org.eventb.theory.core.scConstructorArgument name="getBasicPB" org.eventb.core.type="non_belief_predicates×terms"/>
                 </org.eventb.theory.core.scDatatypeConstructor>
                 <org.eventb.theory.core.scDatatypeConstructor name="SeqComp">
                     <org.eventb.theory.core.scConstructorArgument name="head" org.eventb.core.type="Plan_body"/>
@@ -21263,7 +21263,7 @@
                 <org.eventb.theory.core.scTypeArgument name="terms" org.eventb.theory.core.givenType="terms"/>
                 <org.eventb.theory.core.scDatatypeConstructor name="NilComp"/>
                 <org.eventb.theory.core.scDatatypeConstructor name="BasicPComp">
-                    <org.eventb.theory.core.scConstructorArgument name="NDGGoalPlanBodies" org.eventb.core.type="non_belief_predicates×terms"/>
+                    <org.eventb.theory.core.scConstructorArgument name="getBasicPB" org.eventb.core.type="non_belief_predicates×terms"/>
                 </org.eventb.theory.core.scDatatypeConstructor>
                 <org.eventb.theory.core.scDatatypeConstructor name="SeqComp">
                     <org.eventb.theory.core.scConstructorArgument name="head" org.eventb.core.type="Plan_body"/>

@@ -25,14 +25,12 @@
         <org.eventb.core.parameter name="*" org.eventb.core.identifier="terms"/>
         <org.eventb.core.parameter name="+" org.eventb.core.identifier="relevant_plan"/>
         <org.eventb.core.parameter name="," org.eventb.core.identifier="intention"/>
-        <org.eventb.core.guard name="6" org.eventb.core.label="grd6" org.eventb.core.predicate="eventcomp∈GetFirsts(intention)"/>
-        <org.eventb.core.guard name="4" org.eventb.core.comment="check the chosen top element is e EventComp " org.eventb.core.label="grd2" org.eventb.core.predicate="isEventComp(eventcomp)"/>
-        <org.eventb.core.guard name="-" org.eventb.core.comment="destruct eventcomp to extract the terms and the event " org.eventb.core.label="grd3" org.eventb.core.predicate="getEvent(eventcomp)=event↦terms "/>
-        <org.eventb.core.guard name="." org.eventb.core.comment=" get one applicable plan in the set of plan   " org.eventb.core.label="grd5" org.eventb.core.predicate="relevant_plan ∈UserPlan(intention)(belief_base↦terms)  "/>
-        <org.eventb.core.action name="0" org.eventb.core.assignment="intentions ≔ (intentions∖{intention}) ∪ { update(intention,eventcomp,newplan)}" org.eventb.core.comment="add a new stack for the event regardless it is being external or internal" org.eventb.core.label="act1"/>
-        <org.eventb.core.parameter name="5" org.eventb.core.identifier="eventcomp"/>
+        <org.eventb.core.guard name="6" org.eventb.core.label="grd6" org.eventb.core.predicate="nextP∈GetFirsts(intention)"/>
+        <org.eventb.core.guard name="4" org.eventb.core.comment="check the chosen top element is a basic program" org.eventb.core.label="grd2" org.eventb.core.predicate="isBasicComp(nextP)"/>
+        <org.eventb.core.guard name="-" org.eventb.core.comment="destruct BasicComp to extract the terms and the event " org.eventb.core.label="grd3" org.eventb.core.predicate="getBasicPB(nextP)=event↦terms"/>
+        <org.eventb.core.action name="0" org.eventb.core.assignment="intentions ≔ (intentions∖{intention}) ∪ {update(intention,nextP,EventComp(event↦terms, Plan_body_def(event)))}" org.eventb.core.label="act1"/>
+        <org.eventb.core.parameter name="5" org.eventb.core.identifier="nextP"/>
         <org.eventb.core.parameter name="7" org.eventb.core.identifier="newplan"/>
-        <org.eventb.core.guard name="8" org.eventb.core.comment=" update the eventComp to  a backup plan and in the backup we remove the applicable plan " org.eventb.core.label="grd7" org.eventb.core.predicate="newplan=Rhd(UserP2Plan_body(relevant_plan,Plan_body_def) ,EventComp(event↦terms,(λbelief↦terms1·terms1∈Point∣UserPlan(intention)(belief↦terms1)∖{relevant_plan}) ) )"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="evt1" org.eventb.core.comment="Maybe no need " org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="SelectApplicablePlan">
         <org.eventb.core.guard name="0" org.eventb.core.comment="the mean-end relation is established after SelectRelevantPlans, hence no need forintention_stack ∈ ran(intentions) " org.eventb.core.label="grd1" org.eventb.core.predicate="{event ↦ terms}↦intention_stack ∈ intentions"/>

@@ -42,7 +42,7 @@
         <org.eventb.theory.core.typeArgument name=")" org.eventb.theory.core.givenType="terms"/>
         <org.eventb.theory.core.datatypeConstructor name="/" org.eventb.core.identifier="NilComp"/>
         <org.eventb.theory.core.datatypeConstructor name="+" org.eventb.core.identifier="BasicPComp">
-            <org.eventb.theory.core.constructorArgument name="'" org.eventb.core.identifier="NDGGoalPlanBodies" org.eventb.theory.core.type="non_belief_predicates ×terms"/>
+            <org.eventb.theory.core.constructorArgument name="'" org.eventb.core.identifier="getBasicPB" org.eventb.theory.core.type="non_belief_predicates ×terms"/>
         </org.eventb.theory.core.datatypeConstructor>
         <org.eventb.theory.core.datatypeConstructor name="-" org.eventb.core.identifier="SeqComp">
             <org.eventb.theory.core.constructorArgument name="'" org.eventb.core.identifier="head" org.eventb.theory.core.type="Plan_body(belief_predicates,non_belief_predicates,terms) "/>
