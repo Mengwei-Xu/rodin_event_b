@@ -2,5 +2,6 @@
 <org.eventb.core.psFile>
     <org.eventb.core.psStatus name="UserP2Plan_body/Op-WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="23" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="GetFirsts/Op-WD" org.eventb.core.confidence="-99" org.eventb.core.poStamp="25" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="update/Op-WD" org.eventb.core.confidence="-99" org.eventb.core.poStamp="25" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="update/Op-WD" org.eventb.core.confidence="-99" org.eventb.core.poStamp="29" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="NilRemove/Op-WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="38" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>
