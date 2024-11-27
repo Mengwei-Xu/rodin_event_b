@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="1">
+<org.eventb.core.poFile org.eventb.core.poStamp="6">
     <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
         <org.eventb.core.poIdentifier name="Terms" org.eventb.core.type="ℙ(Terms)"/>
         <org.eventb.core.poIdentifier name="a" org.eventb.core.type="Terms"/>
@@ -181,15 +181,34 @@
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="nextP∈GetFirsts(intention)" org.eventb.core.source="/BDI-Agents_Unification_New/bdireasoning.bum|org.eventb.core.machineFile#bdireasoning|org.eventb.core.event#evt2|org.eventb.core.guard#+"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="isNilComp(nextP)" org.eventb.core.source="/BDI-Agents_Unification_New/bdireasoning.bum|org.eventb.core.machineFile#bdireasoning|org.eventb.core.event#evt2|org.eventb.core.guard#,"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTIDENTexternal_eventz" org.eventb.core.parentSet="/BDI-Agents_Unification_New/bdireasoning.bpo|org.eventb.core.poFile#bdireasoning|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+    <org.eventb.core.poSequent name="FailureRecovery/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="6">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BDI-Agents_Unification_New/bdireasoning.bpo|org.eventb.core.poFile#bdireasoning|org.eventb.core.poPredicateSet#EVTHYPexternal_eventz)"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(isBasicComp(nextP)⇒(∃getBasicPB0⦂None_belief_predicates×Terms·nextP=BasicPComp(getBasicPB0)))∧((isBasicComp(nextP)∧getBasicPB(nextP)=action ↦ terms1∧Preconditions[{action ↦ terms1}]⊈belief_base)∨(isEventComp(nextP)⇒(∃getEvent0⦂None_belief_predicates×Terms,UserPlan1⦂ℙ(ℙ(Belief_predicates×Terms)×Terms×ℙ(UserP(Belief_predicates,None_belief_predicates,Terms)))·nextP=EventComp(getEvent0,UserPlan1))∧(getEvent(nextP)=event ↦ terms2⇒(∃getEvent0⦂None_belief_predicates×Terms,UserPlan1⦂ℙ(ℙ(Belief_predicates×Terms)×Terms×ℙ(UserP(Belief_predicates,None_belief_predicates,Terms)))·nextP=EventComp(getEvent0,UserPlan1))∧belief_base ↦ terms2∈dom(UserPlan(nextP))∧UserPlan(nextP)∈ℙ(Belief_predicates × Terms) × Terms ⇸ ℙ(UserP(Belief_predicates,None_belief_predicates,Terms)))))" org.eventb.core.source="/BDI-Agents_Unification_New/bdireasoning.bum|org.eventb.core.machineFile#bdireasoning|org.eventb.core.event#evt3|org.eventb.core.guard#,"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BDI-Agents_Unification_New/bdireasoning.bum|org.eventb.core.machineFile#bdireasoning|org.eventb.core.event#evt3|org.eventb.core.guard#,"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/BDI-Agents_Unification_New/bdireasoning.bpo|org.eventb.core.poFile#bdireasoning|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/BDI-Agents_Unification_New/bdireasoning.bpo|org.eventb.core.poFile#bdireasoning|org.eventb.core.poPredicateSet#EVTHYPexternal_eventz)"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTexternal_eventz" org.eventb.core.parentSet="/BDI-Agents_Unification_New/bdireasoning.bpo|org.eventb.core.poFile#bdireasoning|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="6">
+        <org.eventb.core.poIdentifier name="terms1" org.eventb.core.type="Terms"/>
         <org.eventb.core.poIdentifier name="intention" org.eventb.core.type="Plan_body(Belief_predicates,None_belief_predicates,Terms)"/>
+        <org.eventb.core.poIdentifier name="intentions'" org.eventb.core.type="ℙ(Plan_body(Belief_predicates,None_belief_predicates,Terms))"/>
         <org.eventb.core.poIdentifier name="nextP" org.eventb.core.type="Plan_body(Belief_predicates,None_belief_predicates,Terms)"/>
+        <org.eventb.core.poIdentifier name="event" org.eventb.core.type="None_belief_predicates"/>
+        <org.eventb.core.poIdentifier name="terms2" org.eventb.core.type="Terms"/>
+        <org.eventb.core.poIdentifier name="currentP" org.eventb.core.type="Plan_body(Belief_predicates,None_belief_predicates,Terms)"/>
+        <org.eventb.core.poIdentifier name="applicable_plan_body" org.eventb.core.type="UserP(Belief_predicates,None_belief_predicates,Terms)"/>
+        <org.eventb.core.poIdentifier name="newintention" org.eventb.core.type="Plan_body(Belief_predicates,None_belief_predicates,Terms)"/>
+        <org.eventb.core.poIdentifier name="action" org.eventb.core.type="None_belief_predicates"/>
+        <org.eventb.core.poIdentifier name="backups" org.eventb.core.type="Plan_body(Belief_predicates,None_belief_predicates,Terms)"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPexternal_eventz" org.eventb.core.parentSet="/BDI-Agents_Unification_New/bdireasoning.bpo|org.eventb.core.poFile#bdireasoning|org.eventb.core.poPredicateSet#EVTIDENTexternal_eventz" org.eventb.core.poStamp="0">
+    <org.eventb.core.poPredicateSet name="EVTHYPexternal_eventz)" org.eventb.core.parentSet="/BDI-Agents_Unification_New/bdireasoning.bpo|org.eventb.core.poFile#bdireasoning|org.eventb.core.poPredicateSet#EVTIDENTexternal_eventz" org.eventb.core.poStamp="6">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="intention∈intentions" org.eventb.core.source="/BDI-Agents_Unification_New/bdireasoning.bum|org.eventb.core.machineFile#bdireasoning|org.eventb.core.event#evt3|org.eventb.core.guard#+"/>
-        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="nextP∈GetFirsts(intention)" org.eventb.core.source="/BDI-Agents_Unification_New/bdireasoning.bum|org.eventb.core.machineFile#bdireasoning|org.eventb.core.event#evt3|org.eventb.core.guard#1"/>
-        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="⊤" org.eventb.core.source="/BDI-Agents_Unification_New/bdireasoning.bum|org.eventb.core.machineFile#bdireasoning|org.eventb.core.event#evt3|org.eventb.core.guard#-"/>
-        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="⊤" org.eventb.core.source="/BDI-Agents_Unification_New/bdireasoning.bum|org.eventb.core.machineFile#bdireasoning|org.eventb.core.event#evt3|org.eventb.core.guard#2"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="intention=Rhd(currentP,backups)" org.eventb.core.source="/BDI-Agents_Unification_New/bdireasoning.bum|org.eventb.core.machineFile#bdireasoning|org.eventb.core.event#evt3|org.eventb.core.guard#4"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="nextP∈GetFirsts(intention)" org.eventb.core.source="/BDI-Agents_Unification_New/bdireasoning.bum|org.eventb.core.machineFile#bdireasoning|org.eventb.core.event#evt3|org.eventb.core.guard#1"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPexternal_eventz" org.eventb.core.parentSet="/BDI-Agents_Unification_New/bdireasoning.bpo|org.eventb.core.poFile#bdireasoning|org.eventb.core.poPredicateSet#EVTHYPexternal_eventz)" org.eventb.core.poStamp="6">
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="(isBasicComp(nextP)∧getBasicPB(nextP)=action ↦ terms1∧Preconditions[{action ↦ terms1}]⊈belief_base)∨(isEventComp(nextP)∧getEvent(nextP)=event ↦ terms2∧applicable_plan_body∉UserPlan(nextP)(belief_base ↦ terms2))∨isFalse(nextP)" org.eventb.core.source="/BDI-Agents_Unification_New/bdireasoning.bum|org.eventb.core.machineFile#bdireasoning|org.eventb.core.event#evt3|org.eventb.core.guard#,"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="¬isNilComp(nextP)" org.eventb.core.source="/BDI-Agents_Unification_New/bdireasoning.bum|org.eventb.core.machineFile#bdireasoning|org.eventb.core.event#evt3|org.eventb.core.guard#-"/>
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="newintention=backups" org.eventb.core.source="/BDI-Agents_Unification_New/bdireasoning.bum|org.eventb.core.machineFile#bdireasoning|org.eventb.core.event#evt3|org.eventb.core.guard#="/>
     </org.eventb.core.poPredicateSet>
     <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/BDI-Agents_Unification_New/bdireasoning.bpo|org.eventb.core.poFile#bdireasoning|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="belief_base∈ℙ(Belief_predicates × Terms)" org.eventb.core.source="/BDI-Agents_Unification_New/bdireasoning.bum|org.eventb.core.machineFile#bdireasoning|org.eventb.core.invariant#+"/>
