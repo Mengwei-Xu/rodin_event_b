@@ -119,4 +119,23 @@
         <org.eventb.core.guard name="1" org.eventb.core.label="grd7" org.eventb.core.predicate="newnextP = GoalComp(SuccessComp(nextP), Rhd(getGoalPlanBody(nextP), getGoalPlanBody(nextP)),FailureComp(nextP)) "/>
         <org.eventb.core.action name="2" org.eventb.core.assignment="intentions ≔ (intentions ∖ {intention}) ∪ {update(intention, nextP, newnextP)}" org.eventb.core.label="act1"/>
     </org.eventb.core.event>
+    <org.eventb.core.event name="evt7" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="DeclarativeGoalActProgress">
+        <org.eventb.core.parameter name="(" org.eventb.core.identifier="nextP"/>
+        <org.eventb.core.parameter name=")" org.eventb.core.identifier="currentP"/>
+        <org.eventb.core.parameter name="*" org.eventb.core.identifier="backups"/>
+        <org.eventb.core.parameter name="+" org.eventb.core.identifier="action"/>
+        <org.eventb.core.parameter name="'" org.eventb.core.identifier="intention"/>
+        <org.eventb.core.parameter name="," org.eventb.core.identifier="terms"/>
+        <org.eventb.core.parameter name="5" org.eventb.core.identifier="newnextP"/>
+        <org.eventb.core.guard name="-" org.eventb.core.label="grd1" org.eventb.core.predicate="intention ∈ intentions"/>
+        <org.eventb.core.guard name="." org.eventb.core.label="grd2" org.eventb.core.predicate="nextP ∈ GetFirsts(intention)"/>
+        <org.eventb.core.guard name="/" org.eventb.core.label="grd3" org.eventb.core.predicate="isGoalComp(nextP)"/>
+        <org.eventb.core.guard name="0" org.eventb.core.label="grd4" org.eventb.core.predicate="getGoalPlanBody(nextP) = Rhd(currentP, backups) "/>
+        <org.eventb.core.guard name="2" org.eventb.core.label="grd6" org.eventb.core.predicate="SuccessComp(nextP) ⊈ belief_base"/>
+        <org.eventb.core.guard name="3" org.eventb.core.label="grd7" org.eventb.core.predicate="FailureComp(nextP) ⊈ belief_base"/>
+        <org.eventb.core.guard name="1" org.eventb.core.label="grd5" org.eventb.core.predicate="isBasicComp(currentP) ∧ getBasicPB(currentP)=action↦terms ∧ Preconditions[{action↦terms}]  ⊆ belief_base "/>
+        <org.eventb.core.guard name="4" org.eventb.core.label="grd8" org.eventb.core.predicate="newnextP ∈  Plan_body(Belief_predicates,None_belief_predicates,Terms) ∧ newnextP = NilComp"/>
+        <org.eventb.core.action name="6" org.eventb.core.assignment="belief_base ≔ (belief_base ∖ Deletion_sets[{action ↦ terms}]) ∪ Addition_sets[{action ↦ terms}]" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="7" org.eventb.core.assignment="intentions ≔ (intentions ∖ {intention}) ∪ {NilRemove(update(intention, nextP, newnextP))}" org.eventb.core.label="act2"/>
+    </org.eventb.core.event>
 </org.eventb.core.machineFile>

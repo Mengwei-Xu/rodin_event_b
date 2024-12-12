@@ -18,4 +18,8 @@
     <org.eventb.core.psStatus name="DeclarativeGoalInit/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="9" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="DeclarativeGoalInit/grd6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="9" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="DeclarativeGoalInit/grd7/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="9" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DeclarativeGoalActProgress/grd4/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="15" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DeclarativeGoalActProgress/grd6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="15" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DeclarativeGoalActProgress/grd7/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="15" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DeclarativeGoalActProgress/grd5/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="15" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>
