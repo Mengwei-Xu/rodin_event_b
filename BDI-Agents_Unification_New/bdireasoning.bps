@@ -15,5 +15,7 @@
     <org.eventb.core.psStatus name="DeclarativeGoalFailure/grd4/THM" org.eventb.core.confidence="0" org.eventb.core.poStamp="4" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="DeclarativeGoalInit/grd4/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="7" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="DeclarativeGoalInit/grd4/THM" org.eventb.core.confidence="0" org.eventb.core.poStamp="7" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="DeclarativeGoalInit/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="7" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DeclarativeGoalInit/grd6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="8" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DeclarativeGoalInit/grd7/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="8" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DeclarativeGoalInit/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="8" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>
