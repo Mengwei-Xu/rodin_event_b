@@ -9,5 +9,6 @@
     <org.eventb.core.psStatus name="SelectApplicablePlan/grd5/THM" org.eventb.core.confidence="0" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="SelectApplicablePlan/grd6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="ExecuteAction/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="FailureRecovery/grd2/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="1" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="FailureRecovery/grd4/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="2" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DeclarativeGoalSuccess/grd4/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="3" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>
