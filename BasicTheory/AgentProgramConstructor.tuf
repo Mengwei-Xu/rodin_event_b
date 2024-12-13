@@ -196,7 +196,7 @@
             <org.eventb.theory.core.recursiveDefinitionCase name="." org.eventb.core.expression="False" org.eventb.theory.core.formula="(Plan_body(belief_predicates,non_belief_predicates,terms)◁id)(False) "/>
         </org.eventb.theory.core.recursiveOperatorDefinition>
     </org.eventb.theory.core.newOperatorDefinition>
-    <org.eventb.theory.core.newOperatorDefinition name="elementF" org.eventb.core.label="isFalse" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.notationType="PREFIX">
+    <org.eventb.theory.core.newOperatorDefinition name="elementF" org.eventb.core.comment="Preconditions ∈ (Actions × Terms) ↔ (Belief_predicates × Terms) " org.eventb.core.label="isFalse" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.notationType="PREFIX">
         <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="Plan_body(belief_predicates,non_belief_predicates,terms) " org.eventb.core.identifier="plan"/>
         <org.eventb.theory.core.recursiveOperatorDefinition name="(" org.eventb.theory.core.inductiveArgument="plan">
             <org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="NilComp" org.eventb.theory.core.formula="⊥"/>
@@ -208,5 +208,48 @@
             <org.eventb.theory.core.recursiveDefinitionCase name="-" org.eventb.core.expression="EventComp(evt,planlib)" org.eventb.theory.core.formula="⊥"/>
             <org.eventb.theory.core.recursiveDefinitionCase name="." org.eventb.core.expression="False" org.eventb.theory.core.formula="⊤ "/>
         </org.eventb.theory.core.recursiveOperatorDefinition>
+    </org.eventb.theory.core.newOperatorDefinition>
+    <org.eventb.theory.core.newOperatorDefinition name="element1" org.eventb.core.comment="similar to the stack, get first return the set of atomic elementon the top of the plan " org.eventb.core.label="Not_Progress" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.notationType="PREFIX">
+        <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="Plan_body(belief_predicates,non_belief_predicates,terms) " org.eventb.core.identifier="plan"/>
+        <org.eventb.theory.core.recursiveOperatorDefinition name="(" org.eventb.theory.core.inductiveArgument="plan">
+            <org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="NilComp" org.eventb.theory.core.formula="⊤ "/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="BasicPComp(evt)" org.eventb.theory.core.formula="¬ (preconditions[{evt}] ⊆ belief)"/>
+            <org.eventb.theory.core.recursiveDefinitionCase name=")" org.eventb.core.comment="corresponds to the rule of ;" org.eventb.core.expression="SeqComp(l,r)" org.eventb.theory.core.formula="SeqComp(failure_Recovery(l,belief),r)"/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="*" org.eventb.core.comment="corresponds to the rule of ||1 and ||2" org.eventb.core.expression="ConcurrentComp(l,r)" org.eventb.theory.core.formula="  "/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="+" org.eventb.core.expression="GoalComp(succes,planrec,failure)" org.eventb.theory.core.formula="  GoalComp(succes,failure_Recovery(planrec,belief),failure)"/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="," org.eventb.core.comment="corresponds to the rule rhd_;" org.eventb.core.expression="Rhd(cur,back)" org.eventb.theory.core.formula="{ (cur1↦back1)↦plan ∣  ((  ∀top·top∈GetFirst(cur1)  ⇒ NotProgress(top,belief) )∧ plan=back1) ∨ &#10;(  ¬ (  ∀top·top∈GetFirst(cur1) ⇒ NotProgress(top,belief) )  ∧ plan = Rhd(failure_recovery(cur1,belief),back1)}(cur↦back)"/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="-" org.eventb.core.expression="EventComp(evt,planlib)" org.eventb.theory.core.formula="EventComp(evt,planlib)"/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="." org.eventb.core.expression="False" org.eventb.theory.core.formula="((Plan_body(belief_predicates,non_belief_predicates,terms))◁id)(False)"/>
+        </org.eventb.theory.core.recursiveOperatorDefinition>
+        <org.eventb.theory.core.operatorArgument name=")" org.eventb.core.expression="ℙ(belief_predicates×terms)" org.eventb.core.identifier="belief"/>
+        <org.eventb.theory.core.operatorArgument name="*" org.eventb.core.expression="(non_belief_predicates × terms) ↔ (belief_predicates × terms) " org.eventb.core.identifier="precondition"/>
+    </org.eventb.theory.core.newOperatorDefinition>
+    <org.eventb.theory.core.newOperatorDefinition name="element3" org.eventb.core.comment="similar to the stack, get first return the set of atomic elementon the top of the plan " org.eventb.core.label="failure_Recovery" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+        <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="Plan_body(belief_predicates,non_belief_predicates,terms) " org.eventb.core.identifier="plan"/>
+        <org.eventb.theory.core.recursiveOperatorDefinition name="(" org.eventb.theory.core.inductiveArgument="plan">
+            <org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="NilComp" org.eventb.theory.core.formula="(Plan_body(belief_predicates,non_belief_predicates,terms)◁id)(NilComp)"/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="BasicPComp(evt)" org.eventb.theory.core.formula=" ((Plan_body(belief_predicates,non_belief_predicates,terms) )◁ id)(BasicPComp(evt))"/>
+            <org.eventb.theory.core.recursiveDefinitionCase name=")" org.eventb.core.comment="corresponds to the rule of ;" org.eventb.core.expression="SeqComp(l,r)" org.eventb.theory.core.formula="SeqComp(failure_Recovery(l,belief),r)"/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="*" org.eventb.core.comment="corresponds to the rule of ||1 and ||2" org.eventb.core.expression="ConcurrentComp(l,r)" org.eventb.theory.core.formula="  "/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="+" org.eventb.core.expression="GoalComp(succes,planrec,failure)" org.eventb.theory.core.formula="  GoalComp(succes,failure_Recovery(planrec,belief),failure)"/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="," org.eventb.core.comment="corresponds to the rule rhd_;" org.eventb.core.expression="Rhd(cur,back)" org.eventb.theory.core.formula="{ (cur1↦back1)↦plan ∣  ((  ∀top·top∈GetFirst(cur1)  ⇒ NotProgress(top,belief) )∧ plan=back1) ∨ &#10;(  ¬ (  ∀top·top∈GetFirst(cur1) ⇒ NotProgress(top,belief) )  ∧ plan = Rhd(failure_recovery(cur1,belief),back1)}(cur↦back)"/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="-" org.eventb.core.expression="EventComp(evt,planlib)" org.eventb.theory.core.formula="EventComp(evt,planlib)"/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="." org.eventb.core.expression="False" org.eventb.theory.core.formula="((Plan_body(belief_predicates,non_belief_predicates,terms))◁id)(False)"/>
+        </org.eventb.theory.core.recursiveOperatorDefinition>
+        <org.eventb.theory.core.operatorArgument name=")" org.eventb.core.expression="ℙ(belief_predicates)" org.eventb.core.identifier="belief"/>
+    </org.eventb.theory.core.newOperatorDefinition>
+    <org.eventb.theory.core.newOperatorDefinition name="element2" org.eventb.core.comment="similar to the stack, get first return the set of atomic elementon the top of the plan " org.eventb.core.label="is_failure_Recovery_Needed" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.notationType="PREFIX">
+        <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="Plan_body(belief_predicates,non_belief_predicates,terms) " org.eventb.core.identifier="plan"/>
+        <org.eventb.theory.core.recursiveOperatorDefinition name="(" org.eventb.theory.core.inductiveArgument="plan">
+            <org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="NilComp" org.eventb.theory.core.formula="⊥ "/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="BasicPComp(evt)" org.eventb.theory.core.formula="⊥ "/>
+            <org.eventb.theory.core.recursiveDefinitionCase name=")" org.eventb.core.comment="corresponds to the rule of ;" org.eventb.core.expression="SeqComp(l,r)" org.eventb.theory.core.formula="is_failure_Recovery_Needed(l,belief)"/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="*" org.eventb.core.comment="corresponds to the rule of ||1 and ||2" org.eventb.core.expression="ConcurrentComp(l,r)" org.eventb.theory.core.formula=" is_failure_Recovery_Needed(l,belief) ∨ is_failure_Recovery_Needed(r,belief)"/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="+" org.eventb.core.expression="GoalComp(succes,planrec,failure)" org.eventb.theory.core.formula=" is_failure_Recovery_Needed(planrec,belief)"/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="," org.eventb.core.comment="corresponds to the rule rhd_;" org.eventb.core.expression="Rhd(cur,back)" org.eventb.theory.core.formula="((  ∀top·top∈GetFirst(cur1)  ⇒ NotProgress(top,belief) ) ∨ is_failure_Recovery_Needed(cur,belief) "/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="-" org.eventb.core.expression="EventComp(evt,planlib)" org.eventb.theory.core.formula="⊥ "/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="." org.eventb.core.expression="False" org.eventb.theory.core.formula="⊥ "/>
+        </org.eventb.theory.core.recursiveOperatorDefinition>
+        <org.eventb.theory.core.operatorArgument name=")" org.eventb.core.expression="ℙ(belief_predicates)" org.eventb.core.identifier="belief"/>
     </org.eventb.theory.core.newOperatorDefinition>
 </org.eventb.theory.core.theoryRoot>
