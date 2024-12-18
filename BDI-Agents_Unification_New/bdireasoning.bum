@@ -38,8 +38,8 @@
         <org.eventb.core.guard name="8" org.eventb.core.label="grd2" org.eventb.core.predicate="nextP ∈ GetFirsts(intention)"/>
         <org.eventb.core.guard name="?" org.eventb.core.comment="check the chosen top element is an EventComp" org.eventb.core.label="grd3" org.eventb.core.predicate="isEventComp(nextP)"/>
         <org.eventb.core.action name=")" org.eventb.core.assignment="intentions ≔ (intentions ∖ {intention}) ∪ {update(intention, nextP, newnextP)}" org.eventb.core.label="act1"/>
-        <org.eventb.core.guard name="D" org.eventb.core.label="grd4" org.eventb.core.predicate="getEvent(nextP) = event ↦ terms"/>
-        <org.eventb.core.guard name=";" org.eventb.core.comment="compute the applicable plan-body given the event, plan (i.e. identifier), current belief base, and the terms that are inherited from the event. The trick part to understand is that the plan body and its terms are defined together with terms  in the event and context.    " org.eventb.core.label="grd5" org.eventb.core.predicate="applicable_plan_body ∈ UserPlan(nextP)(belief_base ↦ terms)" org.eventb.core.theorem="true"/>
+        <org.eventb.core.guard name="D" org.eventb.core.comment="getEvent is the destructor for EventComp" org.eventb.core.label="grd4" org.eventb.core.predicate="getEvent(nextP) = event ↦ terms"/>
+        <org.eventb.core.guard name=";" org.eventb.core.comment="UserPlan is the destructor for EventComp. compute the applicable plan-body given the event, plan (i.e. identifier), current belief base, and the terms that are inherited from the event. The trick part to understand is that the plan body and its terms are defined together with terms  in the event and context.    " org.eventb.core.label="grd5" org.eventb.core.predicate="applicable_plan_body ∈ UserPlan(nextP)(belief_base ↦ terms)" org.eventb.core.theorem="true"/>
         <org.eventb.core.guard name="9" org.eventb.core.comment="the lambada expression is important to ensure we only remove a specific binded plan body away from all possible binded version for all relevant plans' plan bodies " org.eventb.core.label="grd6" org.eventb.core.predicate="newnextP = Rhd(UserP2Plan_body(applicable_plan_body), EventComp(event ↦ terms, (λ belief ↦ terms1 · terms1 ∈ Terms ∣ UserPlan(nextP)(belief ↦ terms1) ∖ {applicable_plan_body}) )) "/>
         <org.eventb.core.parameter name="4" org.eventb.core.identifier="event"/>
         <org.eventb.core.parameter name="@" org.eventb.core.identifier="terms"/>
@@ -65,33 +65,20 @@
         <org.eventb.core.parameter name=";" org.eventb.core.identifier="newnextP"/>
         <org.eventb.core.guard name="D" org.eventb.core.label="grd7" org.eventb.core.predicate="newnextP = NilComp"/>
     </org.eventb.core.event>
-    <org.eventb.core.event name="evt10" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ExecuteActionRhd">
-        <org.eventb.core.parameter name="(" org.eventb.core.identifier="action"/>
-        <org.eventb.core.guard name="6" org.eventb.core.label="grd1" org.eventb.core.predicate="intention ∈ intentions"/>
-        <org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="nextPrhd ∈ GetFirsts(intention)"/>
-        <org.eventb.core.action name="-" org.eventb.core.assignment="belief_base ≔ (belief_base ∖ Deletion_sets[{action ↦ terms}]) ∪ Addition_sets[{action ↦ terms}]" org.eventb.core.label="act1"/>
-        <org.eventb.core.guard name="C" org.eventb.core.label="grd3" org.eventb.core.predicate="nextPrhd = Rhd(currentP, backups) "/>
-        <org.eventb.core.guard name="F" org.eventb.core.label="grd8" org.eventb.core.predicate="nextP ∈ GetFirst(currentP) "/>
-        <org.eventb.core.guard name="G" org.eventb.core.label="grd9" org.eventb.core.predicate="isABasicComp(nextP)"/>
-        <org.eventb.core.guard name="&gt;" org.eventb.core.label="grd4" org.eventb.core.predicate="getBasicPB(nextP)=action↦terms"/>
-        <org.eventb.core.guard name="1" org.eventb.core.comment="check if this action is applicable with already inferred terms. This process happens in the definition of Plan_body_def. " org.eventb.core.label="grd5" org.eventb.core.predicate="Preconditions[{action↦terms}] ⊆ belief_base"/>
-        <org.eventb.core.action name="2" org.eventb.core.assignment="intentions ≔ (intentions ∖ {intention}) ∪ {NilRemove(update(intention, nextP, newnextP))}" org.eventb.core.comment="this is beautiful as this is only time nil is introduced after action exeuction" org.eventb.core.label="act2"/>
-        <org.eventb.core.parameter name="5" org.eventb.core.identifier="terms"/>
-        <org.eventb.core.parameter name="9" org.eventb.core.identifier="intention"/>
-        <org.eventb.core.guard name=":" org.eventb.core.comment="add this as Rodin struggles to infer the type of newnextP when NilComp takes no argument " org.eventb.core.label="grd6" org.eventb.core.predicate="newnextP ∈  Plan_body(Belief_predicates,None_belief_predicates,Terms)"/>
-        <org.eventb.core.parameter name="B" org.eventb.core.identifier="nextP"/>
-        <org.eventb.core.parameter name="E" org.eventb.core.identifier="nextPrhd"/>
-        <org.eventb.core.parameter name=";" org.eventb.core.identifier="newnextP"/>
-        <org.eventb.core.guard name="D" org.eventb.core.label="grd7" org.eventb.core.predicate="newnextP = NilComp"/>
-        <org.eventb.core.parameter name="H" org.eventb.core.identifier="prm1"/>
-    </org.eventb.core.event>
     <org.eventb.core.event name="evt3" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="FailureRecovery">
         <org.eventb.core.parameter name="'" org.eventb.core.identifier="intention"/>
         <org.eventb.core.guard name="+" org.eventb.core.label="grd1" org.eventb.core.predicate="intention ∈ intentions"/>
-        <org.eventb.core.guard name="4" org.eventb.core.label="grd2" org.eventb.core.predicate="is_failure_Recovery_Needed(intention,belief_base)"/>
-        <org.eventb.core.action name="." org.eventb.core.assignment="intentions ≔ (intentions ∖ {intention}) ∪ {failure_Recovery(intention,belief_base)}" org.eventb.core.label="act1"/>
+        <org.eventb.core.guard name="4" org.eventb.core.label="grd2" org.eventb.core.predicate="nextP ∈ GetFirsts(intention)"/>
+        <org.eventb.core.action name="." org.eventb.core.assignment="intentions ≔ (intentions ∖ {intention}) ∪ {Failure_Recovery(intention, nextP, newnextP)}" org.eventb.core.label="act1"/>
+        <org.eventb.core.parameter name="5" org.eventb.core.identifier="nextP"/>
+        <org.eventb.core.parameter name="6" org.eventb.core.identifier="newnextP"/>
+        <org.eventb.core.guard name="7" org.eventb.core.label="grd3" org.eventb.core.predicate="(isBasicComp(nextP) ∧ ¬ (Preconditions[{getBasicPB(nextP)}] ⊆ belief_base))  ∨ &#10;    (isEventComp(nextP) ∧ getEvent(nextP) = event ↦ terms ∧ UserPlan(nextP)(belief_base ↦ terms) = ∅) "/>
+        <org.eventb.core.guard name="8" org.eventb.core.label="grd4" org.eventb.core.predicate="newnextP = GetFirstRhd(intention, nextP, False)"/>
+        <org.eventb.core.guard name="9" org.eventb.core.label="grd5" org.eventb.core.predicate="newnextP ≠ False "/>
+        <org.eventb.core.parameter name=":" org.eventb.core.identifier="event"/>
+        <org.eventb.core.parameter name=";" org.eventb.core.identifier="terms"/>
     </org.eventb.core.event>
-    <org.eventb.core.event name="evt4" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="DeclarativeGoalSuccess">
+    <org.eventb.core.event name="evt4" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="&#10;&#10;&#9;⚬&#9;DeclarativeGoalSu">
         <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="intention ∈ intentions"/>
         <org.eventb.core.parameter name="(" org.eventb.core.identifier="intention"/>
         <org.eventb.core.parameter name=")" org.eventb.core.identifier="nextP"/>
