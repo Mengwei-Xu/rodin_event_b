@@ -4,7 +4,6 @@
     <org.eventb.core.psStatus name="GetFirsts/Op-WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="55" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="update/Op-WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="56" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="NilRemove/Op-WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="52" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="Unprogressable/Op-WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="57" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="Failure_Recovery/Op-WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="59" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="GetFirstRhd/Op-WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="58" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="Failure_Recovery/Op-WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="60" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="GetFirstRhd/Op-WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="60" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>
