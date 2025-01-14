@@ -17,19 +17,27 @@
         <org.eventb.core.poIdentifier name="Belief_predicates" org.eventb.core.type="ℙ(Belief_predicates)"/>
         <org.eventb.core.poIdentifier name="Events" org.eventb.core.type="ℙ(None_belief_predicates)"/>
         <org.eventb.core.poIdentifier name="Addition_sets" org.eventb.core.type="ℙ(None_belief_predicates×Terms×(Belief_predicates×Terms))"/>
-        <org.eventb.core.poIdentifier name="Plan_body_def" org.eventb.core.type="ℙ(None_belief_predicates×ℙ(ℙ(Belief_predicates×Terms)×Terms×ℙ(UserP(Belief_predicates,None_belief_predicates,Terms))))"/>
         <org.eventb.core.poIdentifier name="Actions" org.eventb.core.type="ℙ(None_belief_predicates)"/>
         <org.eventb.core.poIdentifier name="Initial_external_event_set" org.eventb.core.type="ℙ(None_belief_predicates×Terms)"/>
         <org.eventb.core.poIdentifier name="Preconditions" org.eventb.core.type="ℙ(None_belief_predicates×Terms×(Belief_predicates×Terms))"/>
         <org.eventb.core.poIdentifier name="Deletion_sets" org.eventb.core.type="ℙ(None_belief_predicates×Terms×(Belief_predicates×Terms))"/>
+        <org.eventb.core.poIdentifier name="Plans" org.eventb.core.type="ℙ(ℙ(None_belief_predicates×Terms×ℙ(ℙ(Belief_predicates×Terms)×UserP(Belief_predicates,None_belief_predicates,Terms))))"/>
         <org.eventb.core.poIdentifier name="Initial_belief_base" org.eventb.core.type="ℙ(Belief_predicates×Terms)"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/BDI-Agents_Unification_New/BDIcontext.bpo|org.eventb.core.poFile#BDIcontext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+    <org.eventb.core.poSequent name="axm8/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BDI-Agents_Unification_New/BDIcontext.bpo|org.eventb.core.poFile#BDIcontext|org.eventb.core.poPredicateSet#HYPTermsContexx"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="Plans∈ℙ(Events × Terms ⇸ ℙ(ℙ(Belief_predicates × Terms) × UserP(Belief_predicates,None_belief_predicates,Terms)))" org.eventb.core.source="/BDI-Agents_Unification_New/BDIcontext.buc|org.eventb.core.contextFile#BDIcontext|org.eventb.core.axiom#set9"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BDI-Agents_Unification_New/BDIcontext.buc|org.eventb.core.contextFile#BDIcontext|org.eventb.core.axiom#set9"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/BDI-Agents_Unification_New/BDIcontext.bpo|org.eventb.core.poFile#BDIcontext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/BDI-Agents_Unification_New/BDIcontext.bpo|org.eventb.core.poFile#BDIcontext|org.eventb.core.poPredicateSet#HYPTermsContexx"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="HYPTermsContexx" org.eventb.core.parentSet="/BDI-Agents_Unification_New/BDIcontext.bpo|org.eventb.core.poFile#BDIcontext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="partition(None_belief_predicates,Events,Actions)" org.eventb.core.source="/BDI-Agents_Unification_New/BDIcontext.buc|org.eventb.core.contextFile#BDIcontext|org.eventb.core.axiom#axm1"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="Preconditions∈Actions × Terms ↔ Belief_predicates × Terms" org.eventb.core.source="/BDI-Agents_Unification_New/BDIcontext.buc|org.eventb.core.contextFile#BDIcontext|org.eventb.core.axiom#axm2"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="Deletion_sets∈Actions × Terms ↔ Belief_predicates × Terms" org.eventb.core.source="/BDI-Agents_Unification_New/BDIcontext.buc|org.eventb.core.contextFile#BDIcontext|org.eventb.core.axiom#axm3"/>
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="Addition_sets∈Actions × Terms ↔ Belief_predicates × Terms" org.eventb.core.source="/BDI-Agents_Unification_New/BDIcontext.buc|org.eventb.core.contextFile#BDIcontext|org.eventb.core.axiom#axm4"/>
-        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="Plan_body_def∈Events ⇸ (ℙ(Belief_predicates × Terms) × Terms ⇸ ℙ(UserP(Belief_predicates,None_belief_predicates,Terms)))" org.eventb.core.source="/BDI-Agents_Unification_New/BDIcontext.buc|org.eventb.core.contextFile#BDIcontext|org.eventb.core.axiom#axm5"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/BDI-Agents_Unification_New/BDIcontext.bpo|org.eventb.core.poFile#BDIcontext|org.eventb.core.poPredicateSet#HYPTermsContexx" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="Plans∈ℙ(Events × Terms ⇸ ℙ(ℙ(Belief_predicates × Terms) × UserP(Belief_predicates,None_belief_predicates,Terms)))" org.eventb.core.source="/BDI-Agents_Unification_New/BDIcontext.buc|org.eventb.core.contextFile#BDIcontext|org.eventb.core.axiom#set9"/>
         <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="Initial_belief_base∈ℙ(Belief_predicates × Terms)" org.eventb.core.source="/BDI-Agents_Unification_New/BDIcontext.buc|org.eventb.core.contextFile#BDIcontext|org.eventb.core.axiom#set5"/>
         <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="Initial_external_event_set∈ℙ(Events × Terms)" org.eventb.core.source="/BDI-Agents_Unification_New/BDIcontext.buc|org.eventb.core.contextFile#BDIcontext|org.eventb.core.axiom#set6"/>
     </org.eventb.core.poPredicateSet>
