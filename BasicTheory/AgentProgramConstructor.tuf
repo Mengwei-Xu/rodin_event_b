@@ -64,7 +64,7 @@
         </org.eventb.theory.core.datatypeConstructor>
         <org.eventb.theory.core.datatypeConstructor name="element2" org.eventb.core.identifier="EventComp">
             <org.eventb.theory.core.constructorArgument name="'" org.eventb.core.identifier="getEvent" org.eventb.theory.core.type="non_belief_predicates×terms"/>
-            <org.eventb.theory.core.constructorArgument name="(" org.eventb.core.identifier="UserPlan" org.eventb.theory.core.type="ℙ(ℙ(belief_predicates×terms)×terms×ℙ(UserP(belief_predicates,non_belief_predicates,terms)))"/>
+            <org.eventb.theory.core.constructorArgument name="(" org.eventb.core.identifier="UserPlan" org.eventb.theory.core.type="ℙ (ℙ(ℙ(belief_predicates×terms)×(UserP(belief_predicates,non_belief_predicates,terms))))"/>
         </org.eventb.theory.core.datatypeConstructor>
         <org.eventb.theory.core.datatypeConstructor name="element3" org.eventb.core.comment="for declarative goal when the failure conditions holds, it progresses to False. " org.eventb.core.identifier="False"/>
     </org.eventb.theory.core.datatypeDefinition>
