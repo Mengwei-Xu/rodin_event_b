@@ -30,7 +30,7 @@
         <org.eventb.core.guard name="-" org.eventb.core.comment="destruct BasicComp to extract the terms and the event " org.eventb.core.label="grd4" org.eventb.core.predicate="getBasicPB(nextP)=event↦terms"/>
         <org.eventb.core.action name="0" org.eventb.core.assignment="intentions ≔ (intentions∖{intention}) ∪ {update(intention,nextP, newnextP)}" org.eventb.core.comment="the one to be replaced has to the next one to be progressed. " org.eventb.core.label="act1"/>
         <org.eventb.core.parameter name="5" org.eventb.core.identifier="nextP"/>
-        <org.eventb.core.guard name="7" org.eventb.core.label="grd5" org.eventb.core.predicate="newnextP = EventComp(event↦terms, {plan·plan ∈ Plans ∧ plan(event ↦ terms) ≠ ∅ ∣ plan(event ↦ terms)} )"/>
+        <org.eventb.core.guard name="7" org.eventb.core.comment="if no revelant plan, Plans[{event ↦ terms}] returns empty set." org.eventb.core.label="grd5" org.eventb.core.predicate="newnextP = EventComp(event↦terms, Plans[{event ↦ terms}])"/>
         <org.eventb.core.parameter name="8" org.eventb.core.identifier="newnextP"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="evt1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="SelectApplicablePlan">
@@ -39,9 +39,9 @@
         <org.eventb.core.guard name="?" org.eventb.core.comment="check the chosen top element is an EventComp" org.eventb.core.label="grd3" org.eventb.core.predicate="isEventComp(nextP)"/>
         <org.eventb.core.action name=")" org.eventb.core.assignment="intentions ≔ (intentions ∖ {intention}) ∪ {update(intention, nextP, newnextP)}" org.eventb.core.label="act1"/>
         <org.eventb.core.guard name="D" org.eventb.core.comment="getEvent is the destructor for EventComp" org.eventb.core.label="grd4" org.eventb.core.predicate="getEvent(nextP) = event ↦ terms"/>
-        <org.eventb.core.guard name=";" org.eventb.core.comment="UserPlan is the destructor for EventComp.  " org.eventb.core.label="grd5" org.eventb.core.predicate="{context ↦ applicable_plan_body} ∈ UserPlan(nextP)" org.eventb.core.theorem="true"/>
+        <org.eventb.core.guard name=";" org.eventb.core.comment="UserPlan is the destructor for EventComp.  " org.eventb.core.label="grd5" org.eventb.core.predicate="context ↦ applicable_plan_body ∈ UserPlan(nextP)" org.eventb.core.theorem="true"/>
         <org.eventb.core.guard name="G" org.eventb.core.label="grd7" org.eventb.core.predicate="context ⊆ belief_base"/>
-        <org.eventb.core.guard name="9" org.eventb.core.comment="(λ belief ↦ terms1 · terms1 ∈ Terms ∣ UserPlan(nextP)(belief ↦ terms1) ∖ {applicable_plan_body})the lambada expression is important to ensure we only remove a specific binded plan body away from all possible binded version for all relevant plans' plan bodies " org.eventb.core.label="grd6" org.eventb.core.predicate="newnextP = Rhd(UserP2Plan_body(applicable_plan_body), EventComp(event ↦ terms, UserPlan(nextP) ∖ {{context ↦ applicable_plan_body}} )) "/>
+        <org.eventb.core.guard name="9" org.eventb.core.comment="(λ belief ↦ terms1 · terms1 ∈ Terms ∣ UserPlan(nextP)(belief ↦ terms1) ∖ {applicable_plan_body})the lambada expression is important to ensure we only remove a specific binded plan body away from all possible binded version for all relevant plans' plan bodies " org.eventb.core.label="grd6" org.eventb.core.predicate="newnextP = Rhd(UserP2Plan_body(applicable_plan_body), EventComp(event ↦ terms, UserPlan(nextP) ∖ {context ↦ applicable_plan_body} )) "/>
         <org.eventb.core.parameter name="4" org.eventb.core.identifier="event"/>
         <org.eventb.core.parameter name="@" org.eventb.core.identifier="terms"/>
         <org.eventb.core.parameter name="1" org.eventb.core.identifier="intention"/>

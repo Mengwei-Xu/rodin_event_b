@@ -1,103 +1,103 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
-    <org.eventb.theory.core.typeParameter name="'" org.eventb.core.identifier="belief_predicates"/>
-    <org.eventb.theory.core.typeParameter name="(" org.eventb.core.identifier="non_belief_predicates"/>
-    <org.eventb.theory.core.typeParameter name=")" org.eventb.core.identifier="terms"/>
-    <org.eventb.theory.core.newOperatorDefinition name="+" org.eventb.core.comment="Just to make a example of a filter to add in the guard. " org.eventb.core.label="isEventComp" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.notationType="PREFIX">
-        <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="Plan_body(belief_predicates,non_belief_predicates,terms) " org.eventb.core.identifier="plan"/>
-        <org.eventb.theory.core.recursiveOperatorDefinition name="(" org.eventb.theory.core.inductiveArgument="plan">
-            <org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="NilComp" org.eventb.theory.core.formula="⊥ "/>
-            <org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="BasicPComp(evt)" org.eventb.theory.core.formula="⊥ "/>
-            <org.eventb.theory.core.recursiveDefinitionCase name="*" org.eventb.core.expression="SeqComp(l,r)" org.eventb.theory.core.formula="⊥ "/>
-            <org.eventb.theory.core.recursiveDefinitionCase name="+" org.eventb.core.expression="ConcurrentComp(l,r)" org.eventb.theory.core.formula="⊥ "/>
-            <org.eventb.theory.core.recursiveDefinitionCase name="," org.eventb.core.expression="GoalComp(succes,planrec,failure)" org.eventb.theory.core.formula="⊥"/>
-            <org.eventb.theory.core.recursiveDefinitionCase name="-" org.eventb.core.expression="Rhd(cur,back)" org.eventb.theory.core.formula="⊥ "/>
-            <org.eventb.theory.core.recursiveDefinitionCase name="." org.eventb.core.expression="EventComp(evt,planlib)" org.eventb.theory.core.formula="⊤ "/>
+    <org.eventb.theory.core.typeParameter name="'" org.eventb.core.identifier="Belief_predicate_symbols"/>
+    <org.eventb.theory.core.typeParameter name="(" org.eventb.core.identifier="Event_Action_predicate_symbols"/>
+    <org.eventb.theory.core.typeParameter name=")" org.eventb.core.identifier="Terms"/>
+    <org.eventb.theory.core.newOperatorDefinition name="+" org.eventb.core.label="isRevelant_plans" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.notationType="PREFIX">
+        <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="P(Belief_predicate_symbols, Event_Action_predicate_symbols, Terms)" org.eventb.core.identifier="intention"/>
+        <org.eventb.theory.core.recursiveOperatorDefinition name="(" org.eventb.theory.core.inductiveArgument="intention">
+            <org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="Nil" org.eventb.theory.core.formula="⊥ "/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="BasicP_intention(basic_program)" org.eventb.theory.core.formula="⊥ "/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="*" org.eventb.core.expression="Sequence_intention(head,tail)" org.eventb.theory.core.formula="⊥ "/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="+" org.eventb.core.expression="Concurrency_intention(left,right)" org.eventb.theory.core.formula="⊥ "/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="," org.eventb.core.expression="Declarative_goal_intention(s,procedual,f)" org.eventb.theory.core.formula="⊥"/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="-" org.eventb.core.expression="Try_current_with_backups(current, backups)" org.eventb.theory.core.formula="⊥ "/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="." org.eventb.core.expression="Relevant_plans(event, guarded_plan_bodies)" org.eventb.theory.core.formula="⊤ "/>
             <org.eventb.theory.core.recursiveDefinitionCase name="/" org.eventb.core.expression="False" org.eventb.theory.core.formula="⊥ "/>
         </org.eventb.theory.core.recursiveOperatorDefinition>
     </org.eventb.theory.core.newOperatorDefinition>
     <org.eventb.theory.core.datatypeDefinition name="element:" org.eventb.core.comment="The two data type follow the grammar define in the fig 4 a yours SCP paper entitle &quot;Modelling and verifying BDI agents with bigraphs&quot;" org.eventb.core.identifier="UserP">
-        <org.eventb.theory.core.typeArgument name="'" org.eventb.theory.core.givenType="belief_predicates"/>
-        <org.eventb.theory.core.typeArgument name="(" org.eventb.theory.core.givenType="non_belief_predicates"/>
-        <org.eventb.theory.core.typeArgument name=")" org.eventb.theory.core.givenType="terms"/>
-        <org.eventb.theory.core.datatypeConstructor name="element1" org.eventb.core.identifier="BasicP">
-            <org.eventb.theory.core.constructorArgument name="'" org.eventb.core.identifier="getBasicP" org.eventb.theory.core.type="non_belief_predicates ×terms"/>
+        <org.eventb.theory.core.typeArgument name="'" org.eventb.theory.core.givenType="Belief_predicate_symbols"/>
+        <org.eventb.theory.core.typeArgument name="(" org.eventb.theory.core.givenType="Event_Action_predicate_symbols"/>
+        <org.eventb.theory.core.typeArgument name=")" org.eventb.theory.core.givenType="Terms"/>
+        <org.eventb.theory.core.datatypeConstructor name="element1" org.eventb.core.identifier="BasicP_user">
+            <org.eventb.theory.core.constructorArgument name="'" org.eventb.core.identifier="basic_program_user" org.eventb.theory.core.type="Event_Action_predicate_symbols × Terms"/>
         </org.eventb.theory.core.datatypeConstructor>
-        <org.eventb.theory.core.datatypeConstructor name="element2" org.eventb.core.identifier="Seq">
-            <org.eventb.theory.core.constructorArgument name="'" org.eventb.core.identifier="leftSeq" org.eventb.theory.core.type="UserP(belief_predicates,non_belief_predicates,terms)"/>
-            <org.eventb.theory.core.constructorArgument name="(" org.eventb.core.identifier="rightSeq" org.eventb.theory.core.type="UserP(belief_predicates,non_belief_predicates,terms)"/>
+        <org.eventb.theory.core.datatypeConstructor name="element2" org.eventb.core.identifier="Sequence_user">
+            <org.eventb.theory.core.constructorArgument name="'" org.eventb.core.identifier="head_user" org.eventb.theory.core.type="UserP(Belief_predicate_symbols, Event_Action_predicate_symbols, Terms)"/>
+            <org.eventb.theory.core.constructorArgument name="(" org.eventb.core.identifier="tail_user" org.eventb.theory.core.type="UserP(Belief_predicate_symbols, Event_Action_predicate_symbols, Terms)"/>
         </org.eventb.theory.core.datatypeConstructor>
-        <org.eventb.theory.core.datatypeConstructor name="element3" org.eventb.core.identifier="Concurrent">
-            <org.eventb.theory.core.constructorArgument name="'" org.eventb.core.identifier="leftConc" org.eventb.theory.core.type="UserP(belief_predicates,non_belief_predicates,terms)"/>
-            <org.eventb.theory.core.constructorArgument name="(" org.eventb.core.identifier="rightConc" org.eventb.theory.core.type="UserP(belief_predicates,non_belief_predicates,terms)"/>
+        <org.eventb.theory.core.datatypeConstructor name="element3" org.eventb.core.identifier="Concurrency_user">
+            <org.eventb.theory.core.constructorArgument name="'" org.eventb.core.identifier="left_user" org.eventb.theory.core.type="UserP(Belief_predicate_symbols, Event_Action_predicate_symbols, Terms)"/>
+            <org.eventb.theory.core.constructorArgument name="(" org.eventb.core.identifier="right_user" org.eventb.theory.core.type="UserP(Belief_predicate_symbols, Event_Action_predicate_symbols, Terms)"/>
         </org.eventb.theory.core.datatypeConstructor>
-        <org.eventb.theory.core.datatypeConstructor name="element4" org.eventb.core.identifier="Goal">
-            <org.eventb.theory.core.constructorArgument name="'" org.eventb.core.identifier="SuccesUser" org.eventb.theory.core.type="ℙ(belief_predicates×terms)"/>
-            <org.eventb.theory.core.constructorArgument name="(" org.eventb.core.identifier="EventUser" org.eventb.theory.core.type="non_belief_predicates×terms"/>
-            <org.eventb.theory.core.constructorArgument name=")" org.eventb.core.identifier="FailureUser" org.eventb.theory.core.type="ℙ(belief_predicates×terms)"/>
+        <org.eventb.theory.core.datatypeConstructor name="element4" org.eventb.core.identifier="Declarative_goal_user">
+            <org.eventb.theory.core.constructorArgument name="'" org.eventb.core.identifier="success_condition_user" org.eventb.theory.core.type="ℙ(Belief_predicate_symbols × Terms)"/>
+            <org.eventb.theory.core.constructorArgument name="(" org.eventb.core.comment="strickly, it should be Event_predicate_symbols " org.eventb.core.identifier="event_user" org.eventb.theory.core.type="Event_Action_predicate_symbols × Terms"/>
+            <org.eventb.theory.core.constructorArgument name=")" org.eventb.core.identifier="failure_condition_user" org.eventb.theory.core.type="ℙ(Belief_predicate_symbols × Terms)"/>
         </org.eventb.theory.core.datatypeConstructor>
     </org.eventb.theory.core.datatypeDefinition>
-    <org.eventb.theory.core.datatypeDefinition name="*" org.eventb.core.identifier="Plan_body">
-        <org.eventb.theory.core.typeArgument name="'" org.eventb.theory.core.givenType="belief_predicates"/>
-        <org.eventb.theory.core.typeArgument name="(" org.eventb.theory.core.givenType="non_belief_predicates"/>
-        <org.eventb.theory.core.typeArgument name=")" org.eventb.theory.core.givenType="terms"/>
-        <org.eventb.theory.core.datatypeConstructor name="/" org.eventb.core.identifier="NilComp"/>
-        <org.eventb.theory.core.datatypeConstructor name="+" org.eventb.core.identifier="BasicPComp">
-            <org.eventb.theory.core.constructorArgument name="'" org.eventb.core.identifier="getBasicPB" org.eventb.theory.core.type="non_belief_predicates ×terms"/>
+    <org.eventb.theory.core.datatypeDefinition name="*" org.eventb.core.identifier="P">
+        <org.eventb.theory.core.typeArgument name="'" org.eventb.theory.core.givenType="Belief_predicate_symbols"/>
+        <org.eventb.theory.core.typeArgument name="(" org.eventb.theory.core.givenType="Event_Action_predicate_symbols"/>
+        <org.eventb.theory.core.typeArgument name=")" org.eventb.theory.core.givenType="Terms"/>
+        <org.eventb.theory.core.datatypeConstructor name="/" org.eventb.core.identifier="Nil"/>
+        <org.eventb.theory.core.datatypeConstructor name="+" org.eventb.core.identifier="BasicP_intention">
+            <org.eventb.theory.core.constructorArgument name="'" org.eventb.core.identifier="basic_program_intention" org.eventb.theory.core.type="Event_Action_predicate_symbols × Terms"/>
         </org.eventb.theory.core.datatypeConstructor>
-        <org.eventb.theory.core.datatypeConstructor name="-" org.eventb.core.identifier="SeqComp">
-            <org.eventb.theory.core.constructorArgument name="'" org.eventb.core.identifier="head" org.eventb.theory.core.type="Plan_body(belief_predicates,non_belief_predicates,terms) "/>
-            <org.eventb.theory.core.constructorArgument name="(" org.eventb.core.identifier="tail" org.eventb.theory.core.type="Plan_body(belief_predicates,non_belief_predicates,terms) "/>
+        <org.eventb.theory.core.datatypeConstructor name="-" org.eventb.core.identifier="Sequence_intention">
+            <org.eventb.theory.core.constructorArgument name="'" org.eventb.core.identifier="head_intention" org.eventb.theory.core.type="P(Belief_predicate_symbols, Event_Action_predicate_symbols, Terms)"/>
+            <org.eventb.theory.core.constructorArgument name="(" org.eventb.core.identifier="tail_intention" org.eventb.theory.core.type="P(Belief_predicate_symbols, Event_Action_predicate_symbols, Terms)"/>
         </org.eventb.theory.core.datatypeConstructor>
-        <org.eventb.theory.core.datatypeConstructor name="." org.eventb.core.identifier="ConcurrentComp">
-            <org.eventb.theory.core.constructorArgument name="'" org.eventb.core.identifier="left" org.eventb.theory.core.type="Plan_body(belief_predicates,non_belief_predicates,terms) "/>
-            <org.eventb.theory.core.constructorArgument name="(" org.eventb.core.identifier="right" org.eventb.theory.core.type="Plan_body(belief_predicates,non_belief_predicates,terms) "/>
+        <org.eventb.theory.core.datatypeConstructor name="." org.eventb.core.identifier="Concurrency_intention">
+            <org.eventb.theory.core.constructorArgument name="'" org.eventb.core.identifier="left_intention" org.eventb.theory.core.type="P(Belief_predicate_symbols, Event_Action_predicate_symbols, Terms)"/>
+            <org.eventb.theory.core.constructorArgument name="(" org.eventb.core.identifier="right_intention" org.eventb.theory.core.type="P(Belief_predicate_symbols, Event_Action_predicate_symbols, Terms)"/>
         </org.eventb.theory.core.datatypeConstructor>
-        <org.eventb.theory.core.datatypeConstructor name="*" org.eventb.core.identifier="GoalComp">
-            <org.eventb.theory.core.constructorArgument name="'" org.eventb.core.identifier="SuccessComp" org.eventb.theory.core.type="ℙ (belief_predicates × terms)"/>
-            <org.eventb.theory.core.constructorArgument name="(" org.eventb.core.identifier="getGoalPlanBody" org.eventb.theory.core.type="Plan_body(belief_predicates,non_belief_predicates,terms) "/>
-            <org.eventb.theory.core.constructorArgument name=")" org.eventb.core.identifier="FailureComp" org.eventb.theory.core.type="ℙ (belief_predicates × terms)"/>
+        <org.eventb.theory.core.datatypeConstructor name="*" org.eventb.core.identifier="Declarative_goal_intention">
+            <org.eventb.theory.core.constructorArgument name="'" org.eventb.core.identifier="success_condition" org.eventb.theory.core.type="ℙ(Belief_predicate_symbols × Terms)"/>
+            <org.eventb.theory.core.constructorArgument name="(" org.eventb.core.identifier="procedural_program" org.eventb.theory.core.type="P(Belief_predicate_symbols, Event_Action_predicate_symbols, Terms)"/>
+            <org.eventb.theory.core.constructorArgument name=")" org.eventb.core.identifier="failure_condition" org.eventb.theory.core.type="ℙ(Belief_predicate_symbols × Terms)"/>
         </org.eventb.theory.core.datatypeConstructor>
-        <org.eventb.theory.core.datatypeConstructor name="element1" org.eventb.core.comment=" it is the name of the command in latex for the symbol to define the backup, of course you can change it. " org.eventb.core.identifier="Rhd">
-            <org.eventb.theory.core.constructorArgument name="'" org.eventb.core.identifier="current" org.eventb.theory.core.type="Plan_body(belief_predicates,non_belief_predicates,terms) "/>
-            <org.eventb.theory.core.constructorArgument name="(" org.eventb.core.identifier="backup" org.eventb.theory.core.type="Plan_body(belief_predicates,non_belief_predicates,terms) "/>
+        <org.eventb.theory.core.datatypeConstructor name="element1" org.eventb.core.comment="P1 |&gt; P2" org.eventb.core.identifier="Try_current_with_backups">
+            <org.eventb.theory.core.constructorArgument name="'" org.eventb.core.identifier="current_intention" org.eventb.theory.core.type="P(Belief_predicate_symbols, Event_Action_predicate_symbols, Terms)"/>
+            <org.eventb.theory.core.constructorArgument name="(" org.eventb.core.identifier="backup_plans" org.eventb.theory.core.type="P(Belief_predicate_symbols, Event_Action_predicate_symbols, Terms)"/>
         </org.eventb.theory.core.datatypeConstructor>
-        <org.eventb.theory.core.datatypeConstructor name="element2" org.eventb.core.identifier="EventComp">
-            <org.eventb.theory.core.constructorArgument name="'" org.eventb.core.identifier="getEvent" org.eventb.theory.core.type="non_belief_predicates×terms"/>
-            <org.eventb.theory.core.constructorArgument name="(" org.eventb.core.identifier="UserPlan" org.eventb.theory.core.type="ℙ (ℙ(ℙ(belief_predicates×terms)×(UserP(belief_predicates,non_belief_predicates,terms))))"/>
+        <org.eventb.theory.core.datatypeConstructor name="element2" org.eventb.core.identifier="Relevant_plans">
+            <org.eventb.theory.core.constructorArgument name="'" org.eventb.core.identifier="triggering_event" org.eventb.theory.core.type="Event_Action_predicate_symbols"/>
+            <org.eventb.theory.core.constructorArgument name="(" org.eventb.core.identifier="set_of_guarded_plan_bodies" org.eventb.theory.core.type="ℙ(ℙ(Belief_predicate_symbols × Terms) × UserP(Belief_predicate_symbols , Event_Action_predicate_symbols, Terms))"/>
         </org.eventb.theory.core.datatypeConstructor>
-        <org.eventb.theory.core.datatypeConstructor name="element3" org.eventb.core.comment="for declarative goal when the failure conditions holds, it progresses to False. " org.eventb.core.identifier="False"/>
+        <org.eventb.theory.core.datatypeConstructor name="element3" org.eventb.core.comment="for declarative goal when the failure conditions holds, it progresses to False.  I should add this to the new Fig for &quot;Grammer of plans and plan-bodies&quot;" org.eventb.core.identifier="False"/>
     </org.eventb.theory.core.datatypeDefinition>
-    <org.eventb.theory.core.newOperatorDefinition name="element;" org.eventb.core.label="UserP2Plan_body" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
-        <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="UserP(belief_predicates,non_belief_predicates,terms) " org.eventb.core.identifier="uP"/>
-        <org.eventb.theory.core.recursiveOperatorDefinition name="(" org.eventb.theory.core.inductiveArgument="uP">
-            <org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.comment="GoalComp(succes,EventComp(evtxterms,Plan_library(prj1(evtxterms))  ),fail)   why should it be ? " org.eventb.core.expression="Goal(success,evtxterms,fail)" org.eventb.theory.core.formula="GoalComp(success, BasicPComp(evtxterms), fail)"/>
-            <org.eventb.theory.core.recursiveDefinitionCase name="+" org.eventb.core.comment="I add the id application to Id to add the missing information for the typing " org.eventb.core.expression="BasicP(nonbeliefpred)" org.eventb.theory.core.formula="(Plan_body(belief_predicates,non_belief_predicates,terms)◁id)(BasicPComp(nonbeliefpred))"/>
-            <org.eventb.theory.core.recursiveDefinitionCase name="*" org.eventb.core.expression="Seq(ag1,ag2)" org.eventb.theory.core.formula="SeqComp(UserP2Plan_body( ag1)  , UserP2Plan_body(ag2)  )"/>
-            <org.eventb.theory.core.recursiveDefinitionCase name=")" org.eventb.core.expression="Concurrent(ag1,ag2)" org.eventb.theory.core.formula="ConcurrentComp( UserP2Plan_body( ag1)   , UserP2Plan_body(ag2)    ) "/>
+    <org.eventb.theory.core.newOperatorDefinition name="element;" org.eventb.core.label="type_UserP_to_P" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+        <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="UserP(Belief_predicate_symbols, Event_Action_predicate_symbols, Terms) " org.eventb.core.identifier="userP"/>
+        <org.eventb.theory.core.recursiveOperatorDefinition name="(" org.eventb.theory.core.inductiveArgument="userP">
+            <org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="Declarative_goal_user(s, evt, failure)" org.eventb.theory.core.formula="Declarative_goal_intention(s, BasicP_intention(evt), failure)"/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="+" org.eventb.core.comment="I add the id application to Id to add the missing information for the typing " org.eventb.core.expression="BasicP_user(basic_program)" org.eventb.theory.core.formula="(P(Belief_predicate_symbols, Event_Action_predicate_symbols, Terms)◁id)(BasicP_intention(basic_program))"/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="*" org.eventb.core.expression="Sequence_user(head,tail)" org.eventb.theory.core.formula="Sequence_intention(type_UserP_to_P(head)  , type_UserP_to_P(tail)  )"/>
+            <org.eventb.theory.core.recursiveDefinitionCase name=")" org.eventb.core.expression="Concurrency_user(left,right)" org.eventb.theory.core.formula="Concurrency_intention(type_UserP_to_P(left)   , type_UserP_to_P(right)   ) "/>
         </org.eventb.theory.core.recursiveOperatorDefinition>
     </org.eventb.theory.core.newOperatorDefinition>
-    <org.eventb.theory.core.newOperatorDefinition name="element=" org.eventb.core.comment="similar to the stack, get first return the set of atomic elementon the top of the plan " org.eventb.core.label="GetFirsts" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
-        <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="Plan_body(belief_predicates,non_belief_predicates,terms) " org.eventb.core.identifier="plan"/>
-        <org.eventb.theory.core.recursiveOperatorDefinition name="(" org.eventb.theory.core.inductiveArgument="plan">
-            <org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="NilComp" org.eventb.theory.core.formula="(ℙ(Plan_body(belief_predicates,non_belief_predicates,terms))◁id)({NilComp})"/>
-            <org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="BasicPComp(evt)" org.eventb.theory.core.formula=" (ℙ(Plan_body(belief_predicates,non_belief_predicates,terms) )◁ id)({BasicPComp(evt)})"/>
-            <org.eventb.theory.core.recursiveDefinitionCase name=")" org.eventb.core.comment="corresponds to the rule of ;" org.eventb.core.expression="SeqComp(l,r)" org.eventb.theory.core.formula="GetFirsts(l)"/>
-            <org.eventb.theory.core.recursiveDefinitionCase name="*" org.eventb.core.comment="corresponds to the rule of ||1 and ||2" org.eventb.core.expression="ConcurrentComp(l,r)" org.eventb.theory.core.formula="GetFirsts(l)∪GetFirsts(r)"/>
-            <org.eventb.theory.core.recursiveDefinitionCase name="+" org.eventb.core.expression="GoalComp(succes,planrec,failure)" org.eventb.theory.core.formula="{GoalComp(succes,planrec,failure) }"/>
-            <org.eventb.theory.core.recursiveDefinitionCase name="," org.eventb.core.comment="corresponds to the rule rhd_;" org.eventb.core.expression="Rhd(cur,back)" org.eventb.theory.core.formula="GetFirsts(cur)"/>
-            <org.eventb.theory.core.recursiveDefinitionCase name="-" org.eventb.core.expression="EventComp(evt,planlib)" org.eventb.theory.core.formula="{EventComp(evt,planlib)}"/>
-            <org.eventb.theory.core.recursiveDefinitionCase name="." org.eventb.core.expression="False" org.eventb.theory.core.formula="(ℙ(Plan_body(belief_predicates,non_belief_predicates,terms))◁id)({False})"/>
+    <org.eventb.theory.core.newOperatorDefinition name="element=" org.eventb.core.comment="similar to the stack, get first return the set of atomic elementon the top of the plan " org.eventb.core.label="next_programs_to_progress" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+        <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="P(Belief_predicate_symbols, Event_Action_predicate_symbols, Terms) " org.eventb.core.identifier="intention"/>
+        <org.eventb.theory.core.recursiveOperatorDefinition name="(" org.eventb.theory.core.inductiveArgument="intention">
+            <org.eventb.theory.core.recursiveDefinitionCase name="'" org.eventb.core.expression="Nil" org.eventb.theory.core.formula="(ℙ(P(Belief_predicate_symbols, Event_Action_predicate_symbols, Terms) )◁id)({Nil})"/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="BasicP_intention(basic_program)" org.eventb.theory.core.formula=" (ℙ(P(Belief_predicate_symbols, Event_Action_predicate_symbols, Terms) )◁ id)({BasicP_intention(basic_program)})"/>
+            <org.eventb.theory.core.recursiveDefinitionCase name=")" org.eventb.core.comment="corresponds to the rule of ;" org.eventb.core.expression="Sequence_intention(head, tail)" org.eventb.theory.core.formula="next_programs_to_progress(head)"/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="*" org.eventb.core.comment="corresponds to the rule of ||1 and ||2" org.eventb.core.expression="Concurrency_intention(left, right)" org.eventb.theory.core.formula="next_programs_to_progress(left)∪next_programs_to_progress(right)"/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="+" org.eventb.core.expression="Declarative_goal_intention(s,procedual,f)" org.eventb.theory.core.formula="{Declarative_goal_intention(s,procedual,f)}"/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="," org.eventb.core.comment="corresponds to the rule rhd_;" org.eventb.core.expression="Try_current_with_backups(current, backups)" org.eventb.theory.core.formula="next_programs_to_progress(current)"/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="-" org.eventb.core.expression="Relevant_plans(event, guarded_plan_bodies) " org.eventb.theory.core.formula="{Relevant_plans(event, guarded_plan_bodies) }"/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="." org.eventb.core.expression="False" org.eventb.theory.core.formula="(ℙ(P(Belief_predicate_symbols, Event_Action_predicate_symbols, Terms) )◁id)({False})"/>
         </org.eventb.theory.core.recursiveOperatorDefinition>
     </org.eventb.theory.core.newOperatorDefinition>
-    <org.eventb.theory.core.newOperatorDefinition name="element&gt;" org.eventb.core.comment="update a plan, and preserve the concurent et sequence order" org.eventb.core.label="update" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
-        <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="Plan_body(belief_predicates,non_belief_predicates,terms) " org.eventb.core.identifier="plan"/>
-        <org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="Plan_body(belief_predicates,non_belief_predicates,terms) " org.eventb.core.identifier="prev"/>
-        <org.eventb.theory.core.operatorArgument name=")" org.eventb.core.expression="Plan_body(belief_predicates,non_belief_predicates,terms) " org.eventb.core.identifier="new"/>
-        <org.eventb.theory.core.recursiveOperatorDefinition name="*" org.eventb.theory.core.inductiveArgument="plan">
-            <org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="BasicPComp(evt)" org.eventb.theory.core.formula="new"/>
-            <org.eventb.theory.core.recursiveDefinitionCase name=")" org.eventb.core.comment="corresponds to the rule ;" org.eventb.core.expression="SeqComp(l,r)" org.eventb.theory.core.formula="SeqComp(update(l,prev,new),r)"/>
-            <org.eventb.theory.core.recursiveDefinitionCase name="*" org.eventb.core.comment="the third is for well-definedness, most of time, update will only happen meaningfully to actually change the intention" org.eventb.core.expression="ConcurrentComp(l,r)" org.eventb.theory.core.formula="{pre↦ne∣ (pre∈GetFirsts(l)∧ pre∉GetFirsts(r)∧ne=ConcurrentComp(update(l,pre,new),r))&#10;&#9;&#9;∨ ( pre∈GetFirsts(r) ∧ne=ConcurrentComp(l,update(r,pre,new)))&#10;&#9;&#9;∨ (pre∉GetFirsts(l)∧ pre∉GetFirsts(r)∧ ne= ConcurrentComp(l,r) )  }(prev)"/>
+    <org.eventb.theory.core.newOperatorDefinition name="element&gt;" org.eventb.core.comment="update a plan, and preserve the concurent et sequence order" org.eventb.core.label="update_intention" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX">
+        <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="P(Belief_predicate_symbols, Event_Action_predicate_symbols, Terms)" org.eventb.core.identifier="intention"/>
+        <org.eventb.theory.core.operatorArgument name="(" org.eventb.core.expression="P(Belief_predicate_symbols, Event_Action_predicate_symbols, Terms)" org.eventb.core.identifier="current_program"/>
+        <org.eventb.theory.core.operatorArgument name=")" org.eventb.core.expression="P(Belief_predicate_symbols, Event_Action_predicate_symbols, Terms)" org.eventb.core.identifier="new_program"/>
+        <org.eventb.theory.core.recursiveOperatorDefinition name="*" org.eventb.theory.core.inductiveArgument="intention">
+            <org.eventb.theory.core.recursiveDefinitionCase name="(" org.eventb.core.expression="BasicP_intention(basic_program)" org.eventb.theory.core.formula="new"/>
+            <org.eventb.theory.core.recursiveDefinitionCase name=")" org.eventb.core.comment="corresponds to the rule ;" org.eventb.core.expression="Sequence_intention(tail, head)" org.eventb.theory.core.formula="Sequence_intention(update_intention(tail,current_program,new_program),head)"/>
+            <org.eventb.theory.core.recursiveDefinitionCase name="*" org.eventb.core.comment="the third is for well-definedness, most of time, update will only happen meaningfully to actually change the intention" org.eventb.core.expression="Concurrency_intention(left,right)" org.eventb.theory.core.formula="{current ↦ new ∣ &#10;       (current∈next_programs_to_progress(left)&#10;        ∧ current∉next_programs_to_progress(right)&#10;        ∧ new =Concurrentcy_intention(update_intention(left,current_program,new_program),r) ) &#10;∨ &#10;       (current∉next_programs_to_progress(left) &#10;        ∧ current∈next_programs_to_progress(right) &#10;        ∧ new =Concurrency_Intention(left,update_intention(right,current_program,new_program) ) )&#10; }(current_program)"/>
             <org.eventb.theory.core.recursiveDefinitionCase name="+" org.eventb.core.comment="i can do this as the GetFirsts can return GoalComp(succes,planrec,failure)" org.eventb.core.expression="GoalComp(succes,planrec,failure)" org.eventb.theory.core.formula="{prev1 ↦ new1 ∣ (prev1 = GoalComp(succes,planrec,failure) ∧ new1 = new) ∨ (prev1 ≠ GoalComp(succes,planrec,failure) ∧ new1 = GoalComp(succes,update(planrec,prev,new),failure))}(prev)"/>
             <org.eventb.theory.core.recursiveDefinitionCase name="," org.eventb.core.comment="{prev1 ↦ new1 ∣ (prev1 = Rhd(cur,back) ∧ new1 = new) ∨ (prev1 ≠ Rhd(cur,back) ∧ new1 = Rhd(update(cur,prev,new) ,back))}(prev) &quot;I cannot do this as the GetFirsts will never return Rhd(cur, back)" org.eventb.core.expression="Rhd(cur,back)" org.eventb.theory.core.formula="Rhd(update(cur, prev, new), back)"/>
             <org.eventb.theory.core.recursiveDefinitionCase name="-" org.eventb.core.expression="EventComp(evt,planlib)" org.eventb.theory.core.formula="new"/>

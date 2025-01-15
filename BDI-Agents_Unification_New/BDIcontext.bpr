@@ -804,7 +804,7 @@
                 </org.eventb.theory.core.scDatatypeConstructor>
                 <org.eventb.theory.core.scDatatypeConstructor name="EventComp">
                     <org.eventb.theory.core.scConstructorArgument name="getEvent" org.eventb.core.type="non_belief_predicates×terms"/>
-                    <org.eventb.theory.core.scConstructorArgument name="UserPlan" org.eventb.core.type="ℙ(ℙ(ℙ(belief_predicates×terms)×UserP(belief_predicates,non_belief_predicates,terms)))"/>
+                    <org.eventb.theory.core.scConstructorArgument name="UserPlan" org.eventb.core.type="ℙ(ℙ(belief_predicates×terms)×UserP(belief_predicates,non_belief_predicates,terms))"/>
                 </org.eventb.theory.core.scDatatypeConstructor>
                 <org.eventb.theory.core.scDatatypeConstructor name="False"/>
             </org.eventb.theory.core.scDatatypeDefinition>
@@ -1001,7 +1001,7 @@
                     <org.eventb.core.prAnte name="'">
                         <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p4,p5,p6,p7"/>
                         <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p4,p5,p6,p7"/>
-                        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(None_belief_predicates,Events,Actions))" org.eventb.core.prHyps="">
+                        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Event_Action_predicate_symbols,Event_predicate_symbols,Action_predicate_symbols))" org.eventb.core.prHyps="">
                             <org.eventb.core.prAnte name="'">
                                 <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p8" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p9,p10"/>
                                 <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p9,p10"/>
@@ -1033,11 +1033,6 @@
         <org.eventb.core.prIdent name="b" org.eventb.core.type="Terms"/>
         <org.eventb.core.prIdent name="c" org.eventb.core.type="Terms"/>
         <org.eventb.core.prPred name="p11" org.eventb.core.predicate="Point⊆Terms"/>
-        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="None_belief_predicates=Events∪Actions">
-            <org.eventb.core.prIdent name="Actions" org.eventb.core.type="ℙ(None_belief_predicates)"/>
-            <org.eventb.core.prIdent name="Events" org.eventb.core.type="ℙ(None_belief_predicates)"/>
-            <org.eventb.core.prIdent name="None_belief_predicates" org.eventb.core.type="ℙ(None_belief_predicates)"/>
-        </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p4" org.eventb.core.predicate="Point={a,b,c}"/>
         <org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬a=b"/>
         <org.eventb.core.prPred name="p13" org.eventb.core.predicate="Terms={a,b,c}∪VectorTerms">
@@ -1047,10 +1042,20 @@
         <org.eventb.core.prPred name="p14" org.eventb.core.predicate="{a,b,c}∩VectorTerms=(∅ ⦂ ℙ(Terms))">
             <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="partition(None_belief_predicates,Events,Actions)">
-            <org.eventb.core.prIdent name="Actions" org.eventb.core.type="ℙ(None_belief_predicates)"/>
-            <org.eventb.core.prIdent name="Events" org.eventb.core.type="ℙ(None_belief_predicates)"/>
-            <org.eventb.core.prIdent name="None_belief_predicates" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="partition(Event_Action_predicate_symbols,Event_predicate_symbols,Action_predicate_symbols)">
+            <org.eventb.core.prIdent name="Action_predicate_symbols" org.eventb.core.type="ℙ(Event_Action_predicate_symbols)"/>
+            <org.eventb.core.prIdent name="Event_Action_predicate_symbols" org.eventb.core.type="ℙ(Event_Action_predicate_symbols)"/>
+            <org.eventb.core.prIdent name="Event_predicate_symbols" org.eventb.core.type="ℙ(Event_Action_predicate_symbols)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="Event_Action_predicate_symbols=Event_predicate_symbols∪Action_predicate_symbols">
+            <org.eventb.core.prIdent name="Action_predicate_symbols" org.eventb.core.type="ℙ(Event_Action_predicate_symbols)"/>
+            <org.eventb.core.prIdent name="Event_Action_predicate_symbols" org.eventb.core.type="ℙ(Event_Action_predicate_symbols)"/>
+            <org.eventb.core.prIdent name="Event_predicate_symbols" org.eventb.core.type="ℙ(Event_Action_predicate_symbols)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="Event_predicate_symbols∩Action_predicate_symbols=(∅ ⦂ ℙ(Event_Action_predicate_symbols))">
+            <org.eventb.core.prIdent name="Action_predicate_symbols" org.eventb.core.type="ℙ(Event_Action_predicate_symbols)"/>
+            <org.eventb.core.prIdent name="Event_Action_predicate_symbols" org.eventb.core.type="ℙ(Event_Action_predicate_symbols)"/>
+            <org.eventb.core.prIdent name="Event_predicate_symbols" org.eventb.core.type="ℙ(Event_Action_predicate_symbols)"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p2" org.eventb.core.predicate="Terms=Point∪VectorTerms">
             <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
@@ -1063,11 +1068,6 @@
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬a=c"/>
         <org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬b=c"/>
-        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="Events∩Actions=(∅ ⦂ ℙ(None_belief_predicates))">
-            <org.eventb.core.prIdent name="Actions" org.eventb.core.type="ℙ(None_belief_predicates)"/>
-            <org.eventb.core.prIdent name="Events" org.eventb.core.type="ℙ(None_belief_predicates)"/>
-            <org.eventb.core.prIdent name="None_belief_predicates" org.eventb.core.type="ℙ(None_belief_predicates)"/>
-        </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(Terms,Point,VectorTerms)">
             <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
         </org.eventb.core.prPred>
