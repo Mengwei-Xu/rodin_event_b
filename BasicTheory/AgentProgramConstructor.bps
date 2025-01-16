@@ -4,4 +4,5 @@
     <org.eventb.core.psStatus name="next_programs_to_progress/Op-WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="72" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="update_intention/Op-WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="73" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="NilRemove/Op-WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="74" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="get_backups_for_current_program/Op-WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="75" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>
