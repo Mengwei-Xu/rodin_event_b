@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="7">
-    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="6">
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
         <org.eventb.core.poIdentifier name="Terms" org.eventb.core.type="ℙ(Terms)"/>
         <org.eventb.core.poIdentifier name="a" org.eventb.core.type="Terms"/>
         <org.eventb.core.poIdentifier name="b" org.eventb.core.type="Terms"/>
@@ -24,7 +24,7 @@
         <org.eventb.core.poIdentifier name="deletion_sets" org.eventb.core.type="ℙ(Event_Action_predicate_symbols×Terms×(Belief_predicate_symbols×Terms))"/>
         <org.eventb.core.poIdentifier name="Initial_belief_base" org.eventb.core.type="ℙ(Belief_predicate_symbols×Terms)"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/BDI-Agents_Unification_New/BDIcontext.bpo|org.eventb.core.poFile#BDIcontext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="7">
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/BDI-Agents_Unification_New/BDIcontext.bpo|org.eventb.core.poFile#BDIcontext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="partition(Event_Action_predicate_symbols,Event_predicate_symbols,Action_predicate_symbols)" org.eventb.core.source="/BDI-Agents_Unification_New/BDIcontext.buc|org.eventb.core.contextFile#BDIcontext|org.eventb.core.axiom#axm1"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="preconditions∈Action_predicate_symbols × Terms ↔ Belief_predicate_symbols × Terms" org.eventb.core.source="/BDI-Agents_Unification_New/BDIcontext.buc|org.eventb.core.contextFile#BDIcontext|org.eventb.core.axiom#axm2"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="deletion_sets∈Action_predicate_symbols × Terms ↔ Belief_predicate_symbols × Terms" org.eventb.core.source="/BDI-Agents_Unification_New/BDIcontext.buc|org.eventb.core.contextFile#BDIcontext|org.eventb.core.axiom#axm3"/>
