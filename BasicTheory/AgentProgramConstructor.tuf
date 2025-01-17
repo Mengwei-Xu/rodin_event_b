@@ -63,7 +63,7 @@
             <org.eventb.theory.core.constructorArgument name="(" org.eventb.core.identifier="backup_plans" org.eventb.theory.core.type="P(Belief_predicate_symbols, Event_Action_predicate_symbols, Terms)"/>
         </org.eventb.theory.core.datatypeConstructor>
         <org.eventb.theory.core.datatypeConstructor name="element2" org.eventb.core.identifier="Relevant_plans">
-            <org.eventb.theory.core.constructorArgument name="'" org.eventb.core.identifier="triggering_event" org.eventb.theory.core.type="Event_Action_predicate_symbols"/>
+            <org.eventb.theory.core.constructorArgument name="'" org.eventb.core.identifier="triggering_event" org.eventb.theory.core.type="Event_Action_predicate_symbols × Terms"/>
             <org.eventb.theory.core.constructorArgument name="(" org.eventb.core.identifier="set_of_guarded_plan_bodies" org.eventb.theory.core.type="ℙ(ℙ(Belief_predicate_symbols × Terms) × UserP(Belief_predicate_symbols , Event_Action_predicate_symbols, Terms))"/>
         </org.eventb.theory.core.datatypeConstructor>
         <org.eventb.theory.core.datatypeConstructor name="element3" org.eventb.core.comment="for declarative goal when the failure conditions holds, it progresses to False.  I should add this to the new Fig for &quot;Grammer of plans and plan-bodies&quot;" org.eventb.core.identifier="False"/>
