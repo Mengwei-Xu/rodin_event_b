@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="8">
+<org.eventb.core.poFile org.eventb.core.poStamp="9">
     <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="7">
         <org.eventb.core.poIdentifier name="Terms" org.eventb.core.type="ℙ(Terms)"/>
         <org.eventb.core.poIdentifier name="a" org.eventb.core.type="Terms"/>
@@ -46,37 +46,37 @@
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BDI-Agents_Unification_New/BDIExample.buc|org.eventb.core.contextFile#BDIExample|org.eventb.core.axiom#E"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/BDI-Agents_Unification_New/BDIExample.bpo|org.eventb.core.poFile#BDIExample|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/BDI-Agents_Unification_New/BDIExample.bpo|org.eventb.core.poFile#BDIExample|org.eventb.core.poPredicateSet#ABSHYP"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="axm5/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="7">
+    <org.eventb.core.poSequent name="axm4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="9">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BDI-Agents_Unification_New/BDIExample.bpo|org.eventb.core.poFile#BDIExample|org.eventb.core.poPredicateSet#HYPTermsContexw"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀terms1⦂Terms,terms2⦂Terms·terms1∈Point∧terms2∈Point⇒terms1 ↦ terms2∈dom(Vector)∧Vector∈Terms × Terms ⇸ Terms" org.eventb.core.source="/BDI-Agents_Unification_New/BDIExample.buc|org.eventb.core.contextFile#BDIExample|org.eventb.core.axiom#'H"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BDI-Agents_Unification_New/BDIExample.buc|org.eventb.core.contextFile#BDIExample|org.eventb.core.axiom#'H"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/BDI-Agents_Unification_New/BDIExample.bpo|org.eventb.core.poFile#BDIExample|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/BDI-Agents_Unification_New/BDIExample.bpo|org.eventb.core.poFile#BDIExample|org.eventb.core.poPredicateSet#HYPTermsContexw"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="axm6/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="7">
+    <org.eventb.core.poSequent name="axm5/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="9">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BDI-Agents_Unification_New/BDIExample.bpo|org.eventb.core.poFile#BDIExample|org.eventb.core.poPredicateSet#HYPTermsContexx"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀terms1⦂Terms,terms2⦂Terms·terms1∈Point∧terms2∈Point⇒terms1 ↦ terms2∈dom(Vector)∧Vector∈Terms × Terms ⇸ Terms" org.eventb.core.source="/BDI-Agents_Unification_New/BDIExample.buc|org.eventb.core.contextFile#BDIExample|org.eventb.core.axiom#'I"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BDI-Agents_Unification_New/BDIExample.buc|org.eventb.core.contextFile#BDIExample|org.eventb.core.axiom#'I"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/BDI-Agents_Unification_New/BDIExample.bpo|org.eventb.core.poFile#BDIExample|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/BDI-Agents_Unification_New/BDIExample.bpo|org.eventb.core.poFile#BDIExample|org.eventb.core.poPredicateSet#HYPTermsContexx"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="axm7/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="7">
+    <org.eventb.core.poSequent name="axm6/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="9">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BDI-Agents_Unification_New/BDIExample.bpo|org.eventb.core.poFile#BDIExample|org.eventb.core.poPredicateSet#HYPTermsContexy"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀terms1⦂Terms,terms2⦂Terms·terms1∈Point∧terms2∈Point⇒terms1 ↦ terms2∈dom(Vector)∧Vector∈Terms × Terms ⇸ Terms" org.eventb.core.source="/BDI-Agents_Unification_New/BDIExample.buc|org.eventb.core.contextFile#BDIExample|org.eventb.core.axiom#'X"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BDI-Agents_Unification_New/BDIExample.buc|org.eventb.core.contextFile#BDIExample|org.eventb.core.axiom#'X"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/BDI-Agents_Unification_New/BDIExample.bpo|org.eventb.core.poFile#BDIExample|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/BDI-Agents_Unification_New/BDIExample.bpo|org.eventb.core.poFile#BDIExample|org.eventb.core.poPredicateSet#HYPTermsContexy"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="axm18/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="7">
+    <org.eventb.core.poSequent name="axm8/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="9">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BDI-Agents_Unification_New/BDIExample.bpo|org.eventb.core.poFile#BDIExample|org.eventb.core.poPredicateSet#HYPTermsContex{"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀event⦂Event_predicate_symbols,terms1⦂Terms,terms2⦂Terms,terms3⦂Terms·event∈Event_predicate_symbols∧terms1∈Point∧terms2∈Point∧terms3∈Point∧event=arrive_at⇒terms1 ↦ terms2∈dom(Vector)∧Vector∈Terms × Terms ⇸ Terms∧terms2 ↦ terms3∈dom(Vector)" org.eventb.core.source="/BDI-Agents_Unification_New/BDIExample.buc|org.eventb.core.contextFile#BDIExample|org.eventb.core.axiom#axm1"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BDI-Agents_Unification_New/BDIExample.buc|org.eventb.core.contextFile#BDIExample|org.eventb.core.axiom#axm1"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/BDI-Agents_Unification_New/BDIExample.bpo|org.eventb.core.poFile#BDIExample|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/BDI-Agents_Unification_New/BDIExample.bpo|org.eventb.core.poFile#BDIExample|org.eventb.core.poPredicateSet#HYPTermsContex{"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="axm23/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="7">
+    <org.eventb.core.poSequent name="axm9/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="9">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BDI-Agents_Unification_New/BDIExample.bpo|org.eventb.core.poFile#BDIExample|org.eventb.core.poPredicateSet#HYPTermsContex\|"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀event⦂Event_predicate_symbols,terms1⦂Terms,terms2⦂Terms·event∈Event_predicate_symbols∧terms1∈Point∧terms2∈Point∧event=arrive_at⇒terms1 ↦ terms2∈dom(Vector)∧Vector∈Terms × Terms ⇸ Terms" org.eventb.core.source="/BDI-Agents_Unification_New/BDIExample.buc|org.eventb.core.contextFile#BDIExample|org.eventb.core.axiom#'t"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BDI-Agents_Unification_New/BDIExample.buc|org.eventb.core.contextFile#BDIExample|org.eventb.core.axiom#'t"/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/BDI-Agents_Unification_New/BDIExample.bpo|org.eventb.core.poFile#BDIExample|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/BDI-Agents_Unification_New/BDIExample.bpo|org.eventb.core.poFile#BDIExample|org.eventb.core.poPredicateSet#HYPTermsContex\|"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="axm32/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="7">
+    <org.eventb.core.poSequent name="axm13/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="9">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BDI-Agents_Unification_New/BDIExample.bpo|org.eventb.core.poFile#BDIExample|org.eventb.core.poPredicateSet#HYPTermsContey("/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="a ↦ b∈dom(Vector)∧Vector∈Terms × Terms ⇸ Terms∧b ↦ c∈dom(Vector)∧a ↦ c∈dom(Vector)" org.eventb.core.source="/BDI-Agents_Unification_New/BDIExample.buc|org.eventb.core.contextFile#BDIExample|org.eventb.core.axiom#axm="/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BDI-Agents_Unification_New/BDIExample.buc|org.eventb.core.contextFile#BDIExample|org.eventb.core.axiom#axm="/>
