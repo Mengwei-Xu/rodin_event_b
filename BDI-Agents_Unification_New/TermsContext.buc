@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase" version="3">
     <org.eventb.core.carrierSet name="'" org.eventb.core.identifier="Terms"/>
-    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="true" name="(" org.eventb.core.identifier="Point"/>
-    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="true" name=")" org.eventb.core.identifier="Vector"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="(" org.eventb.core.identifier="Point"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name=")" org.eventb.core.identifier="Vector"/>
     <org.eventb.core.axiom name="2" org.eventb.core.label="axm1" org.eventb.core.predicate="Point⊆Terms"/>
     <org.eventb.core.axiom name="7" org.eventb.core.label="axm2" org.eventb.core.predicate="VectorTerms⊆Terms"/>
     <org.eventb.core.axiom name="1" org.eventb.core.label="axm3" org.eventb.core.predicate="Vector ∈ Point×Point↣(VectorTerms)"/>
-    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="true" name="6" org.eventb.core.identifier="VectorTerms"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="6" org.eventb.core.identifier="VectorTerms"/>
     <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="," org.eventb.core.identifier="a"/>
     <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="-" org.eventb.core.identifier="b"/>
     <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="." org.eventb.core.identifier="c"/>
