@@ -1,2 +1,39 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<org.eventb.core.psFile/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.psFile>
+    <org.eventb.core.psStatus name="SelectRelevantPlans/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="4" org.eventb.core.psBroken="true" org.eventb.core.psManual="true"/>
+    <org.eventb.core.psStatus name="SelectApplicablePlan/grd4/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="5" org.eventb.core.psBroken="true" org.eventb.core.psManual="true"/>
+    <org.eventb.core.psStatus name="SelectApplicablePlan/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="5" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="SelectApplicablePlan/grd7/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="17" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="ExecuteAction/grd4/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="11" org.eventb.core.psBroken="true" org.eventb.core.psManual="true"/>
+    <org.eventb.core.psStatus name="ExecuteAction/grd7/THM" org.eventb.core.confidence="0" org.eventb.core.poStamp="11" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="FailureRecovery/grd3/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="10" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DeclarativeGoalSuccess/grd4/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DeclarativeGoalFailure/grd4/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="13" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DeclarativeGoalInit/grd4/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="2" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DeclarativeGoalInit/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="2" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DeclarativeGoalInit/grd6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="2" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DeclarativeGoalInit/grd7/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="2" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DeclarativeGoalActionExecution/grd4/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="15" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DeclarativeGoalActionExecution/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="17" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DeclarativeGoalActionExecution/grd6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="17" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DeclarativeGoalActionExecution/grd8/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="17" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DeclarativeGoalActionExecution/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="15" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DeclarativeGoalRelevantPlanSelection/grd4/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="17" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DeclarativeGoalRelevantPlanSelection/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="17" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DeclarativeGoalRelevantPlanSelection/grd6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="17" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DeclarativeGoalRelevantPlanSelection/grd8/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="17" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DeclarativeGoalRelevantPlanSelection/grd9/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="17" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DeclarativeGoalApplicablePlanSelection/grd4/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="17" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DeclarativeGoalApplicablePlanSelection/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="17" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DeclarativeGoalApplicablePlanSelection/grd6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="17" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DeclarativeGoalApplicablePlanSelection/grd8/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="17" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DeclarativeGoalApplicablePlanSelection/grd9/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="17" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DeclarativeGoalStandardFailureRecovery/grd4/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="21" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DeclarativeGoalStandardFailureRecovery/grd6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="21" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DeclarativeGoalStandardFailureRecovery/grd7/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="21" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DeclarativeGoalStandardFailureRecovery/grd9/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="21" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DeclarativeGoalPersistentFailureRecovery/grd4/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="2" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DeclarativeGoalPersistentFailureRecovery/grd5/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="DeclarativeGoalPersistentFailureRecovery/grd6/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="Aupdate/grd2/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="2" org.eventb.core.psManual="false"/>
+</org.eventb.core.psFile>
