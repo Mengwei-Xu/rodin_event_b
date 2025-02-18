@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.psFile>
-    <org.eventb.core.psStatus name="UserP_to_IntentionP/Op-WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="84" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="next_programs_to_progress/Op-WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="85" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="update_intention/Op-WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="86" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="NilRemove/Op-WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="87" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="failure_recovery/Op-WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="88" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-    <org.eventb.core.psStatus name="get_backups_for_current_program/Op-WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="89" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="UserP_to_IntentionP/Op-WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="23" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="next_programs_to_progress/Op-WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="23" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="update_intention/Op-WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="23" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="NilRemove/Op-WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="24" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="get_backup_for_current_plan/Op-WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="26" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="failure_recovery/Op-WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="27" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="WD_UserP_to_IntentionP/S-THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="27" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="WD1_UserP_to_IntentionP/S-THM" org.eventb.core.confidence="0" org.eventb.core.poStamp="27" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="WD2_UserP_to_IntentionP/S-THM" org.eventb.core.confidence="0" org.eventb.core.poStamp="27" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="WD3_UserP_to_IntentionP/S-THM" org.eventb.core.confidence="0" org.eventb.core.poStamp="27" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="WD4_UserP_to_IntentionP/S-THM" org.eventb.core.confidence="0" org.eventb.core.poStamp="27" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="WD5_UserP_to_IntentionP/S-THM" org.eventb.core.confidence="0" org.eventb.core.poStamp="27" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="WD5_UserP_to_IntentionP/WD-THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="27" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>

@@ -24,10 +24,10 @@
         <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="intention ∈ intentions"/>
         <org.eventb.core.parameter name="*" org.eventb.core.identifier="terms"/>
         <org.eventb.core.parameter name="," org.eventb.core.identifier="intention"/>
-        <org.eventb.core.guard name="6" org.eventb.core.label="grd2" org.eventb.core.predicate="nextP ∈ next_programs_to_progress(intention)"/>
+        <org.eventb.core.guard name="6" org.eventb.core.label="grd2" org.eventb.core.predicate="nextP ∈ next_programs_to_progress(intention, belief_base)"/>
         <org.eventb.core.guard name="4" org.eventb.core.comment="check the chosen top element is a basic event program" org.eventb.core.label="grd3" org.eventb.core.predicate="isBasicP_event_intention(nextP)"/>
         <org.eventb.core.guard name="-" org.eventb.core.comment="destruct BasicP_event_intention to extract the terms and the event " org.eventb.core.label="grd4" org.eventb.core.predicate="basic_program_event_intention(nextP)=event↦terms"/>
-        <org.eventb.core.action name="0" org.eventb.core.assignment="intentions ≔ (intentions∖{intention}) ∪ {update_intention(intention,nextP, newnextP)}" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="0" org.eventb.core.assignment="intentions ≔ (intentions∖{intention}) ∪ {update_intention(intention,nextP, newnextP, belief_base)}" org.eventb.core.label="act1"/>
         <org.eventb.core.parameter name="5" org.eventb.core.identifier="nextP"/>
         <org.eventb.core.guard name=":" org.eventb.core.comment="there exists at least one relevant plan " org.eventb.core.label="grd5" org.eventb.core.predicate="plan_rules[{event ↦ terms}] ≠ ∅"/>
         <org.eventb.core.guard name="7" org.eventb.core.comment="if no revelant plan, Plans[{event ↦ terms}] returns empty set." org.eventb.core.label="grd6" org.eventb.core.predicate="newnextP = Relevant_plans(event↦terms, plan_rules[{event ↦ terms}])"/>
@@ -35,9 +35,9 @@
     </org.eventb.core.event>
     <org.eventb.core.event name="evt1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="SelectApplicablePlan">
         <org.eventb.core.guard name="0" org.eventb.core.label="grd1" org.eventb.core.predicate="intention ∈ intentions"/>
-        <org.eventb.core.guard name="8" org.eventb.core.label="grd2" org.eventb.core.predicate="nextP ∈ next_programs_to_progress(intention)"/>
-        <org.eventb.core.guard name="?" org.eventb.core.comment="check the chosen top element is a set of relevant plans" org.eventb.core.label="grd3" org.eventb.core.predicate="isRevelant_plans(nextP)"/>
-        <org.eventb.core.action name=")" org.eventb.core.assignment="intentions ≔ (intentions ∖ {intention}) ∪ {update_intention(intention, nextP, newnextP)}" org.eventb.core.label="act1"/>
+        <org.eventb.core.guard name="8" org.eventb.core.label="grd2" org.eventb.core.predicate="nextP ∈ next_programs_to_progress(intention, belief_base)"/>
+        <org.eventb.core.guard name="?" org.eventb.core.comment="check the chosen top element is a set of relevant plans" org.eventb.core.label="grd3" org.eventb.core.predicate="isRelevant_plans(nextP)"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="intentions ≔ (intentions ∖ {intention}) ∪ {update_intention(intention, nextP, newnextP, belief_base)}" org.eventb.core.label="act1"/>
         <org.eventb.core.guard name="D" org.eventb.core.comment="triggering_event is the destructor for Relevant_plans" org.eventb.core.label="grd4" org.eventb.core.predicate="triggering_event(nextP) = event ↦ terms"/>
         <org.eventb.core.guard name=";" org.eventb.core.comment="set_of_guarded_plan_bodies is the destructor for Relevant_plans.  " org.eventb.core.label="grd5" org.eventb.core.predicate="context ↦ applicable_plan_body ∈ set_of_guarded_plan_bodies(nextP)"/>
         <org.eventb.core.guard name="G" org.eventb.core.comment="we are not desinging most efficient unification algorithm, &#10;but rather to specif the behaviours of the semantics.&#10;Also when context is entailed by the belief base&#10;the rest of variables should be entailed as well in applicable_plan_body&#10;it means we have the following assumption no free variables in a plan&#10;that we cannot inferred from either external event or belief base." org.eventb.core.label="grd6" org.eventb.core.predicate="context ⊆ belief_base"/>
@@ -53,28 +53,28 @@
     <org.eventb.core.event name="1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ExecuteAction">
         <org.eventb.core.parameter name="(" org.eventb.core.identifier="action"/>
         <org.eventb.core.guard name="6" org.eventb.core.label="grd1" org.eventb.core.predicate="intention ∈ intentions"/>
-        <org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="nextP ∈ next_programs_to_progress(intention)"/>
+        <org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="nextP ∈ next_programs_to_progress(intention, belief_base)"/>
         <org.eventb.core.action name="-" org.eventb.core.assignment="belief_base ≔ (belief_base ∖ deletion_sets[{action ↦ terms}]) ∪ addition_sets[{action ↦ terms}]" org.eventb.core.label="act1"/>
         <org.eventb.core.guard name="C" org.eventb.core.label="grd3" org.eventb.core.predicate="isBasicP_action_intention(nextP)"/>
         <org.eventb.core.guard name="&gt;" org.eventb.core.label="grd4" org.eventb.core.predicate="basic_program_action_intention(nextP) = action ↦ terms"/>
         <org.eventb.core.guard name="1" org.eventb.core.label="grd5" org.eventb.core.predicate="preconditions[{action↦terms}] ⊆ belief_base"/>
-        <org.eventb.core.action name="2" org.eventb.core.assignment="intentions ≔ (intentions ∖ {intention}) ∪ {NilRemove(update_intention(intention, nextP, newnextP))}" org.eventb.core.comment="this is beautiful as this is only time nil is introduced after action exeuction" org.eventb.core.label="act2"/>
+        <org.eventb.core.action name="2" org.eventb.core.assignment="intentions ≔ (intentions ∖ {intention}) ∪ {NilRemove(update_intention(intention, nextP, newnextP, belief_base))}" org.eventb.core.comment="this is beautiful as this is only time nil is introduced after action exeuction" org.eventb.core.label="act2"/>
         <org.eventb.core.parameter name="5" org.eventb.core.identifier="terms"/>
         <org.eventb.core.parameter name="9" org.eventb.core.identifier="intention"/>
         <org.eventb.core.guard name=":" org.eventb.core.comment="add this as Rodin struggles to infer the type of newnextP when NilComp takes no argument " org.eventb.core.label="grd6" org.eventb.core.predicate="newnextP ∈  IntentionP(Belief_predicate_symbols, Event_predicate_symbols, Action_predicate_symbols, Terms)"/>
         <org.eventb.core.parameter name="B" org.eventb.core.identifier="nextP"/>
         <org.eventb.core.parameter name=";" org.eventb.core.identifier="newnextP"/>
-        <org.eventb.core.guard name="D" org.eventb.core.label="grd7" org.eventb.core.predicate="newnextP = Nil" org.eventb.core.theorem="true"/>
+        <org.eventb.core.guard name="D" org.eventb.core.label="grd7" org.eventb.core.predicate="newnextP = Nil"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="evt3" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="FailureRecovery">
         <org.eventb.core.parameter name="'" org.eventb.core.identifier="intention"/>
         <org.eventb.core.guard name="+" org.eventb.core.label="grd1" org.eventb.core.predicate="intention ∈ intentions"/>
-        <org.eventb.core.guard name="4" org.eventb.core.label="grd2" org.eventb.core.predicate="nextP ∈ next_programs_to_progress(intention)"/>
-        <org.eventb.core.action name="." org.eventb.core.assignment="intentions ≔ (intentions ∖ {intention}) ∪ {failure_recovery(intention, nextP, newnextP)}" org.eventb.core.comment="perform failure recovery" org.eventb.core.label="act1"/>
+        <org.eventb.core.guard name="4" org.eventb.core.label="grd2" org.eventb.core.predicate="nextP ∈ next_programs_to_progress(intention, belief_base)"/>
+        <org.eventb.core.action name="." org.eventb.core.assignment="intentions ≔ (intentions ∖ {intention}) ∪ {failure_recovery(intention, nextP, belief_base, newnextP)}" org.eventb.core.comment="perform failure recovery" org.eventb.core.label="act1"/>
         <org.eventb.core.parameter name="5" org.eventb.core.identifier="nextP"/>
         <org.eventb.core.parameter name="6" org.eventb.core.identifier="newnextP"/>
-        <org.eventb.core.guard name="7" org.eventb.core.comment="not too happy with the current rodin defintion of no applicable plan" org.eventb.core.label="grd3" org.eventb.core.predicate="  (isBasicP_action_intention(nextP) &#10;   &#9;   ∧ ¬ (preconditions[{basic_program_action_intention(nextP)}] ⊆ belief_base)&#10;       )  &#10;∨ &#10;      (isBasicP_event_intention(nextP) &#10;      ∧ plan_rules[{basic_program_event_intention(nextP)}] = ∅&#10;      )  &#10;&#10;∨ &#10;      (isRevelant_plans(nextP) &#10;      ∧ (∀ context · context ↦ plan_body ∈ set_of_guarded_plan_bodies(nextP) ⇒ context ⊈ belief_base)&#10;      ) &#10;∨ &#10;      isFalse(nextP)"/>
-        <org.eventb.core.guard name="8" org.eventb.core.comment="Nil is the initial value" org.eventb.core.label="grd4" org.eventb.core.predicate="newnextP = get_backups_for_current_program(intention, nextP, Nil)"/>
+        <org.eventb.core.guard name="7" org.eventb.core.comment="not too happy with the current rodin defintion of no applicable plan" org.eventb.core.label="grd3" org.eventb.core.predicate="  (isBasicP_action_intention(nextP) &#10;   &#9;   ∧ ¬ (preconditions[{basic_program_action_intention(nextP)}] ⊆ belief_base)&#10;       )  &#10;∨ &#10;      (isBasicP_event_intention(nextP) &#10;      ∧ plan_rules[{basic_program_event_intention(nextP)}] = ∅&#10;      )  &#10;∨ &#10;      (isRelevant_plans(nextP) &#10;      ∧ (∀ context · context ↦ plan_body ∈ set_of_guarded_plan_bodies(nextP) ⇒ context ⊈ belief_base)&#10;      ) &#10;∨ &#10;      isFalse(nextP)"/>
+        <org.eventb.core.guard name="8" org.eventb.core.comment="Nil is the initial value" org.eventb.core.label="grd4" org.eventb.core.predicate="newnextP = get_backup_for_current_plan(intention, nextP, belief_base, Nil)"/>
         <org.eventb.core.guard name="9" org.eventb.core.comment="double check the non-initial value is returned" org.eventb.core.label="grd5" org.eventb.core.predicate="newnextP ≠ Nil "/>
         <org.eventb.core.parameter name="?" org.eventb.core.identifier="plan_body"/>
     </org.eventb.core.event>
@@ -83,134 +83,54 @@
         <org.eventb.core.parameter name="(" org.eventb.core.identifier="intention"/>
         <org.eventb.core.parameter name=")" org.eventb.core.identifier="nextP"/>
         <org.eventb.core.parameter name="*" org.eventb.core.identifier="newnextP"/>
-        <org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="nextP ∈ next_programs_to_progress(intention)"/>
+        <org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="nextP ∈ next_programs_to_progress(intention, belief_base)"/>
         <org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="isDeclarative_goal_intention(nextP)"/>
         <org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="success_condition(nextP) ⊆ belief_base"/>
         <org.eventb.core.guard name="." org.eventb.core.label="grd5" org.eventb.core.predicate="newnextP ∈ IntentionP(Belief_predicate_symbols,Event_predicate_symbols, Action_predicate_symbols, Terms)"/>
         <org.eventb.core.guard name="/" org.eventb.core.label="grd6" org.eventb.core.predicate="newnextP = Nil"/>
-        <org.eventb.core.action name="0" org.eventb.core.assignment="intentions ≔ (intentions ∖ {intention}) ∪ {NilRemove(update_intention(intention, nextP, newnextP))}" org.eventb.core.comment="this needs NilRemove as Nil is introduced " org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="0" org.eventb.core.assignment="intentions ≔ (intentions ∖ {intention}) ∪ {NilRemove(update_intention(intention, nextP, newnextP, belief_base))}" org.eventb.core.comment="this needs NilRemove as Nil is introduced " org.eventb.core.label="act1"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="evt5" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="DeclarativeGoalFailure">
         <org.eventb.core.parameter name="'" org.eventb.core.identifier="intention"/>
         <org.eventb.core.parameter name="(" org.eventb.core.identifier="nextP"/>
         <org.eventb.core.parameter name=")" org.eventb.core.identifier="newnextP"/>
         <org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="intention ∈ intentions"/>
-        <org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="nextP ∈ next_programs_to_progress(intention)"/>
+        <org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="nextP ∈ next_programs_to_progress(intention, belief_base)"/>
         <org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="isDeclarative_goal_intention(nextP)"/>
         <org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="failure_condition(nextP) ⊆ belief_base"/>
         <org.eventb.core.guard name="." org.eventb.core.label="grd5" org.eventb.core.predicate="newnextP ∈ IntentionP(Belief_predicate_symbols,Event_predicate_symbols, Action_predicate_symbols, Terms)"/>
         <org.eventb.core.guard name="/" org.eventb.core.label="grd6" org.eventb.core.predicate="newnextP = False"/>
-        <org.eventb.core.action name="0" org.eventb.core.assignment="intentions ≔ (intentions ∖ {intention}) ∪ {update_intention(intention, nextP, newnextP)}" org.eventb.core.comment="this does not need NilRemove as no Nil is introduced" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="0" org.eventb.core.assignment="intentions ≔ (intentions ∖ {intention}) ∪ {update_intention(intention, nextP, newnextP, belief_base)}" org.eventb.core.comment="this does not need NilRemove as no Nil is introduced" org.eventb.core.label="act1"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="evt6" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="DeclarativeGoalInit">
         <org.eventb.core.parameter name="'" org.eventb.core.identifier="intention"/>
         <org.eventb.core.parameter name="(" org.eventb.core.identifier="nextP"/>
         <org.eventb.core.parameter name="+" org.eventb.core.identifier="newnextP"/>
         <org.eventb.core.guard name="," org.eventb.core.label="grd1" org.eventb.core.predicate="intention ∈ intentions"/>
-        <org.eventb.core.guard name="-" org.eventb.core.label="grd2" org.eventb.core.predicate="nextP ∈ next_programs_to_progress(intention)"/>
+        <org.eventb.core.guard name="-" org.eventb.core.label="grd2" org.eventb.core.predicate="nextP ∈ next_programs_to_progress(intention, belief_base)"/>
         <org.eventb.core.guard name="." org.eventb.core.label="grd3" org.eventb.core.predicate="isDeclarative_goal_intention(nextP)"/>
-        <org.eventb.core.guard name="/" org.eventb.core.label="grd4" org.eventb.core.predicate="¬ isTry_current_with_backups(procedural_program(nextP))"/>
+        <org.eventb.core.guard name="/" org.eventb.core.comment="equivalent to isBasicP_event_intention(procedural_program(nextP))" org.eventb.core.label="grd4" org.eventb.core.predicate="¬ isTry_current_with_backups(procedural_program(nextP))"/>
         <org.eventb.core.guard name="3" org.eventb.core.label="grd5" org.eventb.core.predicate="success_condition(nextP) ⊈ belief_base"/>
         <org.eventb.core.guard name="4" org.eventb.core.label="grd6" org.eventb.core.predicate="failure_condition(nextP) ⊈ belief_base"/>
         <org.eventb.core.guard name="1" org.eventb.core.label="grd7" org.eventb.core.predicate="newnextP = Declarative_goal_intention&#10;           (success_condition(nextP), &#10;            Try_current_with_backups(procedural_program(nextP), procedural_program(nextP)),&#10;            failure_condition(nextP)&#10;           ) "/>
-        <org.eventb.core.action name="2" org.eventb.core.assignment="intentions ≔ (intentions ∖ {intention}) ∪ {update_intention(intention, nextP, newnextP)}" org.eventb.core.label="act1"/>
-    </org.eventb.core.event>
-    <org.eventb.core.event name="evt7" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="DeclarativeGoalActionExecution">
-        <org.eventb.core.parameter name="'" org.eventb.core.identifier="intention"/>
-        <org.eventb.core.parameter name="(" org.eventb.core.identifier="nextP"/>
-        <org.eventb.core.parameter name=")" org.eventb.core.identifier="current"/>
-        <org.eventb.core.parameter name="*" org.eventb.core.identifier="backups"/>
-        <org.eventb.core.parameter name="8" org.eventb.core.identifier="nextnextP"/>
-        <org.eventb.core.parameter name="5" org.eventb.core.identifier="newnextnextP"/>
-        <org.eventb.core.guard name="-" org.eventb.core.label="grd1" org.eventb.core.predicate="intention ∈ intentions"/>
-        <org.eventb.core.guard name="." org.eventb.core.label="grd2" org.eventb.core.predicate="nextP ∈ next_programs_to_progress(intention)"/>
-        <org.eventb.core.guard name="/" org.eventb.core.label="grd3" org.eventb.core.predicate="isDeclarative_goal_intention(nextP)"/>
-        <org.eventb.core.guard name="0" org.eventb.core.label="grd4" org.eventb.core.predicate="procedural_program(nextP) = Try_current_with_backups(current, backups) "/>
-        <org.eventb.core.guard name="2" org.eventb.core.label="grd5" org.eventb.core.predicate="success_condition(nextP) ⊈ belief_base"/>
-        <org.eventb.core.guard name="3" org.eventb.core.label="grd6" org.eventb.core.predicate="failure_condition(nextP) ⊈ belief_base"/>
-        <org.eventb.core.guard name="9" org.eventb.core.label="grd7" org.eventb.core.predicate="nextnextP ∈ next_programs_to_progress(current)"/>
-        <org.eventb.core.guard name="1" org.eventb.core.label="grd8" org.eventb.core.predicate="  isBasicP_action_intention(nextnextP) &#10;      ∧ preconditions[{basic_program_action_intention(nextnextP)}] ⊆ belief_base "/>
-        <org.eventb.core.guard name="4" org.eventb.core.label="grd9" org.eventb.core.predicate="  newnextnextP ∈  IntentionP(Belief_predicate_symbols,Event_predicate_symbols, Action_predicate_symbols,  Terms) &#10;      ∧ newnextnextP = Nil"/>
-        <org.eventb.core.action name="6" org.eventb.core.assignment="belief_base ≔ (belief_base ∖ deletion_sets[{basic_program_action_intention(nextnextP)}]) ∪ addition_sets[{basic_program_action_intention(nextnextP)}]" org.eventb.core.label="act1"/>
-        <org.eventb.core.action name="7" org.eventb.core.assignment="intentions ≔ (intentions ∖ {intention}) ∪ {NilRemove(update_intention(intention, nextnextP, newnextnextP))}" org.eventb.core.label="act2"/>
-    </org.eventb.core.event>
-    <org.eventb.core.event name="evt8" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="DeclarativeGoalRelevantPlanSelection">
-        <org.eventb.core.parameter name="'" org.eventb.core.identifier="intention"/>
-        <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="intention ∈ intentions"/>
-        <org.eventb.core.parameter name=")" org.eventb.core.identifier="nextP"/>
-        <org.eventb.core.parameter name="*" org.eventb.core.identifier="current"/>
-        <org.eventb.core.parameter name="+" org.eventb.core.identifier="backups"/>
-        <org.eventb.core.parameter name="." org.eventb.core.identifier="nextnextP"/>
-        <org.eventb.core.guard name="/" org.eventb.core.label="grd2" org.eventb.core.predicate="nextP ∈ next_programs_to_progress(intention)"/>
-        <org.eventb.core.guard name="0" org.eventb.core.label="grd3" org.eventb.core.predicate="isDeclarative_goal_intention(nextP)"/>
-        <org.eventb.core.guard name="1" org.eventb.core.label="grd4" org.eventb.core.predicate="procedural_program(nextP) = Try_current_with_backups(current, backups) "/>
-        <org.eventb.core.guard name="2" org.eventb.core.label="grd5" org.eventb.core.predicate="success_condition(nextP) ⊈ belief_base"/>
-        <org.eventb.core.guard name="3" org.eventb.core.label="grd6" org.eventb.core.predicate="failure_condition(nextP) ⊈ belief_base"/>
-        <org.eventb.core.guard name="8" org.eventb.core.label="grd7" org.eventb.core.predicate="nextnextP ∈ next_programs_to_progress(current)"/>
-        <org.eventb.core.guard name=";" org.eventb.core.label="grd8" org.eventb.core.predicate="plan_rules[{basic_program_event_intention(nextnextP)}] ≠ ∅"/>
-        <org.eventb.core.guard name="5" org.eventb.core.label="grd9" org.eventb.core.predicate="newnextnextP = Relevant_plans(basic_program_event_intention(nextnextP), plan_rules[{basic_program_event_intention(nextnextP)}])"/>
-        <org.eventb.core.parameter name="7" org.eventb.core.identifier="newnextnextP"/>
-        <org.eventb.core.action name="9" org.eventb.core.assignment="intentions ≔ (intentions∖{intention}) ∪ {update_intention(intention,nextnextP, newnextnextP)}" org.eventb.core.label="act1"/>
-    </org.eventb.core.event>
-    <org.eventb.core.event name="evt9" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="DeclarativeGoalApplicablePlanSelection">
-        <org.eventb.core.parameter name="'" org.eventb.core.identifier="intention"/>
-        <org.eventb.core.parameter name="(" org.eventb.core.identifier="nextP"/>
-        <org.eventb.core.parameter name=")" org.eventb.core.identifier="current"/>
-        <org.eventb.core.parameter name="*" org.eventb.core.identifier="backups"/>
-        <org.eventb.core.parameter name="/" org.eventb.core.identifier="nextnextP"/>
-        <org.eventb.core.guard name="," org.eventb.core.label="grd1" org.eventb.core.predicate="intention ∈ intentions"/>
-        <org.eventb.core.parameter name=":" org.eventb.core.identifier="context"/>
-        <org.eventb.core.parameter name="." org.eventb.core.identifier="applicable_plan_body"/>
-        <org.eventb.core.parameter name="0" org.eventb.core.identifier="newnextnextP"/>
-        <org.eventb.core.guard name="1" org.eventb.core.label="grd2" org.eventb.core.predicate="nextP ∈ next_programs_to_progress(intention)"/>
-        <org.eventb.core.guard name="2" org.eventb.core.label="grd3" org.eventb.core.predicate="isDeclarative_goal_intention(nextP)"/>
-        <org.eventb.core.guard name="3" org.eventb.core.label="grd4" org.eventb.core.predicate="procedural_program(nextP) = Try_current_with_backups(current, backups) "/>
-        <org.eventb.core.guard name="4" org.eventb.core.label="grd5" org.eventb.core.predicate="success_condition(nextP) ⊈ belief_base"/>
-        <org.eventb.core.guard name="5" org.eventb.core.label="grd6" org.eventb.core.predicate="failure_condition(nextP) ⊈ belief_base"/>
-        <org.eventb.core.guard name="6" org.eventb.core.label="grd7" org.eventb.core.predicate="nextnextP ∈ next_programs_to_progress(current)"/>
-        <org.eventb.core.guard name="7" org.eventb.core.label="grd8" org.eventb.core.predicate="isRevelant_plans(nextnextP) &#10;∧ context ↦ applicable_plan_body ∈ set_of_guarded_plan_bodies(nextnextP)&#10;∧ context ⊆ belief_base"/>
-        <org.eventb.core.guard name="8" org.eventb.core.label="grd9" org.eventb.core.predicate="newnextnextP = Try_current_with_backups(UserP_to_IntentionP(applicable_plan_body), Relevant_plans(triggering_event(nextnextP), set_of_guarded_plan_bodies(nextnextP) ∖ {context ↦ applicable_plan_body} )) "/>
-        <org.eventb.core.action name="9" org.eventb.core.assignment="intentions ≔ (intentions ∖ {intention}) ∪ {update_intention(intention, nextnextP, newnextnextP)}" org.eventb.core.label="act1"/>
-    </org.eventb.core.event>
-    <org.eventb.core.event name="evt:" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="DeclarativeGoalStandardFailureRecovery">
-        <org.eventb.core.parameter name="'" org.eventb.core.identifier="intention"/>
-        <org.eventb.core.parameter name="(" org.eventb.core.identifier="nextP"/>
-        <org.eventb.core.parameter name=")" org.eventb.core.identifier="current"/>
-        <org.eventb.core.parameter name="*" org.eventb.core.identifier="backups"/>
-        <org.eventb.core.parameter name="+" org.eventb.core.identifier="nextnextP"/>
-        <org.eventb.core.parameter name="1" org.eventb.core.identifier="newnextnextP"/>
-        <org.eventb.core.guard name="2" org.eventb.core.label="grd1" org.eventb.core.predicate="intention ∈ intentions"/>
-        <org.eventb.core.guard name="3" org.eventb.core.label="grd2" org.eventb.core.predicate="nextP ∈ next_programs_to_progress(intention)"/>
-        <org.eventb.core.guard name="4" org.eventb.core.label="grd3" org.eventb.core.predicate="isDeclarative_goal_intention(nextP)"/>
-        <org.eventb.core.guard name="5" org.eventb.core.label="grd4" org.eventb.core.predicate="procedural_program(nextP) = Try_current_with_backups(current, backups) "/>
-        <org.eventb.core.action name="6" org.eventb.core.assignment="intentions ≔ (intentions ∖ {intention}) ∪ {failure_recovery(intention, nextnextP, newnextnextP)}" org.eventb.core.label="act1"/>
-        <org.eventb.core.guard name="=" org.eventb.core.comment="&#10;in the case goal(s, e:(|/\|) |&gt;e, f), &#10;where e is the top event in the procedual program&#10;it either has to progress&#10;or it implies that the standard failure recovery &#10;has applied to the top then in this case, &#10;we have to re-install it to e |&gt; e" org.eventb.core.label="grd5" org.eventb.core.predicate="¬ isRevelant_plans(current)"/>
-        <org.eventb.core.guard name="7" org.eventb.core.label="grd6" org.eventb.core.predicate="success_condition(nextP) ⊈ belief_base"/>
-        <org.eventb.core.guard name="8" org.eventb.core.label="grd7" org.eventb.core.predicate="failure_condition(nextP) ⊈ belief_base"/>
-        <org.eventb.core.guard name="9" org.eventb.core.label="grd8" org.eventb.core.predicate="nextnextP ∈ next_programs_to_progress(current)"/>
-        <org.eventb.core.guard name=":" org.eventb.core.comment="&#10;i deliberatively do not handle False case as it is generated only by declarative goal, &#10;and it implies that i do not allow the nested declarative structures&#10;e.g. goal(s, goal(s1, e1, f1) |&gt; e, f)" org.eventb.core.label="grd9" org.eventb.core.predicate="(isBasicP_action_intention(nextnextP) &#10;  ∧ ¬ (preconditions[{basic_program_action_intention(nextnextP)}] ⊆ belief_base)&#10;  )  &#10;∨ &#10;  (isBasicP_event_intention(nextnextP) &#10;  ∧ plan_rules[{basic_program_event_intention(nextnextP)}] = ∅&#10;  )  &#10;&#10;∨ &#10;  (isRevelant_plans(nextnextP) &#10;  ∧ (∀ context ·&#10;            context ↦ plan_body ∈ set_of_guarded_plan_bodies(nextnextP) &#10;            ⇒ context ⊈ belief_base)&#10;       ) "/>
-        <org.eventb.core.guard name=";" org.eventb.core.label="grd10" org.eventb.core.predicate="newnextnextP = get_backups_for_current_program(intention, nextnextP, Nil)"/>
-        <org.eventb.core.parameter name="&gt;" org.eventb.core.identifier="plan_body"/>
+        <org.eventb.core.action name="2" org.eventb.core.assignment="intentions ≔ (intentions ∖ {intention}) ∪ {update_intention(intention, nextP, newnextP, belief_base)}" org.eventb.core.label="act1"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="evt=" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="DeclarativeGoalPersistentFailureRecovery">
         <org.eventb.core.parameter name="'" org.eventb.core.identifier="intention"/>
         <org.eventb.core.parameter name="(" org.eventb.core.identifier="nextP"/>
-        <org.eventb.core.parameter name=")" org.eventb.core.identifier="current"/>
         <org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="intention ∈ intentions"/>
-        <org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="nextP ∈ next_programs_to_progress(intention)"/>
-        <org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="isDeclarative_goal_intention(nextP)"/>
-        <org.eventb.core.action name="-" org.eventb.core.assignment="intentions ≔ (intentions ∖ {intention}) ∪ {update_intention(intention, nextP, newnextP)}" org.eventb.core.label="act1"/>
-        <org.eventb.core.guard name="." org.eventb.core.label="grd4" org.eventb.core.predicate="procedural_program(nextP) = Try_current_with_backups(current, backups)"/>
-        <org.eventb.core.guard name="/" org.eventb.core.label="grd5" org.eventb.core.predicate="  isRevelant_plans(current)&#10;∧ &#10;    (∀ context · &#10;      context ↦ plan_body ∈ set_of_guarded_plan_bodies(current) &#10;       ⇒ context ⊈ belief_base&#10;     )"/>
-        <org.eventb.core.guard name="0" org.eventb.core.label="grd6" org.eventb.core.predicate="newnextP = Declarative_goal_intention&#10;   (success_condition(nextP), &#10;    Try_current_with_backups(backups, backups),&#10;    failure_condition(nextP)&#10;    )"/>
-        <org.eventb.core.parameter name="1" org.eventb.core.identifier="backups"/>
+        <org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="nextP ∈ next_programs_to_progress(intention, belief_base)"/>
+        <org.eventb.core.action name="-" org.eventb.core.assignment="intentions ≔ (intentions ∖ {intention}) ∪ {update_intention(intention, nextP, newnextP, belief_base)}" org.eventb.core.label="act1"/>
+        <org.eventb.core.guard name="." org.eventb.core.label="grd4" org.eventb.core.predicate="¬ isTry_current_with_backups(get_backup_for_current_plan(intention, nextP, belief_base, Nil))"/>
+        <org.eventb.core.guard name="/" org.eventb.core.label="grd5" org.eventb.core.predicate=" isRelevant_plans(nextP)&#10;    ∧  &#10;    (∀ context · context ↦ plan_body ∈ set_of_guarded_plan_bodies(nextP) ⇒ context ⊈ belief_base)"/>
+        <org.eventb.core.guard name="0" org.eventb.core.label="grd6" org.eventb.core.predicate="newnextP = get_backup_for_current_plan(intention, nextP, belief_base, Nil)"/>
         <org.eventb.core.parameter name="4" org.eventb.core.identifier="plan_body"/>
         <org.eventb.core.parameter name="5" org.eventb.core.identifier="newnextP"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="evt;" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Aupdate">
         <org.eventb.core.parameter name="'" org.eventb.core.identifier="intention"/>
         <org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="intention ∈ intentions"/>
-        <org.eventb.core.guard name="*" org.eventb.core.comment="&#10;either fully executed, leaving a nil&#10;or backpropogate the failure to the event comes from the external event set&#10;and such event no longer has any applicable plan." org.eventb.core.label="grd2" org.eventb.core.predicate="(&#10;      intention = Nil&#10;     ∨&#10;     ( isRevelant_plans(intention) &#10;        ∧ &#10;         (∀ context · &#10;               context ↦ plan_body ∈ set_of_guarded_plan_bodies(intention) &#10;               ⇒ context ⊈ belief_base&#10;          )&#10;      ) &#10;) "/>
+        <org.eventb.core.guard name="*" org.eventb.core.comment="&#10;either fully executed, leaving a nil&#10;or backpropogate the failure to the event comes from the external event set&#10;and such event no longer has any applicable plan." org.eventb.core.label="grd2" org.eventb.core.predicate="(&#10;      intention = Nil&#10;     ∨&#10;     ( isRelevant_plans(intention) &#10;        ∧ &#10;         (∀ context · &#10;               context ↦ plan_body ∈ set_of_guarded_plan_bodies(intention) &#10;               ⇒ context ⊈ belief_base&#10;          )&#10;      ) &#10;) "/>
         <org.eventb.core.parameter name="+" org.eventb.core.identifier="plan_body"/>
         <org.eventb.core.action name="-" org.eventb.core.assignment="intentions ≔ (intentions ∖ {intention})" org.eventb.core.label="act1"/>
     </org.eventb.core.event>

@@ -178,8 +178,8 @@
         <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
             <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1"/>
         </org.eventb.core.prRule>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="TRUE AND FALSE=FALSE"/>
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="(TRUE=TRUE∧FALSE=TRUE)∨¬TRUE=TRUE∨¬FALSE=TRUE⇒TRUE AND FALSE=FALSE"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="TRUE AND FALSE=FALSE"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="rewFAT/S/rhs1" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
@@ -202,8 +202,8 @@
         <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
             <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1"/>
         </org.eventb.core.prRule>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="FALSE AND TRUE=FALSE"/>
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="(FALSE=TRUE∧TRUE=TRUE)∨¬FALSE=TRUE∨¬TRUE=TRUE⇒FALSE AND TRUE=FALSE"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="FALSE AND TRUE=FALSE"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="rewFAF/S/rhs1" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
@@ -274,8 +274,8 @@
         <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
             <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1"/>
         </org.eventb.core.prRule>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="TRUE OR FALSE=TRUE"/>
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="TRUE=TRUE∨FALSE=TRUE∨(¬TRUE=TRUE∧¬FALSE=TRUE)⇒TRUE OR FALSE=TRUE"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="TRUE OR FALSE=TRUE"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="rewFOT/S/rhs1" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
@@ -298,8 +298,8 @@
         <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
             <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1"/>
         </org.eventb.core.prRule>
-        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="FALSE=TRUE∨TRUE=TRUE∨(¬FALSE=TRUE∧¬TRUE=TRUE)⇒FALSE OR TRUE=TRUE"/>
         <org.eventb.core.prPred name="p1" org.eventb.core.predicate="FALSE OR TRUE=TRUE"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="FALSE=TRUE∨TRUE=TRUE∨(¬FALSE=TRUE∧¬TRUE=TRUE)⇒FALSE OR TRUE=TRUE"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="rewFOF/S/rhs1" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
