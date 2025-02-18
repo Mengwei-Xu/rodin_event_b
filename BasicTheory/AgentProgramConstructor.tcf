@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.theory.core.scTheoryRoot org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.theory.core.thy" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf">
+<org.eventb.theory.core.scTheoryRoot org.eventb.core.accurate="false" org.eventb.core.configuration="org.eventb.theory.core.thy" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf">
     <org.eventb.theory.core.scTypeParameter name="Belief_predicate_symbols" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.typeParameter#'" org.eventb.core.type="ℙ(Belief_predicate_symbols)"/>
     <org.eventb.theory.core.scTypeParameter name="Action_predicate_symbols" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.typeParameter#)" org.eventb.core.type="ℙ(Action_predicate_symbols)"/>
     <org.eventb.theory.core.scTypeParameter name="Event_predicate_symbols" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.typeParameter#(" org.eventb.core.type="ℙ(Event_predicate_symbols)"/>
