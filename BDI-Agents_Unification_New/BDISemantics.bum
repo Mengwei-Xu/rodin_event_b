@@ -134,4 +134,5 @@
         <org.eventb.core.parameter name="+" org.eventb.core.identifier="plan_body"/>
         <org.eventb.core.action name="-" org.eventb.core.assignment="intentions ≔ (intentions ∖ {intention})" org.eventb.core.label="act1"/>
     </org.eventb.core.event>
+    <org.eventb.core.invariant name="evt&gt;" org.eventb.core.label="inv4" org.eventb.core.predicate="∀ intention · intention ∈ intentions ⇒ backup_plans_WD(intention)"/>
 </org.eventb.core.machineFile>

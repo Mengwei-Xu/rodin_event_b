@@ -40,12 +40,6 @@
         <org.eventb.core.poIdentifier name="arrive_at" org.eventb.core.type="Event_predicate_symbols"/>
         <org.eventb.core.poIdentifier name="Initial_belief_base" org.eventb.core.type="ℙ(Belief_predicate_symbols×Terms)"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="axm1/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="0">
-        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BDI-Agents_Unification_New/BDIExample.bpo|org.eventb.core.poFile#BDIExample|org.eventb.core.poPredicateSet#ABSHYP"/>
-        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="partition(Belief_predicate_symbols,{at},{smiled_at},{cried_at},{next})" org.eventb.core.source="/BDI-Agents_Unification_New/BDIExample.buc|org.eventb.core.contextFile#BDIExample|org.eventb.core.axiom#E"/>
-        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BDI-Agents_Unification_New/BDIExample.buc|org.eventb.core.contextFile#BDIExample|org.eventb.core.axiom#E"/>
-        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/BDI-Agents_Unification_New/BDIExample.bpo|org.eventb.core.poFile#BDIExample|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/BDI-Agents_Unification_New/BDIExample.bpo|org.eventb.core.poFile#BDIExample|org.eventb.core.poPredicateSet#ABSHYP"/>
-    </org.eventb.core.poSequent>
     <org.eventb.core.poSequent name="axm4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BDI-Agents_Unification_New/BDIExample.bpo|org.eventb.core.poFile#BDIExample|org.eventb.core.poPredicateSet#HYPTermsContexw"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀terms1⦂Terms,terms2⦂Terms·terms1∈Point∧terms2∈Point⇒terms1 ↦ terms2∈dom(Vector)∧Vector∈Terms × Terms ⇸ Terms" org.eventb.core.source="/BDI-Agents_Unification_New/BDIExample.buc|org.eventb.core.contextFile#BDIExample|org.eventb.core.axiom#'H"/>
