@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="1">
+    <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="DATA" org.eventb.core.type="ℙ(DATA)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Data/Sampler2.bpo|org.eventb.core.poFile#Sampler2|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="1">
+        <org.eventb.core.poIdentifier name="pd" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="sd" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="data" org.eventb.core.type="ℙ(DATA×ℤ)"/>
+        <org.eventb.core.poPredicate name="datb" org.eventb.core.predicate="data∈DATA ⇸ ℤ" org.eventb.core.source="/Data/Sampler.bum|org.eventb.core.machineFile#Sampler|org.eventb.core.invariant#)"/>
+        <org.eventb.core.poPredicate name="datc" org.eventb.core.predicate="finite(data)" org.eventb.core.source="/Data/Sampler.bum|org.eventb.core.machineFile#Sampler|org.eventb.core.invariant#-"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="inv1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="1">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Data/Sampler2.bpo|org.eventb.core.poFile#Sampler2|org.eventb.core.poPredicateSet#ABSHYP"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="data∈DATA ⇸ ℤ∧finite(data)" org.eventb.core.source="/Data/Sampler2.bum|org.eventb.core.machineFile#Sampler2|org.eventb.core.invariant#\/"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Data/Sampler2.bum|org.eventb.core.machineFile#Sampler2|org.eventb.core.invariant#\/"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Data/Sampler2.bpo|org.eventb.core.poFile#Sampler2|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Data/Sampler2.bpo|org.eventb.core.poFile#Sampler2|org.eventb.core.poPredicateSet#ABSHYP"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="inv2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="1">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Data/Sampler2.bpo|org.eventb.core.poFile#Sampler2|org.eventb.core.poPredicateSet#HYPC4"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="data∈DATA ⇸ ℤ∧finite(data)" org.eventb.core.source="/Data/Sampler2.bum|org.eventb.core.machineFile#Sampler2|org.eventb.core.invariant#1"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Data/Sampler2.bum|org.eventb.core.machineFile#Sampler2|org.eventb.core.invariant#1"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Data/Sampler2.bpo|org.eventb.core.poFile#Sampler2|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Data/Sampler2.bpo|org.eventb.core.poFile#Sampler2|org.eventb.core.poPredicateSet#HYPC4"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="1">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Data/Sampler2.bpo|org.eventb.core.poFile#Sampler2|org.eventb.core.poPredicateSet#EVTALLHYPdatb"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0=SUM(∅ ⦂ ℙ(DATA×ℤ))" org.eventb.core.source="/Data/Sampler2.bum|org.eventb.core.machineFile#Sampler2|org.eventb.core.invariant#\/"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Data/Sampler.bum|org.eventb.core.machineFile#Sampler|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Data/Sampler2.bum|org.eventb.core.machineFile#Sampler2|org.eventb.core.event#+"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Data/Sampler2.bum|org.eventb.core.machineFile#Sampler2|org.eventb.core.invariant#\/"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Data/Sampler2.bpo|org.eventb.core.poFile#Sampler2|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Data/Sampler2.bpo|org.eventb.core.poFile#Sampler2|org.eventb.core.poSequent#INITIALISATION\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Data/Sampler2.bpo|org.eventb.core.poFile#Sampler2|org.eventb.core.poPredicateSet#HYPC4|org.eventb.core.poPredicate#PRD0"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="1">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Data/Sampler2.bpo|org.eventb.core.poFile#Sampler2|org.eventb.core.poPredicateSet#EVTALLHYPdatb"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="1=PRODUCT(∅ ⦂ ℙ(DATA×ℤ))" org.eventb.core.source="/Data/Sampler2.bum|org.eventb.core.machineFile#Sampler2|org.eventb.core.invariant#1"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Data/Sampler.bum|org.eventb.core.machineFile#Sampler|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Data/Sampler2.bum|org.eventb.core.machineFile#Sampler2|org.eventb.core.event#+"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Data/Sampler2.bum|org.eventb.core.machineFile#Sampler2|org.eventb.core.invariant#1"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Data/Sampler2.bpo|org.eventb.core.poFile#Sampler2|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Data/Sampler2.bpo|org.eventb.core.poFile#Sampler2|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Data/Sampler2.bpo|org.eventb.core.poFile#Sampler2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTdatb" org.eventb.core.parentSet="/Data/Sampler2.bpo|org.eventb.core.poFile#Sampler2|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="1">
+        <org.eventb.core.poIdentifier name="sd'" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="data'" org.eventb.core.type="ℙ(DATA×ℤ)"/>
+        <org.eventb.core.poIdentifier name="pd'" org.eventb.core.type="ℤ"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPdatb" org.eventb.core.parentSet="/Data/Sampler2.bpo|org.eventb.core.poFile#Sampler2|org.eventb.core.poPredicateSet#EVTIDENTdatb" org.eventb.core.poStamp="1"/>
+    <org.eventb.core.poSequent name="addValue/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Data/Sampler2.bpo|org.eventb.core.poFile#Sampler2|org.eventb.core.poPredicateSet#EVTALLHYPdatc"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="sd+v=SUM(data∪{d ↦ v})" org.eventb.core.source="/Data/Sampler2.bum|org.eventb.core.machineFile#Sampler2|org.eventb.core.invariant#\/"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Data/Sampler.bum|org.eventb.core.machineFile#Sampler|org.eventb.core.event#+"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Data/Sampler2.bum|org.eventb.core.machineFile#Sampler2|org.eventb.core.event#,"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Data/Sampler2.bum|org.eventb.core.machineFile#Sampler2|org.eventb.core.invariant#\/"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Data/Sampler2.bpo|org.eventb.core.poFile#Sampler2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Data/Sampler2.bpo|org.eventb.core.poFile#Sampler2|org.eventb.core.poSequent#addValue\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Data/Sampler2.bpo|org.eventb.core.poFile#Sampler2|org.eventb.core.poPredicateSet#HYPC4|org.eventb.core.poPredicate#PRD0"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="addValue/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Data/Sampler2.bpo|org.eventb.core.poFile#Sampler2|org.eventb.core.poPredicateSet#EVTALLHYPdatc"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="pd∗v=PRODUCT(data∪{d ↦ v})" org.eventb.core.source="/Data/Sampler2.bum|org.eventb.core.machineFile#Sampler2|org.eventb.core.invariant#1"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Data/Sampler.bum|org.eventb.core.machineFile#Sampler|org.eventb.core.event#+"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Data/Sampler2.bum|org.eventb.core.machineFile#Sampler2|org.eventb.core.event#,"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Data/Sampler2.bum|org.eventb.core.machineFile#Sampler2|org.eventb.core.invariant#1"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Data/Sampler2.bpo|org.eventb.core.poFile#Sampler2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Data/Sampler2.bpo|org.eventb.core.poFile#Sampler2|org.eventb.core.poSequent#addValue\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Data/Sampler2.bpo|org.eventb.core.poFile#Sampler2|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTdatc" org.eventb.core.parentSet="/Data/Sampler2.bpo|org.eventb.core.poFile#Sampler2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="1">
+        <org.eventb.core.poIdentifier name="sd'" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="data'" org.eventb.core.type="ℙ(DATA×ℤ)"/>
+        <org.eventb.core.poIdentifier name="v" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="d" org.eventb.core.type="DATA"/>
+        <org.eventb.core.poIdentifier name="pd'" org.eventb.core.type="ℤ"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPdatc" org.eventb.core.parentSet="/Data/Sampler2.bpo|org.eventb.core.poFile#Sampler2|org.eventb.core.poPredicateSet#EVTIDENTdatc" org.eventb.core.poStamp="1">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="d∈DATA ∖ dom(data)" org.eventb.core.source="/Data/Sampler.bum|org.eventb.core.machineFile#Sampler|org.eventb.core.event#+|org.eventb.core.guard#)"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="v∈ℤ" org.eventb.core.source="/Data/Sampler.bum|org.eventb.core.machineFile#Sampler|org.eventb.core.event#+|org.eventb.core.guard#*"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="getStats/grd1/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="1">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Data/Sampler2.bpo|org.eventb.core.poFile#Sampler2|org.eventb.core.poPredicateSet#EVTALLHYPdatd"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="s=SUM(data)" org.eventb.core.source="/Data/Sampler.bum|org.eventb.core.machineFile#Sampler|org.eventb.core.event#,|org.eventb.core.guard#)"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Data/Sampler.bum|org.eventb.core.machineFile#Sampler|org.eventb.core.event#,"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Data/Sampler.bum|org.eventb.core.machineFile#Sampler|org.eventb.core.event#,|org.eventb.core.guard#)"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Data/Sampler2.bum|org.eventb.core.machineFile#Sampler2|org.eventb.core.event#-"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Data/Sampler2.bpo|org.eventb.core.poFile#Sampler2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Data/Sampler2.bpo|org.eventb.core.poFile#Sampler2|org.eventb.core.poSequent#getStats\/grd1\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="getStats/grd2/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="1">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Data/Sampler2.bpo|org.eventb.core.poFile#Sampler2|org.eventb.core.poPredicateSet#EVTALLHYPdatd"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="p=PRODUCT(data)" org.eventb.core.source="/Data/Sampler.bum|org.eventb.core.machineFile#Sampler|org.eventb.core.event#,|org.eventb.core.guard#*"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Data/Sampler.bum|org.eventb.core.machineFile#Sampler|org.eventb.core.event#,"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Data/Sampler.bum|org.eventb.core.machineFile#Sampler|org.eventb.core.event#,|org.eventb.core.guard#*"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Data/Sampler2.bum|org.eventb.core.machineFile#Sampler2|org.eventb.core.event#-"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Data/Sampler2.bpo|org.eventb.core.poFile#Sampler2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Data/Sampler2.bpo|org.eventb.core.poFile#Sampler2|org.eventb.core.poSequent#getStats\/grd2\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTdatd" org.eventb.core.parentSet="/Data/Sampler2.bpo|org.eventb.core.poFile#Sampler2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="1">
+        <org.eventb.core.poIdentifier name="s" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="p" org.eventb.core.type="ℤ"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPdatd" org.eventb.core.parentSet="/Data/Sampler2.bpo|org.eventb.core.poFile#Sampler2|org.eventb.core.poPredicateSet#EVTIDENTdatd" org.eventb.core.poStamp="1">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="s=sd" org.eventb.core.source="/Data/Sampler2.bum|org.eventb.core.machineFile#Sampler2|org.eventb.core.event#-|org.eventb.core.guard#)"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="p=pd" org.eventb.core.source="/Data/Sampler2.bum|org.eventb.core.machineFile#Sampler2|org.eventb.core.event#-|org.eventb.core.guard#*"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="HYPC4" org.eventb.core.parentSet="/Data/Sampler2.bpo|org.eventb.core.poFile#Sampler2|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="1">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="sd=SUM(data)" org.eventb.core.source="/Data/Sampler2.bum|org.eventb.core.machineFile#Sampler2|org.eventb.core.invariant#\/"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Data/Sampler2.bpo|org.eventb.core.poFile#Sampler2|org.eventb.core.poPredicateSet#HYPC4" org.eventb.core.poStamp="1">
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="pd=PRODUCT(data)" org.eventb.core.source="/Data/Sampler2.bum|org.eventb.core.machineFile#Sampler2|org.eventb.core.invariant#1"/>
+    </org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

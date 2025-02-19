@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="1">
+    <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="JOB" org.eventb.core.type="ℙ(JOB)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Queue/JobQueue.bpo|org.eventb.core.poFile#JobQueue|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="job" org.eventb.core.type="ℙ(JOB)"/>
+        <org.eventb.core.poIdentifier name="queue" org.eventb.core.type="ℙ(ℤ×JOB)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Queue/JobQueue.bpo|org.eventb.core.poFile#JobQueue|org.eventb.core.poPredicateSet#EVTALLHYPqueuf"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(emptySeq ⦂ ℙ(ℤ×JOB))∈seq(∅ ⦂ ℙ(JOB))" org.eventb.core.source="/Queue/JobQueue.bum|org.eventb.core.machineFile#JobQueue|org.eventb.core.invariant#)"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Queue/JobQueue.bum|org.eventb.core.machineFile#JobQueue|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Queue/JobQueue.bum|org.eventb.core.machineFile#JobQueue|org.eventb.core.invariant#)"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Queue/JobQueue.bpo|org.eventb.core.poFile#JobQueue|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Queue/JobQueue.bpo|org.eventb.core.poFile#JobQueue|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Queue/JobQueue.bpo|org.eventb.core.poFile#JobQueue|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTqueuf" org.eventb.core.parentSet="/Queue/JobQueue.bpo|org.eventb.core.poFile#JobQueue|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="queue'" org.eventb.core.type="ℙ(ℤ×JOB)"/>
+        <org.eventb.core.poIdentifier name="job'" org.eventb.core.type="ℙ(JOB)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPqueuf" org.eventb.core.parentSet="/Queue/JobQueue.bpo|org.eventb.core.poFile#JobQueue|org.eventb.core.poPredicateSet#EVTIDENTqueuf" org.eventb.core.poStamp="0"/>
+    <org.eventb.core.poSequent name="QueueJob/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Queue/JobQueue.bpo|org.eventb.core.poFile#JobQueue|org.eventb.core.poPredicateSet#EVTALLHYPqueug"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="seqAppend(queue,j)∈seq(job)" org.eventb.core.source="/Queue/JobQueue.bum|org.eventb.core.machineFile#JobQueue|org.eventb.core.invariant#)"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Queue/JobQueue.bum|org.eventb.core.machineFile#JobQueue|org.eventb.core.event#*"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Queue/JobQueue.bum|org.eventb.core.machineFile#JobQueue|org.eventb.core.invariant#)"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Queue/JobQueue.bpo|org.eventb.core.poFile#JobQueue|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Queue/JobQueue.bpo|org.eventb.core.poFile#JobQueue|org.eventb.core.poSequent#QueueJob\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Queue/JobQueue.bpo|org.eventb.core.poFile#JobQueue|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="QueueJob/act1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="1">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Queue/JobQueue.bpo|org.eventb.core.poFile#JobQueue|org.eventb.core.poPredicateSet#EVTALLHYPqueug"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="queue∈seq(JOB)" org.eventb.core.source="/Queue/JobQueue.bum|org.eventb.core.machineFile#JobQueue|org.eventb.core.event#*|org.eventb.core.action#)"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Queue/JobQueue.bum|org.eventb.core.machineFile#JobQueue|org.eventb.core.event#*|org.eventb.core.action#)"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Queue/JobQueue.bpo|org.eventb.core.poFile#JobQueue|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Queue/JobQueue.bpo|org.eventb.core.poFile#JobQueue|org.eventb.core.poPredicateSet#EVTALLHYPqueug"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTqueug" org.eventb.core.parentSet="/Queue/JobQueue.bpo|org.eventb.core.poFile#JobQueue|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="1">
+        <org.eventb.core.poIdentifier name="j" org.eventb.core.type="JOB"/>
+        <org.eventb.core.poIdentifier name="queue'" org.eventb.core.type="ℙ(ℤ×JOB)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPqueug" org.eventb.core.parentSet="/Queue/JobQueue.bpo|org.eventb.core.poFile#JobQueue|org.eventb.core.poPredicateSet#EVTIDENTqueug" org.eventb.core.poStamp="1">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="j∈job" org.eventb.core.source="/Queue/JobQueue.bum|org.eventb.core.machineFile#JobQueue|org.eventb.core.event#*|org.eventb.core.guard#("/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="DeQueueJob/grd3/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="1">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Queue/JobQueue.bpo|org.eventb.core.poFile#JobQueue|org.eventb.core.poPredicateSet#EVTIDENTqueuh"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="queue∈seq(job)" org.eventb.core.source="/Queue/JobQueue.bum|org.eventb.core.machineFile#JobQueue|org.eventb.core.event#,|org.eventb.core.guard#+"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Queue/JobQueue.bum|org.eventb.core.machineFile#JobQueue|org.eventb.core.event#,|org.eventb.core.guard#+"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Queue/JobQueue.bpo|org.eventb.core.poFile#JobQueue|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Queue/JobQueue.bpo|org.eventb.core.poFile#JobQueue|org.eventb.core.poPredicateSet#EVTIDENTqueuh"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="DeQueueJob/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="1">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Queue/JobQueue.bpo|org.eventb.core.poFile#JobQueue|org.eventb.core.poPredicateSet#EVTHYPqueuh("/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="queue∈seq(JOB)∧queue≠(emptySeq ⦂ ℙ(ℤ×JOB))" org.eventb.core.source="/Queue/JobQueue.bum|org.eventb.core.machineFile#JobQueue|org.eventb.core.event#,|org.eventb.core.guard#)"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Queue/JobQueue.bum|org.eventb.core.machineFile#JobQueue|org.eventb.core.event#,|org.eventb.core.guard#)"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Queue/JobQueue.bpo|org.eventb.core.poFile#JobQueue|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Queue/JobQueue.bpo|org.eventb.core.poFile#JobQueue|org.eventb.core.poPredicateSet#EVTHYPqueuh("/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="DeQueueJob/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Queue/JobQueue.bpo|org.eventb.core.poFile#JobQueue|org.eventb.core.poPredicateSet#EVTALLHYPqueuh"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="seqTail(queue)∈seq(job)" org.eventb.core.source="/Queue/JobQueue.bum|org.eventb.core.machineFile#JobQueue|org.eventb.core.invariant#)"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Queue/JobQueue.bum|org.eventb.core.machineFile#JobQueue|org.eventb.core.event#,"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Queue/JobQueue.bum|org.eventb.core.machineFile#JobQueue|org.eventb.core.invariant#)"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Queue/JobQueue.bpo|org.eventb.core.poFile#JobQueue|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Queue/JobQueue.bpo|org.eventb.core.poFile#JobQueue|org.eventb.core.poSequent#DeQueueJob\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Queue/JobQueue.bpo|org.eventb.core.poFile#JobQueue|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="DeQueueJob/act1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="1">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Queue/JobQueue.bpo|org.eventb.core.poFile#JobQueue|org.eventb.core.poPredicateSet#EVTALLHYPqueuh"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="queue∈seq(JOB)∧queue≠(emptySeq ⦂ ℙ(ℤ×JOB))" org.eventb.core.source="/Queue/JobQueue.bum|org.eventb.core.machineFile#JobQueue|org.eventb.core.event#,|org.eventb.core.action#*"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Queue/JobQueue.bum|org.eventb.core.machineFile#JobQueue|org.eventb.core.event#,|org.eventb.core.action#*"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Queue/JobQueue.bpo|org.eventb.core.poFile#JobQueue|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Queue/JobQueue.bpo|org.eventb.core.poFile#JobQueue|org.eventb.core.poPredicateSet#EVTALLHYPqueuh"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTqueuh" org.eventb.core.parentSet="/Queue/JobQueue.bpo|org.eventb.core.poFile#JobQueue|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="1">
+        <org.eventb.core.poIdentifier name="j" org.eventb.core.type="JOB"/>
+        <org.eventb.core.poIdentifier name="queue'" org.eventb.core.type="ℙ(ℤ×JOB)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTHYPqueuh(" org.eventb.core.parentSet="/Queue/JobQueue.bpo|org.eventb.core.poFile#JobQueue|org.eventb.core.poPredicateSet#EVTIDENTqueuh" org.eventb.core.poStamp="1">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="queue∈seq(job)" org.eventb.core.source="/Queue/JobQueue.bum|org.eventb.core.machineFile#JobQueue|org.eventb.core.event#,|org.eventb.core.guard#+"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="queue≠(emptySeq ⦂ ℙ(ℤ×JOB))" org.eventb.core.source="/Queue/JobQueue.bum|org.eventb.core.machineFile#JobQueue|org.eventb.core.event#,|org.eventb.core.guard#("/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPqueuh" org.eventb.core.parentSet="/Queue/JobQueue.bpo|org.eventb.core.poFile#JobQueue|org.eventb.core.poPredicateSet#EVTHYPqueuh(" org.eventb.core.poStamp="1">
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="j=seqHead(queue)" org.eventb.core.source="/Queue/JobQueue.bum|org.eventb.core.machineFile#JobQueue|org.eventb.core.event#,|org.eventb.core.guard#)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="NewJob/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Queue/JobQueue.bpo|org.eventb.core.poFile#JobQueue|org.eventb.core.poPredicateSet#EVTALLHYPqueui"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="queue∈seq(job∪{j})" org.eventb.core.source="/Queue/JobQueue.bum|org.eventb.core.machineFile#JobQueue|org.eventb.core.invariant#)"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Queue/JobQueue.bum|org.eventb.core.machineFile#JobQueue|org.eventb.core.event#\/"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Queue/JobQueue.bum|org.eventb.core.machineFile#JobQueue|org.eventb.core.invariant#)"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Queue/JobQueue.bpo|org.eventb.core.poFile#JobQueue|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Queue/JobQueue.bpo|org.eventb.core.poFile#JobQueue|org.eventb.core.poSequent#NewJob\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Queue/JobQueue.bpo|org.eventb.core.poFile#JobQueue|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTqueui" org.eventb.core.parentSet="/Queue/JobQueue.bpo|org.eventb.core.poFile#JobQueue|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="1">
+        <org.eventb.core.poIdentifier name="j" org.eventb.core.type="JOB"/>
+        <org.eventb.core.poIdentifier name="job'" org.eventb.core.type="ℙ(JOB)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPqueui" org.eventb.core.parentSet="/Queue/JobQueue.bpo|org.eventb.core.poFile#JobQueue|org.eventb.core.poPredicateSet#EVTIDENTqueui" org.eventb.core.poStamp="1">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="j∉job" org.eventb.core.source="/Queue/JobQueue.bum|org.eventb.core.machineFile#JobQueue|org.eventb.core.event#\/|org.eventb.core.guard#("/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="DestroyJob/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Queue/JobQueue.bpo|org.eventb.core.poFile#JobQueue|org.eventb.core.poPredicateSet#EVTALLHYPqueuj"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="queue∈seq(job ∖ {j})" org.eventb.core.source="/Queue/JobQueue.bum|org.eventb.core.machineFile#JobQueue|org.eventb.core.invariant#)"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Queue/JobQueue.bum|org.eventb.core.machineFile#JobQueue|org.eventb.core.event#0"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Queue/JobQueue.bum|org.eventb.core.machineFile#JobQueue|org.eventb.core.invariant#)"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Queue/JobQueue.bpo|org.eventb.core.poFile#JobQueue|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Queue/JobQueue.bpo|org.eventb.core.poFile#JobQueue|org.eventb.core.poSequent#DestroyJob\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Queue/JobQueue.bpo|org.eventb.core.poFile#JobQueue|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTqueuj" org.eventb.core.parentSet="/Queue/JobQueue.bpo|org.eventb.core.poFile#JobQueue|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="1">
+        <org.eventb.core.poIdentifier name="j" org.eventb.core.type="JOB"/>
+        <org.eventb.core.poIdentifier name="job'" org.eventb.core.type="ℙ(JOB)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPqueuj" org.eventb.core.parentSet="/Queue/JobQueue.bpo|org.eventb.core.poFile#JobQueue|org.eventb.core.poPredicateSet#EVTIDENTqueuj" org.eventb.core.poStamp="1">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="j∈job" org.eventb.core.source="/Queue/JobQueue.bum|org.eventb.core.machineFile#JobQueue|org.eventb.core.event#0|org.eventb.core.guard#'"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="j∉ran(queue)" org.eventb.core.source="/Queue/JobQueue.bum|org.eventb.core.machineFile#JobQueue|org.eventb.core.event#0|org.eventb.core.guard#*"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Queue/JobQueue.bpo|org.eventb.core.poFile#JobQueue|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="job⊆JOB" org.eventb.core.source="/Queue/JobQueue.bum|org.eventb.core.machineFile#JobQueue|org.eventb.core.invariant#."/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="queue∈seq(job)" org.eventb.core.source="/Queue/JobQueue.bum|org.eventb.core.machineFile#JobQueue|org.eventb.core.invariant#)"/>
+    </org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

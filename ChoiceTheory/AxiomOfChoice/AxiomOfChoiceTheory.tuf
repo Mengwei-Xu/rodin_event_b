@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.theory.core.theoryRoot org.eventb.core.configuration="org.eventb.theory.core.thy">
+    <org.eventb.theory.core.axiomaticDefinitionsBlock name="'" org.eventb.core.label="AxiomChoice">
+        <org.eventb.theory.core.axiomaticOperatorDefinition name="'" org.eventb.core.label="Choose" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="E">
+            <org.eventb.theory.core.operatorArgument name="'" org.eventb.core.expression="ℙ(E)" org.eventb.core.identifier="set"/>
+            <org.eventb.theory.core.operatorWDcondition name="(" org.eventb.core.predicate="set∈ℙ1(E)"/>
+        </org.eventb.theory.core.axiomaticOperatorDefinition>
+        <org.eventb.theory.core.axiomaticDefinitionAxiom name="(" org.eventb.core.label="axm1" org.eventb.core.predicate="∀set·set∈ℙ1(E) ⇒ Choose(set)∈set"/>
+    </org.eventb.theory.core.axiomaticDefinitionsBlock>
+    <org.eventb.theory.core.typeParameter name="(" org.eventb.core.identifier="E"/>
+</org.eventb.theory.core.theoryRoot>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="A" org.eventb.core.type="ℙ(A)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="thm1/S-THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Therorem Soundness" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/RelationOrderTheory/Connectivity.bpo|org.eventb.core.poFile#Connectivity|org.eventb.core.poPredicateSet#ABSHYP"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀r⦂ℙ(A×A)·r∈A ↔ A∧r≠(∅ ⦂ ℙ(A×A))∧(∀s⦂ℙ(A)·s≠(∅ ⦂ ℙ(A))∧r[s]⊆s⇒A⊆s)⇒connected(r)" org.eventb.core.source="/RelationOrderTheory/Connectivity.tuf|org.eventb.theory.core.theoryRoot#Connectivity|org.eventb.theory.core.theorem#("/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/RelationOrderTheory/Connectivity.tcf|org.eventb.theory.core.scTheoryRoot#Connectivity|org.eventb.theory.core.scTheorem#generatedBlocl"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/RelationOrderTheory/Connectivity.tuf|org.eventb.theory.core.theoryRoot#Connectivity|org.eventb.theory.core.theorem#("/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/RelationOrderTheory/Connectivity.bpo|org.eventb.core.poFile#Connectivity|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/RelationOrderTheory/Connectivity.bpo|org.eventb.core.poFile#Connectivity|org.eventb.core.poSequent#thm1\/S-THM|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="thm2/S-THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Therorem Soundness" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/RelationOrderTheory/Connectivity.bpo|org.eventb.core.poFile#Connectivity|org.eventb.core.poPredicateSet#ABSHYP"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀r⦂ℙ(A×A)·r∈A ↔ A∧connected(r)⇒(∀s⦂ℙ(A)·s≠(∅ ⦂ ℙ(A))∧r[s]⊆s⇒A⊆s)" org.eventb.core.source="/RelationOrderTheory/Connectivity.tuf|org.eventb.theory.core.theoryRoot#Connectivity|org.eventb.theory.core.theorem#*"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/RelationOrderTheory/Connectivity.tcf|org.eventb.theory.core.scTheoryRoot#Connectivity|org.eventb.theory.core.scTheorem#generatedBlocm"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/RelationOrderTheory/Connectivity.tuf|org.eventb.theory.core.theoryRoot#Connectivity|org.eventb.theory.core.theorem#*"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/RelationOrderTheory/Connectivity.bpo|org.eventb.core.poFile#Connectivity|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/RelationOrderTheory/Connectivity.bpo|org.eventb.core.poFile#Connectivity|org.eventb.core.poSequent#thm2\/S-THM|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="inf1/S-INF" org.eventb.core.accurate="true" org.eventb.core.poDesc="Inference Rule Soundness" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/RelationOrderTheory/Connectivity.bpo|org.eventb.core.poFile#Connectivity|org.eventb.core.poPredicateSet#ABSHYP"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀r⦂ℙ(A×A)·⊤⇒(r∈A ↔ A∧r≠(∅ ⦂ ℙ(A×A))∧(∀s⦂ℙ(A)·s≠(∅ ⦂ ℙ(A))∧r[s]⊆s⇒A⊆s)⇒connected(r))" org.eventb.core.source="/RelationOrderTheory/Connectivity.tuf|org.eventb.theory.core.theoryRoot#Connectivity|org.eventb.theory.core.proofRulesBlock#,|org.eventb.theory.core.inferenceRule#("/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/RelationOrderTheory/Connectivity.tcf|org.eventb.theory.core.scTheoryRoot#Connectivity|org.eventb.theory.core.scProofRulesBlock#generatedBlocn|org.eventb.theory.core.scInferenceRule#s"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/RelationOrderTheory/Connectivity.tuf|org.eventb.theory.core.theoryRoot#Connectivity|org.eventb.theory.core.proofRulesBlock#,|org.eventb.theory.core.inferenceRule#("/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/RelationOrderTheory/Connectivity.bpo|org.eventb.core.poFile#Connectivity|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/RelationOrderTheory/Connectivity.bpo|org.eventb.core.poFile#Connectivity|org.eventb.core.poSequent#inf1\/S-INF|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+</org.eventb.core.poFile>
