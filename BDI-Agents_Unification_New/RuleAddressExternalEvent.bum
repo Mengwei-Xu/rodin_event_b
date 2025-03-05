@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+    <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+        <org.eventb.core.action name="'" org.eventb.core.assignment="belief_base ≔ ∅" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="external_events ≔ {(arrive_at↦c)} " org.eventb.core.label="act2"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="intentions ≔ ∅" org.eventb.core.label="act3"/>
+        <org.eventb.core.action name="*" org.eventb.core.assignment="counter ≔ 0" org.eventb.core.label="act4"/>
+    </org.eventb.core.event>
+    <org.eventb.core.seesContext name="(" org.eventb.core.target="BDIExample"/>
+    <org.eventb.core.variable name=")" org.eventb.core.identifier="belief_base"/>
+    <org.eventb.core.variable name="*" org.eventb.core.identifier="external_events"/>
+    <org.eventb.core.variable name="+" org.eventb.core.identifier="intentions"/>
+    <org.eventb.core.invariant name="," org.eventb.core.label="inv1" org.eventb.core.predicate="belief_base ∈ ℙ(Belief_predicate_symbols × Terms)"/>
+    <org.eventb.core.invariant name="." org.eventb.core.label="inv2" org.eventb.core.predicate="external_events ∈ ℙ(Event_predicate_symbols × Terms)"/>
+    <org.eventb.core.invariant name="evt5" org.eventb.core.label="inv3" org.eventb.core.predicate="intentions ∈ ℙ(IntentionP(Belief_predicate_symbols, Event_predicate_symbols, Action_predicate_symbols, Terms))"/>
+    <org.eventb.core.invariant name="/" org.eventb.core.label="inv4" org.eventb.core.predicate="∀ event, terms · ( BasicP_event_intention(event ↦ terms) ∈ intentions ⇔ (event ↦ terms ∉ external_events) )"/>
+    <org.eventb.core.event name="evt1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AddressExternalEvent">
+        <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="event ↦ terms ∈ external_events"/>
+        <org.eventb.core.parameter name="(" org.eventb.core.identifier="event"/>
+        <org.eventb.core.action name="*" org.eventb.core.assignment="intentions ≔ intentions ∪ {BasicP_event_intention(event ↦ terms)}" org.eventb.core.label="act1"/>
+        <org.eventb.core.parameter name="+" org.eventb.core.identifier="terms"/>
+        <org.eventb.core.action name="," org.eventb.core.assignment="external_events ≔ external_events ∖ {(event ↦ terms)} " org.eventb.core.label="act2"/>
+        <org.eventb.core.action name="-" org.eventb.core.assignment="counter ≔ counter +1" org.eventb.core.label="act3"/>
+    </org.eventb.core.event>
+    <org.eventb.core.variable name="evt2" org.eventb.core.identifier="counter"/>
+    <org.eventb.core.invariant name="evt3" org.eventb.core.label="inv5" org.eventb.core.predicate="counter ∈ ℕ"/>
+    <org.eventb.core.invariant name="evt6" org.eventb.core.label="inv6" org.eventb.core.predicate="counter = 0 ⇒ (intentions = ∅ ∧ external_events = {arrive_at ↦ c}) "/>
+    <org.eventb.core.invariant name="evt4" org.eventb.core.label="inv7" org.eventb.core.predicate="counter = 1 ⇒ (external_events = ∅ ∧ intentions = {BasicP_event_intention(arrive_at ↦ c)}) "/>
+</org.eventb.core.machineFile>
