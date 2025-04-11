@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase" version="3">
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="=" org.eventb.core.identifier="at"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="';" org.eventb.core.identifier="smiled_at"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="'=" org.eventb.core.identifier="cried_at"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="'r" org.eventb.core.identifier="next"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="&gt;" org.eventb.core.identifier="arrive_at"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="'9" org.eventb.core.identifier="play_at"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="?" org.eventb.core.identifier="travel"/>
+    <org.eventb.core.axiom name="E" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(Belief_predicate_symbols, {at}, {smiled_at}, {cried_at}, {next})"/>
+    <org.eventb.core.axiom name="F" org.eventb.core.label="axm2" org.eventb.core.predicate="partition(Event_predicate_symbols, {arrive_at}, {play_at})"/>
+    <org.eventb.core.axiom name="x" org.eventb.core.label="axm3" org.eventb.core.predicate="partition(Action_predicate_symbols, {travel}, {smile_at}, {cry_at})"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="'@" org.eventb.core.identifier="smile_at"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="'A" org.eventb.core.identifier="cry_at"/>
+    <org.eventb.core.axiom name="'H" org.eventb.core.label="axm4" org.eventb.core.predicate="preconditions=&#10;  {terms1,terms2·terms1∈Point∧terms2∈Point ∣ travel↦Vector(terms1↦terms2)↦(at↦terms1)}&#10;∪ {terms·terms∈Point ∣ smile_at↦terms↦(at↦terms)}&#10;∪ {terms·terms∈Point ∣ cry_at↦terms↦(at↦terms)}"/>
+    <org.eventb.core.axiom name="'I" org.eventb.core.label="axm5" org.eventb.core.predicate="addition_sets=&#10;  {terms,terms1,terms2·terms1∈Point∧terms2∈Point∧terms=Vector(terms1↦terms2)∣ travel↦terms↦(at↦terms2)}&#10;∪ {terms·terms∈Point∣cry_at↦terms↦(cried_at↦terms)}&#10;∪ {terms·terms∈Point∣smile_at↦terms↦(smiled_at↦terms)}"/>
+    <org.eventb.core.axiom name="'X" org.eventb.core.label="axm6" org.eventb.core.predicate="deletion_sets= &#10;  {terms1,terms2·terms1∈Point∧terms2∈Point∣ travel↦Vector(terms1↦terms2)↦(at↦terms1)}"/>
+    <org.eventb.core.extendsContext name="'S" org.eventb.core.target="BDISyntaxContext"/>
+    <org.eventb.core.axiom name="axm5" org.eventb.core.label="axm7" org.eventb.core.predicate="plan1 ∪ plan2 ∪ plan3 ∪ plan4 = plan_rules"/>
+    <org.eventb.core.axiom name="axm1" org.eventb.core.comment=" " org.eventb.core.label="axm8" org.eventb.core.predicate="plan1={event, terms1, terms2, terms3, context, plan_body_program ·&#10;          event ∈ Event_predicate_symbols&#10;&#9;&#9;∧ terms1∈Point&#10;&#9;&#9;∧ terms2∈Point&#10;        ∧ terms3∈Point&#10;        ∧ event = arrive_at           &#10;&#9;&#9;∧ context ={at ↦ terms1, next↦Vector(terms1↦terms2), next↦Vector(terms2↦terms3)}&#10;        ∧ plan_body_program = Sequence_user(BasicP_action_user(travel ↦ Vector(terms1↦terms2)), Sequence_user(Declarative_goal_user({smiled_at ↦ terms2}, play_at ↦ terms2, {cried_at ↦ terms2}), BasicP_action_user(travel ↦ Vector(terms2↦terms3)))) &#10;        ∣ (event ↦ terms3) ↦ (context ↦ plan_body_program) }"/>
+    <org.eventb.core.axiom name="'t" org.eventb.core.label="axm9" org.eventb.core.predicate="plan2={event, terms1, terms2, context, plan_body_program ·&#10;          event ∈ Event_predicate_symbols&#10;&#9;&#9;∧ terms1∈Point&#10;        ∧ terms2∈Point &#10;        ∧ event = arrive_at &#10;        ∧ context ={at↦terms1, next↦Vector(terms1↦terms2)}&#10;        ∧ plan_body_program =BasicP_action_user(travel ↦ Vector(terms1↦terms2)) &#10;        ∣ (event ↦ terms2) ↦ (context ↦ plan_body_program)}"/>
+    <org.eventb.core.axiom name="'m" org.eventb.core.label="axm10" org.eventb.core.predicate="plan3={event, terms1, context, plan_body_program ·&#10;          event ∈ Event_predicate_symbols &#10;&#9;    ∧ terms1 ∈ Point&#10;        ∧ event = play_at&#10;&#9;&#9;∧ context = {at↦terms1}&#10;&#9;&#9;∧ plan_body_program = BasicP_action_user(smile_at ↦ terms1)&#10;&#9;    ∣ (event ↦ terms1) ↦ (context ↦ plan_body_program)}"/>
+    <org.eventb.core.axiom name="'V" org.eventb.core.label="axm11" org.eventb.core.predicate="plan4={event, terms1, context, plan_body_program ·&#10;          event ∈ Event_predicate_symbols &#10;        ∧ terms1 ∈ Point&#10;        ∧ event = play_at&#10;        ∧ context = {at↦terms1}&#10;        ∧ plan_body_program = BasicP_action_user(cry_at ↦ terms1)&#10;&#9;    ∣ (event↦ terms1) ↦ (context ↦ plan_body_program)}"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="'n" org.eventb.core.identifier="plan1"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="'q" org.eventb.core.identifier="plan2"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="'p" org.eventb.core.identifier="plan3"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="axm;" org.eventb.core.identifier="plan4"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="axm7" org.eventb.core.identifier="Initial_belief_base"/>
+    <org.eventb.core.axiom name="axm8" org.eventb.core.label="axm12" org.eventb.core.predicate="Initial_belief_base ∈ ℙ (Belief_predicate_symbols × Terms) "/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="axm9" org.eventb.core.identifier="Initial_external_event_set"/>
+    <org.eventb.core.axiom name="axm=" org.eventb.core.label="axm13" org.eventb.core.predicate="Initial_belief_base ={(at ↦ a),next↦Vector(a↦b),next↦Vector(b↦c),next↦Vector(a↦c)} "/>
+    <org.eventb.core.axiom name="axm:" org.eventb.core.label="axm14" org.eventb.core.predicate="Initial_external_event_set ∈  ℙ(Event_predicate_symbols × Terms) "/>
+    <org.eventb.core.axiom name="axm&gt;" org.eventb.core.label="axm15" org.eventb.core.predicate="Initial_external_event_set ={(arrive_at↦c)} "/>
+</org.eventb.core.contextFile>

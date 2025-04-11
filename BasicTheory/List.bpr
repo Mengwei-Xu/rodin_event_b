@@ -70,16 +70,16 @@
                 </org.eventb.core.prRule>
             </org.eventb.core.prAnte>
         </org.eventb.core.prRule>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀l⦂List(T),x⦂T·⊤∧⊤⇒listSize(append(l,x))=1+listSize(l)"/>
-        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀l⦂List(T),x⦂T·l∈List(T)∧x∈T⇒listSize(append(l,x))=1+listSize(l)"/>
         <org.eventb.core.prPred name="p3" org.eventb.core.predicate="listSize(append(l,x))=1+listSize(l)">
             <org.eventb.core.prIdent name="l" org.eventb.core.type="List(T)"/>
             <org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
         </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀l⦂List(T),x⦂T·⊤∧⊤⇒listSize(append(l,x))=1+listSize(l)"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀l⦂List(T),x⦂T·l∈List(T)∧x∈T⇒listSize(append(l,x))=1+listSize(l)"/>
         <org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀l⦂List(T),x⦂T·listSize(append(l,x))=1+listSize(l)"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
         <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="thm2/S-THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="f,x,l" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="S,T">
         <org.eventb.core.lang name="L">
@@ -156,25 +156,25 @@
             </org.eventb.core.prAnte>
         </org.eventb.core.prRule>
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀l⦂List(T),f⦂ℙ(T×S),x⦂T·l∈List(T)∧f∈T → S∧x∈T⇒map(f,append(l,x))=append(map(f,l),f(x))"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀l⦂List(T),f⦂ℙ(T×S),x⦂T·⊤∧f∈T → S∧⊤⇒map(f,append(l,x))=append(map(f,l),f(x))"/>
         <org.eventb.core.prPred name="p4" org.eventb.core.predicate="f∈T → S">
             <org.eventb.core.prIdent name="f" org.eventb.core.type="ℙ(T×S)"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="f∈T → S⇒map(f,append(l,x))=append(map(f,l),f(x))">
-            <org.eventb.core.prIdent name="f" org.eventb.core.type="ℙ(T×S)"/>
-            <org.eventb.core.prIdent name="l" org.eventb.core.type="List(T)"/>
-            <org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀l⦂List(T),f⦂ℙ(T×S),x⦂T·⊤∧f∈T → S∧⊤⇒map(f,append(l,x))=append(map(f,l),f(x))"/>
         <org.eventb.core.prPred name="p5" org.eventb.core.predicate="map(f,append(l,x))=append(map(f,l),f(x))">
             <org.eventb.core.prIdent name="f" org.eventb.core.type="ℙ(T×S)"/>
             <org.eventb.core.prIdent name="l" org.eventb.core.type="List(T)"/>
             <org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀l⦂List(T),f⦂ℙ(T×S),x⦂T·f∈T → S⇒map(f,append(l,x))=append(map(f,l),f(x))"/>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="f∈T → S⇒map(f,append(l,x))=append(map(f,l),f(x))">
+            <org.eventb.core.prIdent name="f" org.eventb.core.type="ℙ(T×S)"/>
+            <org.eventb.core.prIdent name="l" org.eventb.core.type="List(T)"/>
+            <org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
+        </org.eventb.core.prPred>
         <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="thm2/WD-THM" org.eventb.core.confidence="1000" org.eventb.core.prFresh="f,x" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="S,T">
         <org.eventb.core.lang name="L">
@@ -376,24 +376,24 @@
                 </org.eventb.core.prRule>
             </org.eventb.core.prAnte>
         </org.eventb.core.prRule>
-        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀l⦂List(T),f⦂ℙ(T×S)·f∈T → S⇒rev(map(f,l))=map(f,rev(l))"/>
-        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="f∈T → S⇒rev(map(f,l))=map(f,rev(l))">
-            <org.eventb.core.prIdent name="f" org.eventb.core.type="ℙ(T×S)"/>
-            <org.eventb.core.prIdent name="l" org.eventb.core.type="List(T)"/>
-        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀l⦂List(T),f⦂ℙ(T×S)·⊤∧f∈T → S⇒rev(map(f,l))=map(f,rev(l))"/>
         <org.eventb.core.prPred name="p4" org.eventb.core.predicate="f∈T → S">
             <org.eventb.core.prIdent name="f" org.eventb.core.type="ℙ(T×S)"/>
         </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀l⦂List(T),f⦂ℙ(T×S)·f∈T → S⇒rev(map(f,l))=map(f,rev(l))"/>
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀l⦂List(T),f⦂ℙ(T×S)·l∈List(T)∧f∈T → S⇒rev(map(f,l))=map(f,rev(l))"/>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀l⦂List(T),f⦂ℙ(T×S)·⊤∧f∈T → S⇒rev(map(f,l))=map(f,rev(l))"/>
         <org.eventb.core.prPred name="p5" org.eventb.core.predicate="rev(map(f,l))=map(f,rev(l))">
             <org.eventb.core.prIdent name="f" org.eventb.core.type="ℙ(T×S)"/>
             <org.eventb.core.prIdent name="l" org.eventb.core.type="List(T)"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="f∈T → S⇒rev(map(f,l))=map(f,rev(l))">
+            <org.eventb.core.prIdent name="f" org.eventb.core.type="ℙ(T×S)"/>
+            <org.eventb.core.prIdent name="l" org.eventb.core.type="List(T)"/>
+        </org.eventb.core.prPred>
         <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="thm4/S-THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="x,l" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="T">
         <org.eventb.core.lang name="L">
@@ -466,15 +466,15 @@
             </org.eventb.core.prAnte>
         </org.eventb.core.prRule>
         <org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀l⦂List(T),x⦂T·rev(append(l,x))=cons(x,rev(l))"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀l⦂List(T),x⦂T·l∈List(T)∧x∈T⇒rev(append(l,x))=cons(x,rev(l))"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀l⦂List(T),x⦂T·⊤∧⊤⇒rev(append(l,x))=cons(x,rev(l))"/>
         <org.eventb.core.prPred name="p3" org.eventb.core.predicate="rev(append(l,x))=cons(x,rev(l))">
             <org.eventb.core.prIdent name="l" org.eventb.core.type="List(T)"/>
             <org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀l⦂List(T),x⦂T·⊤∧⊤⇒rev(append(l,x))=cons(x,rev(l))"/>
-        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀l⦂List(T),x⦂T·l∈List(T)∧x∈T⇒rev(append(l,x))=cons(x,rev(l))"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
         <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="thm3/S-THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="l" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="T">
         <org.eventb.core.lang name="L">
@@ -546,14 +546,14 @@
             </org.eventb.core.prAnte>
         </org.eventb.core.prRule>
         <org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀l⦂List(T)·⊤⇒rev(rev(l))=l"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀l⦂List(T)·rev(rev(l))=l"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀l⦂List(T)·l∈List(T)⇒rev(rev(l))=l"/>
         <org.eventb.core.prPred name="p3" org.eventb.core.predicate="rev(rev(l))=l">
             <org.eventb.core.prIdent name="l" org.eventb.core.type="List(T)"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀l⦂List(T)·l∈List(T)⇒rev(rev(l))=l"/>
-        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀l⦂List(T)·rev(rev(l))=l"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
         <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="thm6/S-THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="l" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="T">
         <org.eventb.core.lang name="L">
@@ -624,15 +624,15 @@
                 </org.eventb.core.prRule>
             </org.eventb.core.prAnte>
         </org.eventb.core.prRule>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀l⦂List(T)·⊤⇒conc(l,nil ⦂ List(T))=l"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀l⦂List(T)·l∈List(T)⇒conc(l,nil ⦂ List(T))=l"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀l⦂List(T)·conc(l,nil ⦂ List(T))=l"/>
         <org.eventb.core.prPred name="p3" org.eventb.core.predicate="conc(l,nil ⦂ List(T))=l">
             <org.eventb.core.prIdent name="l" org.eventb.core.type="List(T)"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀l⦂List(T)·l∈List(T)⇒conc(l,nil ⦂ List(T))=l"/>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀l⦂List(T)·⊤⇒conc(l,nil ⦂ List(T))=l"/>
-        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀l⦂List(T)·conc(l,nil ⦂ List(T))=l"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
         <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="thm7/S-THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="l1,l2,x" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="T">
         <org.eventb.core.lang name="L">
@@ -705,17 +705,17 @@
                 </org.eventb.core.prRule>
             </org.eventb.core.prAnte>
         </org.eventb.core.prRule>
-        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀l1⦂List(T),l2⦂List(T),x⦂T·append(conc(l1,l2),x)=conc(l1,append(l2,x))"/>
-        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀l1⦂List(T),l2⦂List(T),x⦂T·l1∈List(T)∧l2∈List(T)∧x∈T⇒append(conc(l1,l2),x)=conc(l1,append(l2,x))"/>
         <org.eventb.core.prPred name="p3" org.eventb.core.predicate="append(conc(l1,l2),x)=conc(l1,append(l2,x))">
             <org.eventb.core.prIdent name="l1" org.eventb.core.type="List(T)"/>
             <org.eventb.core.prIdent name="l2" org.eventb.core.type="List(T)"/>
             <org.eventb.core.prIdent name="x" org.eventb.core.type="T"/>
         </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀l1⦂List(T),l2⦂List(T),x⦂T·l1∈List(T)∧l2∈List(T)∧x∈T⇒append(conc(l1,l2),x)=conc(l1,append(l2,x))"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀l1⦂List(T),l2⦂List(T),x⦂T·append(conc(l1,l2),x)=conc(l1,append(l2,x))"/>
         <org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀l1⦂List(T),l2⦂List(T),x⦂T·⊤∧⊤∧⊤⇒append(conc(l1,l2),x)=conc(l1,append(l2,x))"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
         <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="thm5/S-THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="l1,l2" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="T">
         <org.eventb.core.lang name="L">
@@ -787,16 +787,16 @@
                 </org.eventb.core.prRule>
             </org.eventb.core.prAnte>
         </org.eventb.core.prRule>
-        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀l1⦂List(T)·l1∈List(T)⇒(∀l2⦂List(T)·l2∈List(T)⇒rev(conc(l1,l2))=conc(rev(l2),rev(l1)))"/>
-        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀l1⦂List(T),l2⦂List(T)·rev(conc(l1,l2))=conc(rev(l2),rev(l1))"/>
         <org.eventb.core.prPred name="p3" org.eventb.core.predicate="rev(conc(l1,l2))=conc(rev(l2),rev(l1))">
             <org.eventb.core.prIdent name="l1" org.eventb.core.type="List(T)"/>
             <org.eventb.core.prIdent name="l2" org.eventb.core.type="List(T)"/>
         </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀l1⦂List(T)·l1∈List(T)⇒(∀l2⦂List(T)·l2∈List(T)⇒rev(conc(l1,l2))=conc(rev(l2),rev(l1)))"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀l1⦂List(T),l2⦂List(T)·rev(conc(l1,l2))=conc(rev(l2),rev(l1))"/>
         <org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀l1⦂List(T)·⊤⇒(∀l2⦂List(T)·⊤⇒rev(conc(l1,l2))=conc(rev(l2),rev(l1)))"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
         <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="thm10/S-THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="l1,l2,l3" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="T">
         <org.eventb.core.lang name="L">
@@ -869,17 +869,17 @@
                 </org.eventb.core.prRule>
             </org.eventb.core.prAnte>
         </org.eventb.core.prRule>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀l1⦂List(T),l2⦂List(T),l3⦂List(T)·l1∈List(T)∧l2∈List(T)∧l3∈List(T)⇒conc(conc(l1,l2),l3)=conc(l1,conc(l2,l3))"/>
         <org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀l1⦂List(T),l2⦂List(T),l3⦂List(T)·⊤∧⊤∧⊤⇒conc(conc(l1,l2),l3)=conc(l1,conc(l2,l3))"/>
         <org.eventb.core.prPred name="p3" org.eventb.core.predicate="conc(conc(l1,l2),l3)=conc(l1,conc(l2,l3))">
             <org.eventb.core.prIdent name="l1" org.eventb.core.type="List(T)"/>
             <org.eventb.core.prIdent name="l2" org.eventb.core.type="List(T)"/>
             <org.eventb.core.prIdent name="l3" org.eventb.core.type="List(T)"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀l1⦂List(T),l2⦂List(T),l3⦂List(T)·l1∈List(T)∧l2∈List(T)∧l3∈List(T)⇒conc(conc(l1,l2),l3)=conc(l1,conc(l2,l3))"/>
         <org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀l1⦂List(T),l2⦂List(T),l3⦂List(T)·conc(conc(l1,l2),l3)=conc(l1,conc(l2,l3))"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
         <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="thm9/S-THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="ll,l" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="T">
         <org.eventb.core.lang name="L">
@@ -953,14 +953,14 @@
         </org.eventb.core.prRule>
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀ll⦂List(List(T)),l⦂List(T)·ll∈List(List(T))∧l∈List(T)⇒flatten(append(ll,l))=conc(flatten(ll),l)"/>
         <org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀ll⦂List(List(T)),l⦂List(T)·⊤∧⊤⇒flatten(append(ll,l))=conc(flatten(ll),l)"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀ll⦂List(List(T)),l⦂List(T)·flatten(append(ll,l))=conc(flatten(ll),l)"/>
         <org.eventb.core.prPred name="p3" org.eventb.core.predicate="flatten(append(ll,l))=conc(flatten(ll),l)">
             <org.eventb.core.prIdent name="l" org.eventb.core.type="List(T)"/>
             <org.eventb.core.prIdent name="ll" org.eventb.core.type="List(List(T))"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀ll⦂List(List(T)),l⦂List(T)·flatten(append(ll,l))=conc(flatten(ll),l)"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
         <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="map/Op-WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="l0,f,x,l" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="S,T">
         <org.eventb.core.lang name="L">

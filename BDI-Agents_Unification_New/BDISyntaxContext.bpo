@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="Terms" org.eventb.core.type="ℙ(Terms)"/>
+        <org.eventb.core.poIdentifier name="a" org.eventb.core.type="Terms"/>
+        <org.eventb.core.poIdentifier name="b" org.eventb.core.type="Terms"/>
+        <org.eventb.core.poIdentifier name="c" org.eventb.core.type="Terms"/>
+        <org.eventb.core.poIdentifier name="Point" org.eventb.core.type="ℙ(Terms)"/>
+        <org.eventb.core.poIdentifier name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        <org.eventb.core.poIdentifier name="Vector" org.eventb.core.type="ℙ(Terms×Terms×Terms)"/>
+        <org.eventb.core.poPredicate name="VectorTermt" org.eventb.core.predicate="Point⊆Terms" org.eventb.core.source="/BDIAgents/TermsContext.buc|org.eventb.core.contextFile#TermsContext|org.eventb.core.axiom#2"/>
+        <org.eventb.core.poPredicate name="VectorTermu" org.eventb.core.predicate="VectorTerms⊆Terms" org.eventb.core.source="/BDIAgents/TermsContext.buc|org.eventb.core.contextFile#TermsContext|org.eventb.core.axiom#7"/>
+        <org.eventb.core.poPredicate name="VectorTermv" org.eventb.core.predicate="Vector∈Point × Point ↣ VectorTerms" org.eventb.core.source="/BDIAgents/TermsContext.buc|org.eventb.core.contextFile#TermsContext|org.eventb.core.axiom#1"/>
+        <org.eventb.core.poPredicate name="VectorTermw" org.eventb.core.predicate="partition(Terms,Point,VectorTerms)" org.eventb.core.source="/BDIAgents/TermsContext.buc|org.eventb.core.contextFile#TermsContext|org.eventb.core.axiom#5"/>
+        <org.eventb.core.poPredicate name="VectorTermx" org.eventb.core.predicate="partition(Point,{a},{b},{c})" org.eventb.core.source="/BDIAgents/TermsContext.buc|org.eventb.core.contextFile#TermsContext|org.eventb.core.axiom#\/"/>
+        <org.eventb.core.poIdentifier name="Belief_predicate_symbols" org.eventb.core.type="ℙ(Belief_predicate_symbols)"/>
+        <org.eventb.core.poIdentifier name="Action_predicate_symbols" org.eventb.core.type="ℙ(Action_predicate_symbols)"/>
+        <org.eventb.core.poIdentifier name="Event_predicate_symbols" org.eventb.core.type="ℙ(Event_predicate_symbols)"/>
+        <org.eventb.core.poIdentifier name="plan_rules" org.eventb.core.type="ℙ(Event_predicate_symbols×Terms×(ℙ(Belief_predicate_symbols×Terms)×UserP(Belief_predicate_symbols,Event_predicate_symbols,Action_predicate_symbols,Terms)))"/>
+        <org.eventb.core.poIdentifier name="addition_sets" org.eventb.core.type="ℙ(Action_predicate_symbols×Terms×(Belief_predicate_symbols×Terms))"/>
+        <org.eventb.core.poIdentifier name="preconditions" org.eventb.core.type="ℙ(Action_predicate_symbols×Terms×(Belief_predicate_symbols×Terms))"/>
+        <org.eventb.core.poIdentifier name="deletion_sets" org.eventb.core.type="ℙ(Action_predicate_symbols×Terms×(Belief_predicate_symbols×Terms))"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/BDIAgents/BDISyntaxContext.bpo|org.eventb.core.poFile#BDISyntaxContext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="preconditions∈Action_predicate_symbols × Terms ↔ Belief_predicate_symbols × Terms" org.eventb.core.source="/BDIAgents/BDISyntaxContext.buc|org.eventb.core.contextFile#BDISyntaxContext|org.eventb.core.axiom#axm2"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="deletion_sets∈Action_predicate_symbols × Terms ↔ Belief_predicate_symbols × Terms" org.eventb.core.source="/BDIAgents/BDISyntaxContext.buc|org.eventb.core.contextFile#BDISyntaxContext|org.eventb.core.axiom#axm3"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="addition_sets∈Action_predicate_symbols × Terms ↔ Belief_predicate_symbols × Terms" org.eventb.core.source="/BDIAgents/BDISyntaxContext.buc|org.eventb.core.contextFile#BDISyntaxContext|org.eventb.core.axiom#axm4"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="plan_rules∈Event_predicate_symbols × Terms ↔ ℙ(Belief_predicate_symbols × Terms) × UserP(Belief_predicate_symbols,Event_predicate_symbols,Action_predicate_symbols,Terms)" org.eventb.core.source="/BDIAgents/BDISyntaxContext.buc|org.eventb.core.contextFile#BDISyntaxContext|org.eventb.core.axiom#set9"/>
+    </org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

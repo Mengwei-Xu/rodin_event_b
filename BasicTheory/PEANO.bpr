@@ -149,14 +149,14 @@
             </org.eventb.core.prAnte>
         </org.eventb.core.prRule>
         <org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀p⦂PEANO·odd(p)⇔¬even(p)"/>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀p⦂PEANO·⊤⇒(odd(p)⇔¬even(p))"/>
         <org.eventb.core.prPred name="p3" org.eventb.core.predicate="odd(p)⇔¬even(p)">
             <org.eventb.core.prIdent name="p" org.eventb.core.type="PEANO"/>
         </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀p⦂PEANO·⊤⇒(odd(p)⇔¬even(p))"/>
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀p⦂PEANO·p∈(PEANO ⦂ ℙ(PEANO))⇒(odd(p)⇔¬even(p))"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
         <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="thm3/S-THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="p" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
         <org.eventb.core.lang name="L">
@@ -204,15 +204,15 @@
                 </org.eventb.core.prRule>
             </org.eventb.core.prAnte>
         </org.eventb.core.prRule>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀p⦂PEANO·⊤⇒mk_nat(p)∈ℕ"/>
-        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀p⦂PEANO·mk_nat(p)∈ℕ"/>
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀p⦂PEANO·p∈(PEANO ⦂ ℙ(PEANO))⇒mk_nat(p)∈ℕ"/>
         <org.eventb.core.prPred name="p3" org.eventb.core.predicate="mk_nat(p)∈ℕ">
             <org.eventb.core.prIdent name="p" org.eventb.core.type="PEANO"/>
         </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀p⦂PEANO·mk_nat(p)∈ℕ"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀p⦂PEANO·⊤⇒mk_nat(p)∈ℕ"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
         <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="thm2/S-THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="p" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
         <org.eventb.core.lang name="L">
@@ -263,12 +263,12 @@
         <org.eventb.core.prPred name="p3" org.eventb.core.predicate="mk_PEANO(mk_nat(p))=p">
             <org.eventb.core.prIdent name="p" org.eventb.core.type="PEANO"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀p⦂PEANO·p∈(PEANO ⦂ ℙ(PEANO))⇒mk_PEANO(mk_nat(p))=p"/>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀p⦂PEANO·⊤⇒mk_PEANO(mk_nat(p))=p"/>
         <org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀p⦂PEANO·mk_PEANO(mk_nat(p))=p"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀p⦂PEANO·⊤⇒mk_PEANO(mk_nat(p))=p"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀p⦂PEANO·p∈(PEANO ⦂ ℙ(PEANO))⇒mk_PEANO(mk_nat(p))=p"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
         <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="thm2/WD-THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="p" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
         <org.eventb.core.lang name="L">
@@ -316,14 +316,14 @@
                 </org.eventb.core.prRule>
             </org.eventb.core.prAnte>
         </org.eventb.core.prRule>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀p⦂PEANO·⊤⇒mk_nat(p)∈ℕ"/>
-        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀p⦂PEANO·mk_nat(p)∈ℕ"/>
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀p⦂PEANO·p∈(PEANO ⦂ ℙ(PEANO))⇒mk_nat(p)∈ℕ"/>
         <org.eventb.core.prPred name="p3" org.eventb.core.predicate="mk_nat(p)∈ℕ">
             <org.eventb.core.prIdent name="p" org.eventb.core.type="PEANO"/>
         </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀p⦂PEANO·mk_nat(p)∈ℕ"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀p⦂PEANO·⊤⇒mk_nat(p)∈ℕ"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
         <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
     </org.eventb.core.prProof>
 </org.eventb.core.prFile>

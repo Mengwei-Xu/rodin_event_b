@@ -31,10 +31,10 @@
                 <org.eventb.core.prIdent name="t" org.eventb.core.type="Tree(T)"/>
             </org.eventb.core.prAnte>
         </org.eventb.core.prRule>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀t⦂Tree(T)·mirror(mirror(t))=t"/>
         <org.eventb.core.prPred name="p1" org.eventb.core.predicate="mirror(mirror(t))=t">
             <org.eventb.core.prIdent name="t" org.eventb.core.type="Tree(T)"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀t⦂Tree(T)·mirror(mirror(t))=t"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="treeDepth/Op-WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="r,t,v,l" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="T">

@@ -5,7 +5,7 @@
         <org.eventb.core.action name="(" org.eventb.core.assignment="external_events ≔ Initial_external_event_set" org.eventb.core.label="act2"/>
         <org.eventb.core.action name=")" org.eventb.core.assignment="intentions ≔ ∅" org.eventb.core.label="act3"/>
     </org.eventb.core.event>
-    <org.eventb.core.seesContext name="(" org.eventb.core.target="BDIExample"/>
+    <org.eventb.core.seesContext name="(" org.eventb.core.target="BDIPrograms"/>
     <org.eventb.core.event name=")" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AddressExternalEvent">
         <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="event ↦ terms ∈ external_events"/>
         <org.eventb.core.parameter name="(" org.eventb.core.identifier="event"/>

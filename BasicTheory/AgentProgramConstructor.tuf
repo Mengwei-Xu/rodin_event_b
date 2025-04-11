@@ -298,5 +298,5 @@
         </org.eventb.theory.core.recursiveOperatorDefinition>
     </org.eventb.theory.core.newOperatorDefinition>
     <org.eventb.theory.core.typeParameter name="elementH" org.eventb.core.identifier="Terms"/>
-    <org.eventb.theory.core.theorem name="element\" org.eventb.core.comment="( (nil || nil) || nil) || nil&#10;" org.eventb.core.label="NilRemoval_test" org.eventb.core.predicate="(IntentionP(Belief_predicate_symbols, Event_predicate_symbols, Action_predicate_symbols, Terms)◁id) (NilRemove(Concurrency_intention(Concurrency_intention(  Concurrency_intention(Nil, Nil), Nil  ), Nil  ))) = Nil "/>
+    <org.eventb.theory.core.theorem name="element\" org.eventb.core.comment="( (nil || nil) || nil) || nil" org.eventb.core.label="NilRemoval_test" org.eventb.core.predicate="(IntentionP(Belief_predicate_symbols, Event_predicate_symbols, Action_predicate_symbols, Terms)◁id) (NilRemove(Concurrency_intention(Concurrency_intention(  Concurrency_intention(Nil, Nil), Nil  ), Nil  ))) = Nil "/>
 </org.eventb.theory.core.theoryRoot>

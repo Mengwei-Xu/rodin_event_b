@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase" version="3">
+    <org.eventb.core.extendsContext name="'" org.eventb.core.target="TermsContext"/>
+    <org.eventb.core.axiom name="axm2" org.eventb.core.label="axm1" org.eventb.core.predicate="preconditions ∈ (Action_predicate_symbols × Terms) ↔ (Belief_predicate_symbols × Terms) "/>
+    <org.eventb.core.axiom name="axm3" org.eventb.core.label="axm2" org.eventb.core.predicate="deletion_sets ∈ (Action_predicate_symbols × Terms) ↔ (Belief_predicate_symbols × Terms)"/>
+    <org.eventb.core.axiom name="axm4" org.eventb.core.label="axm3" org.eventb.core.predicate="addition_sets ∈ (Action_predicate_symbols × Terms) ↔ (Belief_predicate_symbols × Terms)"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="set8" org.eventb.core.identifier="preconditions"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="cst3" org.eventb.core.identifier="addition_sets"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="cst2" org.eventb.core.identifier="deletion_sets"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="cst4" org.eventb.core.identifier="plan_rules"/>
+    <org.eventb.core.carrierSet name="set1" org.eventb.core.comment="a set of belief predicates symbols" org.eventb.core.identifier="Belief_predicate_symbols"/>
+    <org.eventb.core.carrierSet name="set2" org.eventb.core.comment="a set of event predicates to construct the plan-body " org.eventb.core.identifier="Event_predicate_symbols"/>
+    <org.eventb.core.axiom name="set9" org.eventb.core.label="axm4" org.eventb.core.predicate="plan_rules ∈ &#10;        (Event_predicate_symbols × Terms) &#10;         ↔ &#10;        (ℙ(Belief_predicate_symbols × Terms) × UserP(Belief_predicate_symbols,Event_predicate_symbols,Action_predicate_symbols, Terms))"/>
+    <org.eventb.core.carrierSet name="set:" org.eventb.core.comment="a set of action predicates  to construct the plan-body" org.eventb.core.identifier="Action_predicate_symbols"/>
+</org.eventb.core.contextFile>

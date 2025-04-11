@@ -1,0 +1,1078 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.prFile version="1">
+    <org.eventb.core.prProof name="axm11/WD" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="p0" org.eventb.core.prSets="Terms">
+        <org.eventb.core.lang name="L">
+            <org.eventb.theory.core.scDatatypeDefinition name="STACK">
+                <org.eventb.theory.core.scTypeArgument name="EL" org.eventb.theory.core.givenType="EL"/>
+                <org.eventb.theory.core.scDatatypeConstructor name="Empty"/>
+                <org.eventb.theory.core.scDatatypeConstructor name="push">
+                    <org.eventb.theory.core.scConstructorArgument name="pop" org.eventb.core.type="EL"/>
+                    <org.eventb.theory.core.scConstructorArgument name="next_stack" org.eventb.core.type="STACK"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+            </org.eventb.theory.core.scDatatypeDefinition>
+            <org.eventb.theory.core.scNewOperatorDefinition name="@" org.eventb.core.label="@" org.eventb.core.predicate="⊤" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="infix extended expression group" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="INFIX" org.eventb.theory.core.type="STACK(EL)" org.eventb.theory.core.wd="⊤">
+                <org.eventb.theory.core.scOperatorArgument name="stack1" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="STACK(EL)"/>
+                <org.eventb.theory.core.scOperatorArgument name="stack2" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.operatorArgument#(" org.eventb.core.type="STACK(EL)"/>
+                <org.eventb.theory.core.scRecursiveOperatorDefinition name=")" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.recursiveOperatorDefinition#)" org.eventb.theory.core.inductiveArgument="stack1">
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="Empty ⦂ STACK(EL)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.recursiveOperatorDefinition#)|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="stack2"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="push(e,s)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.recursiveOperatorDefinition#)|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="push(e,s @ stack2)"/>
+                </org.eventb.theory.core.scRecursiveOperatorDefinition>
+            </org.eventb.theory.core.scNewOperatorDefinition>
+            <org.eventb.theory.core.scNewOperatorDefinition name="notEmpty" org.eventb.core.label="notEmpty" org.eventb.core.predicate="⊤" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.wd="⊤">
+                <org.eventb.theory.core.scOperatorArgument name="stack" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="STACK(EL)"/>
+                <org.eventb.theory.core.scRecursiveOperatorDefinition name="(" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(" org.eventb.theory.core.inductiveArgument="stack">
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="Empty ⦂ STACK(EL)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="push(e,s)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="⊤"/>
+                </org.eventb.theory.core.scRecursiveOperatorDefinition>
+            </org.eventb.theory.core.scNewOperatorDefinition>
+        </org.eventb.core.lang>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Terms,Point,VectorTerms))" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2,p3"/>
+                <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p2,p3"/>
+                <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Point,{a},{b},{c}))" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p4,p5,p6,p7"/>
+                        <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p4,p5,p6,p7"/>
+                        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(None_belief_predicates,Events,Actions,Plan_library))" org.eventb.core.prHyps="">
+                            <org.eventb.core.prAnte name="'">
+                                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p8" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p9,p10,p11,p12"/>
+                                <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p9,p10,p11,p12"/>
+                                <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Agent_programs,None_declarative_goal_programs,Declarative_goal_programs))" org.eventb.core.prHyps="">
+                                    <org.eventb.core.prAnte name="'">
+                                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p13" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p14,p15"/>
+                                        <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p14,p15"/>
+                                        <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                                            <org.eventb.core.prAnte name="'">
+                                                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p16"/>
+                                                <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p17"/>
+                                                <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p18"/>
+                                                <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with Point={a,b,c}" org.eventb.core.prHyps="p4">
+                                                    <org.eventb.core.prAnte name="'">
+                                                        <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p2" org.eventb.core.prInfHyps="p19"/>
+                                                        <org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p3" org.eventb.core.prInfHyps="p20"/>
+                                                        <org.eventb.core.prHypAction name="DESELECT2" org.eventb.core.prHyps="p2,p3"/>
+                                                        <org.eventb.core.prHypAction name="DESELECT3" org.eventb.core.prHyps="p4"/>
+                                                    </org.eventb.core.prAnte>
+                                                </org.eventb.core.prRule>
+                                            </org.eventb.core.prAnte>
+                                        </org.eventb.core.prRule>
+                                    </org.eventb.core.prAnte>
+                                    <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+                                </org.eventb.core.prRule>
+                            </org.eventb.core.prAnte>
+                            <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                    <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+            <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="Point" org.eventb.core.type="ℙ(Terms)"/>
+        <org.eventb.core.prIdent name="a" org.eventb.core.type="Terms"/>
+        <org.eventb.core.prIdent name="b" org.eventb.core.type="Terms"/>
+        <org.eventb.core.prIdent name="c" org.eventb.core.type="Terms"/>
+        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="Point⊆Terms"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="Point={a,b,c}"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬a=b"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="partition(None_belief_predicates,Events,Actions,Plan_library)">
+            <org.eventb.core.prIdent name="Actions" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+            <org.eventb.core.prIdent name="Events" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+            <org.eventb.core.prIdent name="None_belief_predicates" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+            <org.eventb.core.prIdent name="Plan_library" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p19" org.eventb.core.predicate="Terms={a,b,c}∪VectorTerms">
+            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="partition(Point,{a},{b},{c})"/>
+        <org.eventb.core.prPred name="p20" org.eventb.core.predicate="{a,b,c}∩VectorTerms=(∅ ⦂ ℙ(Terms))">
+            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="None_belief_predicates=Events∪Actions∪Plan_library">
+            <org.eventb.core.prIdent name="Actions" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+            <org.eventb.core.prIdent name="Events" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+            <org.eventb.core.prIdent name="None_belief_predicates" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+            <org.eventb.core.prIdent name="Plan_library" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="Events∩Plan_library=(∅ ⦂ ℙ(None_belief_predicates))">
+            <org.eventb.core.prIdent name="Events" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+            <org.eventb.core.prIdent name="None_belief_predicates" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+            <org.eventb.core.prIdent name="Plan_library" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="Agent_programs=None_declarative_goal_programs∪Declarative_goal_programs">
+            <org.eventb.core.prIdent name="Agent_programs" org.eventb.core.type="ℙ(Agent_programs)"/>
+            <org.eventb.core.prIdent name="Declarative_goal_programs" org.eventb.core.type="ℙ(Agent_programs)"/>
+            <org.eventb.core.prIdent name="None_declarative_goal_programs" org.eventb.core.type="ℙ(Agent_programs)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="Terms=Point∪VectorTerms">
+            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p18" org.eventb.core.predicate="Initial_belief_base∈ℙ(Belief_predicates × Terms)">
+            <org.eventb.core.prIdent name="Belief_predicates" org.eventb.core.type="ℙ(Belief_predicates)"/>
+            <org.eventb.core.prIdent name="Initial_belief_base" org.eventb.core.type="ℙ(Belief_predicates×Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="Point∩VectorTerms=(∅ ⦂ ℙ(Terms))">
+            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p17" org.eventb.core.predicate="VectorTerms⊆Terms">
+            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬a=c"/>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="Actions∩Plan_library=(∅ ⦂ ℙ(None_belief_predicates))">
+            <org.eventb.core.prIdent name="Actions" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+            <org.eventb.core.prIdent name="None_belief_predicates" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+            <org.eventb.core.prIdent name="Plan_library" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="None_declarative_goal_programs∩Declarative_goal_programs=(∅ ⦂ ℙ(Agent_programs))">
+            <org.eventb.core.prIdent name="Agent_programs" org.eventb.core.type="ℙ(Agent_programs)"/>
+            <org.eventb.core.prIdent name="Declarative_goal_programs" org.eventb.core.type="ℙ(Agent_programs)"/>
+            <org.eventb.core.prIdent name="None_declarative_goal_programs" org.eventb.core.type="ℙ(Agent_programs)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬b=c"/>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="Events∩Actions=(∅ ⦂ ℙ(None_belief_predicates))">
+            <org.eventb.core.prIdent name="Actions" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+            <org.eventb.core.prIdent name="Events" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+            <org.eventb.core.prIdent name="None_belief_predicates" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(Terms,Point,VectorTerms)">
+            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="partition(Agent_programs,None_declarative_goal_programs,Declarative_goal_programs)">
+            <org.eventb.core.prIdent name="Agent_programs" org.eventb.core.type="ℙ(Agent_programs)"/>
+            <org.eventb.core.prIdent name="Declarative_goal_programs" org.eventb.core.type="ℙ(Agent_programs)"/>
+            <org.eventb.core.prIdent name="None_declarative_goal_programs" org.eventb.core.type="ℙ(Agent_programs)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.eqL2:1"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="axm12/WD" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="p0" org.eventb.core.prSets="Terms">
+        <org.eventb.core.lang name="L">
+            <org.eventb.theory.core.scDatatypeDefinition name="STACK">
+                <org.eventb.theory.core.scTypeArgument name="EL" org.eventb.theory.core.givenType="EL"/>
+                <org.eventb.theory.core.scDatatypeConstructor name="Empty"/>
+                <org.eventb.theory.core.scDatatypeConstructor name="push">
+                    <org.eventb.theory.core.scConstructorArgument name="pop" org.eventb.core.type="EL"/>
+                    <org.eventb.theory.core.scConstructorArgument name="next_stack" org.eventb.core.type="STACK"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+            </org.eventb.theory.core.scDatatypeDefinition>
+            <org.eventb.theory.core.scNewOperatorDefinition name="@" org.eventb.core.label="@" org.eventb.core.predicate="⊤" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="infix extended expression group" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="INFIX" org.eventb.theory.core.type="STACK(EL)" org.eventb.theory.core.wd="⊤">
+                <org.eventb.theory.core.scOperatorArgument name="stack1" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="STACK(EL)"/>
+                <org.eventb.theory.core.scOperatorArgument name="stack2" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.operatorArgument#(" org.eventb.core.type="STACK(EL)"/>
+                <org.eventb.theory.core.scRecursiveOperatorDefinition name=")" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.recursiveOperatorDefinition#)" org.eventb.theory.core.inductiveArgument="stack1">
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="Empty ⦂ STACK(EL)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.recursiveOperatorDefinition#)|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="stack2"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="push(e,s)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.recursiveOperatorDefinition#)|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="push(e,s @ stack2)"/>
+                </org.eventb.theory.core.scRecursiveOperatorDefinition>
+            </org.eventb.theory.core.scNewOperatorDefinition>
+            <org.eventb.theory.core.scNewOperatorDefinition name="notEmpty" org.eventb.core.label="notEmpty" org.eventb.core.predicate="⊤" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.wd="⊤">
+                <org.eventb.theory.core.scOperatorArgument name="stack" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="STACK(EL)"/>
+                <org.eventb.theory.core.scRecursiveOperatorDefinition name="(" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(" org.eventb.theory.core.inductiveArgument="stack">
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="Empty ⦂ STACK(EL)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="push(e,s)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="⊤"/>
+                </org.eventb.theory.core.scRecursiveOperatorDefinition>
+            </org.eventb.theory.core.scNewOperatorDefinition>
+        </org.eventb.core.lang>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Terms,Point,VectorTerms))" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2,p3"/>
+                <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p2,p3"/>
+                <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Point,{a},{b},{c}))" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p4,p5,p6,p7"/>
+                        <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p4,p5,p6,p7"/>
+                        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(None_belief_predicates,Events,Actions,Plan_library))" org.eventb.core.prHyps="">
+                            <org.eventb.core.prAnte name="'">
+                                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p8" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p9,p10,p11,p12"/>
+                                <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p9,p10,p11,p12"/>
+                                <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Agent_programs,None_declarative_goal_programs,Declarative_goal_programs))" org.eventb.core.prHyps="">
+                                    <org.eventb.core.prAnte name="'">
+                                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p13" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p14,p15"/>
+                                        <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p14,p15"/>
+                                        <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                                            <org.eventb.core.prAnte name="'">
+                                                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p16"/>
+                                                <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p17"/>
+                                                <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p18"/>
+                                                <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with Point={a,b,c}" org.eventb.core.prHyps="p4">
+                                                    <org.eventb.core.prAnte name="'">
+                                                        <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p2" org.eventb.core.prInfHyps="p19"/>
+                                                        <org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p3" org.eventb.core.prInfHyps="p20"/>
+                                                        <org.eventb.core.prHypAction name="DESELECT2" org.eventb.core.prHyps="p2,p3"/>
+                                                        <org.eventb.core.prHypAction name="DESELECT3" org.eventb.core.prHyps="p4"/>
+                                                    </org.eventb.core.prAnte>
+                                                </org.eventb.core.prRule>
+                                            </org.eventb.core.prAnte>
+                                        </org.eventb.core.prRule>
+                                    </org.eventb.core.prAnte>
+                                    <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+                                </org.eventb.core.prRule>
+                            </org.eventb.core.prAnte>
+                            <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                    <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+            <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="Point" org.eventb.core.type="ℙ(Terms)"/>
+        <org.eventb.core.prIdent name="a" org.eventb.core.type="Terms"/>
+        <org.eventb.core.prIdent name="b" org.eventb.core.type="Terms"/>
+        <org.eventb.core.prIdent name="c" org.eventb.core.type="Terms"/>
+        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="Point⊆Terms"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="Point={a,b,c}"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬a=b"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="partition(None_belief_predicates,Events,Actions,Plan_library)">
+            <org.eventb.core.prIdent name="Actions" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+            <org.eventb.core.prIdent name="Events" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+            <org.eventb.core.prIdent name="None_belief_predicates" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+            <org.eventb.core.prIdent name="Plan_library" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p19" org.eventb.core.predicate="Terms={a,b,c}∪VectorTerms">
+            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="partition(Point,{a},{b},{c})"/>
+        <org.eventb.core.prPred name="p20" org.eventb.core.predicate="{a,b,c}∩VectorTerms=(∅ ⦂ ℙ(Terms))">
+            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="None_belief_predicates=Events∪Actions∪Plan_library">
+            <org.eventb.core.prIdent name="Actions" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+            <org.eventb.core.prIdent name="Events" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+            <org.eventb.core.prIdent name="None_belief_predicates" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+            <org.eventb.core.prIdent name="Plan_library" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="Events∩Plan_library=(∅ ⦂ ℙ(None_belief_predicates))">
+            <org.eventb.core.prIdent name="Events" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+            <org.eventb.core.prIdent name="None_belief_predicates" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+            <org.eventb.core.prIdent name="Plan_library" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="Agent_programs=None_declarative_goal_programs∪Declarative_goal_programs">
+            <org.eventb.core.prIdent name="Agent_programs" org.eventb.core.type="ℙ(Agent_programs)"/>
+            <org.eventb.core.prIdent name="Declarative_goal_programs" org.eventb.core.type="ℙ(Agent_programs)"/>
+            <org.eventb.core.prIdent name="None_declarative_goal_programs" org.eventb.core.type="ℙ(Agent_programs)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="Terms=Point∪VectorTerms">
+            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p18" org.eventb.core.predicate="Initial_belief_base∈ℙ(Belief_predicates × Terms)">
+            <org.eventb.core.prIdent name="Belief_predicates" org.eventb.core.type="ℙ(Belief_predicates)"/>
+            <org.eventb.core.prIdent name="Initial_belief_base" org.eventb.core.type="ℙ(Belief_predicates×Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="Point∩VectorTerms=(∅ ⦂ ℙ(Terms))">
+            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p17" org.eventb.core.predicate="VectorTerms⊆Terms">
+            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬a=c"/>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="Actions∩Plan_library=(∅ ⦂ ℙ(None_belief_predicates))">
+            <org.eventb.core.prIdent name="Actions" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+            <org.eventb.core.prIdent name="None_belief_predicates" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+            <org.eventb.core.prIdent name="Plan_library" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="None_declarative_goal_programs∩Declarative_goal_programs=(∅ ⦂ ℙ(Agent_programs))">
+            <org.eventb.core.prIdent name="Agent_programs" org.eventb.core.type="ℙ(Agent_programs)"/>
+            <org.eventb.core.prIdent name="Declarative_goal_programs" org.eventb.core.type="ℙ(Agent_programs)"/>
+            <org.eventb.core.prIdent name="None_declarative_goal_programs" org.eventb.core.type="ℙ(Agent_programs)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬b=c"/>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="Events∩Actions=(∅ ⦂ ℙ(None_belief_predicates))">
+            <org.eventb.core.prIdent name="Actions" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+            <org.eventb.core.prIdent name="Events" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+            <org.eventb.core.prIdent name="None_belief_predicates" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(Terms,Point,VectorTerms)">
+            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="partition(Agent_programs,None_declarative_goal_programs,Declarative_goal_programs)">
+            <org.eventb.core.prIdent name="Agent_programs" org.eventb.core.type="ℙ(Agent_programs)"/>
+            <org.eventb.core.prIdent name="Declarative_goal_programs" org.eventb.core.type="ℙ(Agent_programs)"/>
+            <org.eventb.core.prIdent name="None_declarative_goal_programs" org.eventb.core.type="ℙ(Agent_programs)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.eqL2:1"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="axm13/WD" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="p0" org.eventb.core.prSets="Terms">
+        <org.eventb.core.lang name="L">
+            <org.eventb.theory.core.scDatatypeDefinition name="STACK">
+                <org.eventb.theory.core.scTypeArgument name="EL" org.eventb.theory.core.givenType="EL"/>
+                <org.eventb.theory.core.scDatatypeConstructor name="Empty"/>
+                <org.eventb.theory.core.scDatatypeConstructor name="push">
+                    <org.eventb.theory.core.scConstructorArgument name="pop" org.eventb.core.type="EL"/>
+                    <org.eventb.theory.core.scConstructorArgument name="next_stack" org.eventb.core.type="STACK"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+            </org.eventb.theory.core.scDatatypeDefinition>
+            <org.eventb.theory.core.scNewOperatorDefinition name="@" org.eventb.core.label="@" org.eventb.core.predicate="⊤" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="infix extended expression group" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="INFIX" org.eventb.theory.core.type="STACK(EL)" org.eventb.theory.core.wd="⊤">
+                <org.eventb.theory.core.scOperatorArgument name="stack1" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="STACK(EL)"/>
+                <org.eventb.theory.core.scOperatorArgument name="stack2" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.operatorArgument#(" org.eventb.core.type="STACK(EL)"/>
+                <org.eventb.theory.core.scRecursiveOperatorDefinition name=")" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.recursiveOperatorDefinition#)" org.eventb.theory.core.inductiveArgument="stack1">
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="Empty ⦂ STACK(EL)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.recursiveOperatorDefinition#)|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="stack2"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="push(e,s)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.recursiveOperatorDefinition#)|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="push(e,s @ stack2)"/>
+                </org.eventb.theory.core.scRecursiveOperatorDefinition>
+            </org.eventb.theory.core.scNewOperatorDefinition>
+            <org.eventb.theory.core.scNewOperatorDefinition name="notEmpty" org.eventb.core.label="notEmpty" org.eventb.core.predicate="⊤" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.wd="⊤">
+                <org.eventb.theory.core.scOperatorArgument name="stack" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="STACK(EL)"/>
+                <org.eventb.theory.core.scRecursiveOperatorDefinition name="(" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(" org.eventb.theory.core.inductiveArgument="stack">
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="Empty ⦂ STACK(EL)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="push(e,s)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="⊤"/>
+                </org.eventb.theory.core.scRecursiveOperatorDefinition>
+            </org.eventb.theory.core.scNewOperatorDefinition>
+        </org.eventb.core.lang>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Terms,Point,VectorTerms))" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2,p3"/>
+                <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p2,p3"/>
+                <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Point,{a},{b},{c}))" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p4,p5,p6,p7"/>
+                        <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p4,p5,p6,p7"/>
+                        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(None_belief_predicates,Events,Actions,Plan_library))" org.eventb.core.prHyps="">
+                            <org.eventb.core.prAnte name="'">
+                                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p8" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p9,p10,p11,p12"/>
+                                <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p9,p10,p11,p12"/>
+                                <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Agent_programs,None_declarative_goal_programs,Declarative_goal_programs))" org.eventb.core.prHyps="">
+                                    <org.eventb.core.prAnte name="'">
+                                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p13" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p14,p15"/>
+                                        <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p14,p15"/>
+                                        <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                                            <org.eventb.core.prAnte name="'">
+                                                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p16"/>
+                                                <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p17"/>
+                                                <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p18"/>
+                                                <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with Point={a,b,c}" org.eventb.core.prHyps="p4">
+                                                    <org.eventb.core.prAnte name="'">
+                                                        <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p2" org.eventb.core.prInfHyps="p19"/>
+                                                        <org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p3" org.eventb.core.prInfHyps="p20"/>
+                                                        <org.eventb.core.prHypAction name="DESELECT2" org.eventb.core.prHyps="p2,p3"/>
+                                                        <org.eventb.core.prHypAction name="DESELECT3" org.eventb.core.prHyps="p4"/>
+                                                    </org.eventb.core.prAnte>
+                                                </org.eventb.core.prRule>
+                                            </org.eventb.core.prAnte>
+                                        </org.eventb.core.prRule>
+                                    </org.eventb.core.prAnte>
+                                    <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+                                </org.eventb.core.prRule>
+                            </org.eventb.core.prAnte>
+                            <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                    <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+            <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="Point" org.eventb.core.type="ℙ(Terms)"/>
+        <org.eventb.core.prIdent name="a" org.eventb.core.type="Terms"/>
+        <org.eventb.core.prIdent name="b" org.eventb.core.type="Terms"/>
+        <org.eventb.core.prIdent name="c" org.eventb.core.type="Terms"/>
+        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="Point⊆Terms"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="Point={a,b,c}"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬a=b"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="partition(None_belief_predicates,Events,Actions,Plan_library)">
+            <org.eventb.core.prIdent name="Actions" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+            <org.eventb.core.prIdent name="Events" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+            <org.eventb.core.prIdent name="None_belief_predicates" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+            <org.eventb.core.prIdent name="Plan_library" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p19" org.eventb.core.predicate="Terms={a,b,c}∪VectorTerms">
+            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="partition(Point,{a},{b},{c})"/>
+        <org.eventb.core.prPred name="p20" org.eventb.core.predicate="{a,b,c}∩VectorTerms=(∅ ⦂ ℙ(Terms))">
+            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="None_belief_predicates=Events∪Actions∪Plan_library">
+            <org.eventb.core.prIdent name="Actions" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+            <org.eventb.core.prIdent name="Events" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+            <org.eventb.core.prIdent name="None_belief_predicates" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+            <org.eventb.core.prIdent name="Plan_library" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="Events∩Plan_library=(∅ ⦂ ℙ(None_belief_predicates))">
+            <org.eventb.core.prIdent name="Events" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+            <org.eventb.core.prIdent name="None_belief_predicates" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+            <org.eventb.core.prIdent name="Plan_library" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="Agent_programs=None_declarative_goal_programs∪Declarative_goal_programs">
+            <org.eventb.core.prIdent name="Agent_programs" org.eventb.core.type="ℙ(Agent_programs)"/>
+            <org.eventb.core.prIdent name="Declarative_goal_programs" org.eventb.core.type="ℙ(Agent_programs)"/>
+            <org.eventb.core.prIdent name="None_declarative_goal_programs" org.eventb.core.type="ℙ(Agent_programs)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="Terms=Point∪VectorTerms">
+            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p18" org.eventb.core.predicate="Initial_belief_base∈ℙ(Belief_predicates × Terms)">
+            <org.eventb.core.prIdent name="Belief_predicates" org.eventb.core.type="ℙ(Belief_predicates)"/>
+            <org.eventb.core.prIdent name="Initial_belief_base" org.eventb.core.type="ℙ(Belief_predicates×Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="Point∩VectorTerms=(∅ ⦂ ℙ(Terms))">
+            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p17" org.eventb.core.predicate="VectorTerms⊆Terms">
+            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬a=c"/>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="Actions∩Plan_library=(∅ ⦂ ℙ(None_belief_predicates))">
+            <org.eventb.core.prIdent name="Actions" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+            <org.eventb.core.prIdent name="None_belief_predicates" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+            <org.eventb.core.prIdent name="Plan_library" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="None_declarative_goal_programs∩Declarative_goal_programs=(∅ ⦂ ℙ(Agent_programs))">
+            <org.eventb.core.prIdent name="Agent_programs" org.eventb.core.type="ℙ(Agent_programs)"/>
+            <org.eventb.core.prIdent name="Declarative_goal_programs" org.eventb.core.type="ℙ(Agent_programs)"/>
+            <org.eventb.core.prIdent name="None_declarative_goal_programs" org.eventb.core.type="ℙ(Agent_programs)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬b=c"/>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="Events∩Actions=(∅ ⦂ ℙ(None_belief_predicates))">
+            <org.eventb.core.prIdent name="Actions" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+            <org.eventb.core.prIdent name="Events" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+            <org.eventb.core.prIdent name="None_belief_predicates" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(Terms,Point,VectorTerms)">
+            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="partition(Agent_programs,None_declarative_goal_programs,Declarative_goal_programs)">
+            <org.eventb.core.prIdent name="Agent_programs" org.eventb.core.type="ℙ(Agent_programs)"/>
+            <org.eventb.core.prIdent name="Declarative_goal_programs" org.eventb.core.type="ℙ(Agent_programs)"/>
+            <org.eventb.core.prIdent name="None_declarative_goal_programs" org.eventb.core.type="ℙ(Agent_programs)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.eqL2:1"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="axm14/WD" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="p0" org.eventb.core.prSets="Terms">
+        <org.eventb.core.lang name="L">
+            <org.eventb.theory.core.scDatatypeDefinition name="STACK">
+                <org.eventb.theory.core.scTypeArgument name="EL" org.eventb.theory.core.givenType="EL"/>
+                <org.eventb.theory.core.scDatatypeConstructor name="Empty"/>
+                <org.eventb.theory.core.scDatatypeConstructor name="push">
+                    <org.eventb.theory.core.scConstructorArgument name="pop" org.eventb.core.type="EL"/>
+                    <org.eventb.theory.core.scConstructorArgument name="next_stack" org.eventb.core.type="STACK"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+            </org.eventb.theory.core.scDatatypeDefinition>
+            <org.eventb.theory.core.scNewOperatorDefinition name="@" org.eventb.core.label="@" org.eventb.core.predicate="⊤" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="infix extended expression group" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="INFIX" org.eventb.theory.core.type="STACK(EL)" org.eventb.theory.core.wd="⊤">
+                <org.eventb.theory.core.scOperatorArgument name="stack1" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="STACK(EL)"/>
+                <org.eventb.theory.core.scOperatorArgument name="stack2" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.operatorArgument#(" org.eventb.core.type="STACK(EL)"/>
+                <org.eventb.theory.core.scRecursiveOperatorDefinition name=")" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.recursiveOperatorDefinition#)" org.eventb.theory.core.inductiveArgument="stack1">
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="Empty ⦂ STACK(EL)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.recursiveOperatorDefinition#)|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="stack2"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="push(e,s)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.recursiveOperatorDefinition#)|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="push(e,s @ stack2)"/>
+                </org.eventb.theory.core.scRecursiveOperatorDefinition>
+            </org.eventb.theory.core.scNewOperatorDefinition>
+            <org.eventb.theory.core.scNewOperatorDefinition name="notEmpty" org.eventb.core.label="notEmpty" org.eventb.core.predicate="⊤" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.wd="⊤">
+                <org.eventb.theory.core.scOperatorArgument name="stack" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="STACK(EL)"/>
+                <org.eventb.theory.core.scRecursiveOperatorDefinition name="(" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(" org.eventb.theory.core.inductiveArgument="stack">
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="Empty ⦂ STACK(EL)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="push(e,s)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="⊤"/>
+                </org.eventb.theory.core.scRecursiveOperatorDefinition>
+            </org.eventb.theory.core.scNewOperatorDefinition>
+        </org.eventb.core.lang>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Terms,Point,VectorTerms))" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2,p3"/>
+                <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p2,p3"/>
+                <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Point,{a},{b},{c}))" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p4,p5,p6,p7"/>
+                        <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p4,p5,p6,p7"/>
+                        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(None_belief_predicates,Events,Actions,Plan_library))" org.eventb.core.prHyps="">
+                            <org.eventb.core.prAnte name="'">
+                                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p8" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p9,p10,p11,p12"/>
+                                <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p9,p10,p11,p12"/>
+                                <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Agent_programs,None_declarative_goal_programs,Declarative_goal_programs))" org.eventb.core.prHyps="">
+                                    <org.eventb.core.prAnte name="'">
+                                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p13" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p14,p15"/>
+                                        <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p14,p15"/>
+                                        <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                                            <org.eventb.core.prAnte name="'">
+                                                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p16"/>
+                                                <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p17"/>
+                                                <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p18"/>
+                                                <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with Point={a,b,c}" org.eventb.core.prHyps="p4">
+                                                    <org.eventb.core.prAnte name="'">
+                                                        <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p2" org.eventb.core.prInfHyps="p19"/>
+                                                        <org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p3" org.eventb.core.prInfHyps="p20"/>
+                                                        <org.eventb.core.prHypAction name="DESELECT2" org.eventb.core.prHyps="p2,p3"/>
+                                                        <org.eventb.core.prHypAction name="DESELECT3" org.eventb.core.prHyps="p4"/>
+                                                    </org.eventb.core.prAnte>
+                                                </org.eventb.core.prRule>
+                                            </org.eventb.core.prAnte>
+                                        </org.eventb.core.prRule>
+                                    </org.eventb.core.prAnte>
+                                    <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+                                </org.eventb.core.prRule>
+                            </org.eventb.core.prAnte>
+                            <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                    <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+            <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="Point" org.eventb.core.type="ℙ(Terms)"/>
+        <org.eventb.core.prIdent name="a" org.eventb.core.type="Terms"/>
+        <org.eventb.core.prIdent name="b" org.eventb.core.type="Terms"/>
+        <org.eventb.core.prIdent name="c" org.eventb.core.type="Terms"/>
+        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="Point⊆Terms"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="Point={a,b,c}"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬a=b"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="partition(None_belief_predicates,Events,Actions,Plan_library)">
+            <org.eventb.core.prIdent name="Actions" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+            <org.eventb.core.prIdent name="Events" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+            <org.eventb.core.prIdent name="None_belief_predicates" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+            <org.eventb.core.prIdent name="Plan_library" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p19" org.eventb.core.predicate="Terms={a,b,c}∪VectorTerms">
+            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="partition(Point,{a},{b},{c})"/>
+        <org.eventb.core.prPred name="p20" org.eventb.core.predicate="{a,b,c}∩VectorTerms=(∅ ⦂ ℙ(Terms))">
+            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="None_belief_predicates=Events∪Actions∪Plan_library">
+            <org.eventb.core.prIdent name="Actions" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+            <org.eventb.core.prIdent name="Events" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+            <org.eventb.core.prIdent name="None_belief_predicates" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+            <org.eventb.core.prIdent name="Plan_library" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="Events∩Plan_library=(∅ ⦂ ℙ(None_belief_predicates))">
+            <org.eventb.core.prIdent name="Events" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+            <org.eventb.core.prIdent name="None_belief_predicates" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+            <org.eventb.core.prIdent name="Plan_library" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="Agent_programs=None_declarative_goal_programs∪Declarative_goal_programs">
+            <org.eventb.core.prIdent name="Agent_programs" org.eventb.core.type="ℙ(Agent_programs)"/>
+            <org.eventb.core.prIdent name="Declarative_goal_programs" org.eventb.core.type="ℙ(Agent_programs)"/>
+            <org.eventb.core.prIdent name="None_declarative_goal_programs" org.eventb.core.type="ℙ(Agent_programs)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="Terms=Point∪VectorTerms">
+            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p18" org.eventb.core.predicate="Initial_belief_base∈ℙ(Belief_predicates × Terms)">
+            <org.eventb.core.prIdent name="Belief_predicates" org.eventb.core.type="ℙ(Belief_predicates)"/>
+            <org.eventb.core.prIdent name="Initial_belief_base" org.eventb.core.type="ℙ(Belief_predicates×Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="Point∩VectorTerms=(∅ ⦂ ℙ(Terms))">
+            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p17" org.eventb.core.predicate="VectorTerms⊆Terms">
+            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬a=c"/>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="Actions∩Plan_library=(∅ ⦂ ℙ(None_belief_predicates))">
+            <org.eventb.core.prIdent name="Actions" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+            <org.eventb.core.prIdent name="None_belief_predicates" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+            <org.eventb.core.prIdent name="Plan_library" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="None_declarative_goal_programs∩Declarative_goal_programs=(∅ ⦂ ℙ(Agent_programs))">
+            <org.eventb.core.prIdent name="Agent_programs" org.eventb.core.type="ℙ(Agent_programs)"/>
+            <org.eventb.core.prIdent name="Declarative_goal_programs" org.eventb.core.type="ℙ(Agent_programs)"/>
+            <org.eventb.core.prIdent name="None_declarative_goal_programs" org.eventb.core.type="ℙ(Agent_programs)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬b=c"/>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="Events∩Actions=(∅ ⦂ ℙ(None_belief_predicates))">
+            <org.eventb.core.prIdent name="Actions" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+            <org.eventb.core.prIdent name="Events" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+            <org.eventb.core.prIdent name="None_belief_predicates" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(Terms,Point,VectorTerms)">
+            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="partition(Agent_programs,None_declarative_goal_programs,Declarative_goal_programs)">
+            <org.eventb.core.prIdent name="Agent_programs" org.eventb.core.type="ℙ(Agent_programs)"/>
+            <org.eventb.core.prIdent name="Declarative_goal_programs" org.eventb.core.type="ℙ(Agent_programs)"/>
+            <org.eventb.core.prIdent name="None_declarative_goal_programs" org.eventb.core.type="ℙ(Agent_programs)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.eqL2:1"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="axm15/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20" org.eventb.core.prSets="Agent_programs,Belief_predicates,None_belief_predicates,Terms">
+        <org.eventb.core.lang name="L">
+            <org.eventb.theory.core.scDatatypeDefinition name="STACK">
+                <org.eventb.theory.core.scTypeArgument name="EL" org.eventb.theory.core.givenType="EL"/>
+                <org.eventb.theory.core.scDatatypeConstructor name="Empty"/>
+                <org.eventb.theory.core.scDatatypeConstructor name="push">
+                    <org.eventb.theory.core.scConstructorArgument name="pop" org.eventb.core.type="EL"/>
+                    <org.eventb.theory.core.scConstructorArgument name="next_stack" org.eventb.core.type="STACK"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+            </org.eventb.theory.core.scDatatypeDefinition>
+            <org.eventb.theory.core.scNewOperatorDefinition name="@" org.eventb.core.label="@" org.eventb.core.predicate="⊤" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="infix extended expression group" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="INFIX" org.eventb.theory.core.type="STACK(EL)" org.eventb.theory.core.wd="⊤">
+                <org.eventb.theory.core.scOperatorArgument name="stack1" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="STACK(EL)"/>
+                <org.eventb.theory.core.scOperatorArgument name="stack2" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.operatorArgument#(" org.eventb.core.type="STACK(EL)"/>
+                <org.eventb.theory.core.scRecursiveOperatorDefinition name=")" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.recursiveOperatorDefinition#)" org.eventb.theory.core.inductiveArgument="stack1">
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="Empty ⦂ STACK(EL)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.recursiveOperatorDefinition#)|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="stack2"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="push(e,s)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.recursiveOperatorDefinition#)|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="push(e,s @ stack2)"/>
+                </org.eventb.theory.core.scRecursiveOperatorDefinition>
+            </org.eventb.theory.core.scNewOperatorDefinition>
+            <org.eventb.theory.core.scNewOperatorDefinition name="notEmpty" org.eventb.core.label="notEmpty" org.eventb.core.predicate="⊤" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.wd="⊤">
+                <org.eventb.theory.core.scOperatorArgument name="stack" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="STACK(EL)"/>
+                <org.eventb.theory.core.scRecursiveOperatorDefinition name="(" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(" org.eventb.theory.core.inductiveArgument="stack">
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="Empty ⦂ STACK(EL)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="push(e,s)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="⊤"/>
+                </org.eventb.theory.core.scRecursiveOperatorDefinition>
+            </org.eventb.theory.core.scNewOperatorDefinition>
+        </org.eventb.core.lang>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Terms,Point,VectorTerms))" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p19" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p21,p22"/>
+                <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p21,p22"/>
+                <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Point,{a},{b},{c}))" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p23,p24,p25,p26"/>
+                        <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p23,p24,p25,p26"/>
+                        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(None_belief_predicates,Events,Actions,Plan_library))" org.eventb.core.prHyps="">
+                            <org.eventb.core.prAnte name="'">
+                                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p27,p28,p29,p30"/>
+                                <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p27,p28,p29,p30"/>
+                                <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Agent_programs,None_declarative_goal_programs,Declarative_goal_programs))" org.eventb.core.prHyps="">
+                                    <org.eventb.core.prAnte name="'">
+                                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p18" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p31,p32"/>
+                                        <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p31,p32"/>
+                                        <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                                            <org.eventb.core.prAnte name="'">
+                                                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p33"/>
+                                                <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p34"/>
+                                                <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p35"/>
+                                                <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with Point={a,b,c}" org.eventb.core.prHyps="p23">
+                                                    <org.eventb.core.prAnte name="'">
+                                                        <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p21" org.eventb.core.prInfHyps="p36"/>
+                                                        <org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p22" org.eventb.core.prInfHyps="p37"/>
+                                                        <org.eventb.core.prHypAction name="DESELECT2" org.eventb.core.prHyps="p21,p22"/>
+                                                        <org.eventb.core.prHypAction name="DESELECT3" org.eventb.core.prHyps="p23"/>
+                                                        <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p20,p7,p2,p8,p1,p16,p9,p13,p11,p17,p10,p4,p6,p15,p14,p12,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p36,p37">
+                                                            <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+                                                        </org.eventb.core.prRule>
+                                                    </org.eventb.core.prAnte>
+                                                </org.eventb.core.prRule>
+                                            </org.eventb.core.prAnte>
+                                        </org.eventb.core.prRule>
+                                    </org.eventb.core.prAnte>
+                                    <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+                                </org.eventb.core.prRule>
+                            </org.eventb.core.prAnte>
+                            <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                    <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+            <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="Actions" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+        <org.eventb.core.prIdent name="Addition_sets" org.eventb.core.type="ℙ(None_belief_predicates×Terms×(Belief_predicates×Terms))"/>
+        <org.eventb.core.prIdent name="Constructor4DG" org.eventb.core.type="ℙ(ℙ(Belief_predicates×Terms)×(ℙ(None_belief_predicates)×Terms)×ℙ(Belief_predicates×Terms)×Agent_programs)"/>
+        <org.eventb.core.prIdent name="Constructor4NDG" org.eventb.core.type="ℙ(ℙ(None_belief_predicates)×Terms×Agent_programs)"/>
+        <org.eventb.core.prIdent name="Declarative_goal_programs" org.eventb.core.type="ℙ(Agent_programs)"/>
+        <org.eventb.core.prIdent name="Deletion_sets" org.eventb.core.type="ℙ(None_belief_predicates×Terms×(Belief_predicates×Terms))"/>
+        <org.eventb.core.prIdent name="Events" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+        <org.eventb.core.prIdent name="Initial_external_event_set" org.eventb.core.type="ℙ(None_belief_predicates×Terms)"/>
+        <org.eventb.core.prIdent name="None_declarative_goal_programs" org.eventb.core.type="ℙ(Agent_programs)"/>
+        <org.eventb.core.prIdent name="Plan_body" org.eventb.core.type="ℙ(None_belief_predicates×ℙ(None_belief_predicates×ℙ(ℙ(Belief_predicates×Terms)×Terms×ℙ(STACK(ℙ(Agent_programs))))))"/>
+        <org.eventb.core.prIdent name="Plan_library" org.eventb.core.type="ℙ(None_belief_predicates)"/>
+        <org.eventb.core.prIdent name="Point" org.eventb.core.type="ℙ(Terms)"/>
+        <org.eventb.core.prIdent name="Preconditions" org.eventb.core.type="ℙ(None_belief_predicates×Terms×(Belief_predicates×Terms))"/>
+        <org.eventb.core.prIdent name="Vector" org.eventb.core.type="ℙ(Terms×Terms×Terms)"/>
+        <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        <org.eventb.core.prIdent name="a" org.eventb.core.type="Terms"/>
+        <org.eventb.core.prIdent name="b" org.eventb.core.type="Terms"/>
+        <org.eventb.core.prIdent name="c" org.eventb.core.type="Terms"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="finite(Agent_programs)"/>
+        <org.eventb.core.prPred name="p33" org.eventb.core.predicate="Point⊆Terms"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="Deletion_sets∈Actions × Terms ↔ Belief_predicates × Terms"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="partition(None_belief_predicates,Events,Actions,Plan_library)"/>
+        <org.eventb.core.prPred name="p36" org.eventb.core.predicate="Terms={a,b,c}∪VectorTerms"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="finite(Belief_predicates)"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="partition(Point,{a},{b},{c})"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="card(None_declarative_goal_programs)=10"/>
+        <org.eventb.core.prPred name="p27" org.eventb.core.predicate="None_belief_predicates=Events∪Actions∪Plan_library"/>
+        <org.eventb.core.prPred name="p29" org.eventb.core.predicate="Events∩Plan_library=(∅ ⦂ ℙ(None_belief_predicates))"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="Addition_sets∈Actions × Terms ↔ Belief_predicates × Terms"/>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="card(None_belief_predicates)=9"/>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="finite(Declarative_goal_programs)"/>
+        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="card(Declarative_goal_programs)=10"/>
+        <org.eventb.core.prPred name="p21" org.eventb.core.predicate="Terms=Point∪VectorTerms"/>
+        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="finite(None_declarative_goal_programs)"/>
+        <org.eventb.core.prPred name="p34" org.eventb.core.predicate="VectorTerms⊆Terms"/>
+        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="Constructor4DG∈ℙ(Belief_predicates × Terms) × (ℙ(None_belief_predicates) × Terms) × ℙ(Belief_predicates × Terms) ⤖ Declarative_goal_programs"/>
+        <org.eventb.core.prPred name="p25" org.eventb.core.predicate="¬a=c"/>
+        <org.eventb.core.prPred name="p30" org.eventb.core.predicate="Actions∩Plan_library=(∅ ⦂ ℙ(None_belief_predicates))"/>
+        <org.eventb.core.prPred name="p32" org.eventb.core.predicate="None_declarative_goal_programs∩Declarative_goal_programs=(∅ ⦂ ℙ(Agent_programs))"/>
+        <org.eventb.core.prPred name="p26" org.eventb.core.predicate="¬b=c"/>
+        <org.eventb.core.prPred name="p28" org.eventb.core.predicate="Events∩Actions=(∅ ⦂ ℙ(None_belief_predicates))"/>
+        <org.eventb.core.prPred name="p18" org.eventb.core.predicate="partition(Agent_programs,None_declarative_goal_programs,Declarative_goal_programs)"/>
+        <org.eventb.core.prPred name="p19" org.eventb.core.predicate="partition(Terms,Point,VectorTerms)"/>
+        <org.eventb.core.prPred name="p20" org.eventb.core.predicate="Vector∈Point × Point ↣ VectorTerms"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="Constructor4NDG∈ℙ(None_belief_predicates) × Terms ⤖ None_declarative_goal_programs"/>
+        <org.eventb.core.prPred name="p23" org.eventb.core.predicate="Point={a,b,c}"/>
+        <org.eventb.core.prPred name="p24" org.eventb.core.predicate="¬a=b"/>
+        <org.eventb.core.prPred name="p37" org.eventb.core.predicate="{a,b,c}∩VectorTerms=(∅ ⦂ ℙ(Terms))"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="Preconditions∈Actions × Terms ↔ Belief_predicates × Terms"/>
+        <org.eventb.core.prPred name="p31" org.eventb.core.predicate="Agent_programs=None_declarative_goal_programs∪Declarative_goal_programs"/>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="Plan_body∈Events ⇸ (Plan_library ⇸ (ℙ(Belief_predicates × Terms) × Terms ⇸ ℙ(STACK(ℙ(Agent_programs)))))"/>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="card(Belief_predicates)=4"/>
+        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="Initial_external_event_set∈ℙ(Events × Terms)"/>
+        <org.eventb.core.prPred name="p35" org.eventb.core.predicate="Initial_belief_base∈ℙ(Belief_predicates × Terms)">
+            <org.eventb.core.prIdent name="Initial_belief_base" org.eventb.core.type="ℙ(Belief_predicates×Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p22" org.eventb.core.predicate="Point∩VectorTerms=(∅ ⦂ ℙ(Terms))"/>
+        <org.eventb.core.prPred name="p17" org.eventb.core.predicate="finite(None_belief_predicates)"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.eqL2:1"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r3" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="axm16/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0" org.eventb.core.prSets="Terms">
+        <org.eventb.core.lang name="L">
+            <org.eventb.theory.core.scDatatypeDefinition name="STACK">
+                <org.eventb.theory.core.scTypeArgument name="EL" org.eventb.theory.core.givenType="EL"/>
+                <org.eventb.theory.core.scDatatypeConstructor name="Empty"/>
+                <org.eventb.theory.core.scDatatypeConstructor name="push">
+                    <org.eventb.theory.core.scConstructorArgument name="pop" org.eventb.core.type="EL"/>
+                    <org.eventb.theory.core.scConstructorArgument name="next_stack" org.eventb.core.type="STACK"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+            </org.eventb.theory.core.scDatatypeDefinition>
+            <org.eventb.theory.core.scNewOperatorDefinition name="@" org.eventb.core.label="@" org.eventb.core.predicate="⊤" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="infix extended expression group" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="INFIX" org.eventb.theory.core.type="STACK(EL)" org.eventb.theory.core.wd="⊤">
+                <org.eventb.theory.core.scOperatorArgument name="stack1" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="STACK(EL)"/>
+                <org.eventb.theory.core.scOperatorArgument name="stack2" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.operatorArgument#(" org.eventb.core.type="STACK(EL)"/>
+                <org.eventb.theory.core.scRecursiveOperatorDefinition name=")" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.recursiveOperatorDefinition#)" org.eventb.theory.core.inductiveArgument="stack1">
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="Empty ⦂ STACK(EL)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.recursiveOperatorDefinition#)|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="stack2"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="push(e,s)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#)|org.eventb.theory.core.recursiveOperatorDefinition#)|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="push(e,s @ stack2)"/>
+                </org.eventb.theory.core.scRecursiveOperatorDefinition>
+            </org.eventb.theory.core.scNewOperatorDefinition>
+            <org.eventb.theory.core.scNewOperatorDefinition name="notEmpty" org.eventb.core.label="notEmpty" org.eventb.core.predicate="⊤" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.wd="⊤">
+                <org.eventb.theory.core.scOperatorArgument name="stack" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="STACK(EL)"/>
+                <org.eventb.theory.core.scRecursiveOperatorDefinition name="(" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(" org.eventb.theory.core.inductiveArgument="stack">
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="Empty ⦂ STACK(EL)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="push(e,s)" org.eventb.core.source="/BasicTheory/StackStructure.tuf|org.eventb.theory.core.theoryRoot#StackStructure|org.eventb.theory.core.newOperatorDefinition#*|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="⊤"/>
+                </org.eventb.theory.core.scRecursiveOperatorDefinition>
+            </org.eventb.theory.core.scNewOperatorDefinition>
+        </org.eventb.core.lang>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="finite(Terms)"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="axm2/THM"/>
+    <org.eventb.core.prProof name="axm8/THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="p0" org.eventb.core.prSets="Terms">
+        <org.eventb.core.lang name="L">
+            <org.eventb.theory.core.scDatatypeDefinition name="UserP">
+                <org.eventb.theory.core.scTypeArgument name="belief_predicates" org.eventb.theory.core.givenType="belief_predicates"/>
+                <org.eventb.theory.core.scTypeArgument name="non_belief_predicates" org.eventb.theory.core.givenType="non_belief_predicates"/>
+                <org.eventb.theory.core.scTypeArgument name="terms" org.eventb.theory.core.givenType="terms"/>
+                <org.eventb.theory.core.scDatatypeConstructor name="BasicP">
+                    <org.eventb.theory.core.scConstructorArgument name="getBasicP" org.eventb.core.type="non_belief_predicates×terms"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+                <org.eventb.theory.core.scDatatypeConstructor name="Seq">
+                    <org.eventb.theory.core.scConstructorArgument name="leftSeq" org.eventb.core.type="UserP"/>
+                    <org.eventb.theory.core.scConstructorArgument name="rightSeq" org.eventb.core.type="UserP"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+                <org.eventb.theory.core.scDatatypeConstructor name="Concurrent">
+                    <org.eventb.theory.core.scConstructorArgument name="leftConc" org.eventb.core.type="UserP"/>
+                    <org.eventb.theory.core.scConstructorArgument name="rightConc" org.eventb.core.type="UserP"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+                <org.eventb.theory.core.scDatatypeConstructor name="Goal">
+                    <org.eventb.theory.core.scConstructorArgument name="SuccesUser" org.eventb.core.type="ℙ(belief_predicates×terms)"/>
+                    <org.eventb.theory.core.scConstructorArgument name="EventUser" org.eventb.core.type="non_belief_predicates×terms"/>
+                    <org.eventb.theory.core.scConstructorArgument name="FailureUser" org.eventb.core.type="ℙ(belief_predicates×terms)"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+            </org.eventb.theory.core.scDatatypeDefinition>
+            <org.eventb.theory.core.scDatatypeDefinition name="Plan_body">
+                <org.eventb.theory.core.scTypeArgument name="belief_predicates" org.eventb.theory.core.givenType="belief_predicates"/>
+                <org.eventb.theory.core.scTypeArgument name="non_belief_predicates" org.eventb.theory.core.givenType="non_belief_predicates"/>
+                <org.eventb.theory.core.scTypeArgument name="terms" org.eventb.theory.core.givenType="terms"/>
+                <org.eventb.theory.core.scDatatypeConstructor name="NilComp"/>
+                <org.eventb.theory.core.scDatatypeConstructor name="BasicPComp">
+                    <org.eventb.theory.core.scConstructorArgument name="getBasicPB" org.eventb.core.type="non_belief_predicates×terms"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+                <org.eventb.theory.core.scDatatypeConstructor name="SeqComp">
+                    <org.eventb.theory.core.scConstructorArgument name="head" org.eventb.core.type="Plan_body"/>
+                    <org.eventb.theory.core.scConstructorArgument name="tail" org.eventb.core.type="Plan_body"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+                <org.eventb.theory.core.scDatatypeConstructor name="ConcurrentComp">
+                    <org.eventb.theory.core.scConstructorArgument name="left" org.eventb.core.type="Plan_body"/>
+                    <org.eventb.theory.core.scConstructorArgument name="right" org.eventb.core.type="Plan_body"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+                <org.eventb.theory.core.scDatatypeConstructor name="GoalComp">
+                    <org.eventb.theory.core.scConstructorArgument name="SuccessComp" org.eventb.core.type="ℙ(belief_predicates×terms)"/>
+                    <org.eventb.theory.core.scConstructorArgument name="getGoalPlanBody" org.eventb.core.type="Plan_body"/>
+                    <org.eventb.theory.core.scConstructorArgument name="FailureComp" org.eventb.core.type="ℙ(belief_predicates×terms)"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+                <org.eventb.theory.core.scDatatypeConstructor name="Rhd">
+                    <org.eventb.theory.core.scConstructorArgument name="current" org.eventb.core.type="Plan_body"/>
+                    <org.eventb.theory.core.scConstructorArgument name="backup" org.eventb.core.type="Plan_body"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+                <org.eventb.theory.core.scDatatypeConstructor name="EventComp">
+                    <org.eventb.theory.core.scConstructorArgument name="getEvent" org.eventb.core.type="non_belief_predicates×terms"/>
+                    <org.eventb.theory.core.scConstructorArgument name="UserPlan" org.eventb.core.type="ℙ(ℙ(belief_predicates×terms)×UserP(belief_predicates,non_belief_predicates,terms))"/>
+                </org.eventb.theory.core.scDatatypeConstructor>
+                <org.eventb.theory.core.scDatatypeConstructor name="False"/>
+            </org.eventb.theory.core.scDatatypeDefinition>
+            <org.eventb.theory.core.scNewOperatorDefinition name="isEventComp" org.eventb.core.label="isEventComp" org.eventb.core.predicate="⊤" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#+" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.wd="⊤">
+                <org.eventb.theory.core.scOperatorArgument name="plan" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#+|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="Plan_body(belief_predicates,non_belief_predicates,terms)"/>
+                <org.eventb.theory.core.scRecursiveOperatorDefinition name="(" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#+|org.eventb.theory.core.recursiveOperatorDefinition#(" org.eventb.theory.core.inductiveArgument="plan">
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="NilComp ⦂ Plan_body(belief_predicates,non_belief_predicates,terms)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#+|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="BasicPComp(evt)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#+|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="." org.eventb.core.expression="EventComp(evt,planlib)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#+|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#." org.eventb.theory.core.formula="⊤"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="/" org.eventb.core.expression="False ⦂ Plan_body(belief_predicates,non_belief_predicates,terms)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#+|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#\/" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="*" org.eventb.core.expression="SeqComp(l,r)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#+|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#*" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="+" org.eventb.core.expression="ConcurrentComp(l,r)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#+|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#+" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="," org.eventb.core.expression="GoalComp(succes,planrec,failure)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#+|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#," org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="-" org.eventb.core.expression="Rhd(cur,back)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#+|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#-" org.eventb.theory.core.formula="⊥"/>
+                </org.eventb.theory.core.scRecursiveOperatorDefinition>
+            </org.eventb.theory.core.scNewOperatorDefinition>
+            <org.eventb.theory.core.scNewOperatorDefinition name="UserP2Plan_body" org.eventb.core.label="UserP2Plan_body" org.eventb.core.predicate="⊤" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element;" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="Plan_body(belief_predicates,non_belief_predicates,terms)" org.eventb.theory.core.wd="⊤">
+                <org.eventb.theory.core.scOperatorArgument name="uP" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element;|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="UserP(belief_predicates,non_belief_predicates,terms)"/>
+                <org.eventb.theory.core.scRecursiveOperatorDefinition name="(" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element;|org.eventb.theory.core.recursiveOperatorDefinition#(" org.eventb.theory.core.inductiveArgument="uP">
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="Goal(success,evtxterms,fail)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element;|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="GoalComp(success,BasicPComp(evtxterms),fail)"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="+" org.eventb.core.expression="BasicP(nonbeliefpred)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element;|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#+" org.eventb.theory.core.formula="(Plan_body(belief_predicates,non_belief_predicates,terms) ◁ (id ⦂ ℙ(Plan_body(belief_predicates,non_belief_predicates,terms)×Plan_body(belief_predicates,non_belief_predicates,terms))))(BasicPComp(nonbeliefpred))"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="*" org.eventb.core.expression="Seq(ag1,ag2)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element;|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#*" org.eventb.theory.core.formula="SeqComp(UserP2Plan_body(ag1),UserP2Plan_body(ag2))"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name=")" org.eventb.core.expression="Concurrent(ag1,ag2)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element;|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#)" org.eventb.theory.core.formula="ConcurrentComp(UserP2Plan_body(ag1),UserP2Plan_body(ag2))"/>
+                </org.eventb.theory.core.scRecursiveOperatorDefinition>
+            </org.eventb.theory.core.scNewOperatorDefinition>
+            <org.eventb.theory.core.scNewOperatorDefinition name="GetFirsts" org.eventb.core.label="GetFirsts" org.eventb.core.predicate="⊤" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element=" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="ℙ(Plan_body(belief_predicates,non_belief_predicates,terms))" org.eventb.theory.core.wd="⊤">
+                <org.eventb.theory.core.scOperatorArgument name="plan" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element=|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="Plan_body(belief_predicates,non_belief_predicates,terms)"/>
+                <org.eventb.theory.core.scRecursiveOperatorDefinition name="(" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element=|org.eventb.theory.core.recursiveOperatorDefinition#(" org.eventb.theory.core.inductiveArgument="plan">
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="NilComp ⦂ Plan_body(belief_predicates,non_belief_predicates,terms)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element=|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="(ℙ(Plan_body(belief_predicates,non_belief_predicates,terms)) ◁ (id ⦂ ℙ(ℙ(Plan_body(belief_predicates,non_belief_predicates,terms))×ℙ(Plan_body(belief_predicates,non_belief_predicates,terms)))))({NilComp ⦂ Plan_body(belief_predicates,non_belief_predicates,terms)})"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="BasicPComp(evt)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element=|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="(ℙ(Plan_body(belief_predicates,non_belief_predicates,terms)) ◁ (id ⦂ ℙ(ℙ(Plan_body(belief_predicates,non_belief_predicates,terms))×ℙ(Plan_body(belief_predicates,non_belief_predicates,terms)))))({BasicPComp(evt)})"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="-" org.eventb.core.expression="EventComp(evt,planlib)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element=|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#-" org.eventb.theory.core.formula="{EventComp(evt,planlib)}"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="." org.eventb.core.expression="False ⦂ Plan_body(belief_predicates,non_belief_predicates,terms)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element=|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#." org.eventb.theory.core.formula="(ℙ(Plan_body(belief_predicates,non_belief_predicates,terms)) ◁ (id ⦂ ℙ(ℙ(Plan_body(belief_predicates,non_belief_predicates,terms))×ℙ(Plan_body(belief_predicates,non_belief_predicates,terms)))))({False ⦂ Plan_body(belief_predicates,non_belief_predicates,terms)})"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name=")" org.eventb.core.expression="SeqComp(l,r)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element=|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#)" org.eventb.theory.core.formula="GetFirsts(l)"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="*" org.eventb.core.expression="ConcurrentComp(l,r)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element=|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#*" org.eventb.theory.core.formula="GetFirsts(l)∪GetFirsts(r)"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="+" org.eventb.core.expression="GoalComp(succes,planrec,failure)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element=|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#+" org.eventb.theory.core.formula="{GoalComp(succes,planrec,failure)}"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="," org.eventb.core.expression="Rhd(cur,back)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element=|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#," org.eventb.theory.core.formula="GetFirsts(cur)"/>
+                </org.eventb.theory.core.scRecursiveOperatorDefinition>
+            </org.eventb.theory.core.scNewOperatorDefinition>
+            <org.eventb.theory.core.scNewOperatorDefinition name="update" org.eventb.core.label="update" org.eventb.core.predicate="⊤" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element&gt;" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="Plan_body(belief_predicates,non_belief_predicates,terms)" org.eventb.theory.core.wd="⊤">
+                <org.eventb.theory.core.scOperatorArgument name="plan" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element&gt;|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="Plan_body(belief_predicates,non_belief_predicates,terms)"/>
+                <org.eventb.theory.core.scOperatorArgument name="prev" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element&gt;|org.eventb.theory.core.operatorArgument#(" org.eventb.core.type="Plan_body(belief_predicates,non_belief_predicates,terms)"/>
+                <org.eventb.theory.core.scOperatorArgument name="new" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element&gt;|org.eventb.theory.core.operatorArgument#)" org.eventb.core.type="Plan_body(belief_predicates,non_belief_predicates,terms)"/>
+                <org.eventb.theory.core.scRecursiveOperatorDefinition name="*" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element&gt;|org.eventb.theory.core.recursiveOperatorDefinition#*" org.eventb.theory.core.inductiveArgument="plan">
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="BasicPComp(evt)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element&gt;|org.eventb.theory.core.recursiveOperatorDefinition#*|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="new"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="-" org.eventb.core.expression="EventComp(evt,planlib)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element&gt;|org.eventb.theory.core.recursiveOperatorDefinition#*|org.eventb.theory.core.recursiveDefinitionCase#-" org.eventb.theory.core.formula="new"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="." org.eventb.core.expression="NilComp ⦂ Plan_body(belief_predicates,non_belief_predicates,terms)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element&gt;|org.eventb.theory.core.recursiveOperatorDefinition#*|org.eventb.theory.core.recursiveDefinitionCase#." org.eventb.theory.core.formula="(Plan_body(belief_predicates,non_belief_predicates,terms) ◁ (id ⦂ ℙ(Plan_body(belief_predicates,non_belief_predicates,terms)×Plan_body(belief_predicates,non_belief_predicates,terms))))(NilComp ⦂ Plan_body(belief_predicates,non_belief_predicates,terms))"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="/" org.eventb.core.expression="False ⦂ Plan_body(belief_predicates,non_belief_predicates,terms)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element&gt;|org.eventb.theory.core.recursiveOperatorDefinition#*|org.eventb.theory.core.recursiveDefinitionCase#\/" org.eventb.theory.core.formula="(Plan_body(belief_predicates,non_belief_predicates,terms) ◁ (id ⦂ ℙ(Plan_body(belief_predicates,non_belief_predicates,terms)×Plan_body(belief_predicates,non_belief_predicates,terms))))(False ⦂ Plan_body(belief_predicates,non_belief_predicates,terms))"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name=")" org.eventb.core.expression="SeqComp(l,r)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element&gt;|org.eventb.theory.core.recursiveOperatorDefinition#*|org.eventb.theory.core.recursiveDefinitionCase#)" org.eventb.theory.core.formula="SeqComp(update(l,prev,new),r)"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="*" org.eventb.core.expression="ConcurrentComp(l,r)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element&gt;|org.eventb.theory.core.recursiveOperatorDefinition#*|org.eventb.theory.core.recursiveDefinitionCase#*" org.eventb.theory.core.formula="{pre⦂Plan_body(belief_predicates,non_belief_predicates,terms),ne⦂Plan_body(belief_predicates,non_belief_predicates,terms)·(pre∈GetFirsts(l)∧pre∉GetFirsts(r)∧ne=ConcurrentComp(update(l,pre,new),r))∨(pre∈GetFirsts(r)∧ne=ConcurrentComp(l,update(r,pre,new)))∨(pre∉GetFirsts(l)∧pre∉GetFirsts(r)∧ne=ConcurrentComp(l,r)) ∣ pre ↦ ne}(prev)"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="+" org.eventb.core.expression="GoalComp(succes,planrec,failure)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element&gt;|org.eventb.theory.core.recursiveOperatorDefinition#*|org.eventb.theory.core.recursiveDefinitionCase#+" org.eventb.theory.core.formula="{prev1⦂Plan_body(belief_predicates,non_belief_predicates,terms),new1⦂Plan_body(belief_predicates,non_belief_predicates,terms)·(prev1=GoalComp(succes,planrec,failure)∧new1=new)∨(prev1≠GoalComp(succes,planrec,failure)∧new1=GoalComp(succes,update(planrec,prev,new),failure)) ∣ prev1 ↦ new1}(prev)"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="," org.eventb.core.expression="Rhd(cur,back)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element&gt;|org.eventb.theory.core.recursiveOperatorDefinition#*|org.eventb.theory.core.recursiveDefinitionCase#," org.eventb.theory.core.formula="Rhd(update(cur,prev,new),back)"/>
+                </org.eventb.theory.core.scRecursiveOperatorDefinition>
+            </org.eventb.theory.core.scNewOperatorDefinition>
+            <org.eventb.theory.core.scNewOperatorDefinition name="isBasicComp" org.eventb.core.label="isBasicComp" org.eventb.core.predicate="⊤" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element?" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.wd="⊤">
+                <org.eventb.theory.core.scOperatorArgument name="plan" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element?|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="Plan_body(belief_predicates,non_belief_predicates,terms)"/>
+                <org.eventb.theory.core.scRecursiveOperatorDefinition name="(" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element?|org.eventb.theory.core.recursiveOperatorDefinition#(" org.eventb.theory.core.inductiveArgument="plan">
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="NilComp ⦂ Plan_body(belief_predicates,non_belief_predicates,terms)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element?|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="BasicPComp(evt)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element?|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="⊤"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="-" org.eventb.core.expression="EventComp(evt,planlib)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element?|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#-" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="." org.eventb.core.expression="False ⦂ Plan_body(belief_predicates,non_belief_predicates,terms)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element?|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#." org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name=")" org.eventb.core.expression="SeqComp(l,r)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element?|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#)" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="*" org.eventb.core.expression="ConcurrentComp(l,r)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element?|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#*" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="+" org.eventb.core.expression="GoalComp(succes,planrec,failure)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element?|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#+" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="," org.eventb.core.expression="Rhd(cur,back)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element?|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#," org.eventb.theory.core.formula="⊥"/>
+                </org.eventb.theory.core.scRecursiveOperatorDefinition>
+            </org.eventb.theory.core.scNewOperatorDefinition>
+            <org.eventb.theory.core.scNewOperatorDefinition name="isSeqComp" org.eventb.core.label="isSeqComp" org.eventb.core.predicate="⊤" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element@" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.wd="⊤">
+                <org.eventb.theory.core.scOperatorArgument name="plan" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element@|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="Plan_body(belief_predicates,non_belief_predicates,terms)"/>
+                <org.eventb.theory.core.scRecursiveOperatorDefinition name="(" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element@|org.eventb.theory.core.recursiveOperatorDefinition#(" org.eventb.theory.core.inductiveArgument="plan">
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="NilComp ⦂ Plan_body(belief_predicates,non_belief_predicates,terms)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element@|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="BasicPComp(evt)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element@|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="-" org.eventb.core.expression="EventComp(evt,planlib)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element@|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#-" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="." org.eventb.core.expression="False ⦂ Plan_body(belief_predicates,non_belief_predicates,terms)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element@|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#." org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name=")" org.eventb.core.expression="SeqComp(l,r)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element@|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#)" org.eventb.theory.core.formula="⊤"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="*" org.eventb.core.expression="ConcurrentComp(l,r)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element@|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#*" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="+" org.eventb.core.expression="GoalComp(succes,planrec,failure)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element@|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#+" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="," org.eventb.core.expression="Rhd(cur,back)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element@|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#," org.eventb.theory.core.formula="⊥"/>
+                </org.eventb.theory.core.scRecursiveOperatorDefinition>
+            </org.eventb.theory.core.scNewOperatorDefinition>
+            <org.eventb.theory.core.scNewOperatorDefinition name="isConcurrentComp" org.eventb.core.label="isConcurrentComp" org.eventb.core.predicate="⊤" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementA" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.wd="⊤">
+                <org.eventb.theory.core.scOperatorArgument name="plan" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementA|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="Plan_body(belief_predicates,non_belief_predicates,terms)"/>
+                <org.eventb.theory.core.scRecursiveOperatorDefinition name="(" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementA|org.eventb.theory.core.recursiveOperatorDefinition#(" org.eventb.theory.core.inductiveArgument="plan">
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="NilComp ⦂ Plan_body(belief_predicates,non_belief_predicates,terms)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementA|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="BasicPComp(evt)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementA|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="-" org.eventb.core.expression="EventComp(evt,planlib)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementA|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#-" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="." org.eventb.core.expression="False ⦂ Plan_body(belief_predicates,non_belief_predicates,terms)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementA|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#." org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name=")" org.eventb.core.expression="SeqComp(l,r)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementA|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#)" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="*" org.eventb.core.expression="ConcurrentComp(l,r)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementA|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#*" org.eventb.theory.core.formula="⊤"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="+" org.eventb.core.expression="GoalComp(succes,planrec,failure)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementA|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#+" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="," org.eventb.core.expression="Rhd(cur,back)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementA|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#," org.eventb.theory.core.formula="⊥"/>
+                </org.eventb.theory.core.scRecursiveOperatorDefinition>
+            </org.eventb.theory.core.scNewOperatorDefinition>
+            <org.eventb.theory.core.scNewOperatorDefinition name="isGoalComp" org.eventb.core.label="isGoalComp" org.eventb.core.predicate="⊤" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementB" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.wd="⊤">
+                <org.eventb.theory.core.scOperatorArgument name="plan" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementB|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="Plan_body(belief_predicates,non_belief_predicates,terms)"/>
+                <org.eventb.theory.core.scRecursiveOperatorDefinition name="(" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementB|org.eventb.theory.core.recursiveOperatorDefinition#(" org.eventb.theory.core.inductiveArgument="plan">
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="NilComp ⦂ Plan_body(belief_predicates,non_belief_predicates,terms)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementB|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="BasicPComp(evt)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementB|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="-" org.eventb.core.expression="EventComp(evt,planlib)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementB|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#-" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="." org.eventb.core.expression="False ⦂ Plan_body(belief_predicates,non_belief_predicates,terms)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementB|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#." org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name=")" org.eventb.core.expression="SeqComp(l,r)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementB|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#)" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="*" org.eventb.core.expression="ConcurrentComp(l,r)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementB|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#*" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="+" org.eventb.core.expression="GoalComp(succes,planrec,failure)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementB|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#+" org.eventb.theory.core.formula="⊤"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="," org.eventb.core.expression="Rhd(cur,back)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementB|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#," org.eventb.theory.core.formula="⊥"/>
+                </org.eventb.theory.core.scRecursiveOperatorDefinition>
+            </org.eventb.theory.core.scNewOperatorDefinition>
+            <org.eventb.theory.core.scNewOperatorDefinition name="isRhd" org.eventb.core.label="isRhd" org.eventb.core.predicate="⊤" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementC" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.wd="⊤">
+                <org.eventb.theory.core.scOperatorArgument name="plan" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementC|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="Plan_body(belief_predicates,non_belief_predicates,terms)"/>
+                <org.eventb.theory.core.scRecursiveOperatorDefinition name="(" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementC|org.eventb.theory.core.recursiveOperatorDefinition#(" org.eventb.theory.core.inductiveArgument="plan">
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="NilComp ⦂ Plan_body(belief_predicates,non_belief_predicates,terms)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementC|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="BasicPComp(evt)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementC|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="-" org.eventb.core.expression="EventComp(evt,planlib)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementC|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#-" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="." org.eventb.core.expression="False ⦂ Plan_body(belief_predicates,non_belief_predicates,terms)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementC|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#." org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name=")" org.eventb.core.expression="SeqComp(l,r)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementC|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#)" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="*" org.eventb.core.expression="ConcurrentComp(l,r)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementC|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#*" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="+" org.eventb.core.expression="GoalComp(succes,planrec,failure)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementC|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#+" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="," org.eventb.core.expression="Rhd(cur,back)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementC|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#," org.eventb.theory.core.formula="⊤"/>
+                </org.eventb.theory.core.scRecursiveOperatorDefinition>
+            </org.eventb.theory.core.scNewOperatorDefinition>
+            <org.eventb.theory.core.scNewOperatorDefinition name="isNilComp" org.eventb.core.label="isNilComp" org.eventb.core.predicate="⊤" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementD" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.wd="⊤">
+                <org.eventb.theory.core.scOperatorArgument name="plan" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementD|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="Plan_body(belief_predicates,non_belief_predicates,terms)"/>
+                <org.eventb.theory.core.scRecursiveOperatorDefinition name="(" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementD|org.eventb.theory.core.recursiveOperatorDefinition#(" org.eventb.theory.core.inductiveArgument="plan">
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="NilComp ⦂ Plan_body(belief_predicates,non_belief_predicates,terms)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementD|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="⊤"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="BasicPComp(evt)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementD|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="-" org.eventb.core.expression="EventComp(evt,planlib)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementD|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#-" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="." org.eventb.core.expression="False ⦂ Plan_body(belief_predicates,non_belief_predicates,terms)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementD|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#." org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name=")" org.eventb.core.expression="SeqComp(l,r)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementD|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#)" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="*" org.eventb.core.expression="ConcurrentComp(l,r)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementD|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#*" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="+" org.eventb.core.expression="GoalComp(succes,planrec,failure)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementD|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#+" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="," org.eventb.core.expression="Rhd(cur,back)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementD|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#," org.eventb.theory.core.formula="⊥"/>
+                </org.eventb.theory.core.scRecursiveOperatorDefinition>
+            </org.eventb.theory.core.scNewOperatorDefinition>
+            <org.eventb.theory.core.scNewOperatorDefinition name="NilRemove" org.eventb.core.label="NilRemove" org.eventb.core.predicate="⊤" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementE" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="Plan_body(belief_predicates,non_belief_predicates,terms)" org.eventb.theory.core.wd="⊤">
+                <org.eventb.theory.core.scOperatorArgument name="plan_body" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementE|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="Plan_body(belief_predicates,non_belief_predicates,terms)"/>
+                <org.eventb.theory.core.scRecursiveOperatorDefinition name="(" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementE|org.eventb.theory.core.recursiveOperatorDefinition#(" org.eventb.theory.core.inductiveArgument="plan_body">
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="NilComp ⦂ Plan_body(belief_predicates,non_belief_predicates,terms)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementE|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="(Plan_body(belief_predicates,non_belief_predicates,terms) ◁ (id ⦂ ℙ(Plan_body(belief_predicates,non_belief_predicates,terms)×Plan_body(belief_predicates,non_belief_predicates,terms))))(NilComp ⦂ Plan_body(belief_predicates,non_belief_predicates,terms))"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="BasicPComp(evt)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementE|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="(Plan_body(belief_predicates,non_belief_predicates,terms) ◁ (id ⦂ ℙ(Plan_body(belief_predicates,non_belief_predicates,terms)×Plan_body(belief_predicates,non_belief_predicates,terms))))(BasicPComp(evt))"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="-" org.eventb.core.expression="EventComp(evt,userplan)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementE|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#-" org.eventb.theory.core.formula="EventComp(evt,userplan)"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="." org.eventb.core.expression="False ⦂ Plan_body(belief_predicates,non_belief_predicates,terms)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementE|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#." org.eventb.theory.core.formula="(Plan_body(belief_predicates,non_belief_predicates,terms) ◁ (id ⦂ ℙ(Plan_body(belief_predicates,non_belief_predicates,terms)×Plan_body(belief_predicates,non_belief_predicates,terms))))(False ⦂ Plan_body(belief_predicates,non_belief_predicates,terms))"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name=")" org.eventb.core.expression="GoalComp(success,plan,failure)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementE|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#)" org.eventb.theory.core.formula="GoalComp(success,NilRemove(plan),failure)"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="*" org.eventb.core.expression="SeqComp(l,r)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementE|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#*" org.eventb.theory.core.formula="{plan⦂Plan_body(belief_predicates,non_belief_predicates,terms),l1⦂Plan_body(belief_predicates,non_belief_predicates,terms),r1⦂Plan_body(belief_predicates,non_belief_predicates,terms)·(isNilComp(l1)∧plan=r1)∨(¬isNilComp(l1)∧plan=SeqComp(NilRemove(l1),r1)) ∣ l1 ↦ r1 ↦ plan}(l ↦ r)"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="+" org.eventb.core.expression="ConcurrentComp(l,r)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementE|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#+" org.eventb.theory.core.formula="{plan⦂Plan_body(belief_predicates,non_belief_predicates,terms),l1⦂Plan_body(belief_predicates,non_belief_predicates,terms),r1⦂Plan_body(belief_predicates,non_belief_predicates,terms),l2⦂Plan_body(belief_predicates,non_belief_predicates,terms),r2⦂Plan_body(belief_predicates,non_belief_predicates,terms)·l2=NilRemove(l1)∧r2=NilRemove(r1)∧((isNilComp(l2)∧isNilComp(r2)∧plan=(NilComp ⦂ Plan_body(belief_predicates,non_belief_predicates,terms)))∨((¬isNilComp(l2)∨¬isNilComp(r2))∧plan=ConcurrentComp(l2,r2))) ∣ l1 ↦ r1 ↦ plan}(l ↦ r)"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="," org.eventb.core.expression="Rhd(plan,plans)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementE|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#," org.eventb.theory.core.formula="{finalplan⦂Plan_body(belief_predicates,non_belief_predicates,terms),plan1⦂Plan_body(belief_predicates,non_belief_predicates,terms),plans1⦂Plan_body(belief_predicates,non_belief_predicates,terms)·(isNilComp(plan1)∧finalplan=(NilComp ⦂ Plan_body(belief_predicates,non_belief_predicates,terms)))∨(¬isNilComp(plan1)∧finalplan=Rhd(NilRemove(plan1),plans1)) ∣ plan1 ↦ plans1 ↦ finalplan}(plan ↦ plans)"/>
+                </org.eventb.theory.core.scRecursiveOperatorDefinition>
+            </org.eventb.theory.core.scNewOperatorDefinition>
+            <org.eventb.theory.core.scNewOperatorDefinition name="isFalse" org.eventb.core.label="isFalse" org.eventb.core.predicate="⊤" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementF" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="false" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.wd="⊤">
+                <org.eventb.theory.core.scOperatorArgument name="plan" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementF|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="Plan_body(belief_predicates,non_belief_predicates,terms)"/>
+                <org.eventb.theory.core.scRecursiveOperatorDefinition name="(" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementF|org.eventb.theory.core.recursiveOperatorDefinition#(" org.eventb.theory.core.inductiveArgument="plan">
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="NilComp ⦂ Plan_body(belief_predicates,non_belief_predicates,terms)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementF|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="BasicPComp(evt)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementF|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="-" org.eventb.core.expression="EventComp(evt,planlib)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementF|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#-" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="." org.eventb.core.expression="False ⦂ Plan_body(belief_predicates,non_belief_predicates,terms)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementF|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#." org.eventb.theory.core.formula="⊤"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name=")" org.eventb.core.expression="SeqComp(l,r)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementF|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#)" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="*" org.eventb.core.expression="ConcurrentComp(l,r)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementF|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#*" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="+" org.eventb.core.expression="GoalComp(succes,planrec,failure)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementF|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#+" org.eventb.theory.core.formula="⊥"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="," org.eventb.core.expression="Rhd(cur,back)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementF|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#," org.eventb.theory.core.formula="⊥"/>
+                </org.eventb.theory.core.scRecursiveOperatorDefinition>
+            </org.eventb.theory.core.scNewOperatorDefinition>
+            <org.eventb.theory.core.scNewOperatorDefinition name="Failure_Recovery" org.eventb.core.label="Failure_Recovery" org.eventb.core.predicate="⊤" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element3" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="Plan_body(belief_predicates,non_belief_predicates,terms)" org.eventb.theory.core.wd="⊤">
+                <org.eventb.theory.core.scOperatorArgument name="intention" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element3|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="Plan_body(belief_predicates,non_belief_predicates,terms)"/>
+                <org.eventb.theory.core.scOperatorArgument name="first_element" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element3|org.eventb.theory.core.operatorArgument#)" org.eventb.core.type="Plan_body(belief_predicates,non_belief_predicates,terms)"/>
+                <org.eventb.theory.core.scOperatorArgument name="rhs" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element3|org.eventb.theory.core.operatorArgument#*" org.eventb.core.type="Plan_body(belief_predicates,non_belief_predicates,terms)"/>
+                <org.eventb.theory.core.scRecursiveOperatorDefinition name="(" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element3|org.eventb.theory.core.recursiveOperatorDefinition#(" org.eventb.theory.core.inductiveArgument="intention">
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="NilComp ⦂ Plan_body(belief_predicates,non_belief_predicates,terms)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element3|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="(Plan_body(belief_predicates,non_belief_predicates,terms) ◁ (id ⦂ ℙ(Plan_body(belief_predicates,non_belief_predicates,terms)×Plan_body(belief_predicates,non_belief_predicates,terms))))(NilComp ⦂ Plan_body(belief_predicates,non_belief_predicates,terms))"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="BasicPComp(evt)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element3|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="(Plan_body(belief_predicates,non_belief_predicates,terms) ◁ (id ⦂ ℙ(Plan_body(belief_predicates,non_belief_predicates,terms)×Plan_body(belief_predicates,non_belief_predicates,terms))))(BasicPComp(evt))"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="-" org.eventb.core.expression="EventComp(evt,planlib)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element3|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#-" org.eventb.theory.core.formula="EventComp(evt,planlib)"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="." org.eventb.core.expression="False ⦂ Plan_body(belief_predicates,non_belief_predicates,terms)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element3|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#." org.eventb.theory.core.formula="(Plan_body(belief_predicates,non_belief_predicates,terms) ◁ (id ⦂ ℙ(Plan_body(belief_predicates,non_belief_predicates,terms)×Plan_body(belief_predicates,non_belief_predicates,terms))))(False ⦂ Plan_body(belief_predicates,non_belief_predicates,terms))"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name=")" org.eventb.core.expression="SeqComp(l,r)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element3|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#)" org.eventb.theory.core.formula="SeqComp(Failure_Recovery(l,first_element,rhs),r)"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="*" org.eventb.core.expression="ConcurrentComp(l,r)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element3|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#*" org.eventb.theory.core.formula="ConcurrentComp(Failure_Recovery(l,first_element,rhs),Failure_Recovery(r,first_element,rhs))"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="+" org.eventb.core.expression="GoalComp(succes,planrec,failure)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element3|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#+" org.eventb.theory.core.formula="GoalComp(succes,Failure_Recovery(planrec,first_element,rhs),failure)"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="," org.eventb.core.expression="Rhd(cur,back)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#element3|org.eventb.theory.core.recursiveOperatorDefinition#(|org.eventb.theory.core.recursiveDefinitionCase#," org.eventb.theory.core.formula="{cur1⦂Plan_body(belief_predicates,non_belief_predicates,terms),back1⦂Plan_body(belief_predicates,non_belief_predicates,terms),replacement⦂Plan_body(belief_predicates,non_belief_predicates,terms)·(back1=rhs∧first_element∈GetFirsts(cur1)∧replacement=back1)∨(¬(back1=rhs∧first_element∈GetFirsts(cur1))∧replacement=Rhd(Failure_Recovery(cur1,first_element,rhs),back1)) ∣ cur1 ↦ back1 ↦ replacement}(cur ↦ back)"/>
+                </org.eventb.theory.core.scRecursiveOperatorDefinition>
+            </org.eventb.theory.core.scNewOperatorDefinition>
+            <org.eventb.theory.core.scNewOperatorDefinition name="GetFirstRhd" org.eventb.core.label="GetFirstRhd" org.eventb.core.predicate="⊤" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementG" org.eventb.theory.core.associative="false" org.eventb.theory.core.commutative="false" org.eventb.theory.core.formulaType="true" org.eventb.theory.core.groupID="org.eventb.core.ast.closed" org.eventb.theory.core.hasError="false" org.eventb.theory.core.notationType="PREFIX" org.eventb.theory.core.type="Plan_body(belief_predicates,non_belief_predicates,terms)" org.eventb.theory.core.wd="⊤">
+                <org.eventb.theory.core.scOperatorArgument name="intention" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementG|org.eventb.theory.core.operatorArgument#'" org.eventb.core.type="Plan_body(belief_predicates,non_belief_predicates,terms)"/>
+                <org.eventb.theory.core.scOperatorArgument name="first_element" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementG|org.eventb.theory.core.operatorArgument#(" org.eventb.core.type="Plan_body(belief_predicates,non_belief_predicates,terms)"/>
+                <org.eventb.theory.core.scOperatorArgument name="rhs" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementG|org.eventb.theory.core.operatorArgument#)" org.eventb.core.type="Plan_body(belief_predicates,non_belief_predicates,terms)"/>
+                <org.eventb.theory.core.scRecursiveOperatorDefinition name="*" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementG|org.eventb.theory.core.recursiveOperatorDefinition#*" org.eventb.theory.core.inductiveArgument="intention">
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="'" org.eventb.core.expression="BasicPComp(evt)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementG|org.eventb.theory.core.recursiveOperatorDefinition#*|org.eventb.theory.core.recursiveDefinitionCase#'" org.eventb.theory.core.formula="rhs"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="," org.eventb.core.expression="EventComp(evt,planlib)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementG|org.eventb.theory.core.recursiveOperatorDefinition#*|org.eventb.theory.core.recursiveDefinitionCase#," org.eventb.theory.core.formula="rhs"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="-" org.eventb.core.expression="NilComp ⦂ Plan_body(belief_predicates,non_belief_predicates,terms)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementG|org.eventb.theory.core.recursiveOperatorDefinition#*|org.eventb.theory.core.recursiveDefinitionCase#-" org.eventb.theory.core.formula="rhs"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="." org.eventb.core.expression="False ⦂ Plan_body(belief_predicates,non_belief_predicates,terms)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementG|org.eventb.theory.core.recursiveOperatorDefinition#*|org.eventb.theory.core.recursiveDefinitionCase#." org.eventb.theory.core.formula="rhs"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="(" org.eventb.core.expression="SeqComp(l,r)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementG|org.eventb.theory.core.recursiveOperatorDefinition#*|org.eventb.theory.core.recursiveDefinitionCase#(" org.eventb.theory.core.formula="GetFirstRhd(l,first_element,rhs)"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name=")" org.eventb.core.expression="ConcurrentComp(l,r)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementG|org.eventb.theory.core.recursiveOperatorDefinition#*|org.eventb.theory.core.recursiveDefinitionCase#)" org.eventb.theory.core.formula="{pre⦂Plan_body(belief_predicates,non_belief_predicates,terms),ne⦂Plan_body(belief_predicates,non_belief_predicates,terms)·(pre∈GetFirsts(l)∧pre∉GetFirsts(r)∧ne=GetFirstRhd(l,first_element,rhs))∨(pre∉GetFirsts(l)∧pre∈GetFirsts(r)∧ne=GetFirstRhd(r,first_element,rhs)) ∣ pre ↦ ne}(first_element)"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="*" org.eventb.core.expression="GoalComp(success,planrec,failure)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementG|org.eventb.theory.core.recursiveOperatorDefinition#*|org.eventb.theory.core.recursiveDefinitionCase#*" org.eventb.theory.core.formula="{prev1⦂Plan_body(belief_predicates,non_belief_predicates,terms),new1⦂Plan_body(belief_predicates,non_belief_predicates,terms)·(prev1=GoalComp(success,planrec,failure)∧new1=rhs)∨(prev1≠GoalComp(success,planrec,failure)∧new1=GetFirstRhd(planrec,first_element,rhs)) ∣ prev1 ↦ new1}(first_element)"/>
+                    <org.eventb.theory.core.scRecursiveDefinitionCase name="+" org.eventb.core.expression="Rhd(cur,back)" org.eventb.core.source="/BasicTheory/AgentProgramConstructor.tuf|org.eventb.theory.core.theoryRoot#AgentProgramConstructor|org.eventb.theory.core.newOperatorDefinition#elementG|org.eventb.theory.core.recursiveOperatorDefinition#*|org.eventb.theory.core.recursiveDefinitionCase#+" org.eventb.theory.core.formula="GetFirstRhd(cur,first_element,back)"/>
+                </org.eventb.theory.core.scRecursiveOperatorDefinition>
+            </org.eventb.theory.core.scNewOperatorDefinition>
+        </org.eventb.core.lang>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Terms,Point,VectorTerms))" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2,p3"/>
+                <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p2,p3"/>
+                <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Point,{a},{b},{c}))" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p4,p5,p6,p7"/>
+                        <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p4,p5,p6,p7"/>
+                        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Event_Action_predicate_symbols,Event_predicate_symbols,Action_predicate_symbols))" org.eventb.core.prHyps="">
+                            <org.eventb.core.prAnte name="'">
+                                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p8" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p9,p10"/>
+                                <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p9,p10"/>
+                                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+                                    <org.eventb.core.prAnte name="'">
+                                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p11"/>
+                                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p12"/>
+                                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with Point={a,b,c}" org.eventb.core.prHyps="p4">
+                                            <org.eventb.core.prAnte name="'">
+                                                <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p2" org.eventb.core.prInfHyps="p13"/>
+                                                <org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p3" org.eventb.core.prInfHyps="p14"/>
+                                                <org.eventb.core.prHypAction name="DESELECT2" org.eventb.core.prHyps="p2,p3"/>
+                                                <org.eventb.core.prHypAction name="DESELECT3" org.eventb.core.prHyps="p4"/>
+                                            </org.eventb.core.prAnte>
+                                        </org.eventb.core.prRule>
+                                    </org.eventb.core.prAnte>
+                                </org.eventb.core.prRule>
+                            </org.eventb.core.prAnte>
+                            <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                    <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+            <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="Point" org.eventb.core.type="ℙ(Terms)"/>
+        <org.eventb.core.prIdent name="a" org.eventb.core.type="Terms"/>
+        <org.eventb.core.prIdent name="b" org.eventb.core.type="Terms"/>
+        <org.eventb.core.prIdent name="c" org.eventb.core.type="Terms"/>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="Point⊆Terms"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="Point={a,b,c}"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬a=b"/>
+        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="Terms={a,b,c}∪VectorTerms">
+            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="partition(Point,{a},{b},{c})"/>
+        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="{a,b,c}∩VectorTerms=(∅ ⦂ ℙ(Terms))">
+            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="partition(Event_Action_predicate_symbols,Event_predicate_symbols,Action_predicate_symbols)">
+            <org.eventb.core.prIdent name="Action_predicate_symbols" org.eventb.core.type="ℙ(Event_Action_predicate_symbols)"/>
+            <org.eventb.core.prIdent name="Event_Action_predicate_symbols" org.eventb.core.type="ℙ(Event_Action_predicate_symbols)"/>
+            <org.eventb.core.prIdent name="Event_predicate_symbols" org.eventb.core.type="ℙ(Event_Action_predicate_symbols)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="Event_Action_predicate_symbols=Event_predicate_symbols∪Action_predicate_symbols">
+            <org.eventb.core.prIdent name="Action_predicate_symbols" org.eventb.core.type="ℙ(Event_Action_predicate_symbols)"/>
+            <org.eventb.core.prIdent name="Event_Action_predicate_symbols" org.eventb.core.type="ℙ(Event_Action_predicate_symbols)"/>
+            <org.eventb.core.prIdent name="Event_predicate_symbols" org.eventb.core.type="ℙ(Event_Action_predicate_symbols)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="Event_predicate_symbols∩Action_predicate_symbols=(∅ ⦂ ℙ(Event_Action_predicate_symbols))">
+            <org.eventb.core.prIdent name="Action_predicate_symbols" org.eventb.core.type="ℙ(Event_Action_predicate_symbols)"/>
+            <org.eventb.core.prIdent name="Event_Action_predicate_symbols" org.eventb.core.type="ℙ(Event_Action_predicate_symbols)"/>
+            <org.eventb.core.prIdent name="Event_predicate_symbols" org.eventb.core.type="ℙ(Event_Action_predicate_symbols)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="Terms=Point∪VectorTerms">
+            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="Point∩VectorTerms=(∅ ⦂ ℙ(Terms))">
+            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="VectorTerms⊆Terms">
+            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬a=c"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬b=c"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(Terms,Point,VectorTerms)">
+            <org.eventb.core.prIdent name="VectorTerms" org.eventb.core.type="ℙ(Terms)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.eqL2:1"/>
+    </org.eventb.core.prProof>
+</org.eventb.core.prFile>
